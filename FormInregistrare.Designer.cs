@@ -41,7 +41,6 @@
             System.Windows.Forms.Label modelLabel;
             System.Windows.Forms.Label culoareLabel;
             System.Windows.Forms.Label iMEILabel;
-            System.Windows.Forms.Label acumulatorLabel;
             System.Windows.Forms.Label cod_telefonLabel;
             System.Windows.Forms.Label piese_inlocuiteLabel;
             System.Windows.Forms.Label data_predariiLabel;
@@ -56,7 +55,6 @@
             this.nr_inregTextBox = new System.Windows.Forms.TextBox();
             this.txtTipTelefon = new System.Windows.Forms.ComboBox();
             this.dateDataPrimirii = new System.Windows.Forms.DateTimePicker();
-            this.checkbox1Garantie = new System.Windows.Forms.CheckBox();
             this.txtDefectConstatat = new System.Windows.Forms.TextBox();
             this.txtTermenRezolvare = new System.Windows.Forms.TextBox();
             this.txtPretEstimativ = new System.Windows.Forms.TextBox();
@@ -66,15 +64,15 @@
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtCuloare = new System.Windows.Forms.TextBox();
             this.txtIMEI = new System.Windows.Forms.TextBox();
-            this.checkbox1Acumulator = new System.Windows.Forms.CheckBox();
             this.txtCodTelefon = new System.Windows.Forms.TextBox();
             this.txtPieseInlocuite = new System.Windows.Forms.TextBox();
             this.dateDataPredarii = new System.Windows.Forms.DateTimePicker();
             this.txtNrTelefon = new System.Windows.Forms.TextBox();
             this.txtObservatii = new System.Windows.Forms.TextBox();
-            this.checkbox0Garantie = new System.Windows.Forms.CheckBox();
-            this.checkbox0Acumulator = new System.Windows.Forms.CheckBox();
+            this.checkboxGarantie = new System.Windows.Forms.CheckBox();
             this.txtPrenume = new System.Windows.Forms.TextBox();
+            this.btnCauta = new System.Windows.Forms.Button();
+            this.txtCauta = new System.Windows.Forms.TextBox();
             nr_inregLabel = new System.Windows.Forms.Label();
             tip_telefonLabel = new System.Windows.Forms.Label();
             data_primiriiLabel = new System.Windows.Forms.Label();
@@ -88,7 +86,6 @@
             modelLabel = new System.Windows.Forms.Label();
             culoareLabel = new System.Windows.Forms.Label();
             iMEILabel = new System.Windows.Forms.Label();
-            acumulatorLabel = new System.Windows.Forms.Label();
             cod_telefonLabel = new System.Windows.Forms.Label();
             piese_inlocuiteLabel = new System.Windows.Forms.Label();
             data_predariiLabel = new System.Windows.Forms.Label();
@@ -228,20 +225,10 @@
             iMEILabel.TabIndex = 63;
             iMEILabel.Text = "IMEI:";
             // 
-            // acumulatorLabel
-            // 
-            acumulatorLabel.AutoSize = true;
-            acumulatorLabel.Location = new System.Drawing.Point(648, 220);
-            acumulatorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            acumulatorLabel.Name = "acumulatorLabel";
-            acumulatorLabel.Size = new System.Drawing.Size(83, 17);
-            acumulatorLabel.TabIndex = 65;
-            acumulatorLabel.Text = "Acumulator:";
-            // 
             // cod_telefonLabel
             // 
             cod_telefonLabel.AutoSize = true;
-            cod_telefonLabel.Location = new System.Drawing.Point(648, 255);
+            cod_telefonLabel.Location = new System.Drawing.Point(648, 225);
             cod_telefonLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             cod_telefonLabel.Name = "cod_telefonLabel";
             cod_telefonLabel.Size = new System.Drawing.Size(84, 17);
@@ -251,7 +238,7 @@
             // piese_inlocuiteLabel
             // 
             piese_inlocuiteLabel.AutoSize = true;
-            piese_inlocuiteLabel.Location = new System.Drawing.Point(648, 287);
+            piese_inlocuiteLabel.Location = new System.Drawing.Point(648, 279);
             piese_inlocuiteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             piese_inlocuiteLabel.Name = "piese_inlocuiteLabel";
             piese_inlocuiteLabel.Size = new System.Drawing.Size(103, 17);
@@ -305,7 +292,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(79, 559);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1143, 113);
@@ -315,10 +302,10 @@
             // 
             this.btnInregistrare.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInregistrare.Location = new System.Drawing.Point(1073, 684);
-            this.btnInregistrare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInregistrare.Margin = new System.Windows.Forms.Padding(4);
             this.btnInregistrare.Name = "btnInregistrare";
             this.btnInregistrare.Size = new System.Drawing.Size(100, 28);
-            this.btnInregistrare.TabIndex = 1;
+            this.btnInregistrare.TabIndex = 16;
             this.btnInregistrare.Text = "Inregistreaza";
             this.btnInregistrare.UseVisualStyleBackColor = true;
             this.btnInregistrare.Click += new System.EventHandler(this.btnInregistrare_Click);
@@ -327,10 +314,10 @@
             // 
             this.btnAnulare.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAnulare.Location = new System.Drawing.Point(79, 697);
-            this.btnAnulare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnulare.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnulare.Name = "btnAnulare";
             this.btnAnulare.Size = new System.Drawing.Size(100, 28);
-            this.btnAnulare.TabIndex = 2;
+            this.btnAnulare.TabIndex = 18;
             this.btnAnulare.Text = "Anuleaza";
             this.btnAnulare.UseVisualStyleBackColor = true;
             // 
@@ -338,20 +325,20 @@
             // 
             this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrint.Location = new System.Drawing.Point(926, 684);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(100, 28);
-            this.btnPrint.TabIndex = 3;
+            this.btnPrint.TabIndex = 17;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = true;
             // 
             // labelExit
             // 
             this.labelExit.Location = new System.Drawing.Point(16, 15);
-            this.labelExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelExit.Margin = new System.Windows.Forms.Padding(4);
             this.labelExit.Name = "labelExit";
             this.labelExit.Size = new System.Drawing.Size(100, 28);
-            this.labelExit.TabIndex = 4;
+            this.labelExit.TabIndex = 19;
             this.labelExit.Text = "X";
             this.labelExit.UseVisualStyleBackColor = true;
             this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
@@ -359,7 +346,7 @@
             // nr_inregTextBox
             // 
             this.nr_inregTextBox.Location = new System.Drawing.Point(933, 42);
-            this.nr_inregTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nr_inregTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nr_inregTextBox.Name = "nr_inregTextBox";
             this.nr_inregTextBox.Size = new System.Drawing.Size(176, 22);
             this.nr_inregTextBox.TabIndex = 40;
@@ -368,134 +355,114 @@
             // 
             this.txtTipTelefon.FormattingEnabled = true;
             this.txtTipTelefon.Location = new System.Drawing.Point(320, 116);
-            this.txtTipTelefon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTipTelefon.Margin = new System.Windows.Forms.Padding(4);
             this.txtTipTelefon.Name = "txtTipTelefon";
             this.txtTipTelefon.Size = new System.Drawing.Size(265, 24);
-            this.txtTipTelefon.TabIndex = 42;
+            this.txtTipTelefon.TabIndex = 1;
             // 
             // dateDataPrimirii
             // 
             this.dateDataPrimirii.Location = new System.Drawing.Point(320, 149);
-            this.dateDataPrimirii.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateDataPrimirii.Margin = new System.Windows.Forms.Padding(4);
             this.dateDataPrimirii.Name = "dateDataPrimirii";
             this.dateDataPrimirii.Size = new System.Drawing.Size(265, 22);
             this.dateDataPrimirii.TabIndex = 44;
-            this.dateDataPrimirii.Value = new System.DateTime(2020, 4, 28, 23, 25, 15, 0);
-            // 
-            // checkbox1Garantie
-            // 
-            this.checkbox1Garantie.Location = new System.Drawing.Point(344, 181);
-            this.checkbox1Garantie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkbox1Garantie.Name = "checkbox1Garantie";
-            this.checkbox1Garantie.Size = new System.Drawing.Size(85, 30);
-            this.checkbox1Garantie.TabIndex = 46;
-            this.checkbox1Garantie.Text = "DA";
-            this.checkbox1Garantie.UseVisualStyleBackColor = true;
+            this.dateDataPrimirii.Value = new System.DateTime(2020, 6, 1, 0, 0, 0, 0);
             // 
             // txtDefectConstatat
             // 
             this.txtDefectConstatat.Location = new System.Drawing.Point(320, 218);
-            this.txtDefectConstatat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDefectConstatat.Margin = new System.Windows.Forms.Padding(4);
             this.txtDefectConstatat.Multiline = true;
             this.txtDefectConstatat.Name = "txtDefectConstatat";
             this.txtDefectConstatat.Size = new System.Drawing.Size(265, 78);
-            this.txtDefectConstatat.TabIndex = 48;
+            this.txtDefectConstatat.TabIndex = 2;
             // 
             // txtTermenRezolvare
             // 
             this.txtTermenRezolvare.Location = new System.Drawing.Point(320, 375);
-            this.txtTermenRezolvare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTermenRezolvare.Margin = new System.Windows.Forms.Padding(4);
             this.txtTermenRezolvare.Name = "txtTermenRezolvare";
             this.txtTermenRezolvare.Size = new System.Drawing.Size(265, 22);
-            this.txtTermenRezolvare.TabIndex = 50;
+            this.txtTermenRezolvare.TabIndex = 4;
             // 
             // txtPretEstimativ
             // 
             this.txtPretEstimativ.Location = new System.Drawing.Point(761, 388);
-            this.txtPretEstimativ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPretEstimativ.Margin = new System.Windows.Forms.Padding(4);
             this.txtPretEstimativ.Name = "txtPretEstimativ";
             this.txtPretEstimativ.Size = new System.Drawing.Size(265, 22);
-            this.txtPretEstimativ.TabIndex = 52;
+            this.txtPretEstimativ.TabIndex = 13;
             // 
             // txtPretAvans
             // 
             this.txtPretAvans.Location = new System.Drawing.Point(761, 420);
-            this.txtPretAvans.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPretAvans.Margin = new System.Windows.Forms.Padding(4);
             this.txtPretAvans.Name = "txtPretAvans";
             this.txtPretAvans.Size = new System.Drawing.Size(265, 22);
-            this.txtPretAvans.TabIndex = 54;
+            this.txtPretAvans.TabIndex = 14;
             // 
             // txtPretAchitat
             // 
             this.txtPretAchitat.Location = new System.Drawing.Point(761, 452);
-            this.txtPretAchitat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPretAchitat.Margin = new System.Windows.Forms.Padding(4);
             this.txtPretAchitat.Name = "txtPretAchitat";
             this.txtPretAchitat.Size = new System.Drawing.Size(265, 22);
-            this.txtPretAchitat.TabIndex = 56;
+            this.txtPretAchitat.TabIndex = 15;
             // 
             // txtNume
             // 
             this.txtNume.Location = new System.Drawing.Point(320, 411);
-            this.txtNume.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNume.Margin = new System.Windows.Forms.Padding(4);
             this.txtNume.Name = "txtNume";
             this.txtNume.Size = new System.Drawing.Size(265, 22);
-            this.txtNume.TabIndex = 58;
+            this.txtNume.TabIndex = 5;
             // 
             // txtModel
             // 
             this.txtModel.Location = new System.Drawing.Point(761, 118);
-            this.txtModel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtModel.Margin = new System.Windows.Forms.Padding(4);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(265, 22);
-            this.txtModel.TabIndex = 60;
+            this.txtModel.TabIndex = 8;
             // 
             // txtCuloare
             // 
             this.txtCuloare.Location = new System.Drawing.Point(761, 150);
-            this.txtCuloare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCuloare.Margin = new System.Windows.Forms.Padding(4);
             this.txtCuloare.Name = "txtCuloare";
             this.txtCuloare.Size = new System.Drawing.Size(265, 22);
-            this.txtCuloare.TabIndex = 62;
+            this.txtCuloare.TabIndex = 9;
             // 
             // txtIMEI
             // 
             this.txtIMEI.Location = new System.Drawing.Point(761, 182);
-            this.txtIMEI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIMEI.Margin = new System.Windows.Forms.Padding(4);
             this.txtIMEI.Name = "txtIMEI";
             this.txtIMEI.Size = new System.Drawing.Size(265, 22);
-            this.txtIMEI.TabIndex = 64;
-            // 
-            // checkbox1Acumulator
-            // 
-            this.checkbox1Acumulator.Location = new System.Drawing.Point(779, 214);
-            this.checkbox1Acumulator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkbox1Acumulator.Name = "checkbox1Acumulator";
-            this.checkbox1Acumulator.Size = new System.Drawing.Size(113, 30);
-            this.checkbox1Acumulator.TabIndex = 66;
-            this.checkbox1Acumulator.Text = "DA";
-            this.checkbox1Acumulator.UseVisualStyleBackColor = true;
+            this.txtIMEI.TabIndex = 10;
             // 
             // txtCodTelefon
             // 
-            this.txtCodTelefon.Location = new System.Drawing.Point(761, 251);
-            this.txtCodTelefon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodTelefon.Location = new System.Drawing.Point(761, 222);
+            this.txtCodTelefon.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodTelefon.Name = "txtCodTelefon";
             this.txtCodTelefon.Size = new System.Drawing.Size(265, 22);
-            this.txtCodTelefon.TabIndex = 70;
+            this.txtCodTelefon.TabIndex = 11;
             // 
             // txtPieseInlocuite
             // 
-            this.txtPieseInlocuite.Location = new System.Drawing.Point(761, 283);
-            this.txtPieseInlocuite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPieseInlocuite.Location = new System.Drawing.Point(761, 264);
+            this.txtPieseInlocuite.Margin = new System.Windows.Forms.Padding(4);
             this.txtPieseInlocuite.Multiline = true;
             this.txtPieseInlocuite.Name = "txtPieseInlocuite";
-            this.txtPieseInlocuite.Size = new System.Drawing.Size(265, 56);
-            this.txtPieseInlocuite.TabIndex = 72;
+            this.txtPieseInlocuite.Size = new System.Drawing.Size(265, 72);
+            this.txtPieseInlocuite.TabIndex = 12;
             // 
             // dateDataPredarii
             // 
             this.dateDataPredarii.Location = new System.Drawing.Point(761, 347);
-            this.dateDataPredarii.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateDataPredarii.Margin = new System.Windows.Forms.Padding(4);
             this.dateDataPredarii.Name = "dateDataPredarii";
             this.dateDataPredarii.Size = new System.Drawing.Size(265, 22);
             this.dateDataPredarii.TabIndex = 74;
@@ -503,57 +470,69 @@
             // txtNrTelefon
             // 
             this.txtNrTelefon.Location = new System.Drawing.Point(320, 475);
-            this.txtNrTelefon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNrTelefon.Margin = new System.Windows.Forms.Padding(4);
             this.txtNrTelefon.Name = "txtNrTelefon";
             this.txtNrTelefon.Size = new System.Drawing.Size(265, 22);
-            this.txtNrTelefon.TabIndex = 76;
+            this.txtNrTelefon.TabIndex = 7;
             // 
             // txtObservatii
             // 
             this.txtObservatii.Location = new System.Drawing.Point(320, 315);
-            this.txtObservatii.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtObservatii.Margin = new System.Windows.Forms.Padding(4);
             this.txtObservatii.Multiline = true;
             this.txtObservatii.Name = "txtObservatii";
             this.txtObservatii.Size = new System.Drawing.Size(265, 41);
-            this.txtObservatii.TabIndex = 78;
+            this.txtObservatii.TabIndex = 3;
             // 
-            // checkbox0Garantie
+            // checkboxGarantie
             // 
-            this.checkbox0Garantie.Location = new System.Drawing.Point(437, 181);
-            this.checkbox0Garantie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkbox0Garantie.Name = "checkbox0Garantie";
-            this.checkbox0Garantie.Size = new System.Drawing.Size(91, 30);
-            this.checkbox0Garantie.TabIndex = 79;
-            this.checkbox0Garantie.Text = "NU";
-            this.checkbox0Garantie.UseVisualStyleBackColor = true;
-            // 
-            // checkbox0Acumulator
-            // 
-            this.checkbox0Acumulator.Location = new System.Drawing.Point(897, 214);
-            this.checkbox0Acumulator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.checkbox0Acumulator.Name = "checkbox0Acumulator";
-            this.checkbox0Acumulator.Size = new System.Drawing.Size(113, 30);
-            this.checkbox0Acumulator.TabIndex = 80;
-            this.checkbox0Acumulator.Text = "NU";
-            this.checkbox0Acumulator.UseVisualStyleBackColor = true;
+            this.checkboxGarantie.Location = new System.Drawing.Point(320, 180);
+            this.checkboxGarantie.Margin = new System.Windows.Forms.Padding(4);
+            this.checkboxGarantie.Name = "checkboxGarantie";
+            this.checkboxGarantie.Size = new System.Drawing.Size(91, 30);
+            this.checkboxGarantie.TabIndex = 79;
+            this.checkboxGarantie.Text = "?";
+            this.checkboxGarantie.UseVisualStyleBackColor = true;
+            this.checkboxGarantie.CheckStateChanged += new System.EventHandler(this.checkboxGarantie_CheckStateChanged);
             // 
             // txtPrenume
             // 
             this.txtPrenume.Location = new System.Drawing.Point(320, 443);
-            this.txtPrenume.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPrenume.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrenume.Name = "txtPrenume";
             this.txtPrenume.Size = new System.Drawing.Size(265, 22);
-            this.txtPrenume.TabIndex = 82;
+            this.txtPrenume.TabIndex = 6;
+            // 
+            // btnCauta
+            // 
+            this.btnCauta.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCauta.Location = new System.Drawing.Point(707, 523);
+            this.btnCauta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCauta.Name = "btnCauta";
+            this.btnCauta.Size = new System.Drawing.Size(100, 28);
+            this.btnCauta.TabIndex = 83;
+            this.btnCauta.Text = "Cauta";
+            this.btnCauta.UseVisualStyleBackColor = true;
+            this.btnCauta.Click += new System.EventHandler(this.btnCauta_Click);
+            // 
+            // txtCauta
+            // 
+            this.txtCauta.Location = new System.Drawing.Point(826, 529);
+            this.txtCauta.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCauta.Name = "txtCauta";
+            this.txtCauta.Size = new System.Drawing.Size(265, 22);
+            this.txtCauta.TabIndex = 84;
             // 
             // FormInregistrare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 738);
+            this.Controls.Add(this.txtCauta);
+            this.Controls.Add(this.btnCauta);
             this.Controls.Add(label2);
             this.Controls.Add(this.txtPrenume);
-            this.Controls.Add(this.checkbox0Acumulator);
-            this.Controls.Add(this.checkbox0Garantie);
+            this.Controls.Add(this.checkboxGarantie);
             this.Controls.Add(label1);
             this.Controls.Add(this.txtObservatii);
             this.Controls.Add(nr_inregLabel);
@@ -563,7 +542,6 @@
             this.Controls.Add(data_primiriiLabel);
             this.Controls.Add(this.dateDataPrimirii);
             this.Controls.Add(garantieLabel);
-            this.Controls.Add(this.checkbox1Garantie);
             this.Controls.Add(defect_constatatLabel);
             this.Controls.Add(this.txtDefectConstatat);
             this.Controls.Add(termen_rezolvareLabel);
@@ -582,8 +560,6 @@
             this.Controls.Add(this.txtCuloare);
             this.Controls.Add(iMEILabel);
             this.Controls.Add(this.txtIMEI);
-            this.Controls.Add(acumulatorLabel);
-            this.Controls.Add(this.checkbox1Acumulator);
             this.Controls.Add(cod_telefonLabel);
             this.Controls.Add(this.txtCodTelefon);
             this.Controls.Add(piese_inlocuiteLabel);
@@ -597,7 +573,7 @@
             this.Controls.Add(this.btnAnulare);
             this.Controls.Add(this.btnInregistrare);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormInregistrare";
             this.Text = "FormInregistrare";
             this.Load += new System.EventHandler(this.FormInregistrare_Load);
@@ -617,7 +593,6 @@
         private System.Windows.Forms.TextBox nr_inregTextBox;
         private System.Windows.Forms.ComboBox txtTipTelefon;
         private System.Windows.Forms.DateTimePicker dateDataPrimirii;
-        private System.Windows.Forms.CheckBox checkbox1Garantie;
         private System.Windows.Forms.TextBox txtDefectConstatat;
         private System.Windows.Forms.TextBox txtTermenRezolvare;
         private System.Windows.Forms.TextBox txtPretEstimativ;
@@ -627,14 +602,14 @@
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtCuloare;
         private System.Windows.Forms.TextBox txtIMEI;
-        private System.Windows.Forms.CheckBox checkbox1Acumulator;
         private System.Windows.Forms.TextBox txtCodTelefon;
         private System.Windows.Forms.TextBox txtPieseInlocuite;
         private System.Windows.Forms.DateTimePicker dateDataPredarii;
         private System.Windows.Forms.TextBox txtNrTelefon;
         private System.Windows.Forms.TextBox txtObservatii;
-        private System.Windows.Forms.CheckBox checkbox0Garantie;
-        private System.Windows.Forms.CheckBox checkbox0Acumulator;
+        private System.Windows.Forms.CheckBox checkboxGarantie;
         private System.Windows.Forms.TextBox txtPrenume;
+        private System.Windows.Forms.Button btnCauta;
+        private System.Windows.Forms.TextBox txtCauta;
     }
 }

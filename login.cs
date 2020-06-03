@@ -41,6 +41,11 @@ namespace AplicatieDisertatie
             Application.Exit();
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void labelCatreInregistrareUtilizator_MouseEnter(object sender, EventArgs e)
         {
             labelCatreInregistrareUtilizator.ForeColor = Color.Yellow;
