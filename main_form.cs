@@ -20,7 +20,7 @@ namespace AplicatieDisertatie
             customizeDesign();
         }
 
-        /* hides the submenu panel */
+        /* Hides the submenu panel */
         private void customizeDesign()
         {
             panelInregistrareSubmenu.Visible = false;

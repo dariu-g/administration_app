@@ -50,11 +50,11 @@
             this.btnClientNou = new System.Windows.Forms.Button();
             this.btnInregistrare = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelButtons = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelStatisticiSubmenu.SuspendLayout();
             this.panelStatusReparatiiSubmenu.SuspendLayout();
@@ -77,7 +77,7 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(250, 1041);
+            this.panelSideMenu.Size = new System.Drawing.Size(250, 853);
             this.panelSideMenu.TabIndex = 0;
             // 
             // btnInformatii
@@ -398,12 +398,39 @@
             this.panelLogo.Size = new System.Drawing.Size(250, 100);
             this.panelLogo.TabIndex = 0;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Coral;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.Location = new System.Drawing.Point(124, 37);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 31);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "  ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Coral;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.label2.Location = new System.Drawing.Point(85, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 31);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "_";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Coral;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label1.Location = new System.Drawing.Point(191, 24);
+            this.label1.Location = new System.Drawing.Point(162, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 31);
             this.label1.TabIndex = 0;
@@ -415,52 +442,29 @@
             // 
             this.panelButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(11)))), ((int)(((byte)(7)))));
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelButtons.Location = new System.Drawing.Point(250, 941);
+            this.panelButtons.Location = new System.Drawing.Point(250, 753);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(1654, 100);
+            this.panelButtons.Size = new System.Drawing.Size(1132, 100);
             this.panelButtons.TabIndex = 1;
             // 
             // panelChildForm
             // 
+            this.panelChildForm.AutoSize = true;
             this.panelChildForm.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.panelChildForm.Location = new System.Drawing.Point(250, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1654, 941);
+            this.panelChildForm.Size = new System.Drawing.Size(1132, 753);
             this.panelChildForm.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Coral;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label2.Location = new System.Drawing.Point(114, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "_";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Coral;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
-            this.label3.Location = new System.Drawing.Point(153, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 31);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "  ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1382, 853);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.panelSideMenu);
@@ -477,6 +481,7 @@
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -504,9 +509,9 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button btnStatusReparatii;
         private System.Windows.Forms.Panel panelButtons;
-        private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelChildForm;
     }
 }

@@ -73,6 +73,10 @@
             this.txtPrenume = new System.Windows.Forms.TextBox();
             this.btnCauta = new System.Windows.Forms.Button();
             this.txtCauta = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             nr_inregLabel = new System.Windows.Forms.Label();
             tip_telefonLabel = new System.Windows.Forms.Label();
             data_primiriiLabel = new System.Windows.Forms.Label();
@@ -98,213 +102,209 @@
             // nr_inregLabel
             // 
             nr_inregLabel.AutoSize = true;
-            nr_inregLabel.Location = new System.Drawing.Point(839, 46);
-            nr_inregLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nr_inregLabel.Location = new System.Drawing.Point(414, 19);
+            nr_inregLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             nr_inregLabel.Name = "nr_inregLabel";
-            nr_inregLabel.Size = new System.Drawing.Size(63, 17);
+            nr_inregLabel.Size = new System.Drawing.Size(122, 20);
             nr_inregLabel.TabIndex = 39;
-            nr_inregLabel.Text = "Nr inreg:";
+            nr_inregLabel.Text = "Nr inregistrare:";
             // 
             // tip_telefonLabel
             // 
             tip_telefonLabel.AutoSize = true;
-            tip_telefonLabel.Location = new System.Drawing.Point(189, 119);
-            tip_telefonLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            tip_telefonLabel.Location = new System.Drawing.Point(104, 245);
+            tip_telefonLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             tip_telefonLabel.Name = "tip_telefonLabel";
-            tip_telefonLabel.Size = new System.Drawing.Size(79, 17);
+            tip_telefonLabel.Size = new System.Drawing.Size(92, 20);
             tip_telefonLabel.TabIndex = 41;
             tip_telefonLabel.Text = "Tip telefon:";
             // 
             // data_primiriiLabel
             // 
             data_primiriiLabel.AutoSize = true;
-            data_primiriiLabel.Location = new System.Drawing.Point(189, 154);
-            data_primiriiLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            data_primiriiLabel.Location = new System.Drawing.Point(635, 84);
+            data_primiriiLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             data_primiriiLabel.Name = "data_primiriiLabel";
-            data_primiriiLabel.Size = new System.Drawing.Size(87, 17);
+            data_primiriiLabel.Size = new System.Drawing.Size(106, 20);
             data_primiriiLabel.TabIndex = 43;
             data_primiriiLabel.Text = "Data primirii:";
             // 
             // garantieLabel
             // 
             garantieLabel.AutoSize = true;
-            garantieLabel.Location = new System.Drawing.Point(189, 187);
-            garantieLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            garantieLabel.Location = new System.Drawing.Point(104, 465);
+            garantieLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             garantieLabel.Name = "garantieLabel";
-            garantieLabel.Size = new System.Drawing.Size(67, 17);
+            garantieLabel.Size = new System.Drawing.Size(78, 20);
             garantieLabel.TabIndex = 45;
             garantieLabel.Text = "Garantie:";
             // 
             // defect_constatatLabel
             // 
             defect_constatatLabel.AutoSize = true;
-            defect_constatatLabel.Location = new System.Drawing.Point(189, 222);
-            defect_constatatLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            defect_constatatLabel.Location = new System.Drawing.Point(635, 124);
+            defect_constatatLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             defect_constatatLabel.Name = "defect_constatatLabel";
-            defect_constatatLabel.Size = new System.Drawing.Size(115, 17);
+            defect_constatatLabel.Size = new System.Drawing.Size(138, 20);
             defect_constatatLabel.TabIndex = 47;
             defect_constatatLabel.Text = "Defect constatat:";
             // 
             // termen_rezolvareLabel
             // 
             termen_rezolvareLabel.AutoSize = true;
-            termen_rezolvareLabel.Location = new System.Drawing.Point(189, 379);
-            termen_rezolvareLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            termen_rezolvareLabel.Location = new System.Drawing.Point(635, 292);
+            termen_rezolvareLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             termen_rezolvareLabel.Name = "termen_rezolvareLabel";
-            termen_rezolvareLabel.Size = new System.Drawing.Size(124, 17);
+            termen_rezolvareLabel.Size = new System.Drawing.Size(145, 20);
             termen_rezolvareLabel.TabIndex = 49;
             termen_rezolvareLabel.Text = "Termen rezolvare:";
             // 
             // pret_estimativLabel
             // 
             pret_estimativLabel.AutoSize = true;
-            pret_estimativLabel.Location = new System.Drawing.Point(648, 391);
-            pret_estimativLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            pret_estimativLabel.Location = new System.Drawing.Point(635, 333);
+            pret_estimativLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             pret_estimativLabel.Name = "pret_estimativLabel";
-            pret_estimativLabel.Size = new System.Drawing.Size(97, 17);
+            pret_estimativLabel.Size = new System.Drawing.Size(117, 20);
             pret_estimativLabel.TabIndex = 51;
             pret_estimativLabel.Text = "Pret estimativ:";
             // 
             // pret_avansLabel
             // 
             pret_avansLabel.AutoSize = true;
-            pret_avansLabel.Location = new System.Drawing.Point(648, 423);
-            pret_avansLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            pret_avansLabel.Location = new System.Drawing.Point(635, 373);
+            pret_avansLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             pret_avansLabel.Name = "pret_avansLabel";
-            pret_avansLabel.Size = new System.Drawing.Size(80, 17);
+            pret_avansLabel.Size = new System.Drawing.Size(94, 20);
             pret_avansLabel.TabIndex = 53;
             pret_avansLabel.Text = "Pret avans:";
             // 
             // pret_achitatLabel
             // 
             pret_achitatLabel.AutoSize = true;
-            pret_achitatLabel.Location = new System.Drawing.Point(648, 455);
-            pret_achitatLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            pret_achitatLabel.Location = new System.Drawing.Point(635, 514);
+            pret_achitatLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             pret_achitatLabel.Name = "pret_achitatLabel";
-            pret_achitatLabel.Size = new System.Drawing.Size(84, 17);
+            pret_achitatLabel.Size = new System.Drawing.Size(100, 20);
             pret_achitatLabel.TabIndex = 55;
             pret_achitatLabel.Text = "Pret achitat:";
             // 
             // nume_clientLabel
             // 
             nume_clientLabel.AutoSize = true;
-            nume_clientLabel.Location = new System.Drawing.Point(189, 416);
-            nume_clientLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nume_clientLabel.Location = new System.Drawing.Point(104, 86);
+            nume_clientLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             nume_clientLabel.Name = "nume_clientLabel";
-            nume_clientLabel.Size = new System.Drawing.Size(86, 17);
+            nume_clientLabel.Size = new System.Drawing.Size(103, 20);
             nume_clientLabel.TabIndex = 57;
             nume_clientLabel.Text = "Nume client:";
             // 
             // modelLabel
             // 
             modelLabel.AutoSize = true;
-            modelLabel.Location = new System.Drawing.Point(648, 122);
-            modelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            modelLabel.Location = new System.Drawing.Point(104, 290);
+            modelLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             modelLabel.Name = "modelLabel";
-            modelLabel.Size = new System.Drawing.Size(50, 17);
+            modelLabel.Size = new System.Drawing.Size(59, 20);
             modelLabel.TabIndex = 59;
             modelLabel.Text = "Model:";
             // 
             // culoareLabel
             // 
             culoareLabel.AutoSize = true;
-            culoareLabel.Location = new System.Drawing.Point(648, 154);
-            culoareLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            culoareLabel.Location = new System.Drawing.Point(104, 330);
+            culoareLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             culoareLabel.Name = "culoareLabel";
-            culoareLabel.Size = new System.Drawing.Size(61, 17);
+            culoareLabel.Size = new System.Drawing.Size(72, 20);
             culoareLabel.TabIndex = 61;
             culoareLabel.Text = "Culoare:";
             // 
             // iMEILabel
             // 
             iMEILabel.AutoSize = true;
-            iMEILabel.Location = new System.Drawing.Point(648, 186);
-            iMEILabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            iMEILabel.Location = new System.Drawing.Point(104, 370);
+            iMEILabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             iMEILabel.Name = "iMEILabel";
-            iMEILabel.Size = new System.Drawing.Size(38, 17);
+            iMEILabel.Size = new System.Drawing.Size(47, 20);
             iMEILabel.TabIndex = 63;
             iMEILabel.Text = "IMEI:";
             // 
             // cod_telefonLabel
             // 
             cod_telefonLabel.AutoSize = true;
-            cod_telefonLabel.Location = new System.Drawing.Point(648, 225);
-            cod_telefonLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            cod_telefonLabel.Location = new System.Drawing.Point(104, 419);
+            cod_telefonLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             cod_telefonLabel.Name = "cod_telefonLabel";
-            cod_telefonLabel.Size = new System.Drawing.Size(84, 17);
+            cod_telefonLabel.Size = new System.Drawing.Size(99, 20);
             cod_telefonLabel.TabIndex = 69;
             cod_telefonLabel.Text = "Cod telefon:";
             // 
             // piese_inlocuiteLabel
             // 
             piese_inlocuiteLabel.AutoSize = true;
-            piese_inlocuiteLabel.Location = new System.Drawing.Point(648, 279);
-            piese_inlocuiteLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            piese_inlocuiteLabel.Location = new System.Drawing.Point(635, 433);
+            piese_inlocuiteLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             piese_inlocuiteLabel.Name = "piese_inlocuiteLabel";
-            piese_inlocuiteLabel.Size = new System.Drawing.Size(103, 17);
+            piese_inlocuiteLabel.Size = new System.Drawing.Size(123, 20);
             piese_inlocuiteLabel.TabIndex = 71;
             piese_inlocuiteLabel.Text = "Piese inlocuite:";
             // 
             // data_predariiLabel
             // 
             data_predariiLabel.AutoSize = true;
-            data_predariiLabel.Location = new System.Drawing.Point(648, 352);
-            data_predariiLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            data_predariiLabel.Location = new System.Drawing.Point(635, 551);
+            data_predariiLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             data_predariiLabel.Name = "data_predariiLabel";
-            data_predariiLabel.Size = new System.Drawing.Size(94, 17);
+            data_predariiLabel.Size = new System.Drawing.Size(111, 20);
             data_predariiLabel.TabIndex = 73;
             data_predariiLabel.Text = "Data predarii:";
             // 
             // nr_telefonLabel
             // 
             nr_telefonLabel.AutoSize = true;
-            nr_telefonLabel.Location = new System.Drawing.Point(191, 479);
-            nr_telefonLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            nr_telefonLabel.Location = new System.Drawing.Point(104, 163);
+            nr_telefonLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             nr_telefonLabel.Name = "nr_telefonLabel";
-            nr_telefonLabel.Size = new System.Drawing.Size(74, 17);
+            nr_telefonLabel.Size = new System.Drawing.Size(87, 20);
             nr_telefonLabel.TabIndex = 75;
             nr_telefonLabel.Text = "Nr telefon:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(189, 319);
-            label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label1.Location = new System.Drawing.Point(635, 232);
+            label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(76, 17);
+            label1.Size = new System.Drawing.Size(90, 20);
             label1.TabIndex = 77;
             label1.Text = "Observatii:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(189, 448);
-            label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label2.Location = new System.Drawing.Point(104, 126);
+            label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(106, 17);
+            label2.Size = new System.Drawing.Size(126, 20);
             label2.TabIndex = 81;
             label2.Text = "Prenume client:";
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(79, 559);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(35, 651);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1143, 113);
+            this.dataGridView1.Size = new System.Drawing.Size(1183, 142);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnInregistrare
             // 
-            this.btnInregistrare.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnInregistrare.Location = new System.Drawing.Point(1073, 684);
-            this.btnInregistrare.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInregistrare.Location = new System.Drawing.Point(1093, 802);
+            this.btnInregistrare.Margin = new System.Windows.Forms.Padding(5);
             this.btnInregistrare.Name = "btnInregistrare";
-            this.btnInregistrare.Size = new System.Drawing.Size(100, 28);
+            this.btnInregistrare.Size = new System.Drawing.Size(125, 35);
             this.btnInregistrare.TabIndex = 16;
             this.btnInregistrare.Text = "Inregistreaza";
             this.btnInregistrare.UseVisualStyleBackColor = true;
@@ -312,204 +312,201 @@
             // 
             // btnAnulare
             // 
-            this.btnAnulare.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAnulare.Location = new System.Drawing.Point(79, 697);
-            this.btnAnulare.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAnulare.Location = new System.Drawing.Point(37, 802);
+            this.btnAnulare.Margin = new System.Windows.Forms.Padding(5);
             this.btnAnulare.Name = "btnAnulare";
-            this.btnAnulare.Size = new System.Drawing.Size(100, 28);
+            this.btnAnulare.Size = new System.Drawing.Size(125, 35);
             this.btnAnulare.TabIndex = 18;
             this.btnAnulare.Text = "Anuleaza";
             this.btnAnulare.UseVisualStyleBackColor = true;
             // 
             // btnPrint
             // 
-            this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPrint.Location = new System.Drawing.Point(926, 684);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrint.Location = new System.Drawing.Point(913, 802);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(5);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(100, 28);
+            this.btnPrint.Size = new System.Drawing.Size(125, 35);
             this.btnPrint.TabIndex = 17;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = true;
             // 
             // labelExit
             // 
-            this.labelExit.Location = new System.Drawing.Point(16, 15);
-            this.labelExit.Margin = new System.Windows.Forms.Padding(4);
+            this.labelExit.Location = new System.Drawing.Point(20, 18);
+            this.labelExit.Margin = new System.Windows.Forms.Padding(5);
             this.labelExit.Name = "labelExit";
-            this.labelExit.Size = new System.Drawing.Size(100, 28);
-            this.labelExit.TabIndex = 19;
+            this.labelExit.Size = new System.Drawing.Size(125, 35);
+            this.labelExit.TabIndex = 60;
             this.labelExit.Text = "X";
             this.labelExit.UseVisualStyleBackColor = true;
             this.labelExit.Click += new System.EventHandler(this.labelExit_Click);
             // 
             // nr_inregTextBox
             // 
-            this.nr_inregTextBox.Location = new System.Drawing.Point(933, 42);
-            this.nr_inregTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nr_inregTextBox.Location = new System.Drawing.Point(546, 14);
+            this.nr_inregTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.nr_inregTextBox.Name = "nr_inregTextBox";
-            this.nr_inregTextBox.Size = new System.Drawing.Size(176, 22);
+            this.nr_inregTextBox.Size = new System.Drawing.Size(219, 26);
             this.nr_inregTextBox.TabIndex = 40;
             // 
             // txtTipTelefon
             // 
             this.txtTipTelefon.FormattingEnabled = true;
-            this.txtTipTelefon.Location = new System.Drawing.Point(320, 116);
-            this.txtTipTelefon.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTipTelefon.Location = new System.Drawing.Point(246, 242);
+            this.txtTipTelefon.Margin = new System.Windows.Forms.Padding(5);
             this.txtTipTelefon.Name = "txtTipTelefon";
-            this.txtTipTelefon.Size = new System.Drawing.Size(265, 24);
-            this.txtTipTelefon.TabIndex = 1;
+            this.txtTipTelefon.Size = new System.Drawing.Size(331, 28);
+            this.txtTipTelefon.TabIndex = 4;
             // 
             // dateDataPrimirii
             // 
-            this.dateDataPrimirii.Location = new System.Drawing.Point(320, 149);
-            this.dateDataPrimirii.Margin = new System.Windows.Forms.Padding(4);
+            this.dateDataPrimirii.Location = new System.Drawing.Point(790, 78);
+            this.dateDataPrimirii.Margin = new System.Windows.Forms.Padding(5);
             this.dateDataPrimirii.Name = "dateDataPrimirii";
-            this.dateDataPrimirii.Size = new System.Drawing.Size(265, 22);
-            this.dateDataPrimirii.TabIndex = 44;
+            this.dateDataPrimirii.Size = new System.Drawing.Size(331, 26);
+            this.dateDataPrimirii.TabIndex = 10;
             this.dateDataPrimirii.Value = new System.DateTime(2020, 6, 1, 0, 0, 0, 0);
             // 
             // txtDefectConstatat
             // 
-            this.txtDefectConstatat.Location = new System.Drawing.Point(320, 218);
-            this.txtDefectConstatat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDefectConstatat.Location = new System.Drawing.Point(790, 112);
+            this.txtDefectConstatat.Margin = new System.Windows.Forms.Padding(5);
             this.txtDefectConstatat.Multiline = true;
             this.txtDefectConstatat.Name = "txtDefectConstatat";
-            this.txtDefectConstatat.Size = new System.Drawing.Size(265, 78);
-            this.txtDefectConstatat.TabIndex = 2;
+            this.txtDefectConstatat.Size = new System.Drawing.Size(331, 97);
+            this.txtDefectConstatat.TabIndex = 11;
             // 
             // txtTermenRezolvare
             // 
-            this.txtTermenRezolvare.Location = new System.Drawing.Point(320, 375);
-            this.txtTermenRezolvare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTermenRezolvare.Location = new System.Drawing.Point(790, 292);
+            this.txtTermenRezolvare.Margin = new System.Windows.Forms.Padding(5);
             this.txtTermenRezolvare.Name = "txtTermenRezolvare";
-            this.txtTermenRezolvare.Size = new System.Drawing.Size(265, 22);
-            this.txtTermenRezolvare.TabIndex = 4;
+            this.txtTermenRezolvare.Size = new System.Drawing.Size(331, 26);
+            this.txtTermenRezolvare.TabIndex = 13;
             // 
             // txtPretEstimativ
             // 
-            this.txtPretEstimativ.Location = new System.Drawing.Point(761, 388);
-            this.txtPretEstimativ.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPretEstimativ.Location = new System.Drawing.Point(790, 329);
+            this.txtPretEstimativ.Margin = new System.Windows.Forms.Padding(5);
             this.txtPretEstimativ.Name = "txtPretEstimativ";
-            this.txtPretEstimativ.Size = new System.Drawing.Size(265, 22);
-            this.txtPretEstimativ.TabIndex = 13;
+            this.txtPretEstimativ.Size = new System.Drawing.Size(331, 26);
+            this.txtPretEstimativ.TabIndex = 14;
             // 
             // txtPretAvans
             // 
-            this.txtPretAvans.Location = new System.Drawing.Point(761, 420);
-            this.txtPretAvans.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPretAvans.Location = new System.Drawing.Point(790, 369);
+            this.txtPretAvans.Margin = new System.Windows.Forms.Padding(5);
             this.txtPretAvans.Name = "txtPretAvans";
-            this.txtPretAvans.Size = new System.Drawing.Size(265, 22);
-            this.txtPretAvans.TabIndex = 14;
+            this.txtPretAvans.Size = new System.Drawing.Size(331, 26);
+            this.txtPretAvans.TabIndex = 15;
             // 
             // txtPretAchitat
             // 
-            this.txtPretAchitat.Location = new System.Drawing.Point(761, 452);
-            this.txtPretAchitat.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPretAchitat.Location = new System.Drawing.Point(790, 510);
+            this.txtPretAchitat.Margin = new System.Windows.Forms.Padding(5);
             this.txtPretAchitat.Name = "txtPretAchitat";
-            this.txtPretAchitat.Size = new System.Drawing.Size(265, 22);
-            this.txtPretAchitat.TabIndex = 15;
+            this.txtPretAchitat.Size = new System.Drawing.Size(331, 26);
+            this.txtPretAchitat.TabIndex = 18;
             // 
             // txtNume
             // 
-            this.txtNume.Location = new System.Drawing.Point(320, 411);
-            this.txtNume.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNume.Location = new System.Drawing.Point(246, 80);
+            this.txtNume.Margin = new System.Windows.Forms.Padding(5);
             this.txtNume.Name = "txtNume";
-            this.txtNume.Size = new System.Drawing.Size(265, 22);
-            this.txtNume.TabIndex = 5;
+            this.txtNume.Size = new System.Drawing.Size(331, 26);
+            this.txtNume.TabIndex = 1;
             // 
             // txtModel
             // 
-            this.txtModel.Location = new System.Drawing.Point(761, 118);
-            this.txtModel.Margin = new System.Windows.Forms.Padding(4);
+            this.txtModel.Location = new System.Drawing.Point(246, 288);
+            this.txtModel.Margin = new System.Windows.Forms.Padding(5);
             this.txtModel.Name = "txtModel";
-            this.txtModel.Size = new System.Drawing.Size(265, 22);
-            this.txtModel.TabIndex = 8;
+            this.txtModel.Size = new System.Drawing.Size(331, 26);
+            this.txtModel.TabIndex = 5;
             // 
             // txtCuloare
             // 
-            this.txtCuloare.Location = new System.Drawing.Point(761, 150);
-            this.txtCuloare.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCuloare.Location = new System.Drawing.Point(246, 328);
+            this.txtCuloare.Margin = new System.Windows.Forms.Padding(5);
             this.txtCuloare.Name = "txtCuloare";
-            this.txtCuloare.Size = new System.Drawing.Size(265, 22);
-            this.txtCuloare.TabIndex = 9;
+            this.txtCuloare.Size = new System.Drawing.Size(331, 26);
+            this.txtCuloare.TabIndex = 6;
             // 
             // txtIMEI
             // 
-            this.txtIMEI.Location = new System.Drawing.Point(761, 182);
-            this.txtIMEI.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIMEI.Location = new System.Drawing.Point(246, 368);
+            this.txtIMEI.Margin = new System.Windows.Forms.Padding(5);
             this.txtIMEI.Name = "txtIMEI";
-            this.txtIMEI.Size = new System.Drawing.Size(265, 22);
-            this.txtIMEI.TabIndex = 10;
+            this.txtIMEI.Size = new System.Drawing.Size(331, 26);
+            this.txtIMEI.TabIndex = 7;
             // 
             // txtCodTelefon
             // 
-            this.txtCodTelefon.Location = new System.Drawing.Point(761, 222);
-            this.txtCodTelefon.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodTelefon.Location = new System.Drawing.Point(246, 419);
+            this.txtCodTelefon.Margin = new System.Windows.Forms.Padding(5);
             this.txtCodTelefon.Name = "txtCodTelefon";
-            this.txtCodTelefon.Size = new System.Drawing.Size(265, 22);
-            this.txtCodTelefon.TabIndex = 11;
+            this.txtCodTelefon.Size = new System.Drawing.Size(331, 26);
+            this.txtCodTelefon.TabIndex = 8;
             // 
             // txtPieseInlocuite
             // 
-            this.txtPieseInlocuite.Location = new System.Drawing.Point(761, 264);
-            this.txtPieseInlocuite.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPieseInlocuite.Location = new System.Drawing.Point(790, 405);
+            this.txtPieseInlocuite.Margin = new System.Windows.Forms.Padding(5);
             this.txtPieseInlocuite.Multiline = true;
             this.txtPieseInlocuite.Name = "txtPieseInlocuite";
-            this.txtPieseInlocuite.Size = new System.Drawing.Size(265, 72);
-            this.txtPieseInlocuite.TabIndex = 12;
+            this.txtPieseInlocuite.Size = new System.Drawing.Size(331, 89);
+            this.txtPieseInlocuite.TabIndex = 17;
             // 
             // dateDataPredarii
             // 
-            this.dateDataPredarii.Location = new System.Drawing.Point(761, 347);
-            this.dateDataPredarii.Margin = new System.Windows.Forms.Padding(4);
+            this.dateDataPredarii.Location = new System.Drawing.Point(790, 546);
+            this.dateDataPredarii.Margin = new System.Windows.Forms.Padding(5);
             this.dateDataPredarii.Name = "dateDataPredarii";
-            this.dateDataPredarii.Size = new System.Drawing.Size(265, 22);
+            this.dateDataPredarii.Size = new System.Drawing.Size(331, 26);
             this.dateDataPredarii.TabIndex = 74;
             // 
             // txtNrTelefon
             // 
-            this.txtNrTelefon.Location = new System.Drawing.Point(320, 475);
-            this.txtNrTelefon.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNrTelefon.Location = new System.Drawing.Point(246, 160);
+            this.txtNrTelefon.Margin = new System.Windows.Forms.Padding(5);
             this.txtNrTelefon.Name = "txtNrTelefon";
-            this.txtNrTelefon.Size = new System.Drawing.Size(265, 22);
-            this.txtNrTelefon.TabIndex = 7;
+            this.txtNrTelefon.Size = new System.Drawing.Size(331, 26);
+            this.txtNrTelefon.TabIndex = 3;
             // 
             // txtObservatii
             // 
-            this.txtObservatii.Location = new System.Drawing.Point(320, 315);
-            this.txtObservatii.Margin = new System.Windows.Forms.Padding(4);
+            this.txtObservatii.Location = new System.Drawing.Point(790, 224);
+            this.txtObservatii.Margin = new System.Windows.Forms.Padding(5);
             this.txtObservatii.Multiline = true;
             this.txtObservatii.Name = "txtObservatii";
-            this.txtObservatii.Size = new System.Drawing.Size(265, 41);
-            this.txtObservatii.TabIndex = 3;
+            this.txtObservatii.Size = new System.Drawing.Size(331, 50);
+            this.txtObservatii.TabIndex = 12;
             // 
             // checkboxGarantie
             // 
-            this.checkboxGarantie.Location = new System.Drawing.Point(320, 180);
-            this.checkboxGarantie.Margin = new System.Windows.Forms.Padding(4);
+            this.checkboxGarantie.Location = new System.Drawing.Point(246, 457);
+            this.checkboxGarantie.Margin = new System.Windows.Forms.Padding(5);
             this.checkboxGarantie.Name = "checkboxGarantie";
-            this.checkboxGarantie.Size = new System.Drawing.Size(91, 30);
-            this.checkboxGarantie.TabIndex = 79;
+            this.checkboxGarantie.Size = new System.Drawing.Size(113, 38);
+            this.checkboxGarantie.TabIndex = 9;
             this.checkboxGarantie.Text = "?";
             this.checkboxGarantie.UseVisualStyleBackColor = true;
             this.checkboxGarantie.CheckStateChanged += new System.EventHandler(this.checkboxGarantie_CheckStateChanged);
             // 
             // txtPrenume
             // 
-            this.txtPrenume.Location = new System.Drawing.Point(320, 443);
-            this.txtPrenume.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrenume.Location = new System.Drawing.Point(246, 120);
+            this.txtPrenume.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrenume.Name = "txtPrenume";
-            this.txtPrenume.Size = new System.Drawing.Size(265, 22);
-            this.txtPrenume.TabIndex = 6;
+            this.txtPrenume.Size = new System.Drawing.Size(331, 26);
+            this.txtPrenume.TabIndex = 2;
             // 
             // btnCauta
             // 
-            this.btnCauta.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCauta.Location = new System.Drawing.Point(707, 523);
-            this.btnCauta.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCauta.Location = new System.Drawing.Point(739, 609);
+            this.btnCauta.Margin = new System.Windows.Forms.Padding(5);
             this.btnCauta.Name = "btnCauta";
-            this.btnCauta.Size = new System.Drawing.Size(100, 28);
+            this.btnCauta.Size = new System.Drawing.Size(125, 35);
             this.btnCauta.TabIndex = 83;
             this.btnCauta.Text = "Cauta";
             this.btnCauta.UseVisualStyleBackColor = true;
@@ -517,17 +514,61 @@
             // 
             // txtCauta
             // 
-            this.txtCauta.Location = new System.Drawing.Point(826, 529);
-            this.txtCauta.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCauta.Location = new System.Drawing.Point(889, 617);
+            this.txtCauta.Margin = new System.Windows.Forms.Padding(5);
             this.txtCauta.Name = "txtCauta";
-            this.txtCauta.Size = new System.Drawing.Size(265, 22);
+            this.txtCauta.Size = new System.Drawing.Size(331, 26);
             this.txtCauta.TabIndex = 84;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(280, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 20);
+            this.label3.TabIndex = 85;
+            this.label3.Text = "Date client";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(280, 217);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 20);
+            this.label4.TabIndex = 86;
+            this.label4.Text = "Date telefon";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(786, 53);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 20);
+            this.label5.TabIndex = 87;
+            this.label5.Text = "Date reparatie";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(108, 503);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(328, 109);
+            this.button1.TabIndex = 88;
+            this.button1.Text = "Dupa completare Date client si Date telefon, acest buton va salva datele in tabel" +
+    "e si id_client + id_telefon vor fi transferate in Date_reparatie";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormInregistrare
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 738);
+            this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1395, 993);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCauta);
             this.Controls.Add(this.btnCauta);
             this.Controls.Add(label2);
@@ -573,7 +614,8 @@
             this.Controls.Add(this.btnAnulare);
             this.Controls.Add(this.btnInregistrare);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormInregistrare";
             this.Text = "FormInregistrare";
             this.Load += new System.EventHandler(this.FormInregistrare_Load);
@@ -611,5 +653,9 @@
         private System.Windows.Forms.TextBox txtPrenume;
         private System.Windows.Forms.Button btnCauta;
         private System.Windows.Forms.TextBox txtCauta;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }

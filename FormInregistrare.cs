@@ -55,19 +55,21 @@ namespace AplicatieDisertatie
                     SqlCommand sqlCmd = new SqlCommand("InregistrareReparatie", DatabaseConnection);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
 
-                    sqlCmd.Parameters.AddWithValue("@Tip_telefon", txtTipTelefon.Text.Trim());
-                    //sqlCmd.Parameters.AddWithValue("@Data_primirii", dateDataPrimirii.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Garantie", checkboxGarantie);
-                    sqlCmd.Parameters.AddWithValue("@Defect_constatat", txtDefectConstatat.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Observatii", txtObservatii.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Termen_rezolvare", txtTermenRezolvare.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Nume", txtNume.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Prenume", txtPrenume.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Nr_telefon", txtNrTelefon.Text.Trim());
+
+                    sqlCmd.Parameters.AddWithValue("@Tip_telefon", txtTipTelefon.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Model", txtModel.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Culoare", txtCuloare.Text.Trim());
+                    //sqlCmd.Parameters.AddWithValue("@Garantie", checkboxGarantie);
                     sqlCmd.Parameters.AddWithValue("@IMEI", txtIMEI.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Cod_telefon", txtCodTelefon.Text.Trim());
+
+                    //sqlCmd.Parameters.AddWithValue("@Data_primirii", dateDataPrimirii.Value);
+                    sqlCmd.Parameters.AddWithValue("@Defect_constatat", txtDefectConstatat.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Observatii", txtObservatii.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Termen_rezolvare", txtTermenRezolvare.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Pret_estimativ", txtPretEstimativ.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Pret_avans", txtPretAvans.Text.Trim());
 
