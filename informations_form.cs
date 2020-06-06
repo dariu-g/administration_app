@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AplicatieDisertatie
 {
-    public partial class FormInformatii : Form
+    public partial class informations_form : Form
     {
-        public FormInformatii()
+        public informations_form()
         {
             InitializeComponent();
         }

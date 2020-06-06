@@ -47,30 +47,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="create_user.cs">
+    <Compile Include="user_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="create_user.Designer.cs">
-      <DependentUpon>create_user.cs</DependentUpon>
+    <Compile Include="user_form.Designer.cs">
+      <DependentUpon>user_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="db_connection.cs" />
-    <Compile Include="FormInregistrare.cs">
+    <Compile Include="connection_class.cs" />
+    <Compile Include="registration_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInregistrare.Designer.cs">
-      <DependentUpon>FormInregistrare.cs</DependentUpon>
+    <Compile Include="registration_form.Designer.cs">
+      <DependentUpon>registration_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormInformatii.cs">
+    <Compile Include="informations_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInformatii.Designer.cs">
-      <DependentUpon>FormInformatii.cs</DependentUpon>
+    <Compile Include="informations_form.Designer.cs">
+      <DependentUpon>informations_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="login_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="login_form.Designer.cs">
+      <DependentUpon>login_form.cs</DependentUpon>
     </Compile>
     <Compile Include="main_form.cs">
       <SubType>Form</SubType>
@@ -80,17 +80,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="create_user.resx">
-      <DependentUpon>create_user.cs</DependentUpon>
+    <EmbeddedResource Include="user_form.resx">
+      <DependentUpon>user_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInregistrare.resx">
-      <DependentUpon>FormInregistrare.cs</DependentUpon>
+    <EmbeddedResource Include="registration_form.resx">
+      <DependentUpon>registration_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInformatii.resx">
-      <DependentUpon>FormInformatii.cs</DependentUpon>
+    <EmbeddedResource Include="informations_form.resx">
+      <DependentUpon>informations_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="login_form.resx">
+      <DependentUpon>login_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main_form.resx">
       <DependentUpon>main_form.cs</DependentUpon>

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace AplicatieDisertatie
 {
-    class db_connection
+    class connection_class
     {
         public static string connectionString = "Data Source=BLUE;Initial Catalog=baza_date;Integrated Security=True;";
 

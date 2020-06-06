@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace AplicatieDisertatie
 {
-    public partial class FormInregistrare : Form
+    public partial class registration_form : Form
     {
-        public FormInregistrare()
+        public registration_form()
         {
             InitializeComponent();
             
@@ -49,7 +49,9 @@ namespace AplicatieDisertatie
                 MessageBox.Show("Completati toate campurile.");
             }
             else
-            {      
+            {
+                DateTime currentDateTime = DateTime.Now;
+//                string DateFormat = currentDateTime.ToString("dd/MM/yyyy, HH:mm");
                 string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
                 using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
                 {
@@ -71,7 +73,7 @@ namespace AplicatieDisertatie
                     sqlCmd.Parameters.AddWithValue("@Cod_telefon", txtCodTelefon.Text.Trim());
 
                     //Date reparatie
-                    sqlCmd.Parameters.AddWithValue("@Data_primirii", dateDataPrimirii.Value);
+                    //sqlCmd.Parameters.AddWithValue("@Data_primirii", dateDataPrimirii.Value = DateTime.Now);
                     sqlCmd.Parameters.AddWithValue("@Defect_constatat", txtDefectConstatat.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Observatii", txtObservatii.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Termen_rezolvare", txtTermenRezolvare.Text.Trim());

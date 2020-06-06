@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace AplicatieDisertatie
 {
-    public partial class login : Form
+    public partial class login_form : Form
     {
-        public login()
+        public login_form()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace AplicatieDisertatie
         private void labelCatreInregistrareUtilizator_Click(object sender, EventArgs e)
         {
             this.Hide();
-            create_user registerform = new create_user();
+            user_form registerform = new user_form();
             registerform.Show();
         }
 
@@ -41,7 +41,7 @@ namespace AplicatieDisertatie
                 login_check += "WHERE utilizator = '" + txtUtilizator.Text + "' ";
                 login_check += "AND parola = '" + txtParola.Text + "' ";
 
-                DataTable Utilizatori = db_connection.executeSQL(login_check);
+                DataTable Utilizatori = connection_class.executeSQL(login_check);
 
                 if(Utilizatori.Rows.Count > 0)
                 {

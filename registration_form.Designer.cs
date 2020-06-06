@@ -1,6 +1,6 @@
 ﻿namespace AplicatieDisertatie
 {
-    partial class FormInregistrare
+    partial class registration_form
     {
         /// <summary>
         /// Required designer variable.
@@ -36,14 +36,11 @@
             System.Windows.Forms.Label termen_rezolvareLabel;
             System.Windows.Forms.Label pret_estimativLabel;
             System.Windows.Forms.Label pret_avansLabel;
-            System.Windows.Forms.Label pret_achitatLabel;
             System.Windows.Forms.Label nume_clientLabel;
             System.Windows.Forms.Label modelLabel;
             System.Windows.Forms.Label culoareLabel;
             System.Windows.Forms.Label iMEILabel;
             System.Windows.Forms.Label cod_telefonLabel;
-            System.Windows.Forms.Label piese_inlocuiteLabel;
-            System.Windows.Forms.Label data_predariiLabel;
             System.Windows.Forms.Label nr_telefonLabel;
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
@@ -53,19 +50,15 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.labelExit = new System.Windows.Forms.Button();
             this.nr_inregTextBox = new System.Windows.Forms.TextBox();
-            this.dateDataPrimirii = new System.Windows.Forms.DateTimePicker();
             this.txtDefectConstatat = new System.Windows.Forms.TextBox();
             this.txtTermenRezolvare = new System.Windows.Forms.TextBox();
             this.txtPretEstimativ = new System.Windows.Forms.TextBox();
             this.txtPretAvans = new System.Windows.Forms.TextBox();
-            this.txtPretAchitat = new System.Windows.Forms.TextBox();
             this.txtNume = new System.Windows.Forms.TextBox();
             this.txtModel = new System.Windows.Forms.TextBox();
             this.txtCuloare = new System.Windows.Forms.TextBox();
             this.txtIMEI = new System.Windows.Forms.TextBox();
             this.txtCodTelefon = new System.Windows.Forms.TextBox();
-            this.txtPieseInlocuite = new System.Windows.Forms.TextBox();
-            this.dateDataPredarii = new System.Windows.Forms.DateTimePicker();
             this.txtNrTelefon = new System.Windows.Forms.TextBox();
             this.txtObservatii = new System.Windows.Forms.TextBox();
             this.checkboxGarantie = new System.Windows.Forms.CheckBox();
@@ -77,6 +70,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.txtTipTelefon = new System.Windows.Forms.TextBox();
+            this.dateDataPrimirii = new System.Windows.Forms.DateTimePicker();
             nr_inregLabel = new System.Windows.Forms.Label();
             tip_telefonLabel = new System.Windows.Forms.Label();
             data_primiriiLabel = new System.Windows.Forms.Label();
@@ -85,14 +79,11 @@
             termen_rezolvareLabel = new System.Windows.Forms.Label();
             pret_estimativLabel = new System.Windows.Forms.Label();
             pret_avansLabel = new System.Windows.Forms.Label();
-            pret_achitatLabel = new System.Windows.Forms.Label();
             nume_clientLabel = new System.Windows.Forms.Label();
             modelLabel = new System.Windows.Forms.Label();
             culoareLabel = new System.Windows.Forms.Label();
             iMEILabel = new System.Windows.Forms.Label();
             cod_telefonLabel = new System.Windows.Forms.Label();
-            piese_inlocuiteLabel = new System.Windows.Forms.Label();
-            data_predariiLabel = new System.Windows.Forms.Label();
             nr_telefonLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -179,16 +170,6 @@
             pret_avansLabel.TabIndex = 53;
             pret_avansLabel.Text = "Pret avans:";
             // 
-            // pret_achitatLabel
-            // 
-            pret_achitatLabel.AutoSize = true;
-            pret_achitatLabel.Location = new System.Drawing.Point(635, 514);
-            pret_achitatLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            pret_achitatLabel.Name = "pret_achitatLabel";
-            pret_achitatLabel.Size = new System.Drawing.Size(100, 20);
-            pret_achitatLabel.TabIndex = 55;
-            pret_achitatLabel.Text = "Pret achitat:";
-            // 
             // nume_clientLabel
             // 
             nume_clientLabel.AutoSize = true;
@@ -239,26 +220,6 @@
             cod_telefonLabel.TabIndex = 69;
             cod_telefonLabel.Text = "Cod telefon:";
             // 
-            // piese_inlocuiteLabel
-            // 
-            piese_inlocuiteLabel.AutoSize = true;
-            piese_inlocuiteLabel.Location = new System.Drawing.Point(635, 433);
-            piese_inlocuiteLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            piese_inlocuiteLabel.Name = "piese_inlocuiteLabel";
-            piese_inlocuiteLabel.Size = new System.Drawing.Size(123, 20);
-            piese_inlocuiteLabel.TabIndex = 71;
-            piese_inlocuiteLabel.Text = "Piese inlocuite:";
-            // 
-            // data_predariiLabel
-            // 
-            data_predariiLabel.AutoSize = true;
-            data_predariiLabel.Location = new System.Drawing.Point(635, 551);
-            data_predariiLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            data_predariiLabel.Name = "data_predariiLabel";
-            data_predariiLabel.Size = new System.Drawing.Size(111, 20);
-            data_predariiLabel.TabIndex = 73;
-            data_predariiLabel.Text = "Data predarii:";
-            // 
             // nr_telefonLabel
             // 
             nr_telefonLabel.AutoSize = true;
@@ -292,7 +253,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 651);
+            this.dataGridView1.Location = new System.Drawing.Point(35, 551);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -301,7 +262,7 @@
             // 
             // btnInregistrare
             // 
-            this.btnInregistrare.Location = new System.Drawing.Point(1093, 802);
+            this.btnInregistrare.Location = new System.Drawing.Point(811, 703);
             this.btnInregistrare.Margin = new System.Windows.Forms.Padding(5);
             this.btnInregistrare.Name = "btnInregistrare";
             this.btnInregistrare.Size = new System.Drawing.Size(125, 35);
@@ -312,7 +273,7 @@
             // 
             // btnAnulare
             // 
-            this.btnAnulare.Location = new System.Drawing.Point(37, 802);
+            this.btnAnulare.Location = new System.Drawing.Point(35, 703);
             this.btnAnulare.Margin = new System.Windows.Forms.Padding(5);
             this.btnAnulare.Name = "btnAnulare";
             this.btnAnulare.Size = new System.Drawing.Size(125, 35);
@@ -323,7 +284,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(913, 802);
+            this.btnPrint.Location = new System.Drawing.Point(664, 703);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(5);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(125, 35);
@@ -349,15 +310,6 @@
             this.nr_inregTextBox.Name = "nr_inregTextBox";
             this.nr_inregTextBox.Size = new System.Drawing.Size(219, 26);
             this.nr_inregTextBox.TabIndex = 40;
-            // 
-            // dateDataPrimirii
-            // 
-            this.dateDataPrimirii.Location = new System.Drawing.Point(790, 78);
-            this.dateDataPrimirii.Margin = new System.Windows.Forms.Padding(5);
-            this.dateDataPrimirii.Name = "dateDataPrimirii";
-            this.dateDataPrimirii.Size = new System.Drawing.Size(331, 26);
-            this.dateDataPrimirii.TabIndex = 10;
-            this.dateDataPrimirii.Value = new System.DateTime(2020, 6, 1, 0, 0, 0, 0);
             // 
             // txtDefectConstatat
             // 
@@ -394,14 +346,6 @@
             this.txtPretAvans.Size = new System.Drawing.Size(331, 26);
             this.txtPretAvans.TabIndex = 15;
             this.txtPretAvans.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPretAvans_KeyPress);
-            // 
-            // txtPretAchitat
-            // 
-            this.txtPretAchitat.Location = new System.Drawing.Point(790, 510);
-            this.txtPretAchitat.Margin = new System.Windows.Forms.Padding(5);
-            this.txtPretAchitat.Name = "txtPretAchitat";
-            this.txtPretAchitat.Size = new System.Drawing.Size(331, 26);
-            this.txtPretAchitat.TabIndex = 18;
             // 
             // txtNume
             // 
@@ -447,23 +391,6 @@
             this.txtCodTelefon.Size = new System.Drawing.Size(331, 26);
             this.txtCodTelefon.TabIndex = 8;
             // 
-            // txtPieseInlocuite
-            // 
-            this.txtPieseInlocuite.Location = new System.Drawing.Point(790, 405);
-            this.txtPieseInlocuite.Margin = new System.Windows.Forms.Padding(5);
-            this.txtPieseInlocuite.Multiline = true;
-            this.txtPieseInlocuite.Name = "txtPieseInlocuite";
-            this.txtPieseInlocuite.Size = new System.Drawing.Size(331, 89);
-            this.txtPieseInlocuite.TabIndex = 17;
-            // 
-            // dateDataPredarii
-            // 
-            this.dateDataPredarii.Location = new System.Drawing.Point(790, 546);
-            this.dateDataPredarii.Margin = new System.Windows.Forms.Padding(5);
-            this.dateDataPredarii.Name = "dateDataPredarii";
-            this.dateDataPredarii.Size = new System.Drawing.Size(331, 26);
-            this.dateDataPredarii.TabIndex = 74;
-            // 
             // txtNrTelefon
             // 
             this.txtNrTelefon.Location = new System.Drawing.Point(246, 160);
@@ -504,7 +431,7 @@
             // 
             // btnCauta
             // 
-            this.btnCauta.Location = new System.Drawing.Point(739, 609);
+            this.btnCauta.Location = new System.Drawing.Point(640, 494);
             this.btnCauta.Margin = new System.Windows.Forms.Padding(5);
             this.btnCauta.Name = "btnCauta";
             this.btnCauta.Size = new System.Drawing.Size(125, 35);
@@ -515,7 +442,7 @@
             // 
             // txtCauta
             // 
-            this.txtCauta.Location = new System.Drawing.Point(889, 617);
+            this.txtCauta.Location = new System.Drawing.Point(790, 502);
             this.txtCauta.Margin = new System.Windows.Forms.Padding(5);
             this.txtCauta.Name = "txtCauta";
             this.txtCauta.Size = new System.Drawing.Size(331, 26);
@@ -550,9 +477,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(108, 503);
+            this.button1.Location = new System.Drawing.Point(35, 488);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(328, 109);
+            this.button1.Size = new System.Drawing.Size(559, 55);
             this.button1.TabIndex = 88;
             this.button1.Text = "Dupa completare Date client si Date telefon, acest buton va salva datele in tabel" +
     "e si id_client + id_telefon vor fi transferate in Date_reparatie";
@@ -567,7 +494,17 @@
             this.txtTipTelefon.TabIndex = 4;
             this.txtTipTelefon.TextChanged += new System.EventHandler(this.txtTipTelefon_TextChanged);
             // 
-            // FormInregistrare
+            // dateDataPrimirii
+            // 
+            this.dateDataPrimirii.CustomFormat = "dd/MM/yyyy";
+            this.dateDataPrimirii.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateDataPrimirii.Location = new System.Drawing.Point(790, 81);
+            this.dateDataPrimirii.Margin = new System.Windows.Forms.Padding(5);
+            this.dateDataPrimirii.Name = "dateDataPrimirii";
+            this.dateDataPrimirii.Size = new System.Drawing.Size(331, 26);
+            this.dateDataPrimirii.TabIndex = 10;
+            // 
+            // registration_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -575,6 +512,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1395, 993);
+            this.Controls.Add(this.dateDataPrimirii);
             this.Controls.Add(this.txtTipTelefon);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -591,7 +529,6 @@
             this.Controls.Add(this.nr_inregTextBox);
             this.Controls.Add(tip_telefonLabel);
             this.Controls.Add(data_primiriiLabel);
-            this.Controls.Add(this.dateDataPrimirii);
             this.Controls.Add(garantieLabel);
             this.Controls.Add(defect_constatatLabel);
             this.Controls.Add(this.txtDefectConstatat);
@@ -601,8 +538,6 @@
             this.Controls.Add(this.txtPretEstimativ);
             this.Controls.Add(pret_avansLabel);
             this.Controls.Add(this.txtPretAvans);
-            this.Controls.Add(pret_achitatLabel);
-            this.Controls.Add(this.txtPretAchitat);
             this.Controls.Add(nume_clientLabel);
             this.Controls.Add(this.txtNume);
             this.Controls.Add(modelLabel);
@@ -613,10 +548,6 @@
             this.Controls.Add(this.txtIMEI);
             this.Controls.Add(cod_telefonLabel);
             this.Controls.Add(this.txtCodTelefon);
-            this.Controls.Add(piese_inlocuiteLabel);
-            this.Controls.Add(this.txtPieseInlocuite);
-            this.Controls.Add(data_predariiLabel);
-            this.Controls.Add(this.dateDataPredarii);
             this.Controls.Add(nr_telefonLabel);
             this.Controls.Add(this.txtNrTelefon);
             this.Controls.Add(this.labelExit);
@@ -626,7 +557,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "FormInregistrare";
+            this.Name = "registration_form";
             this.Text = "FormInregistrare";
             this.Load += new System.EventHandler(this.FormInregistrare_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -643,19 +574,15 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button labelExit;
         private System.Windows.Forms.TextBox nr_inregTextBox;
-        private System.Windows.Forms.DateTimePicker dateDataPrimirii;
         private System.Windows.Forms.TextBox txtDefectConstatat;
         private System.Windows.Forms.TextBox txtTermenRezolvare;
         private System.Windows.Forms.TextBox txtPretEstimativ;
         private System.Windows.Forms.TextBox txtPretAvans;
-        private System.Windows.Forms.TextBox txtPretAchitat;
         private System.Windows.Forms.TextBox txtNume;
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.TextBox txtCuloare;
         private System.Windows.Forms.TextBox txtIMEI;
         private System.Windows.Forms.TextBox txtCodTelefon;
-        private System.Windows.Forms.TextBox txtPieseInlocuite;
-        private System.Windows.Forms.DateTimePicker dateDataPredarii;
         private System.Windows.Forms.TextBox txtNrTelefon;
         private System.Windows.Forms.TextBox txtObservatii;
         private System.Windows.Forms.CheckBox checkboxGarantie;
@@ -667,5 +594,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtTipTelefon;
+        private System.Windows.Forms.DateTimePicker dateDataPrimirii;
     }
 }

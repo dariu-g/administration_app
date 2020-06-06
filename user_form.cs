@@ -15,10 +15,10 @@ namespace AplicatieDisertatie
 {
 
     //create a class for database connection create in which we have 2 functions database open/close connection 
-    public partial class create_user : Form
+    public partial class user_form : Form
     {
         //string connectionString = @"Data Source=BLUE;Initial Catalog=baza_date;Integrated Security=True";
-        public create_user()
+        public user_form()
         {
             InitializeComponent();
         }
@@ -69,7 +69,7 @@ namespace AplicatieDisertatie
                         Clear();
                         DatabaseConnection.Close();
                         this.Hide();
-                        login loginform = new login();
+                        login_form loginform = new login_form();
                         loginform.Show();
                     }
 
@@ -112,7 +112,7 @@ namespace AplicatieDisertatie
         private void labelCatreAutentificare_Click(object sender, EventArgs e)
         {
             this.Hide();
-            login loginform = new login();
+            login_form loginform = new login_form();
             loginform.Show();
         }
 

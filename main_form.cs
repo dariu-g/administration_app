@@ -57,7 +57,7 @@ namespace AplicatieDisertatie
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormInregistrare());
+            openChildForm(new registration_form());
             /* buton din meniul Inregistrare */
             /* cod.. */
             hideSubMenu();
@@ -121,7 +121,7 @@ namespace AplicatieDisertatie
         #endregion
         private void btnInformatii_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormInformatii());
+            openChildForm(new informations_form());
             /* cod.. */
             hideSubMenu();
         }
