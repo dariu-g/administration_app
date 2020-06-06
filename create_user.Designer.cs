@@ -36,7 +36,6 @@
             this.txtNume = new System.Windows.Forms.TextBox();
             this.txtPrenume = new System.Windows.Forms.TextBox();
             this.txtUtilizator = new System.Windows.Forms.TextBox();
-            this.txtTipUtilizator = new System.Windows.Forms.TextBox();
             this.txtParola = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnInregistrare = new System.Windows.Forms.Button();
@@ -51,6 +50,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelExit = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.txtTipUtilizator = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +117,7 @@
             this.txtNume.Name = "txtNume";
             this.txtNume.Size = new System.Drawing.Size(292, 38);
             this.txtNume.TabIndex = 1;
+            this.txtNume.TextChanged += new System.EventHandler(this.txtNume_TextChanged);
             // 
             // txtPrenume
             // 
@@ -125,6 +126,7 @@
             this.txtPrenume.Name = "txtPrenume";
             this.txtPrenume.Size = new System.Drawing.Size(292, 38);
             this.txtPrenume.TabIndex = 2;
+            this.txtPrenume.TextChanged += new System.EventHandler(this.txtPrenume_TextChanged);
             // 
             // txtUtilizator
             // 
@@ -133,14 +135,6 @@
             this.txtUtilizator.Name = "txtUtilizator";
             this.txtUtilizator.Size = new System.Drawing.Size(292, 38);
             this.txtUtilizator.TabIndex = 3;
-            // 
-            // txtTipUtilizator
-            // 
-            this.txtTipUtilizator.Location = new System.Drawing.Point(287, 339);
-            this.txtTipUtilizator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTipUtilizator.Name = "txtTipUtilizator";
-            this.txtTipUtilizator.Size = new System.Drawing.Size(292, 38);
-            this.txtTipUtilizator.TabIndex = 4;
             // 
             // txtParola
             // 
@@ -230,6 +224,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.txtTipUtilizator);
             this.panel1.Controls.Add(this.labelCatreAutentificare);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.panel2);
@@ -248,7 +243,6 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtParola);
             this.panel1.Controls.Add(this.txtUtilizator);
-            this.panel1.Controls.Add(this.txtTipUtilizator);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -264,9 +258,9 @@
             this.labelCatreAutentificare.ForeColor = System.Drawing.Color.White;
             this.labelCatreAutentificare.Location = new System.Drawing.Point(323, 586);
             this.labelCatreAutentificare.Name = "labelCatreAutentificare";
-            this.labelCatreAutentificare.Size = new System.Drawing.Size(271, 25);
+            this.labelCatreAutentificare.Size = new System.Drawing.Size(257, 25);
             this.labelCatreAutentificare.TabIndex = 8;
-            this.labelCatreAutentificare.Text = "Ai deja un cont? Autentifică-te";
+            this.labelCatreAutentificare.Text = "*Ai deja cont? Autentifică-te.";
             this.labelCatreAutentificare.Click += new System.EventHandler(this.labelCatreAutentificare_Click);
             this.labelCatreAutentificare.MouseEnter += new System.EventHandler(this.labelCatreAutentificare_MouseEnter);
             this.labelCatreAutentificare.MouseLeave += new System.EventHandler(this.labelCatreAutentificare_MouseLeave);
@@ -316,6 +310,22 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "ÎNREGISTRARE UTILIZATOR NOU";
             // 
+            // txtTipUtilizator
+            // 
+            this.txtTipUtilizator.AutoCompleteCustomSource.AddRange(new string[] {
+            "Administrator",
+            "Utilizator normal"});
+            this.txtTipUtilizator.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtTipUtilizator.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtTipUtilizator.FormattingEnabled = true;
+            this.txtTipUtilizator.Items.AddRange(new object[] {
+            "Utilizator normal",
+            "Administrator"});
+            this.txtTipUtilizator.Location = new System.Drawing.Point(286, 340);
+            this.txtTipUtilizator.Name = "txtTipUtilizator";
+            this.txtTipUtilizator.Size = new System.Drawing.Size(293, 39);
+            this.txtTipUtilizator.TabIndex = 4;
+            // 
             // create_user
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -350,7 +360,6 @@
         private System.Windows.Forms.TextBox txtNume;
         private System.Windows.Forms.TextBox txtPrenume;
         private System.Windows.Forms.TextBox txtUtilizator;
-        private System.Windows.Forms.TextBox txtTipUtilizator;
         private System.Windows.Forms.TextBox txtParola;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnInregistrare;
@@ -365,5 +374,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label labelExit;
         private System.Windows.Forms.Label labelCatreAutentificare;
+        private System.Windows.Forms.ComboBox txtTipUtilizator;
     }
 }

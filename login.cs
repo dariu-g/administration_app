@@ -26,47 +26,22 @@ namespace AplicatieDisertatie
             registerform.Show();
         }
 
-        private void labelExit_MouseEnter(object sender, EventArgs e)
-        {
-            labelExit.ForeColor = Color.Black;
-        }
-
-        private void labelExit_MouseLeave(object sender, EventArgs e)
-        {
-            labelExit.ForeColor = Color.White;
-        }
-
-        private void labelExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void labelCatreInregistrareUtilizator_MouseEnter(object sender, EventArgs e)
-        {
-            labelCatreInregistrareUtilizator.ForeColor = Color.Yellow;
-        }
-
-        private void labelCatreInregistrareUtilizator_MouseLeave(object sender, EventArgs e)
-        {
-            labelCatreInregistrareUtilizator.ForeColor = Color.White;
         }
 
         private void btnAutentificare_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtUtilizator.Text) && !string.IsNullOrEmpty(txtParola.Text))
             {
-                string msSQL = string.Empty;
+                string login_check = string.Empty;
 
-                msSQL += "SELECT * FROM Utilizatori ";
-                msSQL += "WHERE utilizator = '" + txtUtilizator.Text + "' ";
-                msSQL += "AND parola = '" + txtParola.Text + "' ";
+                login_check += "SELECT * FROM Utilizatori ";
+                login_check += "WHERE utilizator = '" + txtUtilizator.Text + "' ";
+                login_check += "AND parola = '" + txtParola.Text + "' ";
 
-                DataTable Utilizatori = db_connection.executeSQL(msSQL);
+                DataTable Utilizatori = db_connection.executeSQL(login_check);
 
                 if(Utilizatori.Rows.Count > 0)
                 {
@@ -92,5 +67,32 @@ namespace AplicatieDisertatie
                 txtUtilizator.Select();
             }
         }
+
+        #region Design
+        private void labelExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void labelExit_MouseEnter(object sender, EventArgs e)
+        {
+            labelExit.ForeColor = Color.Black;
+        }
+
+        private void labelExit_MouseLeave(object sender, EventArgs e)
+        {
+            labelExit.ForeColor = Color.White;
+        }
+
+        private void labelCatreInregistrareUtilizator_MouseEnter(object sender, EventArgs e)
+        {
+            labelCatreInregistrareUtilizator.ForeColor = Color.Yellow;
+        }
+
+        private void labelCatreInregistrareUtilizator_MouseLeave(object sender, EventArgs e)
+        {
+            labelCatreInregistrareUtilizator.ForeColor = Color.White;
+        }
+        #endregion
     }
 }

@@ -77,9 +77,9 @@
             this.labelCatreInregistrareUtilizator.Location = new System.Drawing.Point(389, 501);
             this.labelCatreInregistrareUtilizator.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCatreInregistrareUtilizator.Name = "labelCatreInregistrareUtilizator";
-            this.labelCatreInregistrareUtilizator.Size = new System.Drawing.Size(183, 25);
+            this.labelCatreInregistrareUtilizator.Size = new System.Drawing.Size(196, 25);
             this.labelCatreInregistrareUtilizator.TabIndex = 4;
-            this.labelCatreInregistrareUtilizator.Text = "Crează un cont nou";
+            this.labelCatreInregistrareUtilizator.Text = "*Crează un cont nou.";
             this.labelCatreInregistrareUtilizator.Click += new System.EventHandler(this.labelCatreInregistrareUtilizator_Click);
             this.labelCatreInregistrareUtilizator.MouseEnter += new System.EventHandler(this.labelCatreInregistrareUtilizator_MouseEnter);
             this.labelCatreInregistrareUtilizator.MouseLeave += new System.EventHandler(this.labelCatreInregistrareUtilizator_MouseLeave);
@@ -113,7 +113,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(147, 77);
+            this.pictureBox1.Location = new System.Drawing.Point(167, 63);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(83, 79);

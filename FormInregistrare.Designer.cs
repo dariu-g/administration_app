@@ -53,7 +53,6 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.labelExit = new System.Windows.Forms.Button();
             this.nr_inregTextBox = new System.Windows.Forms.TextBox();
-            this.txtTipTelefon = new System.Windows.Forms.ComboBox();
             this.dateDataPrimirii = new System.Windows.Forms.DateTimePicker();
             this.txtDefectConstatat = new System.Windows.Forms.TextBox();
             this.txtTermenRezolvare = new System.Windows.Forms.TextBox();
@@ -77,6 +76,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtTipTelefon = new System.Windows.Forms.TextBox();
             nr_inregLabel = new System.Windows.Forms.Label();
             tip_telefonLabel = new System.Windows.Forms.Label();
             data_primiriiLabel = new System.Windows.Forms.Label();
@@ -319,6 +319,7 @@
             this.btnAnulare.TabIndex = 18;
             this.btnAnulare.Text = "Anuleaza";
             this.btnAnulare.UseVisualStyleBackColor = true;
+            this.btnAnulare.Click += new System.EventHandler(this.btnAnulare_Click);
             // 
             // btnPrint
             // 
@@ -349,15 +350,6 @@
             this.nr_inregTextBox.Size = new System.Drawing.Size(219, 26);
             this.nr_inregTextBox.TabIndex = 40;
             // 
-            // txtTipTelefon
-            // 
-            this.txtTipTelefon.FormattingEnabled = true;
-            this.txtTipTelefon.Location = new System.Drawing.Point(246, 242);
-            this.txtTipTelefon.Margin = new System.Windows.Forms.Padding(5);
-            this.txtTipTelefon.Name = "txtTipTelefon";
-            this.txtTipTelefon.Size = new System.Drawing.Size(331, 28);
-            this.txtTipTelefon.TabIndex = 4;
-            // 
             // dateDataPrimirii
             // 
             this.dateDataPrimirii.Location = new System.Drawing.Point(790, 78);
@@ -375,6 +367,7 @@
             this.txtDefectConstatat.Name = "txtDefectConstatat";
             this.txtDefectConstatat.Size = new System.Drawing.Size(331, 97);
             this.txtDefectConstatat.TabIndex = 11;
+            this.txtDefectConstatat.TextChanged += new System.EventHandler(this.txtDefectConstatat_TextChanged);
             // 
             // txtTermenRezolvare
             // 
@@ -391,6 +384,7 @@
             this.txtPretEstimativ.Name = "txtPretEstimativ";
             this.txtPretEstimativ.Size = new System.Drawing.Size(331, 26);
             this.txtPretEstimativ.TabIndex = 14;
+            this.txtPretEstimativ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPretEstimativ_KeyPress);
             // 
             // txtPretAvans
             // 
@@ -399,6 +393,7 @@
             this.txtPretAvans.Name = "txtPretAvans";
             this.txtPretAvans.Size = new System.Drawing.Size(331, 26);
             this.txtPretAvans.TabIndex = 15;
+            this.txtPretAvans.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPretAvans_KeyPress);
             // 
             // txtPretAchitat
             // 
@@ -415,6 +410,7 @@
             this.txtNume.Name = "txtNume";
             this.txtNume.Size = new System.Drawing.Size(331, 26);
             this.txtNume.TabIndex = 1;
+            this.txtNume.TextChanged += new System.EventHandler(this.txtNume_TextChanged);
             // 
             // txtModel
             // 
@@ -423,6 +419,7 @@
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(331, 26);
             this.txtModel.TabIndex = 5;
+            this.txtModel.TextChanged += new System.EventHandler(this.txtModel_TextChanged);
             // 
             // txtCuloare
             // 
@@ -431,6 +428,7 @@
             this.txtCuloare.Name = "txtCuloare";
             this.txtCuloare.Size = new System.Drawing.Size(331, 26);
             this.txtCuloare.TabIndex = 6;
+            this.txtCuloare.TextChanged += new System.EventHandler(this.txtCuloare_TextChanged);
             // 
             // txtIMEI
             // 
@@ -439,6 +437,7 @@
             this.txtIMEI.Name = "txtIMEI";
             this.txtIMEI.Size = new System.Drawing.Size(331, 26);
             this.txtIMEI.TabIndex = 7;
+            this.txtIMEI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIMEI_KeyPress);
             // 
             // txtCodTelefon
             // 
@@ -481,6 +480,7 @@
             this.txtObservatii.Name = "txtObservatii";
             this.txtObservatii.Size = new System.Drawing.Size(331, 50);
             this.txtObservatii.TabIndex = 12;
+            this.txtObservatii.TextChanged += new System.EventHandler(this.txtObservatii_TextChanged);
             // 
             // checkboxGarantie
             // 
@@ -500,6 +500,7 @@
             this.txtPrenume.Name = "txtPrenume";
             this.txtPrenume.Size = new System.Drawing.Size(331, 26);
             this.txtPrenume.TabIndex = 2;
+            this.txtPrenume.TextChanged += new System.EventHandler(this.txtPrenume_TextChanged);
             // 
             // btnCauta
             // 
@@ -557,6 +558,15 @@
     "e si id_client + id_telefon vor fi transferate in Date_reparatie";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // txtTipTelefon
+            // 
+            this.txtTipTelefon.Location = new System.Drawing.Point(246, 248);
+            this.txtTipTelefon.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTipTelefon.Name = "txtTipTelefon";
+            this.txtTipTelefon.Size = new System.Drawing.Size(331, 26);
+            this.txtTipTelefon.TabIndex = 4;
+            this.txtTipTelefon.TextChanged += new System.EventHandler(this.txtTipTelefon_TextChanged);
+            // 
             // FormInregistrare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -565,6 +575,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1395, 993);
+            this.Controls.Add(this.txtTipTelefon);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -579,7 +590,6 @@
             this.Controls.Add(nr_inregLabel);
             this.Controls.Add(this.nr_inregTextBox);
             this.Controls.Add(tip_telefonLabel);
-            this.Controls.Add(this.txtTipTelefon);
             this.Controls.Add(data_primiriiLabel);
             this.Controls.Add(this.dateDataPrimirii);
             this.Controls.Add(garantieLabel);
@@ -633,7 +643,6 @@
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button labelExit;
         private System.Windows.Forms.TextBox nr_inregTextBox;
-        private System.Windows.Forms.ComboBox txtTipTelefon;
         private System.Windows.Forms.DateTimePicker dateDataPrimirii;
         private System.Windows.Forms.TextBox txtDefectConstatat;
         private System.Windows.Forms.TextBox txtTermenRezolvare;
@@ -657,5 +666,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtTipTelefon;
     }
 }
