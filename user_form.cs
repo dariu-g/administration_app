@@ -66,8 +66,8 @@ namespace AplicatieDisertatie
                         sqlCmd.Parameters.AddWithValue("@Parola", txtParola.Text.Trim());
                         sqlCmd.ExecuteNonQuery();
                         MessageBox.Show("Utilzatorul a fost inregistrat cu succes!");
-                        Clear();
                         DatabaseConnection.Close();
+                        Clear();
                         this.Hide();
                         login_form loginform = new login_form();
                         loginform.Show();

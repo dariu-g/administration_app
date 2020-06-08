@@ -18,13 +18,9 @@ namespace AplicatieDisertatie
         public registration_form()
         {
             InitializeComponent();
-            
-            if (checkboxGarantie.CheckState == CheckState.Checked)
-                checkboxGarantie.Text = "Da";
-            else if (checkboxGarantie.CheckState == CheckState.Unchecked)
-                checkboxGarantie.Text = "Nu";
-            else
-                checkboxGarantie.Text = "Eroare";
+            checkStateGarantie();
+            checkStateClientExistent();
+            checkStateTelefonExistent();
         }
 
         private void labelExit_Click(object sender, EventArgs e)
@@ -32,9 +28,9 @@ namespace AplicatieDisertatie
             this.Close();
         }
 
+
         private void FormInregistrare_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnInregistrare_Click(object sender, EventArgs e)
@@ -50,8 +46,6 @@ namespace AplicatieDisertatie
             }
             else
             {
-                DateTime currentDateTime = DateTime.Now;
-//                string DateFormat = currentDateTime.ToString("dd/MM/yyyy, HH:mm");
                 string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
                 using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
                 {
@@ -73,7 +67,6 @@ namespace AplicatieDisertatie
                     sqlCmd.Parameters.AddWithValue("@Cod_telefon", txtCodTelefon.Text.Trim());
 
                     //Date reparatie
-                    //sqlCmd.Parameters.AddWithValue("@Data_primirii", dateDataPrimirii.Value = DateTime.Now);
                     sqlCmd.Parameters.AddWithValue("@Defect_constatat", txtDefectConstatat.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Observatii", txtObservatii.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Termen_rezolvare", txtTermenRezolvare.Text.Trim());
@@ -103,6 +96,7 @@ namespace AplicatieDisertatie
             clear_func(Controls);
         }
 
+        #region checkBoxState
         private void checkboxGarantie_CheckStateChanged(object sender, EventArgs e)
         {
             if (checkboxGarantie.CheckState == CheckState.Checked)
@@ -112,6 +106,58 @@ namespace AplicatieDisertatie
             else
                 checkboxGarantie.Text = "Eroare";
         }
+
+        /* function that is called in the component initializer to place the default name of "Nu" to the checkbox */
+        private void checkStateGarantie()
+        {
+            if (checkboxGarantie.CheckState == CheckState.Checked)
+                checkboxGarantie.Text = "Da";
+            else if (checkboxGarantie.CheckState == CheckState.Unchecked)
+                checkboxGarantie.Text = "Nu";
+            else
+                checkboxGarantie.Text = "Eroare";
+        }
+
+        private void checkBoxClientExistent_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxClientExistent.CheckState == CheckState.Checked)
+                checkBoxClientExistent.Text = "Existent";
+            else if (checkBoxClientExistent.CheckState == CheckState.Unchecked)
+                checkBoxClientExistent.Text = "Nou";
+            else
+                checkBoxClientExistent.Text = "Eroare";
+        }
+
+        private void checkStateClientExistent()
+        {
+            if (checkBoxClientExistent.CheckState == CheckState.Checked)
+                checkBoxClientExistent.Text = "Existent";
+            else if (checkBoxClientExistent.CheckState == CheckState.Unchecked)
+                checkBoxClientExistent.Text = "Nou";
+            else
+                checkBoxClientExistent.Text = "Eroare";
+        }
+
+        private void checkBoxTelefonExistent_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxTelefonExistent.CheckState == CheckState.Checked)
+                checkBoxTelefonExistent.Text = "Existent";
+            else if (checkBoxTelefonExistent.CheckState == CheckState.Unchecked)
+                checkBoxTelefonExistent.Text = "Nou";
+            else
+                checkBoxTelefonExistent.Text = "Eroare";
+        }
+
+        private void checkStateTelefonExistent()
+        {
+            if (checkBoxTelefonExistent.CheckState == CheckState.Checked)
+                checkBoxTelefonExistent.Text = "Existent";
+            else if (checkBoxTelefonExistent.CheckState == CheckState.Unchecked)
+                checkBoxTelefonExistent.Text = "Nou";
+            else
+                checkBoxTelefonExistent.Text = "Eroare";
+        }
+        #endregion
 
         void FillDataGridView()
         {
@@ -139,7 +185,7 @@ namespace AplicatieDisertatie
             {
                 FillDataGridView();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Eroare baza de date.");
             }
@@ -151,7 +197,22 @@ namespace AplicatieDisertatie
         }
 
         #region TextBoxesFormatting
-        private void CapitalizeFirstLetter(TextBox InputTextBox)
+        private void ToTitleCase_textBoxFormat (TextBox textBox_parameter)
+        {
+            textBox_parameter.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(textBox_parameter.Text);
+            textBox_parameter.Select(textBox_parameter.Text.Length, 0);
+        }
+        private void txtNume_TextChanged(object sender, EventArgs e)
+        {
+            ToTitleCase_textBoxFormat(txtNume);
+        }
+
+        private void txtPrenume_TextChanged(object sender, EventArgs e)
+        {
+            ToTitleCase_textBoxFormat(txtPrenume);
+        }
+
+        private void CapitalizeFirstLetter_textBoxFormat(TextBox InputTextBox)
         {
             if (InputTextBox.Text.Length <= 0) return;
             string first_character = InputTextBox.Text.Substring(0, 1);
@@ -167,68 +228,53 @@ namespace AplicatieDisertatie
             }
         }
 
-        private void txtNume_TextChanged(object sender, EventArgs e)
-        {
-            txtNume.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(this.txtNume.Text);
-            txtNume.Select(txtNume.Text.Length, 0);
-        }
-
-        private void txtPrenume_TextChanged(object sender, EventArgs e)
-        {
-            txtPrenume.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(this.txtPrenume.Text);
-            txtPrenume.Select(txtPrenume.Text.Length, 0);
-        }
-
         private void txtTipTelefon_TextChanged(object sender, EventArgs e)
         {
-            CapitalizeFirstLetter(txtTipTelefon);
+            CapitalizeFirstLetter_textBoxFormat(txtTipTelefon);
         }
 
         private void txtModel_TextChanged(object sender, EventArgs e)
         {
-            CapitalizeFirstLetter(txtModel);
+            CapitalizeFirstLetter_textBoxFormat(txtModel);
         }
 
         private void txtCuloare_TextChanged(object sender, EventArgs e)
         {
-            CapitalizeFirstLetter(txtCuloare);
+            CapitalizeFirstLetter_textBoxFormat(txtCuloare);
         }
 
         private void txtDefectConstatat_TextChanged(object sender, EventArgs e)
         {
-            CapitalizeFirstLetter(txtDefectConstatat);
+            CapitalizeFirstLetter_textBoxFormat(txtDefectConstatat);
         }
 
         private void txtObservatii_TextChanged(object sender, EventArgs e)
         {
-            CapitalizeFirstLetter(txtObservatii);
+            CapitalizeFirstLetter_textBoxFormat(txtObservatii);
+        }
+
+        private void NumberOnly_textBoxFormat(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtIMEI_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            NumberOnly_textBoxFormat(e);
         }
 
         private void txtPretEstimativ_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            NumberOnly_textBoxFormat(e);
         }
 
         private void txtPretAvans_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            NumberOnly_textBoxFormat(e);
         }
         #endregion
-
-
     }
 }

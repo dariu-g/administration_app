@@ -45,8 +45,8 @@
             this.btnStatusReparatii = new System.Windows.Forms.Button();
             this.panelInregistrareSubmenu = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnInregistrariRecence = new System.Windows.Forms.Button();
+            this.btnIstoric = new System.Windows.Forms.Button();
+            this.btnInregistrariRecente = new System.Windows.Forms.Button();
             this.btnClientNou = new System.Windows.Forms.Button();
             this.btnInregistrare = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
@@ -122,7 +122,7 @@
             this.button10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button10.Size = new System.Drawing.Size(250, 40);
             this.button10.TabIndex = 3;
-            this.button10.Text = "Telefoane nereparate";
+            this.button10.Text = "Statistici - nereparate";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = true;
             // 
@@ -138,7 +138,7 @@
             this.button11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button11.Size = new System.Drawing.Size(250, 40);
             this.button11.TabIndex = 2;
-            this.button11.Text = "Telefoane reparate";
+            this.button11.Text = "Statistici - reparate";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
@@ -155,7 +155,7 @@
             this.button12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button12.Size = new System.Drawing.Size(250, 40);
             this.button12.TabIndex = 1;
-            this.button12.Text = "Luna curenta";
+            this.button12.Text = "Statistici - luna";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
@@ -172,7 +172,7 @@
             this.button13.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button13.Size = new System.Drawing.Size(250, 40);
             this.button13.TabIndex = 0;
-            this.button13.Text = "Ziua curenta";
+            this.button13.Text = "Statistici - ziua";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.button13_Click);
@@ -235,7 +235,7 @@
             this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button6.Size = new System.Drawing.Size(250, 40);
             this.button6.TabIndex = 2;
-            this.button6.Text = "Neridicate";
+            this.button6.Text = "Status - neridicate";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
             // 
@@ -251,7 +251,7 @@
             this.button7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button7.Size = new System.Drawing.Size(250, 40);
             this.button7.TabIndex = 1;
-            this.button7.Text = "Ridicate";
+            this.button7.Text = "Status - ridicate";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -268,7 +268,7 @@
             this.button8.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button8.Size = new System.Drawing.Size(250, 40);
             this.button8.TabIndex = 0;
-            this.button8.Text = "In lucru";
+            this.button8.Text = "Status - in lucru";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -294,8 +294,8 @@
             // 
             this.panelInregistrareSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.panelInregistrareSubmenu.Controls.Add(this.button5);
-            this.panelInregistrareSubmenu.Controls.Add(this.button4);
-            this.panelInregistrareSubmenu.Controls.Add(this.btnInregistrariRecence);
+            this.panelInregistrareSubmenu.Controls.Add(this.btnIstoric);
+            this.panelInregistrareSubmenu.Controls.Add(this.btnInregistrariRecente);
             this.panelInregistrareSubmenu.Controls.Add(this.btnClientNou);
             this.panelInregistrareSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelInregistrareSubmenu.Location = new System.Drawing.Point(0, 145);
@@ -319,38 +319,39 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnIstoric
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.LightGray;
-            this.button4.Location = new System.Drawing.Point(0, 80);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(250, 40);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "button4";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnIstoric.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnIstoric.FlatAppearance.BorderSize = 0;
+            this.btnIstoric.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnIstoric.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIstoric.ForeColor = System.Drawing.Color.LightGray;
+            this.btnIstoric.Location = new System.Drawing.Point(0, 80);
+            this.btnIstoric.Name = "btnIstoric";
+            this.btnIstoric.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnIstoric.Size = new System.Drawing.Size(250, 40);
+            this.btnIstoric.TabIndex = 2;
+            this.btnIstoric.Text = "Inregistrari - istoric";
+            this.btnIstoric.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIstoric.UseVisualStyleBackColor = true;
+            this.btnIstoric.Click += new System.EventHandler(this.btnIstoric_Click);
             // 
-            // btnInregistrariRecence
+            // btnInregistrariRecente
             // 
-            this.btnInregistrariRecence.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInregistrariRecence.FlatAppearance.BorderSize = 0;
-            this.btnInregistrariRecence.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnInregistrariRecence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInregistrariRecence.ForeColor = System.Drawing.Color.LightGray;
-            this.btnInregistrariRecence.Location = new System.Drawing.Point(0, 40);
-            this.btnInregistrariRecence.Name = "btnInregistrariRecence";
-            this.btnInregistrariRecence.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnInregistrariRecence.Size = new System.Drawing.Size(250, 40);
-            this.btnInregistrariRecence.TabIndex = 1;
-            this.btnInregistrariRecence.Text = "Inregistrari recente";
-            this.btnInregistrariRecence.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInregistrariRecence.UseVisualStyleBackColor = true;
-            this.btnInregistrariRecence.Click += new System.EventHandler(this.button3_Click);
+            this.btnInregistrariRecente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInregistrariRecente.FlatAppearance.BorderSize = 0;
+            this.btnInregistrariRecente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnInregistrariRecente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInregistrariRecente.ForeColor = System.Drawing.Color.LightGray;
+            this.btnInregistrariRecente.Location = new System.Drawing.Point(0, 40);
+            this.btnInregistrariRecente.Name = "btnInregistrariRecente";
+            this.btnInregistrariRecente.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnInregistrariRecente.Size = new System.Drawing.Size(250, 40);
+            this.btnInregistrariRecente.TabIndex = 1;
+            this.btnInregistrariRecente.Text = "Inregistrari - zilnice";
+            this.btnInregistrariRecente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInregistrariRecente.UseVisualStyleBackColor = true;
+            this.btnInregistrariRecente.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnClientNou
             // 
@@ -364,7 +365,7 @@
             this.btnClientNou.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnClientNou.Size = new System.Drawing.Size(250, 40);
             this.btnClientNou.TabIndex = 0;
-            this.btnClientNou.Text = "Inregistrare noua";
+            this.btnClientNou.Text = "Inregistrare - noua";
             this.btnClientNou.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClientNou.UseVisualStyleBackColor = true;
             this.btnClientNou.Click += new System.EventHandler(this.button2_Click);
@@ -382,7 +383,7 @@
             this.btnInregistrare.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnInregistrare.Size = new System.Drawing.Size(250, 45);
             this.btnInregistrare.TabIndex = 1;
-            this.btnInregistrare.Text = "Inregistrari";
+            this.btnInregistrare.Text = "Inregistrari reparatii";
             this.btnInregistrare.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInregistrare.UseVisualStyleBackColor = false;
             this.btnInregistrare.Click += new System.EventHandler(this.btnInregistrare_Click);
@@ -490,8 +491,8 @@
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelInregistrareSubmenu;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button btnInregistrariRecence;
+        private System.Windows.Forms.Button btnIstoric;
+        private System.Windows.Forms.Button btnInregistrariRecente;
         private System.Windows.Forms.Button btnClientNou;
         private System.Windows.Forms.Button btnInregistrare;
         private System.Windows.Forms.Panel panelLogo;

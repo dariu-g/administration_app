@@ -45,12 +45,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTipUtilizator = new System.Windows.Forms.ComboBox();
             this.labelCatreAutentificare = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelExit = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtTipUtilizator = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -250,6 +250,22 @@
             this.panel1.Size = new System.Drawing.Size(742, 628);
             this.panel1.TabIndex = 17;
             // 
+            // txtTipUtilizator
+            // 
+            this.txtTipUtilizator.AutoCompleteCustomSource.AddRange(new string[] {
+            "Administrator",
+            "Utilizator normal"});
+            this.txtTipUtilizator.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txtTipUtilizator.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtTipUtilizator.FormattingEnabled = true;
+            this.txtTipUtilizator.Items.AddRange(new object[] {
+            "Utilizator",
+            "Administrator"});
+            this.txtTipUtilizator.Location = new System.Drawing.Point(286, 340);
+            this.txtTipUtilizator.Name = "txtTipUtilizator";
+            this.txtTipUtilizator.Size = new System.Drawing.Size(293, 39);
+            this.txtTipUtilizator.TabIndex = 4;
+            // 
             // labelCatreAutentificare
             // 
             this.labelCatreAutentificare.AutoSize = true;
@@ -310,23 +326,7 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "ÎNREGISTRARE UTILIZATOR NOU";
             // 
-            // txtTipUtilizator
-            // 
-            this.txtTipUtilizator.AutoCompleteCustomSource.AddRange(new string[] {
-            "Administrator",
-            "Utilizator normal"});
-            this.txtTipUtilizator.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtTipUtilizator.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtTipUtilizator.FormattingEnabled = true;
-            this.txtTipUtilizator.Items.AddRange(new object[] {
-            "Utilizator normal",
-            "Administrator"});
-            this.txtTipUtilizator.Location = new System.Drawing.Point(286, 340);
-            this.txtTipUtilizator.Name = "txtTipUtilizator";
-            this.txtTipUtilizator.Size = new System.Drawing.Size(293, 39);
-            this.txtTipUtilizator.TabIndex = 4;
-            // 
-            // create_user
+            // user_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -338,7 +338,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximumSize = new System.Drawing.Size(760, 675);
             this.MinimumSize = new System.Drawing.Size(760, 675);
-            this.Name = "create_user";
+            this.Name = "user_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inregistrare Utilizator";
             this.panel1.ResumeLayout(false);

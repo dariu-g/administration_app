@@ -155,5 +155,10 @@ namespace AplicatieDisertatie
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void btnIstoric_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ledger_form());
+        }
     }
 }
