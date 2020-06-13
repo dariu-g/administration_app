@@ -49,7 +49,7 @@ namespace AplicatieDisertatie
                 subMenu.Visible = false;
         }
 
-        #region InregistrareSubmenu
+        #region Inregistrare reparatiiSubmenu
         private void btnInregistrare_Click(object sender, EventArgs e)
         {
             showSubMenu(panelInregistrareSubmenu);
@@ -92,7 +92,7 @@ namespace AplicatieDisertatie
         }
         #endregion
 
-        #region StatisticiSubmenu
+        #region StatisticiReparatiiSubmenu
         private void btnStatistici_Click(object sender, EventArgs e)
         {
             showSubMenu(panelStatisticiSubmenu);
@@ -119,6 +119,7 @@ namespace AplicatieDisertatie
             hideSubMenu();
         }
         #endregion
+        
         private void btnInformatii_Click(object sender, EventArgs e)
         {
             openChildForm(new informations_form());
