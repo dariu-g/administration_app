@@ -20,6 +20,7 @@ namespace AplicatieDisertatie
             customizeDesign();
         }
 
+        #region Show/Hide submenu
         /* Hides the submenu panel */
         private void customizeDesign()
         {
@@ -37,7 +38,6 @@ namespace AplicatieDisertatie
             if (panelStatisticiSubmenu.Visible == true)
                 panelStatisticiSubmenu.Visible = false;
         }
-
         private void showSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
@@ -48,8 +48,9 @@ namespace AplicatieDisertatie
             else
                 subMenu.Visible = false;
         }
+        #endregion
 
-        #region Inregistrare reparatiiSubmenu
+        #region InregistrareReparatiiSubmenu
         private void btnInregistrare_Click(object sender, EventArgs e)
         {
             showSubMenu(panelInregistrareSubmenu);
@@ -60,14 +61,14 @@ namespace AplicatieDisertatie
             openChildForm(new registration_form());
             /* buton din meniul Inregistrare */
             /* cod.. */
-            hideSubMenu();
+            //hideSubMenu();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             /* buton din meniul Inregistrare */
             /* cod.. */
-            hideSubMenu();
+            //hideSubMenu();
         }
         #endregion
 
@@ -81,14 +82,14 @@ namespace AplicatieDisertatie
         {
             /* buton din meniul Status reparatii */
             /* cod.. */
-            hideSubMenu();
+            //hideSubMenu();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             /* buton din meniul Status reparatii */
             /* cod.. */
-            hideSubMenu();
+            //hideSubMenu();
         }
         #endregion
 
@@ -102,21 +103,21 @@ namespace AplicatieDisertatie
         {
             /* buton din meniul Status reparatii */
             /* cod.. */
-            hideSubMenu();
+            //hideSubMenu();
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             /* buton din meniul Statistici */
             /* cod.. */
-            hideSubMenu();
+            //hideSubMenu();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             /* buton din meniul Statistici */
             /* cod.. */
-            hideSubMenu();
+            //hideSubMenu();
         }
         #endregion
         
@@ -124,7 +125,7 @@ namespace AplicatieDisertatie
         {
             openChildForm(new informations_form());
             /* cod.. */
-            hideSubMenu();
+            //hideSubMenu();
         }
 
         private Form activeForm = null;             // the child form needs to be stored apart from the main form
