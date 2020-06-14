@@ -61,6 +61,7 @@
             this.btnNrTelefon = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNrTelefon = new System.Windows.Forms.TextBox();
+            this.btnSterge = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLedger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -109,6 +110,7 @@
             this.dataGridLedger.RowTemplate.Height = 24;
             this.dataGridLedger.Size = new System.Drawing.Size(998, 409);
             this.dataGridLedger.TabIndex = 2;
+            this.dataGridLedger.Click += new System.EventHandler(this.dataGridLedger_Click);
             // 
             // id_reparatie
             // 
@@ -249,7 +251,7 @@
             // 
             this.btnPrint.Location = new System.Drawing.Point(946, 549);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(75, 23);
+            this.btnPrint.Size = new System.Drawing.Size(75, 31);
             this.btnPrint.TabIndex = 6;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = true;
@@ -257,9 +259,9 @@
             // 
             // btnDescarca
             // 
-            this.btnDescarca.Location = new System.Drawing.Point(23, 549);
+            this.btnDescarca.Location = new System.Drawing.Point(479, 552);
             this.btnDescarca.Name = "btnDescarca";
-            this.btnDescarca.Size = new System.Drawing.Size(93, 23);
+            this.btnDescarca.Size = new System.Drawing.Size(93, 28);
             this.btnDescarca.TabIndex = 7;
             this.btnDescarca.Text = "Descarca";
             this.btnDescarca.UseVisualStyleBackColor = true;
@@ -339,11 +341,22 @@
             this.txtNrTelefon.Size = new System.Drawing.Size(158, 22);
             this.txtNrTelefon.TabIndex = 14;
             // 
+            // btnSterge
+            // 
+            this.btnSterge.Location = new System.Drawing.Point(23, 552);
+            this.btnSterge.Name = "btnSterge";
+            this.btnSterge.Size = new System.Drawing.Size(105, 28);
+            this.btnSterge.TabIndex = 17;
+            this.btnSterge.Text = "Sterge";
+            this.btnSterge.UseVisualStyleBackColor = true;
+            this.btnSterge.Click += new System.EventHandler(this.btnSterge_Click);
+            // 
             // ledger_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 602);
+            this.Controls.Add(this.btnSterge);
             this.Controls.Add(this.btnNrTelefon);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNrTelefon);
@@ -417,5 +430,6 @@
         private System.Windows.Forms.Button btnNrTelefon;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNrTelefon;
+        private System.Windows.Forms.Button btnSterge;
     }
 }

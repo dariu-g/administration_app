@@ -15,6 +15,7 @@ namespace AplicatieDisertatie
 {
     public partial class ledger_form : Form
     {
+        int ReparatieID = 0;
         public ledger_form()
         {
             InitializeComponent();
@@ -61,6 +62,37 @@ namespace AplicatieDisertatie
                 }
             }
        
+        }
+
+        private void dataGridLedger_Click(object sender, EventArgs e)
+        {
+            if (dataGridLedger.CurrentRow.Index != -1)
+            {
+                ReparatieID = Convert.ToInt32(dataGridLedger.CurrentRow.Cells[0].Value.ToString());
+            }
+        }
+        private void btnSterge_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
+                using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
+                {
+                    DatabaseConnection.Open();
+                    SqlCommand sqlCmd = new SqlCommand("InregistrareSterge", DatabaseConnection);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+
+                    sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID);
+
+                    sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("Reparatie stearsa!");
+                    DatabaseConnection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Eroare de stergere!");
+            }
         }
     }
 }

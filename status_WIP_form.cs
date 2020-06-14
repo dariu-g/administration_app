@@ -18,6 +18,7 @@ namespace AplicatieDisertatie
         public status_WIP_form()
         {
             InitializeComponent();
+            FillDataGridView();
         }
 
         void FillDataGridView()
@@ -78,7 +79,24 @@ namespace AplicatieDisertatie
                 sqlCmd.ExecuteNonQuery();
                 MessageBox.Show("Reparatie concluzionata!");
             }
+            FillDataGridView();
+            ClearTextBoxes();
+        }
 
+        private void ClearTextBoxes()
+        {
+            Action<Control.ControlCollection> clear_func = null;
+
+            clear_func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else
+                        clear_func(control.Controls);
+            };
+
+            clear_func(Controls);
         }
     }
 }
