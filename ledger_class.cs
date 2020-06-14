@@ -35,7 +35,5 @@ namespace AplicatieDisertatie
         public string piese_inlocuite { get; set; }
 
         public decimal pret_achitat { get; set; }
-        
-
     }
 }

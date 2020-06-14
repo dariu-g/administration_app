@@ -36,7 +36,6 @@
             // 
             // reportViewer
             // 
-            this.reportViewer.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.ledgerPrintclassBindingSource, "id_reparatie", true));
             this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer.LocalReport.ReportEmbeddedResource = "AplicatieDisertatie.ledgerPrint_report.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 0);

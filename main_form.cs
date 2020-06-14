@@ -19,8 +19,8 @@ namespace AplicatieDisertatie
             InitializeComponent();
             customizeDesign();
         }
-
-        #region Show/Hide submenu
+        #region NavigationMenu
+        #region Show/HideSubmenu
         /* Hides the submenu panel */
         private void customizeDesign()
         {
@@ -50,25 +50,20 @@ namespace AplicatieDisertatie
         }
         #endregion
 
-        #region InregistrareReparatiiSubmenu
-        private void btnInregistrare_Click(object sender, EventArgs e)
+        #region InregistrariReparatiiSubmenu
+        private void btnInregistrariReparatii_Click(object sender, EventArgs e)
         {
             showSubMenu(panelInregistrareSubmenu);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnInregistrariAdauga_Click(object sender, EventArgs e)
         {
             openChildForm(new registration_form());
-            /* buton din meniul Inregistrare */
-            /* cod.. */
-            //hideSubMenu();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnInregistrariIstoric_Click(object sender, EventArgs e)
         {
-            /* buton din meniul Inregistrare */
-            /* cod.. */
-            //hideSubMenu();
+            openChildForm(new ledger_form());
         }
         #endregion
 
@@ -78,18 +73,15 @@ namespace AplicatieDisertatie
             showSubMenu(panelStatusReparatiiSubmenu);
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void btnStatusInLucru_Click(object sender, EventArgs e)
         {
-            /* buton din meniul Status reparatii */
-            /* cod.. */
-            //hideSubMenu();
+            openChildForm(new status_WIP_form());
+
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnStatusNeridicate_Click(object sender, EventArgs e)
         {
-            /* buton din meniul Status reparatii */
-            /* cod.. */
-            //hideSubMenu();
+            //openChildForm(new registration_form());
         }
         #endregion
 
@@ -127,7 +119,7 @@ namespace AplicatieDisertatie
             /* cod.. */
             //hideSubMenu();
         }
-
+        #endregion
         private Form activeForm = null;             // the child form needs to be stored apart from the main form
         private void openChildForm(Form childForm)  // this method works for only 1 child form being open in the main form (see 13:50 for multiple forms)
         {
@@ -143,24 +135,22 @@ namespace AplicatieDisertatie
             childForm.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        #region MainFormButtons
+        private void btnMainFormExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnMainFormMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnMainFormMax_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
         }
+        #endregion
 
-        private void btnIstoric_Click(object sender, EventArgs e)
-        {
-            openChildForm(new ledger_form());
-        }
     }
 }

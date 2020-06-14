@@ -84,6 +84,12 @@
       <DependentUpon>print_form.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="status_WIP_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="status_WIP_form.Designer.cs">
+      <DependentUpon>status_WIP_form.cs</DependentUpon>
+    </Compile>
     <Compile Include="user_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     <EmbeddedResource Include="PrintRegistration.rdlc" />
     <EmbeddedResource Include="print_form.resx">
       <DependentUpon>print_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="status_WIP_form.resx">
+      <DependentUpon>status_WIP_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="user_form.resx">
       <DependentUpon>user_form.cs</DependentUpon>
