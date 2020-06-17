@@ -79,7 +79,7 @@ namespace AplicatieDisertatie
                 using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
                 {
                     DatabaseConnection.Open();
-                    SqlCommand sqlCmd = new SqlCommand("InregistrareSterge", DatabaseConnection);
+                    SqlCommand sqlCmd = new SqlCommand("StergeReparatie", DatabaseConnection);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
 
                     sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID);

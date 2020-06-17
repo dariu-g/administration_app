@@ -78,7 +78,8 @@
             // 
             // dateTimeDin
             // 
-            this.dateTimeDin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeDin.CustomFormat = "dd/MM/yyyy";
+            this.dateTimeDin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeDin.Location = new System.Drawing.Point(59, 40);
             this.dateTimeDin.Name = "dateTimeDin";
             this.dateTimeDin.Size = new System.Drawing.Size(224, 22);
@@ -240,7 +241,8 @@
             // 
             // dateTimePana
             // 
-            this.dateTimePana.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePana.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePana.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePana.Location = new System.Drawing.Point(363, 40);
             this.dateTimePana.Name = "dateTimePana";
             this.dateTimePana.Size = new System.Drawing.Size(224, 22);

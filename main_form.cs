@@ -24,7 +24,7 @@ namespace AplicatieDisertatie
         /* Hides the submenu panel */
         private void customizeDesign()
         {
-            panelInregistrareSubmenu.Visible = false;
+            panelInregistrareSubmenu.Visible = true;
             panelStatusReparatiiSubmenu.Visible = false;
             panelStatisticiSubmenu.Visible = false;
         }
@@ -42,7 +42,7 @@ namespace AplicatieDisertatie
         {
             if (subMenu.Visible == false)
             {
-                hideSubMenu();
+                //hideSubMenu(); //disabled the feature that hides the submenus, unless they are clicked.
                 subMenu.Visible = true;
             }
             else

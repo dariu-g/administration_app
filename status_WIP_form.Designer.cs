@@ -116,6 +116,8 @@
             // 
             // dateTimeDataPredarii
             // 
+            this.dateTimeDataPredarii.CustomFormat = "dd/MM/yyyy";
+            this.dateTimeDataPredarii.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeDataPredarii.Location = new System.Drawing.Point(493, 408);
             this.dateTimeDataPredarii.Name = "dateTimeDataPredarii";
             this.dateTimeDataPredarii.Size = new System.Drawing.Size(242, 22);
