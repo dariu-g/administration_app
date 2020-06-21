@@ -4,11 +4,16 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AplicatieDisertatie.Properties;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 
 namespace AplicatieDisertatie
 {
@@ -41,10 +46,7 @@ namespace AplicatieDisertatie
         private void showSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
-            {
-                //hideSubMenu(); //disabled the feature that hides the submenus, unless they are clicked.
                 subMenu.Visible = true;
-            }
             else
                 subMenu.Visible = false;
         }
@@ -115,9 +117,9 @@ namespace AplicatieDisertatie
         
         private void btnInformatii_Click(object sender, EventArgs e)
         {
-            openChildForm(new informations_form());
-            /* cod.. */
-            //hideSubMenu();
+            Process usrMan = new Process();
+            usrMan.StartInfo.FileName = "C:\\Users\\User\\source\\repos\\AplicatieDisertatie\\UserManual\\UserManual.chm";
+            usrMan.Start();
         }
         #endregion
         private Form activeForm = null;             // the child form needs to be stored apart from the main form

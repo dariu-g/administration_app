@@ -10,6 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using System.Security.Policy;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace AplicatieDisertatie
 {
@@ -18,6 +21,7 @@ namespace AplicatieDisertatie
     public partial class user_form : Form
     {
         //string connectionString = @"Data Source=BLUE;Initial Catalog=baza_date;Integrated Security=True";
+        connection_class hash = new connection_class();
         public user_form()
         {
             InitializeComponent();
@@ -63,7 +67,7 @@ namespace AplicatieDisertatie
                         sqlCmd.Parameters.AddWithValue("@Tip_Utilizator", txtTipUtilizator.SelectedItem);
                         sqlCmd.Parameters.AddWithValue("@Nume", txtNume.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@Prenume", txtPrenume.Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@Parola", txtParola.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Parola", hash.PasswordEncrypt(txtParola.Text.Trim()));
                         sqlCmd.ExecuteNonQuery();
                         MessageBox.Show("Utilzatorul a fost inregistrat cu succes!");
                         DatabaseConnection.Close();

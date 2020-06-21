@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace AplicatieDisertatie
 {
@@ -39,6 +40,15 @@ namespace AplicatieDisertatie
             }
             return dt;
         }
-    
+
+        public string PasswordEncrypt(string password)
+        {
+            using (SHA256CryptoServiceProvider sha256 = new SHA256CryptoServiceProvider())
+            {
+                UTF8Encoding utf8 = new UTF8Encoding();
+                byte[] data = sha256.ComputeHash(utf8.GetBytes(password));
+                return Convert.ToBase64String(data);
+            }
+        }
     }
 }

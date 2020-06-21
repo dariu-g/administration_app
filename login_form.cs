@@ -14,6 +14,7 @@ namespace AplicatieDisertatie
 {
     public partial class login_form : Form
     {
+        connection_class hash = new connection_class();
         public login_form()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace AplicatieDisertatie
 
                 login_check += "SELECT * FROM Utilizatori ";
                 login_check += "WHERE utilizator = '" + txtUtilizator.Text + "' ";
-                login_check += "AND parola = '" + txtParola.Text + "' ";
+                login_check += "AND parola = '" + hash.PasswordEncrypt(txtParola.Text) + "' ";
 
                 DataTable Utilizatori = connection_class.executeSQL(login_check);
 
