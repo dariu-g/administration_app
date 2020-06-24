@@ -37,6 +37,23 @@ namespace AplicatieDisertatie
                 ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>(query, commandType: CommandType.Text);
             }
         }
+        
+        private void btnReparatiiRecente_Click(object sender, EventArgs e)
+        {
+            using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
+            {
+                if (db_con.State == ConnectionState.Closed)
+                {
+                    db_con.Open();
+                }
+                string query = "SELECT TOP (10) r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat FROM Date_reparatie r " +
+                               "JOIN Date_client c ON r.id_client = c.id " +
+                               "JOIN Date_telefon t ON r.id_telefon = t.id " +
+                               $"ORDER BY id_reparatie DESC";
+
+                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>(query, commandType: CommandType.Text);
+            }
+        }
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
@@ -61,7 +78,6 @@ namespace AplicatieDisertatie
                     };
                 }
             }
-       
         }
 
         private void dataGridLedger_Click(object sender, EventArgs e)

@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
 
 namespace AplicatieDisertatie
 {
@@ -27,7 +28,6 @@ namespace AplicatieDisertatie
         {
             this.Close();
         }
-
 
         private void FormInregistrare_Load(object sender, EventArgs e)
         {
@@ -172,22 +172,10 @@ namespace AplicatieDisertatie
                 sqlDa.SelectCommand.Parameters.AddWithValue("@nume", txtCauta.Text.Trim());
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
-                dataGridView1.DataSource = dtbl;
-                dataGridView1.Columns[0].Visible = false;
+                dataGridViewRegistration.DataSource = dtbl;
+                //dataGridView1.Columns[0].Visible = false;
 
                 DatabaseConnection.Close();
-            }
-        }
-
-        private void btnCauta_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                FillDataGridView();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Eroare baza de date.");
             }
         }
 
@@ -276,5 +264,60 @@ namespace AplicatieDisertatie
             NumberOnly_textBoxFormat(e);
         }
         #endregion
+
+        private void btnCauta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FillDataGridView();
+                //last_Registration();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Eroare baza de date.");
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {         
+            registration_class objct = registrationclassBindingSource.Current as registration_class;
+            if (objct != null)
+            {
+                using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
+                {
+                    if (db_con.State == ConnectionState.Closed)
+                    {
+                        db_con.Open();
+                    }
+                    string query = "SELECT r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.pret_estimativ, r.pret_avans, r.defect_constatat, r.observatii, r.termen_rezolvare FROM Date_reparatie r " +
+                                    "JOIN Date_client c ON r.id_client = c.id " +
+                                    "JOIN Date_telefon t ON r.id_telefon = t.id " +
+                                   $"WHERE r.id_reparatie = '{objct.id_reparatie}'";
+
+                    List<registration_class> list = db_con.Query<registration_class>(query, commandType: CommandType.Text).ToList();
+                    using (registrationPrint_form form = new registrationPrint_form(objct, list))
+                    {
+                        form.ShowDialog();
+                    };
+                }
+            }
+        }
+
+        private void last_Registration ()
+        {
+            using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
+            {
+                if (db_con.State == ConnectionState.Closed)
+                {
+                    db_con.Open();
+                }
+                string query = "SELECT TOP (10) r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.pret_estimativ, r.pret_avans, r.defect_constatat, r.observatii, r.termen_rezolvare FROM Date_reparatie r " +
+                                "JOIN Date_client c ON r.id_client = c.id " +
+                                "JOIN Date_telefon t ON r.id_telefon = t.id " +
+                                $"ORDER BY id_reparatie DESC";
+
+                registrationclassBindingSource.DataSource = db_con.Query<ledger_class>(query, commandType: CommandType.Text);
+            }
+        }
     }
 }

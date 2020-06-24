@@ -32,20 +32,6 @@
             this.btnCauta = new System.Windows.Forms.Button();
             this.dateTimeDin = new System.Windows.Forms.DateTimePicker();
             this.dataGridLedger = new System.Windows.Forms.DataGridView();
-            this.id_reparatie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nr_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tip_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.model = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imei = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_primirii = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_predarii = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.defect_constatat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observatii = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.piese_inlocuite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pret_achitat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePana = new System.Windows.Forms.DateTimePicker();
@@ -62,6 +48,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNrTelefon = new System.Windows.Forms.TextBox();
             this.btnSterge = new System.Windows.Forms.Button();
+            this.btnReparatiiRecente = new System.Windows.Forms.Button();
+            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.id_reparatie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nr_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tip_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.model = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imei = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data_primirii = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data_predarii = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.defect_constatat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observatii = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.piese_inlocuite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pret_achitat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLedger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -93,6 +94,7 @@
             this.dataGridLedger.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_reparatie,
             this.numeDataGridViewTextBoxColumn,
+            this.prenumeDataGridViewTextBoxColumn,
             this.nr_telefon,
             this.tip_telefon,
             this.model,
@@ -102,8 +104,7 @@
             this.defect_constatat,
             this.observatii,
             this.piese_inlocuite,
-            this.pret_achitat,
-            this.prenumeDataGridViewTextBoxColumn});
+            this.pret_achitat});
             this.dataGridLedger.DataSource = this.ledgerclassBindingSource;
             this.dataGridLedger.Location = new System.Drawing.Point(23, 134);
             this.dataGridLedger.Name = "dataGridLedger";
@@ -112,114 +113,6 @@
             this.dataGridLedger.Size = new System.Drawing.Size(998, 409);
             this.dataGridLedger.TabIndex = 2;
             this.dataGridLedger.Click += new System.EventHandler(this.dataGridLedger_Click);
-            // 
-            // id_reparatie
-            // 
-            this.id_reparatie.DataPropertyName = "id_reparatie";
-            this.id_reparatie.HeaderText = "id_reparatie";
-            this.id_reparatie.MinimumWidth = 6;
-            this.id_reparatie.Name = "id_reparatie";
-            this.id_reparatie.Width = 125;
-            // 
-            // numeDataGridViewTextBoxColumn
-            // 
-            this.numeDataGridViewTextBoxColumn.DataPropertyName = "nume";
-            this.numeDataGridViewTextBoxColumn.HeaderText = "nume";
-            this.numeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
-            this.numeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nr_telefon
-            // 
-            this.nr_telefon.DataPropertyName = "nr_telefon";
-            this.nr_telefon.HeaderText = "nr_telefon";
-            this.nr_telefon.MinimumWidth = 6;
-            this.nr_telefon.Name = "nr_telefon";
-            this.nr_telefon.Width = 125;
-            // 
-            // tip_telefon
-            // 
-            this.tip_telefon.DataPropertyName = "tip_telefon";
-            this.tip_telefon.HeaderText = "tip_telefon";
-            this.tip_telefon.MinimumWidth = 6;
-            this.tip_telefon.Name = "tip_telefon";
-            this.tip_telefon.Width = 125;
-            // 
-            // model
-            // 
-            this.model.DataPropertyName = "model";
-            this.model.HeaderText = "model";
-            this.model.MinimumWidth = 6;
-            this.model.Name = "model";
-            this.model.Width = 125;
-            // 
-            // imei
-            // 
-            this.imei.DataPropertyName = "imei";
-            this.imei.HeaderText = "imei";
-            this.imei.MinimumWidth = 6;
-            this.imei.Name = "imei";
-            this.imei.Width = 125;
-            // 
-            // data_primirii
-            // 
-            this.data_primirii.DataPropertyName = "data_primirii";
-            this.data_primirii.HeaderText = "data_primirii";
-            this.data_primirii.MinimumWidth = 6;
-            this.data_primirii.Name = "data_primirii";
-            this.data_primirii.Width = 125;
-            // 
-            // data_predarii
-            // 
-            this.data_predarii.DataPropertyName = "data_predarii";
-            this.data_predarii.HeaderText = "data_predarii";
-            this.data_predarii.MinimumWidth = 6;
-            this.data_predarii.Name = "data_predarii";
-            this.data_predarii.Width = 125;
-            // 
-            // defect_constatat
-            // 
-            this.defect_constatat.DataPropertyName = "defect_constatat";
-            this.defect_constatat.HeaderText = "defect_constatat";
-            this.defect_constatat.MinimumWidth = 6;
-            this.defect_constatat.Name = "defect_constatat";
-            this.defect_constatat.Width = 125;
-            // 
-            // observatii
-            // 
-            this.observatii.DataPropertyName = "observatii";
-            this.observatii.HeaderText = "observatii";
-            this.observatii.MinimumWidth = 6;
-            this.observatii.Name = "observatii";
-            this.observatii.Width = 125;
-            // 
-            // piese_inlocuite
-            // 
-            this.piese_inlocuite.DataPropertyName = "piese_inlocuite";
-            this.piese_inlocuite.HeaderText = "piese_inlocuite";
-            this.piese_inlocuite.MinimumWidth = 6;
-            this.piese_inlocuite.Name = "piese_inlocuite";
-            this.piese_inlocuite.Width = 125;
-            // 
-            // pret_achitat
-            // 
-            this.pret_achitat.DataPropertyName = "pret_achitat";
-            this.pret_achitat.HeaderText = "pret_achitat";
-            this.pret_achitat.MinimumWidth = 6;
-            this.pret_achitat.Name = "pret_achitat";
-            this.pret_achitat.Width = 125;
-            // 
-            // prenumeDataGridViewTextBoxColumn
-            // 
-            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "prenume";
-            this.prenumeDataGridViewTextBoxColumn.HeaderText = "prenume";
-            this.prenumeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
-            this.prenumeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ledgerclassBindingSource
-            // 
-            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.ledger_class);
             // 
             // label1
             // 
@@ -353,11 +246,130 @@
             this.btnSterge.UseVisualStyleBackColor = true;
             this.btnSterge.Click += new System.EventHandler(this.btnSterge_Click);
             // 
+            // btnReparatiiRecente
+            // 
+            this.btnReparatiiRecente.Location = new System.Drawing.Point(850, 32);
+            this.btnReparatiiRecente.Name = "btnReparatiiRecente";
+            this.btnReparatiiRecente.Size = new System.Drawing.Size(140, 39);
+            this.btnReparatiiRecente.TabIndex = 18;
+            this.btnReparatiiRecente.Text = "Reparatii Recente";
+            this.btnReparatiiRecente.UseVisualStyleBackColor = true;
+            this.btnReparatiiRecente.Click += new System.EventHandler(this.btnReparatiiRecente_Click);
+            // 
+            // ledgerclassBindingSource
+            // 
+            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.ledger_class);
+            // 
+            // id_reparatie
+            // 
+            this.id_reparatie.DataPropertyName = "id_reparatie";
+            this.id_reparatie.HeaderText = "id_reparatie";
+            this.id_reparatie.MinimumWidth = 6;
+            this.id_reparatie.Name = "id_reparatie";
+            this.id_reparatie.Width = 125;
+            // 
+            // numeDataGridViewTextBoxColumn
+            // 
+            this.numeDataGridViewTextBoxColumn.DataPropertyName = "nume";
+            this.numeDataGridViewTextBoxColumn.HeaderText = "nume";
+            this.numeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
+            this.numeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // prenumeDataGridViewTextBoxColumn
+            // 
+            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "prenume";
+            this.prenumeDataGridViewTextBoxColumn.HeaderText = "prenume";
+            this.prenumeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
+            this.prenumeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nr_telefon
+            // 
+            this.nr_telefon.DataPropertyName = "nr_telefon";
+            this.nr_telefon.HeaderText = "nr_telefon";
+            this.nr_telefon.MinimumWidth = 6;
+            this.nr_telefon.Name = "nr_telefon";
+            this.nr_telefon.Width = 125;
+            // 
+            // tip_telefon
+            // 
+            this.tip_telefon.DataPropertyName = "tip_telefon";
+            this.tip_telefon.HeaderText = "tip_telefon";
+            this.tip_telefon.MinimumWidth = 6;
+            this.tip_telefon.Name = "tip_telefon";
+            this.tip_telefon.Width = 125;
+            // 
+            // model
+            // 
+            this.model.DataPropertyName = "model";
+            this.model.HeaderText = "model";
+            this.model.MinimumWidth = 6;
+            this.model.Name = "model";
+            this.model.Width = 125;
+            // 
+            // imei
+            // 
+            this.imei.DataPropertyName = "imei";
+            this.imei.HeaderText = "imei";
+            this.imei.MinimumWidth = 6;
+            this.imei.Name = "imei";
+            this.imei.Width = 125;
+            // 
+            // data_primirii
+            // 
+            this.data_primirii.DataPropertyName = "data_primirii";
+            this.data_primirii.HeaderText = "data_primirii";
+            this.data_primirii.MinimumWidth = 6;
+            this.data_primirii.Name = "data_primirii";
+            this.data_primirii.Width = 125;
+            // 
+            // data_predarii
+            // 
+            this.data_predarii.DataPropertyName = "data_predarii";
+            this.data_predarii.HeaderText = "data_predarii";
+            this.data_predarii.MinimumWidth = 6;
+            this.data_predarii.Name = "data_predarii";
+            this.data_predarii.Width = 125;
+            // 
+            // defect_constatat
+            // 
+            this.defect_constatat.DataPropertyName = "defect_constatat";
+            this.defect_constatat.HeaderText = "defect_constatat";
+            this.defect_constatat.MinimumWidth = 6;
+            this.defect_constatat.Name = "defect_constatat";
+            this.defect_constatat.Width = 125;
+            // 
+            // observatii
+            // 
+            this.observatii.DataPropertyName = "observatii";
+            this.observatii.HeaderText = "observatii";
+            this.observatii.MinimumWidth = 6;
+            this.observatii.Name = "observatii";
+            this.observatii.Width = 125;
+            // 
+            // piese_inlocuite
+            // 
+            this.piese_inlocuite.DataPropertyName = "piese_inlocuite";
+            this.piese_inlocuite.HeaderText = "piese_inlocuite";
+            this.piese_inlocuite.MinimumWidth = 6;
+            this.piese_inlocuite.Name = "piese_inlocuite";
+            this.piese_inlocuite.Width = 125;
+            // 
+            // pret_achitat
+            // 
+            this.pret_achitat.DataPropertyName = "pret_achitat";
+            this.pret_achitat.HeaderText = "pret_achitat";
+            this.pret_achitat.MinimumWidth = 6;
+            this.pret_achitat.Name = "pret_achitat";
+            this.pret_achitat.Width = 125;
+            // 
             // ledger_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1047, 602);
+            this.Controls.Add(this.btnReparatiiRecente);
             this.Controls.Add(this.btnSterge);
             this.Controls.Add(this.btnNrTelefon);
             this.Controls.Add(this.label3);
@@ -394,33 +406,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePana;
         private System.Windows.Forms.Button btnPrint;
-        /*
-        private System.Windows.Forms.DataGridViewTextBoxColumn idreparatieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nrtelefonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tiptelefonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imeiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataprimiriiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datapredariiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn defectconstatatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observatiiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pieseinlocuiteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pretachitatDataGridViewTextBoxColumn;
-        */
         private System.Windows.Forms.BindingSource ledgerclassBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_reparatie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nr_telefon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tip_telefon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn model;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imei;
-        private System.Windows.Forms.DataGridViewTextBoxColumn data_primirii;
-        private System.Windows.Forms.DataGridViewTextBoxColumn data_predarii;
-        private System.Windows.Forms.DataGridViewTextBoxColumn defect_constatat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observatii;
-        private System.Windows.Forms.DataGridViewTextBoxColumn piese_inlocuite;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pret_achitat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prenumeDataGridViewTextBoxColumn;
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.Button btnDescarca;
         private System.Windows.Forms.TextBox txtNume;
@@ -433,5 +419,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNrTelefon;
         private System.Windows.Forms.Button btnSterge;
+        private System.Windows.Forms.Button btnReparatiiRecente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_reparatie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prenumeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nr_telefon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tip_telefon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn model;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imei;
+        private System.Windows.Forms.DataGridViewTextBoxColumn data_primirii;
+        private System.Windows.Forms.DataGridViewTextBoxColumn data_predarii;
+        private System.Windows.Forms.DataGridViewTextBoxColumn defect_constatat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn observatii;
+        private System.Windows.Forms.DataGridViewTextBoxColumn piese_inlocuite;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pret_achitat;
     }
 }

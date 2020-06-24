@@ -117,9 +117,9 @@ namespace AplicatieDisertatie
         
         private void btnInformatii_Click(object sender, EventArgs e)
         {
-            Process usrMan = new Process();
-            usrMan.StartInfo.FileName = "C:\\Users\\User\\source\\repos\\AplicatieDisertatie\\UserManual\\UserManual.chm";
-            usrMan.Start();
+            Process UserManual = new Process();
+            UserManual.StartInfo.FileName = "C:\\Users\\User\\source\\repos\\AplicatieDisertatie\\UserManual\\UserManual.chm";
+            UserManual.Start();            
         }
         #endregion
         private Form activeForm = null;             // the child form needs to be stored apart from the main form
