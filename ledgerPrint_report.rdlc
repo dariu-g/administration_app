@@ -60,8 +60,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>1.475in</Top>
-              <Left>4.63in</Left>
+              <Top>0.54167in</Top>
+              <Left>4.78in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>1</ZIndex>
@@ -180,8 +180,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>pid_reparatie</rd:DefaultName>
-              <Top>1.475in</Top>
-              <Left>5.69944in</Left>
+              <Top>0.54167in</Top>
+              <Left>5.84944in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>5</ZIndex>
@@ -300,8 +300,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>2.63334in</Top>
-              <Left>4.025in</Left>
+              <Top>1.48057in</Top>
+              <Left>4.02779in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>9</ZIndex>
@@ -330,8 +330,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>3.91111in</Top>
-              <Left>4.025in</Left>
+              <Top>3.43334in</Top>
+              <Left>4.02779in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>10</ZIndex>
@@ -360,8 +360,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>3.71111in</Top>
-              <Left>0.43333in</Left>
+              <Top>2.2889in</Top>
+              <Left>4.02779in</Left>
               <Height>0.25in</Height>
               <Width>1.20833in</Width>
               <ZIndex>11</ZIndex>
@@ -390,10 +390,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>4.04445in</Top>
-              <Left>0.64166in</Left>
+              <Top>2.62224in</Top>
+              <Left>4.02779in</Left>
               <Height>0.25in</Height>
-              <Width>1in</Width>
+              <Width>1.20833in</Width>
               <ZIndex>12</ZIndex>
               <Style>
                 <Border>
@@ -420,8 +420,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>3.57778in</Top>
-              <Left>4.025in</Left>
+              <Top>3.10001in</Top>
+              <Left>4.02779in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>13</ZIndex>
@@ -450,8 +450,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>2.93889in</Top>
-              <Left>4.025in</Left>
+              <Top>1.78612in</Top>
+              <Left>4.02779in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>14</ZIndex>
@@ -660,8 +660,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>pdata_primirii</rd:DefaultName>
-              <Top>2.63334in</Top>
-              <Left>5.14166in</Left>
+              <Top>1.48057in</Top>
+              <Left>5.14445in</Left>
               <Height>0.25in</Height>
               <Width>1.475in</Width>
               <ZIndex>21</ZIndex>
@@ -690,8 +690,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>pdata_predarii</rd:DefaultName>
-              <Top>2.95278in</Top>
-              <Left>5.14166in</Left>
+              <Top>1.80001in</Top>
+              <Left>5.14445in</Left>
               <Height>0.25in</Height>
               <Width>1.475in</Width>
               <ZIndex>22</ZIndex>
@@ -720,8 +720,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>pdefect_constatat</rd:DefaultName>
-              <Top>3.71111in</Top>
-              <Left>1.71111in</Left>
+              <Top>2.2889in</Top>
+              <Left>5.30557in</Left>
               <Height>0.25in</Height>
               <Width>1.31667in</Width>
               <ZIndex>23</ZIndex>
@@ -750,8 +750,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>pobservatii</rd:DefaultName>
-              <Top>4.04445in</Top>
-              <Left>1.71111in</Left>
+              <Top>2.62224in</Top>
+              <Left>5.30557in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>24</ZIndex>
@@ -780,8 +780,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>ppiese_inlocuite</rd:DefaultName>
-              <Top>3.57778in</Top>
-              <Left>5.14166in</Left>
+              <Top>3.10001in</Top>
+              <Left>5.14445in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>25</ZIndex>
@@ -810,8 +810,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>ppretachitat</rd:DefaultName>
-              <Top>3.91111in</Top>
-              <Left>5.14166in</Left>
+              <Top>3.43334in</Top>
+              <Left>5.14445in</Left>
               <Height>0.25in</Height>
               <Width>0.88333in</Width>
               <ZIndex>26</ZIndex>
@@ -840,11 +840,131 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox29</rd:DefaultName>
-              <Top>3.91111in</Top>
-              <Left>6.09443in</Left>
+              <Top>3.43334in</Top>
+              <Left>6.09722in</Left>
               <Height>0.25in</Height>
               <Width>0.26667in</Width>
               <ZIndex>27</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox16">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Garantie:</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox16</rd:DefaultName>
+              <Top>3.71112in</Top>
+              <Left>0.64166in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
+              <ZIndex>28</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="pgarantie">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Parameters!pgarantie.Value</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>pgarantie</rd:DefaultName>
+              <Top>3.71112in</Top>
+              <Left>1.71111in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
+              <ZIndex>29</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox17">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Culoare:</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox16</rd:DefaultName>
+              <Top>4.03056in</Top>
+              <Left>0.64166in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
+              <ZIndex>30</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="pculoare">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Parameters!pculoare.Value</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>pculoare</rd:DefaultName>
+              <Top>4.03056in</Top>
+              <Left>1.69722in</Left>
+              <Height>0.25in</Height>
+              <Width>1in</Width>
+              <ZIndex>31</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -958,10 +1078,23 @@
     </ReportParameter>
     <ReportParameter Name="ppiese_inlocuite">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="ppretachitat">
       <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="pgarantie">
+      <DataType>Boolean</DataType>
+      <Nullable>true</Nullable>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="pculoare">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
   </ReportParameters>
@@ -1034,6 +1167,16 @@
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>3</RowIndex>
           <ParameterName>ppretachitat</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>3</RowIndex>
+          <ParameterName>pgarantie</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>3</RowIndex>
+          <ParameterName>pculoare</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

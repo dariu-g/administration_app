@@ -264,17 +264,36 @@ namespace AplicatieDisertatie
             NumberOnly_textBoxFormat(e);
         }
         #endregion
+        private void last_Registration()
+        {
+            using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
+            {
+                if (db_con.State == ConnectionState.Closed)
+                {
+                    db_con.Open();
+                }
+                string query = "SELECT TOP (1) r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.pret_estimativ, r.pret_avans, r.defect_constatat, r.observatii, r.termen_rezolvare FROM Date_reparatie r " +
+                                "JOIN Date_client c ON r.id_client = c.id " +
+                                "JOIN Date_telefon t ON r.id_telefon = t.id " +
+                                $"ORDER BY id_reparatie DESC";
 
+                registrationclassBindingSource.DataSource = db_con.Query<ledger_class>(query, commandType: CommandType.Text);
+            }
+        }
         private void btnCauta_Click(object sender, EventArgs e)
         {
-            try
+            using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
             {
-                FillDataGridView();
-                //last_Registration();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Eroare baza de date.");
+                if (db_con.State == ConnectionState.Closed)
+                {
+                    db_con.Open();
+                }
+                string query = "SELECT TOP (1) r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.pret_estimativ, r.pret_avans, r.defect_constatat, r.observatii, r.termen_rezolvare FROM Date_reparatie r " +
+                                "JOIN Date_client c ON r.id_client = c.id " +
+                                "JOIN Date_telefon t ON r.id_telefon = t.id " +
+                                $"ORDER BY id_reparatie DESC";
+
+                registrationclassBindingSource.DataSource = db_con.Query<ledger_class>(query, commandType: CommandType.Text);
             }
         }
 
@@ -300,23 +319,6 @@ namespace AplicatieDisertatie
                         form.ShowDialog();
                     };
                 }
-            }
-        }
-
-        private void last_Registration ()
-        {
-            using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
-            {
-                if (db_con.State == ConnectionState.Closed)
-                {
-                    db_con.Open();
-                }
-                string query = "SELECT TOP (10) r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.pret_estimativ, r.pret_avans, r.defect_constatat, r.observatii, r.termen_rezolvare FROM Date_reparatie r " +
-                                "JOIN Date_client c ON r.id_client = c.id " +
-                                "JOIN Date_telefon t ON r.id_telefon = t.id " +
-                                $"ORDER BY id_reparatie DESC";
-
-                registrationclassBindingSource.DataSource = db_con.Query<ledger_class>(query, commandType: CommandType.Text);
             }
         }
     }

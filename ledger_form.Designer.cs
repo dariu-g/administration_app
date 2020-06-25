@@ -57,6 +57,8 @@
             this.tip_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.model = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imei = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.garantie = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.culoare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data_primirii = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data_predarii = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.defect_constatat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -99,6 +101,8 @@
             this.tip_telefon,
             this.model,
             this.imei,
+            this.garantie,
+            this.culoare,
             this.data_primirii,
             this.data_predarii,
             this.defect_constatat,
@@ -316,6 +320,22 @@
             this.imei.Name = "imei";
             this.imei.Width = 125;
             // 
+            // garantie
+            // 
+            this.garantie.DataPropertyName = "garantie";
+            this.garantie.HeaderText = "garantie";
+            this.garantie.MinimumWidth = 6;
+            this.garantie.Name = "garantie";
+            this.garantie.Width = 125;
+            // 
+            // culoare
+            // 
+            this.culoare.DataPropertyName = "culoare";
+            this.culoare.HeaderText = "culoare";
+            this.culoare.MinimumWidth = 6;
+            this.culoare.Name = "culoare";
+            this.culoare.Width = 125;
+            // 
             // data_primirii
             // 
             this.data_primirii.DataPropertyName = "data_primirii";
@@ -427,6 +447,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tip_telefon;
         private System.Windows.Forms.DataGridViewTextBoxColumn model;
         private System.Windows.Forms.DataGridViewTextBoxColumn imei;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn garantie;
+        private System.Windows.Forms.DataGridViewTextBoxColumn culoare;
         private System.Windows.Forms.DataGridViewTextBoxColumn data_primirii;
         private System.Windows.Forms.DataGridViewTextBoxColumn data_predarii;
         private System.Windows.Forms.DataGridViewTextBoxColumn defect_constatat;
