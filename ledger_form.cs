@@ -30,7 +30,7 @@ namespace AplicatieDisertatie
                 {
                     db_con.Open();
                 }
-                string query = "SELECT r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat FROM Date_reparatie r " +
+                string query = "SELECT r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat, r.pret_estimativ, r.pret_avans, r.termen_rezolvare FROM Date_reparatie r " +
                                 "JOIN Date_client c ON r.id_client = c.id " +
                                 "JOIN Date_telefon t ON r.id_telefon = t.id " +
                                $"WHERE r.data_primirii between '{dateTimeDin.Value}' and '{dateTimePana.Value}'";
@@ -47,7 +47,7 @@ namespace AplicatieDisertatie
                 {
                     db_con.Open();
                 }
-                string query = "SELECT TOP (10) r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat FROM Date_reparatie r " +
+                string query = "SELECT TOP (10) r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat, r.pret_estimativ, r.pret_avans, r.termen_rezolvare FROM Date_reparatie r " +
                                "JOIN Date_client c ON r.id_client = c.id " +
                                "JOIN Date_telefon t ON r.id_telefon = t.id " +
                                $"ORDER BY id_reparatie DESC";
@@ -67,7 +67,7 @@ namespace AplicatieDisertatie
                     {
                         db_con.Open();
                     }
-                    string query = "SELECT r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat FROM Date_reparatie r " +
+                    string query = "SELECT r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat, r.pret_estimativ, r.pret_avans, r.termen_rezolvare FROM Date_reparatie r " +
                                     "JOIN Date_client c ON r.id_client = c.id " +
                                     "JOIN Date_telefon t ON r.id_telefon = t.id " +
                                    $"WHERE r.id_reparatie = '{objct.id_reparatie}'";

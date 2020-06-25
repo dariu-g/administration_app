@@ -41,7 +41,11 @@ namespace AplicatieDisertatie
                 new Microsoft.Reporting.WinForms.ReportParameter("ppiese_inlocuite", _param.piese_inlocuite.ToString()),
                 new Microsoft.Reporting.WinForms.ReportParameter("ppretachitat", _param.pret_achitat.ToString()),
                 new Microsoft.Reporting.WinForms.ReportParameter("pgarantie", _param.garantie.ToString()),
-                new Microsoft.Reporting.WinForms.ReportParameter("pculoare", _param.culoare.ToString())
+                new Microsoft.Reporting.WinForms.ReportParameter("pculoare", _param.culoare.ToString()),
+                new Microsoft.Reporting.WinForms.ReportParameter("pcod_telefon", _param.cod_telefon.ToString()),
+                new Microsoft.Reporting.WinForms.ReportParameter("ppret_estimativ", _param.pret_estimativ.ToString()),
+                new Microsoft.Reporting.WinForms.ReportParameter("ppret_avans", _param.pret_avans.ToString()),
+                new Microsoft.Reporting.WinForms.ReportParameter("ptermen_rezolvare", _param.termen_rezolvare.ToString())
             };
             this.reportViewer.LocalReport.SetParameters(parameters);
             this.reportViewer.RefreshReport();

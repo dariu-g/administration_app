@@ -36,8 +36,16 @@ namespace AplicatieDisertatie
 
         public decimal pret_achitat { get; set; }
 
+        public decimal pret_avans { get; set; }
+
+        public decimal pret_estimativ { get; set; }
+
+        public string termen_rezolvare { get; set; }
+
         public Boolean garantie { get; set; }
 
         public string culoare { get; set; }
+
+        public string cod_telefon { get; set; }
     }
 }

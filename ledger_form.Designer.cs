@@ -59,12 +59,16 @@
             this.imei = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.garantie = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.culoare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cod_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data_primirii = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data_predarii = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.defect_constatat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.observatii = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.piese_inlocuite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pret_estimativ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pret_achitat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pret_avans = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.termen_rezolvare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLedger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -103,12 +107,16 @@
             this.imei,
             this.garantie,
             this.culoare,
+            this.cod_telefon,
             this.data_primirii,
             this.data_predarii,
             this.defect_constatat,
             this.observatii,
             this.piese_inlocuite,
-            this.pret_achitat});
+            this.pret_estimativ,
+            this.pret_achitat,
+            this.pret_avans,
+            this.termen_rezolvare});
             this.dataGridLedger.DataSource = this.ledgerclassBindingSource;
             this.dataGridLedger.Location = new System.Drawing.Point(23, 134);
             this.dataGridLedger.Name = "dataGridLedger";
@@ -267,7 +275,7 @@
             // id_reparatie
             // 
             this.id_reparatie.DataPropertyName = "id_reparatie";
-            this.id_reparatie.HeaderText = "id_reparatie";
+            this.id_reparatie.HeaderText = "Nr.inreg";
             this.id_reparatie.MinimumWidth = 6;
             this.id_reparatie.Name = "id_reparatie";
             this.id_reparatie.Width = 125;
@@ -336,6 +344,14 @@
             this.culoare.Name = "culoare";
             this.culoare.Width = 125;
             // 
+            // cod_telefon
+            // 
+            this.cod_telefon.DataPropertyName = "cod_telefon";
+            this.cod_telefon.HeaderText = "cod_telefon";
+            this.cod_telefon.MinimumWidth = 6;
+            this.cod_telefon.Name = "cod_telefon";
+            this.cod_telefon.Width = 125;
+            // 
             // data_primirii
             // 
             this.data_primirii.DataPropertyName = "data_primirii";
@@ -376,6 +392,14 @@
             this.piese_inlocuite.Name = "piese_inlocuite";
             this.piese_inlocuite.Width = 125;
             // 
+            // pret_estimativ
+            // 
+            this.pret_estimativ.DataPropertyName = "pret_estimativ";
+            this.pret_estimativ.HeaderText = "pret_estimativ";
+            this.pret_estimativ.MinimumWidth = 6;
+            this.pret_estimativ.Name = "pret_estimativ";
+            this.pret_estimativ.Width = 125;
+            // 
             // pret_achitat
             // 
             this.pret_achitat.DataPropertyName = "pret_achitat";
@@ -383,6 +407,22 @@
             this.pret_achitat.MinimumWidth = 6;
             this.pret_achitat.Name = "pret_achitat";
             this.pret_achitat.Width = 125;
+            // 
+            // pret_avans
+            // 
+            this.pret_avans.DataPropertyName = "pret_avans";
+            this.pret_avans.HeaderText = "pret_avans";
+            this.pret_avans.MinimumWidth = 6;
+            this.pret_avans.Name = "pret_avans";
+            this.pret_avans.Width = 125;
+            // 
+            // termen_rezolvare
+            // 
+            this.termen_rezolvare.DataPropertyName = "termen_rezolvare";
+            this.termen_rezolvare.HeaderText = "termen_rezolvare";
+            this.termen_rezolvare.MinimumWidth = 6;
+            this.termen_rezolvare.Name = "termen_rezolvare";
+            this.termen_rezolvare.Width = 125;
             // 
             // ledger_form
             // 
@@ -449,11 +489,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn imei;
         private System.Windows.Forms.DataGridViewCheckBoxColumn garantie;
         private System.Windows.Forms.DataGridViewTextBoxColumn culoare;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cod_telefon;
         private System.Windows.Forms.DataGridViewTextBoxColumn data_primirii;
         private System.Windows.Forms.DataGridViewTextBoxColumn data_predarii;
         private System.Windows.Forms.DataGridViewTextBoxColumn defect_constatat;
         private System.Windows.Forms.DataGridViewTextBoxColumn observatii;
         private System.Windows.Forms.DataGridViewTextBoxColumn piese_inlocuite;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pret_estimativ;
         private System.Windows.Forms.DataGridViewTextBoxColumn pret_achitat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pret_avans;
+        private System.Windows.Forms.DataGridViewTextBoxColumn termen_rezolvare;
     }
 }
