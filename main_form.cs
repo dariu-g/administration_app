@@ -67,6 +67,11 @@ namespace AplicatieDisertatie
         {
             openChildForm(new ledger_form());
         }
+
+        private void btnInregistrariModificari_Click(object sender, EventArgs e)
+        {
+            openChildForm(new dataEdit_form());
+        }
         #endregion
 
         #region StatusReparatiiSubmenu
@@ -153,6 +158,5 @@ namespace AplicatieDisertatie
             this.WindowState = FormWindowState.Maximized;
         }
         #endregion
-
     }
 }
