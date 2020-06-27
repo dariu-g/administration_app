@@ -16,12 +16,14 @@ namespace AplicatieDisertatie
 {
     public partial class registration_form : Form
     {
+        string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
         public registration_form()
         {
             InitializeComponent();
             checkStateGarantie();
             checkStateClientExistent();
             checkStateTelefonExistent();
+            last_Registration();
         }
 
         private void labelExit_Click(object sender, EventArgs e)
@@ -46,7 +48,6 @@ namespace AplicatieDisertatie
             }
             else
             {
-                string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
                 using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
                 {
                     DatabaseConnection.Open();
@@ -76,6 +77,7 @@ namespace AplicatieDisertatie
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Reparatie inregistrata!");
                     ClearTextBoxes();
+                    last_Registration();
                 }
             }
         }
@@ -161,7 +163,6 @@ namespace AplicatieDisertatie
 
         void FillDataGridView()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
             using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
             {
                 if (DatabaseConnection.State == ConnectionState.Closed)
@@ -269,15 +270,9 @@ namespace AplicatieDisertatie
             using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
             {
                 if (db_con.State == ConnectionState.Closed)
-                {
                     db_con.Open();
-                }
-                string query = "SELECT TOP (1) r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat, r.pret_estimativ, r.pret_avans, r.termen_rezolvare FROM Date_reparatie r " +
-                               "JOIN Date_client c ON r.id_client = c.id " +
-                               "JOIN Date_telefon t ON r.id_telefon = t.id " +
-                               $"ORDER BY id_reparatie DESC";
 
-                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>(query, commandType: CommandType.Text);
+                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>("UltimaInregistrare", commandType: CommandType.StoredProcedure);
             }
         }
         private void btnCauta_Click(object sender, EventArgs e)
@@ -285,15 +280,9 @@ namespace AplicatieDisertatie
             using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
             {
                 if (db_con.State == ConnectionState.Closed)
-                {
                     db_con.Open();
-                }
-                string query = "SELECT TOP (1) r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat, r.pret_estimativ, r.pret_avans, r.termen_rezolvare FROM Date_reparatie r " +
-                               "JOIN Date_client c ON r.id_client = c.id " +
-                               "JOIN Date_telefon t ON r.id_telefon = t.id " +
-                               $"ORDER BY id_reparatie DESC";
 
-                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>(query, commandType: CommandType.Text);
+                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>("Cauta", commandType: CommandType.StoredProcedure);
             }
         }
 
@@ -305,15 +294,10 @@ namespace AplicatieDisertatie
                 using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
                 {
                     if (db_con.State == ConnectionState.Closed)
-                    {
                         db_con.Open();
-                    }
-                    string query = "SELECT r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat, r.pret_estimativ, r.pret_avans, r.termen_rezolvare FROM Date_reparatie r " +
-                                    "JOIN Date_client c ON r.id_client = c.id " +
-                                    "JOIN Date_telefon t ON r.id_telefon = t.id " +
-                                   $"WHERE r.id_reparatie = '{objct.id_reparatie}'";
 
-                    List<ledgerPrint_class> list = db_con.Query<ledgerPrint_class>(query, commandType: CommandType.Text).ToList();
+                    int obiect_ReparatieID = objct.id_reparatie;
+                    List<ledgerPrint_class> list = db_con.Query<ledgerPrint_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
                     using (print_form form = new print_form(objct, list))
                     {
                         form.ShowDialog();

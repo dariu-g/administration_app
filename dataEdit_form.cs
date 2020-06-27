@@ -22,6 +22,8 @@ namespace AplicatieDisertatie
         public dataEdit_form()
         {
             InitializeComponent();
+            checkStateGarantie();
+            readOnly_TextBoxes();
         }
 
         private void dataGridViewEdit_DoubleClick(object sender, EventArgs e)
@@ -35,6 +37,7 @@ namespace AplicatieDisertatie
                     txtPrenume.Text = dataGridViewEdit.CurrentRow.Cells[2].Value.ToString();
                     txtNrTelefon.Text = dataGridViewEdit.CurrentRow.Cells[3].Value.ToString();
                     btnModificaClient.Text = "Modifica";
+                    readOnly_DateClient();
                 }
 
                 if (ID == "id_telefon")
@@ -45,8 +48,9 @@ namespace AplicatieDisertatie
                     txtCuloare.Text = dataGridViewEdit.CurrentRow.Cells[3].Value.ToString();
                     txtIMEI.Text = dataGridViewEdit.CurrentRow.Cells[4].Value.ToString();
                     txtCodTelefon.Text = dataGridViewEdit.CurrentRow.Cells[5].Value.ToString();
-                    checkboxGarantie.Text = dataGridViewEdit.CurrentRow.Cells[6].Value.ToString();
+                    checkboxGarantie.Checked = Convert.ToBoolean(dataGridViewEdit.CurrentRow.Cells[6].Value);
                     btnModificaTelefon.Text = "Modifica";
+                    readOnly_DateTelefon();
                 }
 
                 if (ID == "id_reparatie")
@@ -63,6 +67,7 @@ namespace AplicatieDisertatie
                     txtPretAvans.Text = dataGridViewEdit.CurrentRow.Cells[9].Value.ToString();
                     txtPretAchitat.Text = dataGridViewEdit.CurrentRow.Cells[10].Value.ToString();
                     btnModificaReparatie.Text = "Modifica";
+                    readOnly_DateReparatie();
                 }
             }
         }
@@ -115,7 +120,7 @@ namespace AplicatieDisertatie
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Datele clientului au fost modificate.");
                     btnModificaClient.Text = "Cauta";
-                    ClearTextBoxes();
+                    readOnly_DateClient();
                 }
 
             }
@@ -153,7 +158,7 @@ namespace AplicatieDisertatie
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Datele telefonului au fost modificate!");
                     btnModificaTelefon.Text = "Cauta";
-                    ClearTextBoxes();
+                    readOnly_DateTelefon();
                 }
             }
             catch (Exception ex)
@@ -193,7 +198,7 @@ namespace AplicatieDisertatie
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Datele telefonului au fost modificate!");
                     btnModificaReparatie.Text = "Cauta";
-                    ClearTextBoxes();
+                    readOnly_DateReparatie();
                 }
             }
             catch (Exception ex)
@@ -216,6 +221,116 @@ namespace AplicatieDisertatie
             };
 
             clear_func(Controls);
+        }
+
+        private void checkStateGarantie()
+        {
+            if (checkboxGarantie.CheckState == CheckState.Checked)
+                checkboxGarantie.Text = "Da";
+            else if (checkboxGarantie.CheckState == CheckState.Unchecked)
+                checkboxGarantie.Text = "Nu";
+            else
+                checkboxGarantie.Text = "Eroare";
+        }
+
+        private void checkboxGarantie_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (checkboxGarantie.CheckState == CheckState.Checked)
+                checkboxGarantie.Text = "Da";
+            else if (checkboxGarantie.CheckState == CheckState.Unchecked)
+                checkboxGarantie.Text = "Nu";
+            else
+                checkboxGarantie.Text = "Eroare";
+        }
+
+        private void btnAnuleaza_Click(object sender, EventArgs e)
+        {
+            ClearTextBoxes();
+            btnModificaClient.Text = "Cauta";
+            btnModificaTelefon.Text = "Cauta";
+            btnModificaReparatie.Text = "Cauta";
+            readOnly_TextBoxes();
+        }
+
+        private void readOnly_TextBoxes()
+        {
+            Action<Control.ControlCollection> clear_func = null;
+
+            clear_func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).ReadOnly = true;
+                    else
+                        clear_func(control.Controls);
+
+            };
+            clear_func(Controls);
+            txtCautaClient.ReadOnly = false;
+            txtCautaReparatie.ReadOnly = false;
+            txtCautaTelefon.ReadOnly = false;
+        }
+
+        private void readOnly_DateClient ()
+        {
+            if (btnModificaClient.Text == "Modifica")
+            {
+                txtNume.ReadOnly = false;
+                txtPrenume.ReadOnly = false;
+                txtNrTelefon.ReadOnly = false;
+            }
+            else if(btnModificaClient.Text == "Cauta")
+            {
+                txtNume.ReadOnly = true;
+                txtPrenume.ReadOnly = true;
+                txtNrTelefon.ReadOnly = true;
+            }
+        }
+
+        private void readOnly_DateTelefon()
+        {
+            if (btnModificaTelefon.Text == "Modifica")
+            {
+                txtTipTelefon.ReadOnly = false;
+                txtModel.ReadOnly = false;
+                txtCuloare.ReadOnly = false;
+                txtIMEI.ReadOnly = false;
+                txtCodTelefon.ReadOnly = false;
+            }
+            else if (btnModificaTelefon.Text == "Cauta")
+            {
+                txtTipTelefon.ReadOnly = true;
+                txtModel.ReadOnly = true;
+                txtCuloare.ReadOnly = true;
+                txtIMEI.ReadOnly = true;
+                txtCodTelefon.ReadOnly = true;
+            }
+        }
+
+        private void readOnly_DateReparatie()
+        {
+            if (btnModificaReparatie.Text == "Modifica")
+            {
+                txtDefectConstatat.ReadOnly = false;
+                txtPieseInlocuite.ReadOnly = false;
+                txtObservatii.ReadOnly = false;
+                txtTermenRezolvare.ReadOnly = false;
+                txtTermenGarantie.ReadOnly = false;
+                txtPretEstimativ.ReadOnly = false;
+                txtPretAvans.ReadOnly = false;
+                txtPretAchitat.ReadOnly = false;
+            }
+            else if (btnModificaReparatie.Text == "Cauta")
+            {
+                txtDefectConstatat.ReadOnly = true;
+                txtPieseInlocuite.ReadOnly = true;
+                txtObservatii.ReadOnly = true;
+                txtTermenRezolvare.ReadOnly = true;
+                txtTermenGarantie.ReadOnly = true;
+                txtPretEstimativ.ReadOnly = true;
+                txtPretAvans.ReadOnly = true;
+                txtPretAchitat.ReadOnly = true;
+            }
         }
     }
 }

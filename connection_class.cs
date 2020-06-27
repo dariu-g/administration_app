@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,9 @@ namespace AplicatieDisertatie
 {
     class connection_class
     {
-        public static string connectionString = "Data Source=BLUE;Initial Catalog=baza_date;Integrated Security=True;";
+        /* Initial method of establishing the connection to the database. */ 
+        //public static string connectionString = "Data Source=BLUE;Initial Catalog=baza_date;Integrated Security=True;";
+        public static string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
 
         public static DataTable executeSQL(string sql)
         {

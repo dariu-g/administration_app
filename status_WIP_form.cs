@@ -14,6 +14,7 @@ namespace AplicatieDisertatie
 {
     public partial class status_WIP_form : Form
     {
+        string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
         int ReparatieID = 0;
         public status_WIP_form()
         {
@@ -23,7 +24,6 @@ namespace AplicatieDisertatie
 
         void FillDataGridView()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
             using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
             {
                 if (DatabaseConnection.State == ConnectionState.Closed)
@@ -61,7 +61,6 @@ namespace AplicatieDisertatie
 
         private void btnSalveaza_Click(object sender, EventArgs e)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
             using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
             {
                 DatabaseConnection.Open();

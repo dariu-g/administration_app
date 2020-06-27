@@ -30,12 +30,9 @@ namespace AplicatieDisertatie
                 {
                     db_con.Open();
                 }
-                string query = "SELECT r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat, r.pret_estimativ, r.pret_avans, r.termen_rezolvare FROM Date_reparatie r " +
-                                "JOIN Date_client c ON r.id_client = c.id " +
-                                "JOIN Date_telefon t ON r.id_telefon = t.id " +
-                               $"WHERE r.data_primirii between '{dateTimeDin.Value}' and '{dateTimePana.Value}'";
-
-                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>(query, commandType: CommandType.Text);
+                DateTime dateFROM = dateTimeDin.Value;
+                DateTime dateTILL = dateTimePana.Value;
+                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>("CalendarDataInregistrari", new { dateFROM, dateTILL } ,commandType: CommandType.StoredProcedure);
             }
         }
         
@@ -47,12 +44,8 @@ namespace AplicatieDisertatie
                 {
                     db_con.Open();
                 }
-                string query = "SELECT TOP (10) r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat, r.pret_estimativ, r.pret_avans, r.termen_rezolvare FROM Date_reparatie r " +
-                               "JOIN Date_client c ON r.id_client = c.id " +
-                               "JOIN Date_telefon t ON r.id_telefon = t.id " +
-                               $"ORDER BY id_reparatie DESC";
 
-                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>(query, commandType: CommandType.Text);
+                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>("ReparatiiRecente", commandType: CommandType.StoredProcedure);
             }
         }
 
@@ -64,15 +57,11 @@ namespace AplicatieDisertatie
                 using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
                 {
                     if (db_con.State == ConnectionState.Closed)
-                    {
                         db_con.Open();
-                    }
-                    string query = "SELECT r.id_reparatie, c.nume, c.prenume, c.nr_telefon, t.tip_telefon, t.model, t.imei, t.garantie, t.cod_telefon, t.culoare, r.data_primirii, r.data_predarii, r.defect_constatat, r.observatii, r.piese_inlocuite, r.pret_achitat, r.pret_estimativ, r.pret_avans, r.termen_rezolvare FROM Date_reparatie r " +
-                                    "JOIN Date_client c ON r.id_client = c.id " +
-                                    "JOIN Date_telefon t ON r.id_telefon = t.id " +
-                                   $"WHERE r.id_reparatie = '{objct.id_reparatie}'";
-
-                    List<ledgerPrint_class> list = db_con.Query<ledgerPrint_class>(query, commandType: CommandType.Text).ToList();
+                    
+                    /* Storing the object id_reparatie from ledger_class in order to be sent to the stored procedure as a parameter. */
+                    int obiect_ReparatieID = objct.id_reparatie;
+                    List<ledgerPrint_class> list = db_con.Query<ledgerPrint_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
                     using (print_form form = new print_form(objct, list))
                     {
                         form.ShowDialog();
@@ -98,7 +87,6 @@ namespace AplicatieDisertatie
                     DatabaseConnection.Open();
                     SqlCommand sqlCmd = new SqlCommand("StergeReparatie", DatabaseConnection);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
-
                     sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID);
 
                     sqlCmd.ExecuteNonQuery();
