@@ -88,7 +88,7 @@ namespace AplicatieDisertatie
 
         private void btnStatusNeridicate_Click(object sender, EventArgs e)
         {
-            //openChildForm(new registration_form());
+            openChildForm(new status_unclaimed_form());
         }
         #endregion
 
@@ -96,21 +96,9 @@ namespace AplicatieDisertatie
         private void btnStatistici_Click(object sender, EventArgs e)
         {
             showSubMenu(panelStatisticiSubmenu);
+            openChildForm(new statistics_form());
         }
 
-        private void button13_Click(object sender, EventArgs e)
-        {
-            /* buton din meniul Status reparatii */
-            /* cod.. */
-            //hideSubMenu();
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            /* buton din meniul Statistici */
-            /* cod.. */
-            //hideSubMenu();
-        }
 
         private void button11_Click(object sender, EventArgs e)
         {

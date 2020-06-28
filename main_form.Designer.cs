@@ -32,16 +32,13 @@
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnInformatii = new System.Windows.Forms.Button();
             this.panelStatisticiSubmenu = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.btnStatistici = new System.Windows.Forms.Button();
             this.panelStatusReparatiiSubmenu = new System.Windows.Forms.Panel();
             this.btnStatusNeridicate = new System.Windows.Forms.Button();
             this.btnStatusInLucru = new System.Windows.Forms.Button();
             this.btnStatusReparatii = new System.Windows.Forms.Button();
             this.panelInregistrareSubmenu = new System.Windows.Forms.Panel();
+            this.btnInregistrariModificari = new System.Windows.Forms.Button();
             this.btnInregistrariIstoric = new System.Windows.Forms.Button();
             this.btnInregistrariAdauga = new System.Windows.Forms.Button();
             this.btnInregistrariReparatii = new System.Windows.Forms.Button();
@@ -51,7 +48,8 @@
             this.btnMainFormExit = new System.Windows.Forms.Label();
             this.panelButtons = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.btnInregistrariModificari = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelStatisticiSubmenu.SuspendLayout();
             this.panelStatusReparatiiSubmenu.SuspendLayout();
@@ -84,7 +82,7 @@
             this.btnInformatii.FlatAppearance.BorderSize = 2;
             this.btnInformatii.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInformatii.ForeColor = System.Drawing.Color.Black;
-            this.btnInformatii.Location = new System.Drawing.Point(0, 594);
+            this.btnInformatii.Location = new System.Drawing.Point(0, 517);
             this.btnInformatii.Name = "btnInformatii";
             this.btnInformatii.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnInformatii.Size = new System.Drawing.Size(250, 45);
@@ -99,80 +97,11 @@
             this.panelStatisticiSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.panelStatisticiSubmenu.Controls.Add(this.button10);
             this.panelStatisticiSubmenu.Controls.Add(this.button11);
-            this.panelStatisticiSubmenu.Controls.Add(this.button12);
-            this.panelStatisticiSubmenu.Controls.Add(this.button13);
             this.panelStatisticiSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelStatisticiSubmenu.Location = new System.Drawing.Point(0, 434);
             this.panelStatisticiSubmenu.Name = "panelStatisticiSubmenu";
-            this.panelStatisticiSubmenu.Size = new System.Drawing.Size(250, 160);
+            this.panelStatisticiSubmenu.Size = new System.Drawing.Size(250, 83);
             this.panelStatisticiSubmenu.TabIndex = 6;
-            // 
-            // button10
-            // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.Color.LightGray;
-            this.button10.Location = new System.Drawing.Point(0, 120);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(250, 40);
-            this.button10.TabIndex = 16;
-            this.button10.Text = "Statistici - nereparate";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.LightGray;
-            this.button11.Location = new System.Drawing.Point(0, 80);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(250, 40);
-            this.button11.TabIndex = 15;
-            this.button11.Text = "Statistici - reparate";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.Color.LightGray;
-            this.button12.Location = new System.Drawing.Point(0, 40);
-            this.button12.Name = "button12";
-            this.button12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button12.Size = new System.Drawing.Size(250, 40);
-            this.button12.TabIndex = 14;
-            this.button12.Text = "Statistici - luna";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
-            // button13
-            // 
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.ForeColor = System.Drawing.Color.LightGray;
-            this.button13.Location = new System.Drawing.Point(0, 0);
-            this.button13.Name = "button13";
-            this.button13.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button13.Size = new System.Drawing.Size(250, 40);
-            this.button13.TabIndex = 13;
-            this.button13.Text = "Statistici - ziua";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // btnStatistici
             // 
@@ -264,6 +193,23 @@
             this.panelInregistrareSubmenu.Name = "panelInregistrareSubmenu";
             this.panelInregistrareSubmenu.Size = new System.Drawing.Size(250, 120);
             this.panelInregistrareSubmenu.TabIndex = 2;
+            // 
+            // btnInregistrariModificari
+            // 
+            this.btnInregistrariModificari.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInregistrariModificari.FlatAppearance.BorderSize = 0;
+            this.btnInregistrariModificari.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnInregistrariModificari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInregistrariModificari.ForeColor = System.Drawing.Color.LightGray;
+            this.btnInregistrariModificari.Location = new System.Drawing.Point(0, 81);
+            this.btnInregistrariModificari.Name = "btnInregistrariModificari";
+            this.btnInregistrariModificari.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnInregistrariModificari.Size = new System.Drawing.Size(250, 41);
+            this.btnInregistrariModificari.TabIndex = 10;
+            this.btnInregistrariModificari.Text = "Inregistrari - modificari";
+            this.btnInregistrariModificari.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInregistrariModificari.UseVisualStyleBackColor = true;
+            this.btnInregistrariModificari.Click += new System.EventHandler(this.btnInregistrariModificari_Click);
             // 
             // btnInregistrariIstoric
             // 
@@ -388,22 +334,38 @@
             this.panelChildForm.Size = new System.Drawing.Size(1132, 753);
             this.panelChildForm.TabIndex = 2;
             // 
-            // btnInregistrariModificari
+            // button11
             // 
-            this.btnInregistrariModificari.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInregistrariModificari.FlatAppearance.BorderSize = 0;
-            this.btnInregistrariModificari.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.btnInregistrariModificari.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInregistrariModificari.ForeColor = System.Drawing.Color.LightGray;
-            this.btnInregistrariModificari.Location = new System.Drawing.Point(0, 81);
-            this.btnInregistrariModificari.Name = "btnInregistrariModificari";
-            this.btnInregistrariModificari.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnInregistrariModificari.Size = new System.Drawing.Size(250, 41);
-            this.btnInregistrariModificari.TabIndex = 10;
-            this.btnInregistrariModificari.Text = "Inregistrari - modificari";
-            this.btnInregistrariModificari.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInregistrariModificari.UseVisualStyleBackColor = true;
-            this.btnInregistrariModificari.Click += new System.EventHandler(this.btnInregistrariModificari_Click);
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.Color.LightGray;
+            this.button11.Location = new System.Drawing.Point(0, 0);
+            this.button11.Name = "button11";
+            this.button11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(250, 40);
+            this.button11.TabIndex = 15;
+            this.button11.Text = "Statistici - reparate";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button10
+            // 
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.ForeColor = System.Drawing.Color.LightGray;
+            this.button10.Location = new System.Drawing.Point(0, 40);
+            this.button10.Name = "button10";
+            this.button10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button10.Size = new System.Drawing.Size(250, 40);
+            this.button10.TabIndex = 16;
+            this.button10.Text = "Statistici - nereparate";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.UseVisualStyleBackColor = true;
             // 
             // main_form
             // 
@@ -442,10 +404,6 @@
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Button btnInformatii;
         private System.Windows.Forms.Panel panelStatisticiSubmenu;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btnStatistici;
         private System.Windows.Forms.Panel panelStatusReparatiiSubmenu;
         private System.Windows.Forms.Button btnStatusNeridicate;
@@ -457,5 +415,7 @@
         private System.Windows.Forms.Label btnMainFormMax;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Button btnInregistrariModificari;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }

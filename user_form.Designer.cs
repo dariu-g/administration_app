@@ -51,6 +51,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelExit = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -224,6 +225,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.txtTipUtilizator);
             this.panel1.Controls.Add(this.labelCatreAutentificare);
             this.panel1.Controls.Add(this.label12);
@@ -326,6 +328,17 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "ÎNREGISTRARE UTILIZATOR NOU";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(257, 432);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(27, 36);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "*";
+            // 
             // user_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -375,5 +388,6 @@
         private System.Windows.Forms.Label labelExit;
         private System.Windows.Forms.Label labelCatreAutentificare;
         private System.Windows.Forms.ComboBox txtTipUtilizator;
+        private System.Windows.Forms.Label label13;
     }
 }

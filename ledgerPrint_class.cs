@@ -47,5 +47,9 @@ namespace AplicatieDisertatie
 
         public string termen_rezolvare { get; set; }
 
+        public string termen_garantie { get; set; }
+
+        public string verdict_reparatie { get; set; }
+
     }
 }

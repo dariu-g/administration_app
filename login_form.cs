@@ -14,12 +14,12 @@ namespace AplicatieDisertatie
 {
     public partial class login_form : Form
     {
-        connection_class hash = new connection_class();
         public login_form()
         {
             InitializeComponent();
         }
 
+        #region MainButtons
         private void labelCatreInregistrareUtilizator_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -40,7 +40,7 @@ namespace AplicatieDisertatie
 
                 login_check += "SELECT * FROM Utilizatori ";
                 login_check += "WHERE utilizator = '" + txtUtilizator.Text + "' ";
-                login_check += "AND parola = '" + hash.PasswordEncrypt(txtParola.Text) + "' ";
+                login_check += "AND parola = '" + connection_class.PasswordEncrypt(txtParola.Text) + "' ";
 
                 DataTable Utilizatori = connection_class.executeSQL(login_check);
 
@@ -68,6 +68,7 @@ namespace AplicatieDisertatie
                 txtUtilizator.Select();
             }
         }
+        #endregion
 
         #region Design
         private void labelExit_Click(object sender, EventArgs e)

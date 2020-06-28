@@ -16,12 +16,15 @@ namespace AplicatieDisertatie
 {
     public partial class ledger_form : Form
     {
+        /* Global variables. */
         int ReparatieID = 0;
+
         public ledger_form()
         {
             InitializeComponent();
         }
 
+        #region MainButtons
         private void btnCauta_Click(object sender, EventArgs e)
         {
             using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
@@ -70,13 +73,6 @@ namespace AplicatieDisertatie
             }
         }
 
-        private void dataGridLedger_Click(object sender, EventArgs e)
-        {
-            if (dataGridLedger.CurrentRow.Index != -1)
-            {
-                ReparatieID = Convert.ToInt32(dataGridLedger.CurrentRow.Cells[0].Value.ToString());
-            }
-        }
         private void btnSterge_Click(object sender, EventArgs e)
         {
             try
@@ -97,6 +93,17 @@ namespace AplicatieDisertatie
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Eroare de stergere!");
+            }
+        }
+        #endregion
+
+        /* Click event to select the id of the registration upon click. */
+        private void dataGridLedger_Click(object sender, EventArgs e)
+        {
+            if (dataGridLedger.Rows.Count > 0)
+            if (dataGridLedger.CurrentRow.Index != -1)
+            {
+                ReparatieID = Convert.ToInt32(dataGridLedger.CurrentRow.Cells[0].Value.ToString());
             }
         }
     }

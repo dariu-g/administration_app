@@ -39,11 +39,14 @@
             this.dateTimeDataPredarii = new System.Windows.Forms.DateTimePicker();
             this.labelDataPredarii = new System.Windows.Forms.Label();
             this.btnSalveaza = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReparatii)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewReparatii
             // 
+            this.dataGridViewReparatii.AllowUserToAddRows = false;
+            this.dataGridViewReparatii.AllowUserToDeleteRows = false;
             this.dataGridViewReparatii.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewReparatii.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridViewReparatii.Location = new System.Drawing.Point(0, 0);
@@ -58,7 +61,7 @@
             // labelPretAchitat
             // 
             this.labelPretAchitat.AutoSize = true;
-            this.labelPretAchitat.Location = new System.Drawing.Point(397, 551);
+            this.labelPretAchitat.Location = new System.Drawing.Point(357, 543);
             this.labelPretAchitat.Name = "labelPretAchitat";
             this.labelPretAchitat.Size = new System.Drawing.Size(80, 17);
             this.labelPretAchitat.TabIndex = 1;
@@ -67,16 +70,17 @@
             // checkBoxVerdictReparatie
             // 
             this.checkBoxVerdictReparatie.AutoSize = true;
-            this.checkBoxVerdictReparatie.Location = new System.Drawing.Point(741, 483);
+            this.checkBoxVerdictReparatie.Location = new System.Drawing.Point(493, 572);
             this.checkBoxVerdictReparatie.Name = "checkBoxVerdictReparatie";
-            this.checkBoxVerdictReparatie.Size = new System.Drawing.Size(147, 21);
+            this.checkBoxVerdictReparatie.Size = new System.Drawing.Size(38, 21);
             this.checkBoxVerdictReparatie.TabIndex = 4;
-            this.checkBoxVerdictReparatie.Text = "Reparat/nereparat";
+            this.checkBoxVerdictReparatie.Text = "?";
             this.checkBoxVerdictReparatie.UseVisualStyleBackColor = true;
+            this.checkBoxVerdictReparatie.CheckStateChanged += new System.EventHandler(this.checkBoxVerdictReparatie_CheckStateChanged);
             // 
             // txtPretAchitat
             // 
-            this.txtPretAchitat.Location = new System.Drawing.Point(493, 548);
+            this.txtPretAchitat.Location = new System.Drawing.Point(493, 538);
             this.txtPretAchitat.Name = "txtPretAchitat";
             this.txtPretAchitat.Size = new System.Drawing.Size(242, 22);
             this.txtPretAchitat.TabIndex = 3;
@@ -92,7 +96,7 @@
             // labelPieseInlocuite
             // 
             this.labelPieseInlocuite.AutoSize = true;
-            this.labelPieseInlocuite.Location = new System.Drawing.Point(378, 455);
+            this.labelPieseInlocuite.Location = new System.Drawing.Point(357, 467);
             this.labelPieseInlocuite.Name = "labelPieseInlocuite";
             this.labelPieseInlocuite.Size = new System.Drawing.Size(99, 17);
             this.labelPieseInlocuite.TabIndex = 4;
@@ -108,7 +112,7 @@
             // labelTermenGarantie
             // 
             this.labelTermenGarantie.AutoSize = true;
-            this.labelTermenGarantie.Location = new System.Drawing.Point(364, 510);
+            this.labelTermenGarantie.Location = new System.Drawing.Point(357, 510);
             this.labelTermenGarantie.Name = "labelTermenGarantie";
             this.labelTermenGarantie.Size = new System.Drawing.Size(113, 17);
             this.labelTermenGarantie.TabIndex = 6;
@@ -118,15 +122,16 @@
             // 
             this.dateTimeDataPredarii.CustomFormat = "dd/MM/yyyy";
             this.dateTimeDataPredarii.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeDataPredarii.Location = new System.Drawing.Point(493, 408);
+            this.dateTimeDataPredarii.Location = new System.Drawing.Point(493, 418);
             this.dateTimeDataPredarii.Name = "dateTimeDataPredarii";
+            this.dateTimeDataPredarii.ShowCheckBox = true;
             this.dateTimeDataPredarii.Size = new System.Drawing.Size(242, 22);
             this.dateTimeDataPredarii.TabIndex = 8;
             // 
             // labelDataPredarii
             // 
             this.labelDataPredarii.AutoSize = true;
-            this.labelDataPredarii.Location = new System.Drawing.Point(387, 408);
+            this.labelDataPredarii.Location = new System.Drawing.Point(357, 418);
             this.labelDataPredarii.Name = "labelDataPredarii";
             this.labelDataPredarii.Size = new System.Drawing.Size(90, 17);
             this.labelDataPredarii.TabIndex = 9;
@@ -134,19 +139,29 @@
             // 
             // btnSalveaza
             // 
-            this.btnSalveaza.Location = new System.Drawing.Point(258, 483);
+            this.btnSalveaza.Location = new System.Drawing.Point(493, 612);
             this.btnSalveaza.Name = "btnSalveaza";
-            this.btnSalveaza.Size = new System.Drawing.Size(75, 23);
+            this.btnSalveaza.Size = new System.Drawing.Size(87, 38);
             this.btnSalveaza.TabIndex = 5;
             this.btnSalveaza.Text = "Salveaza";
             this.btnSalveaza.UseVisualStyleBackColor = true;
             this.btnSalveaza.Click += new System.EventHandler(this.btnSalveaza_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(357, 572);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 17);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Concluzie reparatie";
+            // 
             // status_WIP_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 590);
+            this.ClientSize = new System.Drawing.Size(1000, 650);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalveaza);
             this.Controls.Add(this.labelDataPredarii);
             this.Controls.Add(this.dateTimeDataPredarii);
@@ -179,5 +194,6 @@
         private System.Windows.Forms.DateTimePicker dateTimeDataPredarii;
         private System.Windows.Forms.Label labelDataPredarii;
         private System.Windows.Forms.Button btnSalveaza;
+        private System.Windows.Forms.Label label1;
     }
 }

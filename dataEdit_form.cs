@@ -15,6 +15,7 @@ namespace AplicatieDisertatie
     public partial class dataEdit_form : Form
     {
         SqlConnection sqlCon = new SqlConnection(@"Data Source=BLUE;Initial Catalog=baza_date;Integrated Security=True;");
+
         int ClientID = 0;
         int TelefonID = 0;
         int ReparatieID = 0;
@@ -207,22 +208,6 @@ namespace AplicatieDisertatie
             }
         }
 
-        private void ClearTextBoxes()
-        {
-            Action<Control.ControlCollection> clear_func = null;
-
-            clear_func = (controls) =>
-            {
-                foreach (Control control in controls)
-                    if (control is TextBox)
-                        (control as TextBox).Clear();
-                    else
-                        clear_func(control.Controls);
-            };
-
-            clear_func(Controls);
-        }
-
         private void checkStateGarantie()
         {
             if (checkboxGarantie.CheckState == CheckState.Checked)
@@ -250,6 +235,23 @@ namespace AplicatieDisertatie
             btnModificaTelefon.Text = "Cauta";
             btnModificaReparatie.Text = "Cauta";
             readOnly_TextBoxes();
+        }
+
+        #region TextBoxesFormat
+        private void ClearTextBoxes()
+        {
+            Action<Control.ControlCollection> clear_func = null;
+
+            clear_func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else
+                        clear_func(control.Controls);
+            };
+
+            clear_func(Controls);
         }
 
         private void readOnly_TextBoxes()
@@ -332,5 +334,6 @@ namespace AplicatieDisertatie
                 txtPretAchitat.ReadOnly = true;
             }
         }
+        #endregion
     }
 }
