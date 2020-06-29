@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -124,7 +125,7 @@ namespace AplicatieDisertatie
         }
         #endregion 
 
-        #region LocalFunctions
+        #region LocalMethods
         private void last_Registration()
         {
             using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))

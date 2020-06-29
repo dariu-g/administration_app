@@ -6,11 +6,13 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using Microsoft.Office.Interop.Excel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dapper;
+using Dapper; 
 
 namespace AplicatieDisertatie
 {
@@ -22,6 +24,18 @@ namespace AplicatieDisertatie
         public ledger_form()
         {
             InitializeComponent();
+
+            Type officeType = Type.GetTypeFromProgID("Excel.Application");
+            if (officeType != null)
+            {
+                btnDescarca.Enabled = true;
+            }
+            /*
+            if (Directory.Exists("C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft Office"))
+            {
+                btnDescarca.Enabled = true;
+            }
+            */
         }
 
         #region MainButtons
@@ -95,6 +109,45 @@ namespace AplicatieDisertatie
                 MessageBox.Show(ex.Message, "Eroare de stergere!");
             }
         }
+
+        private void btnDescarca_Click(object sender, EventArgs e)
+        {      
+            if (dataGridLedger.Rows.Count > 0)
+            {
+                copyAlltoClipboard();
+                /* A MissingValue type object (empty object) created which will be passed as a parameter to the Workbook. */
+                object misValue = System.Reflection.Missing.Value;
+                
+                Microsoft.Office.Interop.Excel.Application Excel = new Microsoft.Office.Interop.Excel.Application();
+                Excel.Visible = true;
+
+                /* Creates a new workbook, which becomes the active workbook. */
+                Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook = Excel.Workbooks.Add(misValue);
+                Microsoft.Office.Interop.Excel.Worksheet ExcelWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+
+                /* [1, 1] Specifies the location at which Column/Row the pasted data from the dataGridLedger will happen in the Excel file. */
+                Microsoft.Office.Interop.Excel.Range ColumnRow = (Microsoft.Office.Interop.Excel.Range)ExcelWorkSheet.Cells[1, 1];
+                ColumnRow.Select();
+                ExcelWorkSheet.PasteSpecial(ColumnRow, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            }
+        }
+        #endregion
+
+        #region LocalMethods
+        /* Selects all the Columns/Rows in the dataGridLedger and copies them into the clipboard. */
+        private void copyAlltoClipboard()
+        {
+            dataGridLedger.RowHeadersVisible = false;
+
+            /* Includes the headers of the dataGridLedger. */
+            //dataGridLedger.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            //dataGridLedger.MultiSelect = true;
+
+            dataGridLedger.SelectAll();
+            DataObject dataGridViewData = dataGridLedger.GetClipboardContent();
+            if (dataGridViewData != null)
+                Clipboard.SetDataObject(dataGridViewData);
+        }
         #endregion
 
         /* Click event to select the id of the registration upon click. */
@@ -105,61 +158,6 @@ namespace AplicatieDisertatie
             {
                 ReparatieID = Convert.ToInt32(dataGridLedger.CurrentRow.Cells[0].Value.ToString());
             }
-        }
-
-        private void btnDescarca_Click(object sender, EventArgs e)
-        {
-            /*
-            copyAlltoClipboard();
-            Microsoft.Office.Interop.Excel.Application xlexcel;
-            Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
-            Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
-            object misValue = System.Reflection.Missing.Value;
-            xlexcel = new Excel.Application();
-            xlexcel.Visible = true;
-            xlWorkBook = xlexcel.Workbooks.Add(misValue);
-            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-            Excel.Range CR = (Excel.Range)xlWorkSheet.Cells[1, 1];
-            CR.Select();
-            xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);*/
-
-            saveFileDialog1.InitialDirectory = "C:";
-            saveFileDialog1.Title = "Save as Excel File";
-            saveFileDialog1.FileName = "";
-            saveFileDialog1.Filter = "Excel Files(2003)|*.xls|Excel Files(2007)|*.xlsx";
-
-            if(saveFileDialog1.ShowDialog() != DialogResult.Cancel)
-            {
-                Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
-                ExcelApp.Application.Workbooks.Add(Type.Missing);
-
-                //ExcelApp.Columns.ColumnWidth = 20;
-
-                for (int i = 1; i <dataGridLedger.Columns.Count + 1; i++)
-                {
-                    ExcelApp.Cells[1, i] = dataGridLedger.Columns[i - 1].HeaderText;
-                }
-
-                for (int i = 1; i < dataGridLedger.Rows.Count + 1; i++)
-                {
-                    for (int j = 1; j < dataGridLedger.Columns.Count + 1; j++)
-                    {
-                        ExcelApp.Cells[i + 2, j + 1] = dataGridLedger.Rows[i].Cells[j].Value.ToString();
-                    }
-                }
-
-                ExcelApp.ActiveWorkbook.SaveCopyAs(saveFileDialog1.FileName.ToString());
-                ExcelApp.ActiveWorkbook.Saved = true;
-                ExcelApp.Quit();
-            }
-        }
-
-        private void copyAlltoClipboard()
-        {
-            dataGridLedger.SelectAll();
-            DataObject dataObj = dataGridLedger.GetClipboardContent();
-            if (dataObj != null)
-                Clipboard.SetDataObject(dataObj);
         }
     }
 }
