@@ -5,12 +5,12 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dapper;
-
 
 namespace AplicatieDisertatie
 {
@@ -105,6 +105,61 @@ namespace AplicatieDisertatie
             {
                 ReparatieID = Convert.ToInt32(dataGridLedger.CurrentRow.Cells[0].Value.ToString());
             }
+        }
+
+        private void btnDescarca_Click(object sender, EventArgs e)
+        {
+            /*
+            copyAlltoClipboard();
+            Microsoft.Office.Interop.Excel.Application xlexcel;
+            Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+            Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+            object misValue = System.Reflection.Missing.Value;
+            xlexcel = new Excel.Application();
+            xlexcel.Visible = true;
+            xlWorkBook = xlexcel.Workbooks.Add(misValue);
+            xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+            Excel.Range CR = (Excel.Range)xlWorkSheet.Cells[1, 1];
+            CR.Select();
+            xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);*/
+
+            saveFileDialog1.InitialDirectory = "C:";
+            saveFileDialog1.Title = "Save as Excel File";
+            saveFileDialog1.FileName = "";
+            saveFileDialog1.Filter = "Excel Files(2003)|*.xls|Excel Files(2007)|*.xlsx";
+
+            if(saveFileDialog1.ShowDialog() != DialogResult.Cancel)
+            {
+                Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+                ExcelApp.Application.Workbooks.Add(Type.Missing);
+
+                //ExcelApp.Columns.ColumnWidth = 20;
+
+                for (int i = 1; i <dataGridLedger.Columns.Count + 1; i++)
+                {
+                    ExcelApp.Cells[1, i] = dataGridLedger.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 1; i < dataGridLedger.Rows.Count + 1; i++)
+                {
+                    for (int j = 1; j < dataGridLedger.Columns.Count + 1; j++)
+                    {
+                        ExcelApp.Cells[i + 2, j + 1] = dataGridLedger.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+
+                ExcelApp.ActiveWorkbook.SaveCopyAs(saveFileDialog1.FileName.ToString());
+                ExcelApp.ActiveWorkbook.Saved = true;
+                ExcelApp.Quit();
+            }
+        }
+
+        private void copyAlltoClipboard()
+        {
+            dataGridLedger.SelectAll();
+            DataObject dataObj = dataGridLedger.GetClipboardContent();
+            if (dataObj != null)
+                Clipboard.SetDataObject(dataObj);
         }
     }
 }

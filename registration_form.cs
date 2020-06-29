@@ -83,6 +83,10 @@ namespace AplicatieDisertatie
                     last_Registration();
                     ClientID = 0;
                     TelefonID = 0;
+                    if (checkBoxTiparire.Checked)
+                    {
+                        btnPrint.PerformClick();
+                    }
                 }
             }
         }
@@ -110,6 +114,8 @@ namespace AplicatieDisertatie
         private void btnAnulare_Click(object sender, EventArgs e)
         {
             connection_class.ClearTextBoxes(this.Controls);
+            ClientID = 0;
+            TelefonID = 0;
         }
 
         private void labelExit_Click(object sender, EventArgs e)
@@ -224,7 +230,6 @@ namespace AplicatieDisertatie
         {
             connection_class.CapitalizeFirstLetter_textBoxFormat(txtObservatii);
         }
-
 
         private void txtPretEstimativ_KeyPress(object sender, KeyPressEventArgs e)
         {
