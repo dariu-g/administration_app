@@ -14,17 +14,26 @@ namespace AplicatieDisertatie
 {
     public partial class login_form : Form
     {
+        /* Class scope members. */
+        static public int UtilizatorID = 0;
+
         public login_form()
         {
             InitializeComponent();
         }
 
+        /* Redirects to user_form. */
         #region MainButtons
         private void labelCatreInregistrareUtilizator_Click(object sender, EventArgs e)
         {
             this.Hide();
             user_form registerform = new user_form();
             registerform.Show();
+        }
+
+        private void labelExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,14 +45,9 @@ namespace AplicatieDisertatie
         {
             if (!string.IsNullOrEmpty(txtUtilizator.Text) && !string.IsNullOrEmpty(txtParola.Text))
             {
-                string login_check = string.Empty;
+                DataTable Utilizatori = executeSQL("AutentificareUtilizator");
 
-                login_check += "SELECT * FROM Utilizatori ";
-                login_check += "WHERE utilizator = '" + txtUtilizator.Text + "' ";
-                login_check += "AND parola = '" + connection_class.PasswordEncrypt(txtParola.Text) + "' ";
-
-                DataTable Utilizatori = connection_class.executeSQL(login_check);
-
+                /* Verifies if a username and password matched in the database. The table gains a Row if this is true. */
                 if(Utilizatori.Rows.Count > 0)
                 {
                     txtUtilizator.Clear();
@@ -70,12 +74,47 @@ namespace AplicatieDisertatie
         }
         #endregion
 
-        #region Design
-        private void labelExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        #region LocalMethods
 
+        /* Returns the user in a DataTable, if there is a match for user/password. */
+        private DataTable executeSQL(string StoredProc)
+        {
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                {
+                    if (DatabaseConnection.State == ConnectionState.Closed)
+                        DatabaseConnection.Open();
+
+                    SqlCommand sqlCmd = new SqlCommand(StoredProc, DatabaseConnection);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+
+                    sqlCmd.Parameters.AddWithValue("@utilizator", txtUtilizator.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@parola", connection_class.PasswordEncrypt(txtParola.Text.Trim()));
+
+                    adapter.SelectCommand = sqlCmd;
+                    adapter.Fill(dataTable);
+
+                    /* Fetches UtilizatorID from the dataTable position [0][0]. */
+                    UtilizatorID = Convert.ToInt32(dataTable.Rows[0][0]);
+
+                    DatabaseConnection.Close();
+                    return dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("A aparut o eroare:" + ex.Message, "Conexiunea la baza de date a esuat.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dataTable = null;
+            }
+            return dataTable;
+        }
+        #endregion
+        
+        #region Design
         private void labelExit_MouseEnter(object sender, EventArgs e)
         {
             labelExit.ForeColor = Color.Black;

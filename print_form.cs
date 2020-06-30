@@ -15,8 +15,10 @@ namespace AplicatieDisertatie
 {
     public partial class print_form : Form
     {
+        /* Global variables. */
         ledger_class _param;
         List<ledgerPrint_class> _list = new List<ledgerPrint_class>();
+
         public print_form(ledger_class param, List<ledgerPrint_class> list)
         {
             InitializeComponent();

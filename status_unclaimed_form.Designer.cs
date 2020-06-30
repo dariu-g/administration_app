@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label1;
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridCurrent = new System.Windows.Forms.DataGridView();
+            this.dataGridGreaterThan6m = new System.Windows.Forms.DataGridView();
             this.btnSalveaza = new System.Windows.Forms.Button();
             this.labelDataPredarii = new System.Windows.Forms.Label();
             this.dateTimeDataPredarii = new System.Windows.Forms.DateTimePicker();
             this.txtObservatii = new System.Windows.Forms.TextBox();
             this.labelTelNeridicate6luni = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCurrent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGreaterThan6m)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,33 +51,35 @@
             label1.TabIndex = 79;
             label1.Text = "Observatii:";
             // 
-            // dataGridView1
+            // dataGridCurrent
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridCurrent.AllowUserToAddRows = false;
+            this.dataGridCurrent.AllowUserToDeleteRows = false;
+            this.dataGridCurrent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCurrent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridCurrent.Location = new System.Drawing.Point(0, 0);
+            this.dataGridCurrent.Name = "dataGridCurrent";
+            this.dataGridCurrent.ReadOnly = true;
+            this.dataGridCurrent.RowHeadersWidth = 51;
+            this.dataGridCurrent.RowTemplate.Height = 24;
+            this.dataGridCurrent.Size = new System.Drawing.Size(1060, 150);
+            this.dataGridCurrent.TabIndex = 0;
+            this.dataGridCurrent.Click += new System.EventHandler(this.dataGridCurrent_Click);
             // 
-            // dataGridView2
+            // dataGridGreaterThan6m
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 425);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1060, 150);
-            this.dataGridView2.TabIndex = 1;
+            this.dataGridGreaterThan6m.AllowUserToAddRows = false;
+            this.dataGridGreaterThan6m.AllowUserToDeleteRows = false;
+            this.dataGridGreaterThan6m.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridGreaterThan6m.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridGreaterThan6m.Location = new System.Drawing.Point(0, 458);
+            this.dataGridGreaterThan6m.Name = "dataGridGreaterThan6m";
+            this.dataGridGreaterThan6m.ReadOnly = true;
+            this.dataGridGreaterThan6m.RowHeadersWidth = 51;
+            this.dataGridGreaterThan6m.RowTemplate.Height = 24;
+            this.dataGridGreaterThan6m.Size = new System.Drawing.Size(1060, 117);
+            this.dataGridGreaterThan6m.TabIndex = 1;
+            this.dataGridGreaterThan6m.Click += new System.EventHandler(this.dataGridGreaterThan6m_Click);
             // 
             // btnSalveaza
             // 
@@ -87,6 +89,7 @@
             this.btnSalveaza.TabIndex = 10;
             this.btnSalveaza.Text = "Salveaza";
             this.btnSalveaza.UseVisualStyleBackColor = true;
+            this.btnSalveaza.Click += new System.EventHandler(this.btnSalveaza_Click);
             // 
             // labelDataPredarii
             // 
@@ -120,7 +123,7 @@
             // 
             this.labelTelNeridicate6luni.AutoSize = true;
             this.labelTelNeridicate6luni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.labelTelNeridicate6luni.Location = new System.Drawing.Point(311, 396);
+            this.labelTelNeridicate6luni.Location = new System.Drawing.Point(267, 429);
             this.labelTelNeridicate6luni.Name = "labelTelNeridicate6luni";
             this.labelTelNeridicate6luni.Size = new System.Drawing.Size(526, 26);
             this.labelTelNeridicate6luni.TabIndex = 80;
@@ -137,12 +140,12 @@
             this.Controls.Add(this.btnSalveaza);
             this.Controls.Add(this.labelDataPredarii);
             this.Controls.Add(this.dateTimeDataPredarii);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridGreaterThan6m);
+            this.Controls.Add(this.dataGridCurrent);
             this.Name = "status_unclaimed_form";
             this.Text = "status_unclaimed_form";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCurrent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGreaterThan6m)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,8 +153,8 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridCurrent;
+        private System.Windows.Forms.DataGridView dataGridGreaterThan6m;
         private System.Windows.Forms.Button btnSalveaza;
         private System.Windows.Forms.Label labelDataPredarii;
         private System.Windows.Forms.DateTimePicker dateTimeDataPredarii;

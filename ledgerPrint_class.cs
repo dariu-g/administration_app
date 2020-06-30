@@ -51,5 +51,7 @@ namespace AplicatieDisertatie
 
         public string verdict_reparatie { get; set; }
 
+        public string utilizator { get; set; }
+
     }
 }

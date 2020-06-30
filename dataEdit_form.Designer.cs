@@ -299,7 +299,7 @@
             this.btnModificaTelefon.Location = new System.Drawing.Point(373, 198);
             this.btnModificaTelefon.Name = "btnModificaTelefon";
             this.btnModificaTelefon.Size = new System.Drawing.Size(103, 29);
-            this.btnModificaTelefon.TabIndex = 112;
+            this.btnModificaTelefon.TabIndex = 7;
             this.btnModificaTelefon.Text = "Cauta";
             this.btnModificaTelefon.UseVisualStyleBackColor = true;
             this.btnModificaTelefon.Click += new System.EventHandler(this.btnModificaTelefon_Click);
@@ -358,7 +358,7 @@
             this.txtTipTelefon.Margin = new System.Windows.Forms.Padding(5);
             this.txtTipTelefon.Name = "txtTipTelefon";
             this.txtTipTelefon.Size = new System.Drawing.Size(348, 22);
-            this.txtTipTelefon.TabIndex = 96;
+            this.txtTipTelefon.TabIndex = 8;
             // 
             // label4
             // 
@@ -376,7 +376,7 @@
             this.txtPrenume.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrenume.Name = "txtPrenume";
             this.txtPrenume.Size = new System.Drawing.Size(348, 22);
-            this.txtPrenume.TabIndex = 94;
+            this.txtPrenume.TabIndex = 4;
             // 
             // checkboxGarantie
             // 
@@ -384,7 +384,7 @@
             this.checkboxGarantie.Margin = new System.Windows.Forms.Padding(5);
             this.checkboxGarantie.Name = "checkboxGarantie";
             this.checkboxGarantie.Size = new System.Drawing.Size(45, 28);
-            this.checkboxGarantie.TabIndex = 101;
+            this.checkboxGarantie.TabIndex = 13;
             this.checkboxGarantie.Text = "?";
             this.checkboxGarantie.UseVisualStyleBackColor = true;
             this.checkboxGarantie.CheckStateChanged += new System.EventHandler(this.checkboxGarantie_CheckStateChanged);
@@ -395,7 +395,7 @@
             this.txtNume.Margin = new System.Windows.Forms.Padding(5);
             this.txtNume.Name = "txtNume";
             this.txtNume.Size = new System.Drawing.Size(348, 22);
-            this.txtNume.TabIndex = 93;
+            this.txtNume.TabIndex = 3;
             // 
             // txtModel
             // 
@@ -403,7 +403,7 @@
             this.txtModel.Margin = new System.Windows.Forms.Padding(5);
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(348, 22);
-            this.txtModel.TabIndex = 97;
+            this.txtModel.TabIndex = 9;
             // 
             // txtCuloare
             // 
@@ -411,7 +411,7 @@
             this.txtCuloare.Margin = new System.Windows.Forms.Padding(5);
             this.txtCuloare.Name = "txtCuloare";
             this.txtCuloare.Size = new System.Drawing.Size(348, 22);
-            this.txtCuloare.TabIndex = 98;
+            this.txtCuloare.TabIndex = 10;
             // 
             // txtIMEI
             // 
@@ -419,7 +419,7 @@
             this.txtIMEI.Margin = new System.Windows.Forms.Padding(5);
             this.txtIMEI.Name = "txtIMEI";
             this.txtIMEI.Size = new System.Drawing.Size(348, 22);
-            this.txtIMEI.TabIndex = 99;
+            this.txtIMEI.TabIndex = 11;
             // 
             // txtCodTelefon
             // 
@@ -427,7 +427,7 @@
             this.txtCodTelefon.Margin = new System.Windows.Forms.Padding(5);
             this.txtCodTelefon.Name = "txtCodTelefon";
             this.txtCodTelefon.Size = new System.Drawing.Size(348, 22);
-            this.txtCodTelefon.TabIndex = 100;
+            this.txtCodTelefon.TabIndex = 12;
             // 
             // txtNrTelefon
             // 
@@ -435,7 +435,7 @@
             this.txtNrTelefon.Margin = new System.Windows.Forms.Padding(5);
             this.txtNrTelefon.Name = "txtNrTelefon";
             this.txtNrTelefon.Size = new System.Drawing.Size(348, 22);
-            this.txtNrTelefon.TabIndex = 95;
+            this.txtNrTelefon.TabIndex = 5;
             // 
             // label3
             // 
@@ -455,7 +455,7 @@
             this.dateDataPrimirii.Margin = new System.Windows.Forms.Padding(5);
             this.dateDataPrimirii.Name = "dateDataPrimirii";
             this.dateDataPrimirii.Size = new System.Drawing.Size(331, 22);
-            this.dateDataPrimirii.TabIndex = 115;
+            this.dateDataPrimirii.TabIndex = 16;
             // 
             // label5
             // 
@@ -474,7 +474,7 @@
             this.txtObservatii.Multiline = true;
             this.txtObservatii.Name = "txtObservatii";
             this.txtObservatii.Size = new System.Drawing.Size(331, 44);
-            this.txtObservatii.TabIndex = 117;
+            this.txtObservatii.TabIndex = 20;
             // 
             // txtDefectConstatat
             // 
@@ -483,7 +483,7 @@
             this.txtDefectConstatat.Multiline = true;
             this.txtDefectConstatat.Name = "txtDefectConstatat";
             this.txtDefectConstatat.Size = new System.Drawing.Size(331, 46);
-            this.txtDefectConstatat.TabIndex = 116;
+            this.txtDefectConstatat.TabIndex = 18;
             // 
             // txtTermenRezolvare
             // 
@@ -491,7 +491,7 @@
             this.txtTermenRezolvare.Margin = new System.Windows.Forms.Padding(5);
             this.txtTermenRezolvare.Name = "txtTermenRezolvare";
             this.txtTermenRezolvare.Size = new System.Drawing.Size(331, 22);
-            this.txtTermenRezolvare.TabIndex = 118;
+            this.txtTermenRezolvare.TabIndex = 21;
             // 
             // txtPretEstimativ
             // 
@@ -499,7 +499,7 @@
             this.txtPretEstimativ.Margin = new System.Windows.Forms.Padding(5);
             this.txtPretEstimativ.Name = "txtPretEstimativ";
             this.txtPretEstimativ.Size = new System.Drawing.Size(331, 22);
-            this.txtPretEstimativ.TabIndex = 119;
+            this.txtPretEstimativ.TabIndex = 23;
             // 
             // txtPretAvans
             // 
@@ -507,7 +507,7 @@
             this.txtPretAvans.Margin = new System.Windows.Forms.Padding(5);
             this.txtPretAvans.Name = "txtPretAvans";
             this.txtPretAvans.Size = new System.Drawing.Size(331, 22);
-            this.txtPretAvans.TabIndex = 120;
+            this.txtPretAvans.TabIndex = 24;
             // 
             // btnModificaClient
             // 
@@ -515,7 +515,7 @@
             this.btnModificaClient.Margin = new System.Windows.Forms.Padding(5);
             this.btnModificaClient.Name = "btnModificaClient";
             this.btnModificaClient.Size = new System.Drawing.Size(103, 29);
-            this.btnModificaClient.TabIndex = 121;
+            this.btnModificaClient.TabIndex = 2;
             this.btnModificaClient.Text = "Cauta";
             this.btnModificaClient.UseVisualStyleBackColor = true;
             this.btnModificaClient.Click += new System.EventHandler(this.btnModificaClient_Click);
@@ -537,28 +537,28 @@
             this.txtCautaClient.Location = new System.Drawing.Point(242, 32);
             this.txtCautaClient.Name = "txtCautaClient";
             this.txtCautaClient.Size = new System.Drawing.Size(123, 22);
-            this.txtCautaClient.TabIndex = 130;
+            this.txtCautaClient.TabIndex = 1;
             // 
             // txtCautaTelefon
             // 
             this.txtCautaTelefon.Location = new System.Drawing.Point(242, 201);
             this.txtCautaTelefon.Name = "txtCautaTelefon";
             this.txtCautaTelefon.Size = new System.Drawing.Size(123, 22);
-            this.txtCautaTelefon.TabIndex = 131;
+            this.txtCautaTelefon.TabIndex = 6;
             // 
             // txtCautaReparatie
             // 
             this.txtCautaReparatie.Location = new System.Drawing.Point(779, 24);
             this.txtCautaReparatie.Name = "txtCautaReparatie";
             this.txtCautaReparatie.Size = new System.Drawing.Size(123, 22);
-            this.txtCautaReparatie.TabIndex = 133;
+            this.txtCautaReparatie.TabIndex = 14;
             // 
             // btnModificaReparatie
             // 
             this.btnModificaReparatie.Location = new System.Drawing.Point(908, 21);
             this.btnModificaReparatie.Name = "btnModificaReparatie";
             this.btnModificaReparatie.Size = new System.Drawing.Size(103, 29);
-            this.btnModificaReparatie.TabIndex = 132;
+            this.btnModificaReparatie.TabIndex = 15;
             this.btnModificaReparatie.Text = "Cauta";
             this.btnModificaReparatie.UseVisualStyleBackColor = true;
             this.btnModificaReparatie.Click += new System.EventHandler(this.btnModificaReparatie_Click);
@@ -570,8 +570,9 @@
             this.dateDataPredarii.Location = new System.Drawing.Point(680, 104);
             this.dateDataPredarii.Margin = new System.Windows.Forms.Padding(5);
             this.dateDataPredarii.Name = "dateDataPredarii";
+            this.dateDataPredarii.ShowCheckBox = true;
             this.dateDataPredarii.Size = new System.Drawing.Size(331, 22);
-            this.dateDataPredarii.TabIndex = 134;
+            this.dateDataPredarii.TabIndex = 17;
             // 
             // txtPieseInlocuite
             // 
@@ -580,7 +581,7 @@
             this.txtPieseInlocuite.Multiline = true;
             this.txtPieseInlocuite.Name = "txtPieseInlocuite";
             this.txtPieseInlocuite.Size = new System.Drawing.Size(331, 38);
-            this.txtPieseInlocuite.TabIndex = 136;
+            this.txtPieseInlocuite.TabIndex = 19;
             // 
             // txtTermenGarantie
             // 
@@ -588,7 +589,7 @@
             this.txtTermenGarantie.Margin = new System.Windows.Forms.Padding(5);
             this.txtTermenGarantie.Name = "txtTermenGarantie";
             this.txtTermenGarantie.Size = new System.Drawing.Size(331, 22);
-            this.txtTermenGarantie.TabIndex = 138;
+            this.txtTermenGarantie.TabIndex = 22;
             // 
             // txtPretAchitat
             // 
@@ -596,14 +597,14 @@
             this.txtPretAchitat.Margin = new System.Windows.Forms.Padding(5);
             this.txtPretAchitat.Name = "txtPretAchitat";
             this.txtPretAchitat.Size = new System.Drawing.Size(331, 22);
-            this.txtPretAchitat.TabIndex = 140;
+            this.txtPretAchitat.TabIndex = 25;
             // 
             // btnAnuleaza
             // 
             this.btnAnuleaza.Location = new System.Drawing.Point(477, 442);
             this.btnAnuleaza.Name = "btnAnuleaza";
             this.btnAnuleaza.Size = new System.Drawing.Size(103, 29);
-            this.btnAnuleaza.TabIndex = 142;
+            this.btnAnuleaza.TabIndex = 26;
             this.btnAnuleaza.Text = "Anuleaza";
             this.btnAnuleaza.UseVisualStyleBackColor = true;
             this.btnAnuleaza.Click += new System.EventHandler(this.btnAnuleaza_Click);

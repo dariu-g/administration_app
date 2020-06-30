@@ -14,48 +14,53 @@ namespace AplicatieDisertatie
 {
     public partial class dataEdit_form : Form
     {
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=BLUE;Initial Catalog=baza_date;Integrated Security=True;");
+        /* Class scope members. */
+        static private int ClientID = 0;
+        static private int TelefonID = 0;
+        static private int ReparatieID = 0;
+        static private string ID = "";
 
-        int ClientID = 0;
-        int TelefonID = 0;
-        int ReparatieID = 0;
-        string ID = "";
         public dataEdit_form()
         {
             InitializeComponent();
-            connection_class.checkStateGarantie(checkboxGarantie);
+            connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
             readOnly_TextBoxes();
+            dataGridViewEdit.DoubleBufferedDataGridView(true);
         }
 
         #region MainButtons
+        /* Method which will perform a database query if the button text is "Cauta" or update the table Date_client
+         * if the button text is "Modifica". */
         private void btnModificaClient_Click(object sender, EventArgs e)
         {
             try
             {
-                if (sqlCon.State == ConnectionState.Closed)
-                    sqlCon.Open();
-
-                if (btnModificaClient.Text == "Cauta")
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
                 {
-                    FillDataGridView("ModificaClient", "@Cautare_client", "@Mod_buton", txtCautaClient);
-                    ID = "id_client";
-                }
-                else if (btnModificaClient.Text == "Modifica")
-                {
+                    if (DatabaseConnection.State == ConnectionState.Closed)
+                        DatabaseConnection.Open();
 
-                    SqlCommand sqlCmd = new SqlCommand("ModificaClient", sqlCon);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue("@Mod_buton", "Modifica");
-                    sqlCmd.Parameters.AddWithValue("@ClientID", ClientID);
-                    sqlCmd.Parameters.AddWithValue("@Nume", txtNume.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Prenume", txtPrenume.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Nr_telefon", txtNrTelefon.Text.Trim());
-                    sqlCmd.ExecuteNonQuery();
-                    MessageBox.Show("Datele clientului au fost modificate.");
-                    btnModificaClient.Text = "Cauta";
-                    readOnly_DateClient();
-                }
+                    if (btnModificaClient.Text == "Cauta")
+                    {
+                        FillDataGridView("ModificaClient", "@Cautare_client", "@Mod_buton", txtCautaClient);
+                        ID = "id_client";
+                    }
+                    else if (btnModificaClient.Text == "Modifica")
+                    {
 
+                        SqlCommand sqlCmd = new SqlCommand("ModificaClient", DatabaseConnection);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.AddWithValue("@Mod_buton", "Modifica");
+                        sqlCmd.Parameters.AddWithValue("@ClientID", ClientID);
+                        sqlCmd.Parameters.AddWithValue("@Nume", txtNume.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Prenume", txtPrenume.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Nr_telefon", txtNrTelefon.Text.Trim());
+                        sqlCmd.ExecuteNonQuery();
+                        MessageBox.Show("Datele clientului au fost modificate.");
+                        btnModificaClient.Text = "Cauta";
+                        readOnly_DateClient();
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -63,35 +68,40 @@ namespace AplicatieDisertatie
             }
         }
 
+        /* Method which will perform a database query if the button text is "Cauta" or update the table Date_telefon
+         * if the button text is "Modifica". */
         private void btnModificaTelefon_Click(object sender, EventArgs e)
         {
             try
             {
-                if (sqlCon.State == ConnectionState.Closed)
-                    sqlCon.Open();
-
-                if (btnModificaTelefon.Text == "Cauta")
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
                 {
-                    FillDataGridView("ModificaTelefon", "@Cautare_telefon", "@Mod_buton", txtCautaTelefon);
-                    ID = "id_telefon";
-                }
-                else if (btnModificaTelefon.Text == "Modifica")
-                {
+                    if (DatabaseConnection.State == ConnectionState.Closed)
+                        DatabaseConnection.Open();
 
-                    SqlCommand sqlCmd = new SqlCommand("ModificaTelefon", sqlCon);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue("@Mod_buton", "Modifica");
-                    sqlCmd.Parameters.AddWithValue("@TelefonID", TelefonID);
-                    sqlCmd.Parameters.AddWithValue("@Tip_telefon", txtTipTelefon.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Model", txtModel.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Culoare", txtCuloare.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@IMEI", txtIMEI.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Cod_telefon", txtCodTelefon.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Garantie", checkboxGarantie.Checked);
-                    sqlCmd.ExecuteNonQuery();
-                    MessageBox.Show("Datele telefonului au fost modificate!");
-                    btnModificaTelefon.Text = "Cauta";
-                    readOnly_DateTelefon();
+                    if (btnModificaTelefon.Text == "Cauta")
+                    {
+                        FillDataGridView("ModificaTelefon", "@Cautare_telefon", "@Mod_buton", txtCautaTelefon);
+                        ID = "id_telefon";
+                    }
+                    else if (btnModificaTelefon.Text == "Modifica")
+                    {
+
+                        SqlCommand sqlCmd = new SqlCommand("ModificaTelefon", DatabaseConnection);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.AddWithValue("@Mod_buton", "Modifica");
+                        sqlCmd.Parameters.AddWithValue("@TelefonID", TelefonID);
+                        sqlCmd.Parameters.AddWithValue("@Tip_telefon", txtTipTelefon.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Model", txtModel.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Culoare", txtCuloare.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@IMEI", txtIMEI.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Cod_telefon", txtCodTelefon.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Garantie", checkboxGarantie.Checked);
+                        sqlCmd.ExecuteNonQuery();
+                        MessageBox.Show("Datele telefonului au fost modificate!");
+                        btnModificaTelefon.Text = "Cauta";
+                        readOnly_DateTelefon();
+                    }
                 }
             }
             catch (Exception ex)
@@ -100,38 +110,45 @@ namespace AplicatieDisertatie
             }
         }
 
+        /* Method which will perform a database query if the button text is "Cauta" or update the table Date_reparatie
+         * if the button text is "Modifica". */
         private void btnModificaReparatie_Click(object sender, EventArgs e)
         {
             try
             {
-                if (sqlCon.State == ConnectionState.Closed)
-                    sqlCon.Open();
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                {
+                    if (DatabaseConnection.State == ConnectionState.Closed)
+                        DatabaseConnection.Open();
 
-                if (btnModificaReparatie.Text == "Cauta")
-                {
-                    FillDataGridView("ModificaReparatie", "@Cautare_reparatie", "Mod_buton", txtCautaReparatie);
-                    ID = "id_reparatie";
-                }
-                else if (btnModificaReparatie.Text == "Modifica")
-                {
-                    SqlCommand sqlCmd = new SqlCommand("ModificaReparatie", sqlCon);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue("@Mod_buton", "Modifica");
-                    sqlCmd.Parameters.AddWithValue("@ReparatieID", ReparatieID);
-                    sqlCmd.Parameters.AddWithValue("@Data_primirii", dateDataPrimirii.Value);
-                    sqlCmd.Parameters.AddWithValue("@Data_predarii", dateDataPredarii.Value);
-                    sqlCmd.Parameters.AddWithValue("@Defect_constatat", txtDefectConstatat.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Piese_inlocuite", txtPieseInlocuite.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Observatii", txtObservatii.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Termen_rezolvare", txtTermenRezolvare.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Termen_garantie", txtTermenGarantie.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Pret_estimativ", txtPretEstimativ.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Pret_avans", txtPretAvans.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Pret_achitat", txtPretAchitat.Text.Trim());
-                    sqlCmd.ExecuteNonQuery();
-                    MessageBox.Show("Datele telefonului au fost modificate!");
-                    btnModificaReparatie.Text = "Cauta";
-                    readOnly_DateReparatie();
+                    if (btnModificaReparatie.Text == "Cauta")
+                    {
+                        FillDataGridView("ModificaReparatie", "@Cautare_reparatie", "Mod_buton", txtCautaReparatie);
+                        ID = "id_reparatie";
+                    }
+                    else if (btnModificaReparatie.Text == "Modifica")
+                    {
+                        SqlCommand sqlCmd = new SqlCommand("ModificaReparatie", DatabaseConnection);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.AddWithValue("@Mod_buton", "Modifica");
+                        sqlCmd.Parameters.AddWithValue("@ReparatieID", ReparatieID);
+                        sqlCmd.Parameters.AddWithValue("@Data_primirii", dateDataPrimirii.Value);
+                        /* If dateDataPredarii is checked it will be updated, otherwise the value will remain the same. */
+                        if (dateDataPredarii.Checked == true)
+                            sqlCmd.Parameters.AddWithValue("@Data_predarii", dateDataPredarii.Value);
+                        sqlCmd.Parameters.AddWithValue("@Defect_constatat", txtDefectConstatat.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Piese_inlocuite", txtPieseInlocuite.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Observatii", txtObservatii.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Termen_rezolvare", txtTermenRezolvare.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Termen_garantie", txtTermenGarantie.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Pret_estimativ", txtPretEstimativ.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Pret_avans", txtPretAvans.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Pret_achitat", txtPretAchitat.Text.Trim());
+                        sqlCmd.ExecuteNonQuery();
+                        MessageBox.Show("Datele telefonului au fost modificate!");
+                        btnModificaReparatie.Text = "Cauta";
+                        readOnly_DateReparatie();
+                    }
                 }
             }
             catch (Exception ex)
@@ -140,6 +157,7 @@ namespace AplicatieDisertatie
             }
         }
 
+        /* Empties all textBoxes and returns the form to the initial state. */
         private void btnAnuleaza_Click(object sender, EventArgs e)
         {
             connection_class.ClearTextBoxes(this.Controls);
@@ -151,28 +169,31 @@ namespace AplicatieDisertatie
         #endregion
 
         #region LocalMethods
-        void FillDataGridView(string StoredProc, string Param1, string Param2, TextBox TextBox)
+        /* Parametrized method to fill dataGridViewEdit based on the used stored procedure corresponding to each searches. */
+        private void FillDataGridView(string StoredProc, string Param1, string Param2, TextBox TextBox)
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
-            using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
+            using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
             {
                 if (DatabaseConnection.State == ConnectionState.Closed)
                     DatabaseConnection.Open();
 
-                SqlDataAdapter sqlDa = new SqlDataAdapter(StoredProc, DatabaseConnection);
-                sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlDa.SelectCommand.Parameters.AddWithValue(Param1, TextBox.Text.Trim());
-                sqlDa.SelectCommand.Parameters.AddWithValue(Param2, "Cauta");
+                SqlDataAdapter sqlData = new SqlDataAdapter(StoredProc, DatabaseConnection);
+                sqlData.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlData.SelectCommand.Parameters.AddWithValue(Param1, TextBox.Text.Trim());
+                sqlData.SelectCommand.Parameters.AddWithValue(Param2, "Cauta");
 
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                dataGridViewEdit.DataSource = dtbl;
+                DataTable dataTable = new DataTable();
+                sqlData.Fill(dataTable);
+                dataGridViewEdit.DataSource = dataTable;
+
+                /* To prevent showing the ClientID and TelefonID from the database, the following line hides the first column. */
                 dataGridViewEdit.Columns[0].Visible = false;
 
                 DatabaseConnection.Close();
             }
         }
 
+        /* Methods to disable input controls, except the Search bars and "Cauta/Modifica/Anuleaza" buttons. */
         private void readOnly_TextBoxes()
         {
             Action<Control.ControlCollection> clear_func = null;
@@ -190,6 +211,7 @@ namespace AplicatieDisertatie
             txtCautaClient.ReadOnly = false;
             txtCautaReparatie.ReadOnly = false;
             txtCautaTelefon.ReadOnly = false;
+            checkboxGarantie.Enabled = false;
             dateDataPrimirii.Enabled = false;
             dateDataPredarii.Enabled = false;
         }
@@ -219,6 +241,7 @@ namespace AplicatieDisertatie
                 txtCuloare.ReadOnly = false;
                 txtIMEI.ReadOnly = false;
                 txtCodTelefon.ReadOnly = false;
+                checkboxGarantie.Enabled = true;
             }
             else if (btnModificaTelefon.Text == "Cauta")
             {
@@ -227,6 +250,7 @@ namespace AplicatieDisertatie
                 txtCuloare.ReadOnly = true;
                 txtIMEI.ReadOnly = true;
                 txtCodTelefon.ReadOnly = true;
+                checkboxGarantie.Enabled = false;
             }
         }
 
@@ -261,6 +285,7 @@ namespace AplicatieDisertatie
         }
         #endregion
 
+        /* Double click event to copy the data from dataGridViewEdit to the appropiate boxes. */
         private void dataGridViewEdit_DoubleClick(object sender, EventArgs e)
         {
             if (dataGridViewEdit.CurrentRow.Index != -1)
@@ -273,6 +298,7 @@ namespace AplicatieDisertatie
                     txtNrTelefon.Text = dataGridViewEdit.CurrentRow.Cells[3].Value.ToString();
                     btnModificaClient.Text = "Modifica";
                     readOnly_DateClient();
+                    ID = "";
                 }
 
                 if (ID == "id_telefon")
@@ -286,6 +312,7 @@ namespace AplicatieDisertatie
                     checkboxGarantie.Checked = Convert.ToBoolean(dataGridViewEdit.CurrentRow.Cells[6].Value);
                     btnModificaTelefon.Text = "Modifica";
                     readOnly_DateTelefon();
+                    ID = "";
                 }
 
                 if (ID == "id_reparatie")
@@ -305,15 +332,14 @@ namespace AplicatieDisertatie
                     txtPretAchitat.Text = dataGridViewEdit.CurrentRow.Cells[10].Value.ToString();
                     btnModificaReparatie.Text = "Modifica";
                     readOnly_DateReparatie();
+                    ID = "";
                 }
             }
         }
 
-
-
         private void checkboxGarantie_CheckStateChanged(object sender, EventArgs e)
         {
-            connection_class.checkStateGarantie(checkboxGarantie);
+            connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
         }
     }
 }

@@ -18,15 +18,16 @@ namespace AplicatieDisertatie
 {
     public partial class ledger_form : Form
     {
-        /* Global variables. */
-        int ReparatieID = 0;
+        /* Class scope variables. */
+        private static int ReparatieID = 0;
 
         public ledger_form()
         {
             InitializeComponent();
 
-            Type officeType = Type.GetTypeFromProgID("Excel.Application");
-            if (officeType != null)
+            /* Checks if the Excel application exists on the PC, if yes btnDescarca is enabled. */
+            Type ExcelApp = Type.GetTypeFromProgID("Excel.Application");
+            if (ExcelApp != null)
             {
                 btnDescarca.Enabled = true;
             }
@@ -36,6 +37,7 @@ namespace AplicatieDisertatie
                 btnDescarca.Enabled = true;
             }
             */
+            dataGridLedger.DoubleBufferedDataGridView(true);
         }
 
         #region MainButtons
@@ -66,6 +68,9 @@ namespace AplicatieDisertatie
             }
         }
 
+        /* Utilizes Dapper IDbconnection, to execute PrintInregistrare procedure and stores the result in a list of type ledgerPrint_class
+         * and it passes the list and an object of type ledger_class to the print_form which will use Microsoft's Report Viewer tool
+         * to create a preview of the printable registration */
         private void btnPrint_Click(object sender, EventArgs e)
         {
             ledger_class objct = ledgerclassBindingSource.Current as ledger_class;
@@ -87,42 +92,54 @@ namespace AplicatieDisertatie
             }
         }
 
+        /* Deletes all fields from a specific registration in the table Date_reparatie, based on id_reparatie. */ 
         private void btnSterge_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult DialogBox = MessageBox.Show("Doresti sa stergi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
+            if(DialogBox == DialogResult.Yes)
             {
-                string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
-                using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
+                try
                 {
-                    DatabaseConnection.Open();
-                    SqlCommand sqlCmd = new SqlCommand("StergeReparatie", DatabaseConnection);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID);
+                    using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                    {
+                        if (DatabaseConnection.State == ConnectionState.Closed)
+                            DatabaseConnection.Open();
+                        SqlCommand sqlCmd = new SqlCommand("StergeReparatie", DatabaseConnection);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID);
 
-                    sqlCmd.ExecuteNonQuery();
-                    MessageBox.Show("Reparatie stearsa!");
-                    DatabaseConnection.Close();
+                        sqlCmd.ExecuteNonQuery();
+                        MessageBox.Show("Reparatie stearsa!");
+                        DatabaseConnection.Close();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Eroare de stergere!");
+                }
+
             }
-            catch (Exception ex)
+            else if (DialogBox == DialogResult.No)
             {
-                MessageBox.Show(ex.Message, "Eroare de stergere!");
+
             }
         }
 
+        /* Utilizes Microsoft.Office.Interop.Excel.dll reference in order to create a temporary Excel document which will contain
+         * the data displayed in dataGridLedger. */
         private void btnDescarca_Click(object sender, EventArgs e)
         {      
             if (dataGridLedger.Rows.Count > 0)
             {
                 copyAlltoClipboard();
                 /* A MissingValue type object (empty object) created which will be passed as a parameter to the Workbook. */
-                object misValue = System.Reflection.Missing.Value;
+                object missValue = System.Reflection.Missing.Value;
                 
                 Microsoft.Office.Interop.Excel.Application Excel = new Microsoft.Office.Interop.Excel.Application();
                 Excel.Visible = true;
 
                 /* Creates a new workbook, which becomes the active workbook. */
-                Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook = Excel.Workbooks.Add(misValue);
+                Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook = Excel.Workbooks.Add(missValue);
                 Microsoft.Office.Interop.Excel.Worksheet ExcelWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
 
                 /* [1, 1] Specifies the location at which Column/Row the pasted data from the dataGridLedger will happen in the Excel file. */
@@ -150,7 +167,7 @@ namespace AplicatieDisertatie
         }
         #endregion
 
-        /* Click event to select the id of the registration upon click. */
+        /* Click event to select the id of the registration. */
         private void dataGridLedger_Click(object sender, EventArgs e)
         {
             if (dataGridLedger.Rows.Count > 0)

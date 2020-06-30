@@ -18,8 +18,6 @@ namespace AplicatieDisertatie
 {
     public partial class user_form : Form
     {
-        /* Global variables. */
-        string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
         public user_form()
         {
             InitializeComponent();
@@ -42,7 +40,7 @@ namespace AplicatieDisertatie
             }
             else
             {
-                using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
                 {
                     DatabaseConnection.Open();
 

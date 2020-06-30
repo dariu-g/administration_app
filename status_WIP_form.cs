@@ -14,15 +14,16 @@ namespace AplicatieDisertatie
 {
     public partial class status_WIP_form : Form
     {
-        /* Global Variables */
-        string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
-        int ReparatieID = 0;
+        /* Class scope members. */
+        static int ReparatieID = 0;
 
         public status_WIP_form()
         {
             InitializeComponent();
-            FillDataGridView();
-            checkStateReparat(checkBoxVerdictReparatie);
+            //FillDataGridView();
+            connection_class.FillDataGridView("AfisareTelefoaneInLucru", dataGridViewReparatii);
+            connection_class.checkBoxStates(checkBoxVerdictReparatie, "Reparat", "Nereparat");
+            dataGridViewReparatii.DoubleBufferedDataGridView(true);
         }
 
         #region MainButtons
@@ -30,7 +31,7 @@ namespace AplicatieDisertatie
         {
             try
             {
-                FillDataGridView();
+                connection_class.FillDataGridView("AfisareTelefoaneInLucru", dataGridViewReparatii);
             }
             catch (Exception ex)
             {
@@ -38,62 +39,73 @@ namespace AplicatieDisertatie
             }
         }
 
+        /* Updates the data typed in the textBoxes in table Date_reparatie. */
         private void btnSalveaza_Click(object sender, EventArgs e)
         {
-            using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
+            DialogResult DialogBox = new DialogResult();
+            if (dateTimeDataPredarii.Checked == true)
             {
-                DatabaseConnection.Open();
-                SqlCommand sqlCmd = new SqlCommand("ConcluzionareReparatie", DatabaseConnection);
-                sqlCmd.CommandType = CommandType.StoredProcedure;
-
-                /* Date reparatie. */
-                sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID);
-                if (dateTimeDataPredarii.Checked == true)
-                    sqlCmd.Parameters.AddWithValue("@Data_predarii", dateTimeDataPredarii.Value);
-                sqlCmd.Parameters.AddWithValue("@Piese_inlocuite", txtPieseInlocuite.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Termen_garantie", txtTermenGarantie.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Pret_achitat", txtPretAchitat.Text.Trim());
-                sqlCmd.Parameters.AddWithValue("@Verdict_reparatie", checkBoxVerdictReparatie.Checked);
-
-                sqlCmd.ExecuteNonQuery();
-                MessageBox.Show("Reparatie concluzionata!");
+                DialogBox = MessageBox.Show("Doresti sa concluzionezi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
             }
-            FillDataGridView();
-            connection_class.ClearTextBoxes(this.Controls);
-        }
+            else
+            {
+                DialogBox = MessageBox.Show("Doresti sa modifici aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
+            }
+            if (DialogBox == DialogResult.Yes)
+            {
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                {
+                    DatabaseConnection.Open();
+                    SqlCommand sqlCmd = new SqlCommand("ConcluzionareReparatie", DatabaseConnection);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
 
+                    /* Date reparatie. */
+                    sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID);
+                    /* Adding this condition the registration can be completed without data_predarii, thus effectively
+                     * marking the phone reparation completed, but the phone is yet to be received by the customer. */
+                    if (dateTimeDataPredarii.Checked == true)
+                        sqlCmd.Parameters.AddWithValue("@Data_predarii", dateTimeDataPredarii.Value);
+                    sqlCmd.Parameters.AddWithValue("@Piese_inlocuite", txtPieseInlocuite.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Termen_garantie", txtTermenGarantie.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Pret_achitat", txtPretAchitat.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Verdict_reparatie", checkBoxVerdictReparatie.Checked);
+
+                    sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("Reparatie concluzionata!");
+                    connection_class.ClearTextBoxes(this.Controls);
+                }
+            }
+            else if (DialogResult == DialogResult.No)
+            {
+
+            }
+            connection_class.FillDataGridView("AfisareTelefoaneInLucru", dataGridViewReparatii);
+        }
         #endregion
 
-        #region LocalFunctions
-        void FillDataGridView()
+        /*
+        #region LocalMethods
+
+        private void FillDataGridView()
         {
-            using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
+            using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
             {
                 if (DatabaseConnection.State == ConnectionState.Closed)
                     DatabaseConnection.Open();
 
-                SqlDataAdapter sqlDa = new SqlDataAdapter("AfisareTelefoaneInLucru", DatabaseConnection);
-                sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                dataGridViewReparatii.DataSource = dtbl;
+                SqlDataAdapter sqlData = new SqlDataAdapter("AfisareTelefoaneInLucru", DatabaseConnection);
+                sqlData.SelectCommand.CommandType = CommandType.StoredProcedure;
+                DataTable dataTable = new DataTable();
+                sqlData.Fill(dataTable);
+                dataGridViewReparatii.DataSource = dataTable;
 
                 DatabaseConnection.Close();
             }
         }
-
-        private void checkStateReparat(CheckBox checkBox)
-        {
-            if (checkBox.CheckState == CheckState.Checked)
-                checkBox.Text = "Reparat";
-            else if (checkBox.CheckState == CheckState.Unchecked)
-                checkBox.Text = "Nereparat";
-            else
-                checkBox.Text = "Eroare";
-        }
         #endregion
+        */
 
-        /* Click event to select the id of the registration upon click. */
+        /* Click event to store Nr_inreg in the variable ReparatieID upon clicking a registration. */
         private void dataGridViewReparatii_Click(object sender, EventArgs e)
         {
             if (dataGridViewReparatii.CurrentRow.Index != -1)
@@ -104,7 +116,7 @@ namespace AplicatieDisertatie
 
         private void checkBoxVerdictReparatie_CheckStateChanged(object sender, EventArgs e)
         {
-            checkStateReparat(checkBoxVerdictReparatie);
+            connection_class.checkBoxStates(checkBoxVerdictReparatie, "Reparat", "Nereparat");
         }
     }
 }

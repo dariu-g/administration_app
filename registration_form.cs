@@ -17,15 +17,14 @@ namespace AplicatieDisertatie
 {
     public partial class registration_form : Form
     {
-        /* Global variables. */
-        int ClientID = 0;
-        int TelefonID = 0;
-        string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
+        /* Class scope members. */
+        static int ClientID = 0;
+        static int TelefonID = 0;
 
         public registration_form()
         {
             InitializeComponent();
-            connection_class.checkStateGarantie(checkboxGarantie);
+            connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
             last_Registration();
         }
 
@@ -41,9 +40,10 @@ namespace AplicatieDisertatie
             }
             else
             {
-                using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
                 {
-                    DatabaseConnection.Open();
+                    if (DatabaseConnection.State == ConnectionState.Closed)
+                        DatabaseConnection.Open();
                     SqlCommand sqlCmd = new SqlCommand("InregistrareReparatie", DatabaseConnection);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
 
@@ -77,6 +77,7 @@ namespace AplicatieDisertatie
                     sqlCmd.Parameters.AddWithValue("@Termen_rezolvare", txtTermenRezolvare.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Pret_estimativ", txtPretEstimativ.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Pret_avans", txtPretAvans.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@UtilizatorID", login_form.UtilizatorID);
 
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Reparatie inregistrata!");
@@ -150,11 +151,13 @@ namespace AplicatieDisertatie
             connection_class.ToTitleCase_textBoxFormat(txtPrenume);
         }
 
+        /* Reads the field txtNrTelefon, if it is found in the database the ClientID will be stored in the static variable
+         * ClientID and the textBoxes txtNume and txtPrenume will be filled with the data coresponding to txtNrTelefon. */
         private void txtNrTelefon_TextChanged(object sender, EventArgs e)
         {
             if (txtNrTelefon.Text != "" && txtNrTelefon.Text.Length > 9)
             {
-                using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
                 {
                     if (DatabaseConnection.State == ConnectionState.Closed)
                         DatabaseConnection.Open();
@@ -195,11 +198,13 @@ namespace AplicatieDisertatie
             connection_class.NumberOnly_textBoxFormat(e);
         }
 
+        /* Reads the field txtIMEI, if it is found in the database, the TelefonID will be stored in the static variable 
+         * TelefonID and all other Date_telefon textBoxes will be filled with the data coresponding to txtIMEI. */
         private void txtIMEI_TextChanged(object sender, EventArgs e)
         {
             if (txtIMEI.Text != "" && txtIMEI.Text.Length > 14)
             {
-                using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
                 {
                     if (DatabaseConnection.State == ConnectionState.Closed)
                         DatabaseConnection.Open();
@@ -244,7 +249,7 @@ namespace AplicatieDisertatie
 
         private void checkboxGarantie_CheckStateChanged(object sender, EventArgs e)
         {
-            connection_class.checkStateGarantie(checkboxGarantie);
+            connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
         }
         #endregion
     }
