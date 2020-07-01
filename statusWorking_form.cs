@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace AplicatieDisertatie
 {
-    public partial class status_WIP_form : Form
+    public partial class statusWorking_form : Form
     {
         /* Class scope members. */
         private static int ReparatieID = 0;
 
-        public status_WIP_form()
+        public statusWorking_form()
         {
             InitializeComponent();
             //FillDataGridView();

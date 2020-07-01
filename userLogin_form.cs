@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace AplicatieDisertatie
 {
-    public partial class login_form : Form
+    public partial class userLogin_form : Form
     {
         /* Class scope members. */
         static public int UtilizatorID = 0;
 
-        public login_form()
+        public userLogin_form()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace AplicatieDisertatie
         private void labelCatreInregistrareUtilizator_Click(object sender, EventArgs e)
         {
             this.Hide();
-            user_form registerform = new user_form();
+            userRegistration_form registerform = new userRegistration_form();
             registerform.Show();
         }
 
@@ -45,10 +45,10 @@ namespace AplicatieDisertatie
         {
             if (!string.IsNullOrEmpty(txtUtilizator.Text) && !string.IsNullOrEmpty(txtParola.Text))
             {
-                DataTable Utilizatori = executeSQL("AutentificareUtilizator");
 
+                DataTable Utilizatori = executeSQL("AutentificareUtilizator");
                 /* Verifies if a username and password matched in the database. The table gains a Row if this is true. */
-                if(Utilizatori.Rows.Count > 0)
+                if(Utilizatori != null && Utilizatori.Rows.Count > 0)
                 {
                     txtUtilizator.Clear();
                     txtParola.Clear();
@@ -57,7 +57,6 @@ namespace AplicatieDisertatie
                     main_form formMain = new main_form();
                     formMain.ShowDialog();
                     formMain = null;
-                    //this.txtUtilizator.Select();
                 }
                 else
                 {
@@ -99,7 +98,9 @@ namespace AplicatieDisertatie
                     adapter.Fill(dataTable);
 
                     /* Fetches UtilizatorID from the dataTable position [0][0]. */
-                    UtilizatorID = Convert.ToInt32(dataTable.Rows[0][0]);
+                    if (dataTable != null)
+                        UtilizatorID = Convert.ToInt32(dataTable.Rows[0][0]);
+
 
                     DatabaseConnection.Close();
                     return dataTable;
@@ -107,7 +108,8 @@ namespace AplicatieDisertatie
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show("A aparut o eroare:" + ex.Message, "Conexiunea la baza de date a esuat.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dataTable == null)
+                    MessageBox.Show("A aparut o eroare. Contactati administratorul." + ex.Message, "Posibila eroare de conexiune la baza de date.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dataTable = null;
             }
             return dataTable;

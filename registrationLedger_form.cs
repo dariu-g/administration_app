@@ -16,12 +16,12 @@ using Dapper;
 
 namespace AplicatieDisertatie
 {
-    public partial class ledger_form : Form
+    public partial class registrationLedger_form : Form
     {
         /* Class scope variables. */
         private static int ReparatieID = 0;
 
-        public ledger_form()
+        public registrationLedger_form()
         {
             InitializeComponent();
 
@@ -185,8 +185,7 @@ namespace AplicatieDisertatie
         /* Click event to select the id of the registration. */
         private void dataGridLedger_Click(object sender, EventArgs e)
         {
-            if (dataGridLedger.Rows.Count > 0)
-            if (dataGridLedger.CurrentRow.Index != -1)
+            if (dataGridLedger.Rows.Count > 0 && dataGridLedger.CurrentRow.Index != -1)
             {
                 ReparatieID = Convert.ToInt32(dataGridLedger.CurrentRow.Cells[0].Value.ToString());
             }

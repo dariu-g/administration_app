@@ -73,19 +73,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dataEdit_form.cs">
+    <Compile Include="registrationEdit_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dataEdit_form.Designer.cs">
-      <DependentUpon>dataEdit_form.cs</DependentUpon>
+    <Compile Include="registrationEdit_form.Designer.cs">
+      <DependentUpon>registrationEdit_form.cs</DependentUpon>
     </Compile>
     <Compile Include="ledgerPrint_class.cs" />
     <Compile Include="ledger_class.cs" />
-    <Compile Include="ledger_form.cs">
+    <Compile Include="registrationLedger_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ledger_form.Designer.cs">
-      <DependentUpon>ledger_form.cs</DependentUpon>
+    <Compile Include="registrationLedger_form.Designer.cs">
+      <DependentUpon>registrationLedger_form.cs</DependentUpon>
     </Compile>
     <Compile Include="print_form.cs">
       <SubType>Form</SubType>
@@ -100,36 +100,36 @@
     <Compile Include="statistics_form.Designer.cs">
       <DependentUpon>statistics_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="status_unclaimed_form.cs">
+    <Compile Include="statusUnclaimed_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="status_unclaimed_form.Designer.cs">
-      <DependentUpon>status_unclaimed_form.cs</DependentUpon>
+    <Compile Include="statusUnclaimed_form.Designer.cs">
+      <DependentUpon>statusUnclaimed_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="status_WIP_form.cs">
+    <Compile Include="statusWorking_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="status_WIP_form.Designer.cs">
-      <DependentUpon>status_WIP_form.cs</DependentUpon>
+    <Compile Include="statusWorking_form.Designer.cs">
+      <DependentUpon>statusWorking_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="user_form.cs">
+    <Compile Include="userRegistration_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="user_form.Designer.cs">
-      <DependentUpon>user_form.cs</DependentUpon>
+    <Compile Include="userRegistration_form.Designer.cs">
+      <DependentUpon>userRegistration_form.cs</DependentUpon>
     </Compile>
     <Compile Include="connection_class.cs" />
-    <Compile Include="registration_form.cs">
+    <Compile Include="registrationAdd_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registration_form.Designer.cs">
-      <DependentUpon>registration_form.cs</DependentUpon>
+    <Compile Include="registrationAdd_form.Designer.cs">
+      <DependentUpon>registrationAdd_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="login_form.cs">
+    <Compile Include="userLogin_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login_form.Designer.cs">
-      <DependentUpon>login_form.cs</DependentUpon>
+    <Compile Include="userLogin_form.Designer.cs">
+      <DependentUpon>userLogin_form.cs</DependentUpon>
     </Compile>
     <Compile Include="main_form.cs">
       <SubType>Form</SubType>
@@ -139,30 +139,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="dataEdit_form.resx">
-      <DependentUpon>dataEdit_form.cs</DependentUpon>
+    <EmbeddedResource Include="registrationEdit_form.resx">
+      <DependentUpon>registrationEdit_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ledgerPrint_report.rdlc" />
-    <EmbeddedResource Include="ledger_form.resx">
-      <DependentUpon>ledger_form.cs</DependentUpon>
+    <EmbeddedResource Include="registrationLedger_form.resx">
+      <DependentUpon>registrationLedger_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="print_form.resx">
       <DependentUpon>print_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="status_unclaimed_form.resx">
-      <DependentUpon>status_unclaimed_form.cs</DependentUpon>
+    <EmbeddedResource Include="statusUnclaimed_form.resx">
+      <DependentUpon>statusUnclaimed_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="status_WIP_form.resx">
-      <DependentUpon>status_WIP_form.cs</DependentUpon>
+    <EmbeddedResource Include="statusWorking_form.resx">
+      <DependentUpon>statusWorking_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="user_form.resx">
-      <DependentUpon>user_form.cs</DependentUpon>
+    <EmbeddedResource Include="userRegistration_form.resx">
+      <DependentUpon>userRegistration_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="registration_form.resx">
-      <DependentUpon>registration_form.cs</DependentUpon>
+    <EmbeddedResource Include="registrationAdd_form.resx">
+      <DependentUpon>registrationAdd_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login_form.resx">
-      <DependentUpon>login_form.cs</DependentUpon>
+    <EmbeddedResource Include="userLogin_form.resx">
+      <DependentUpon>userLogin_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main_form.resx">
       <DependentUpon>main_form.cs</DependentUpon>

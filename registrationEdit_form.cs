@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace AplicatieDisertatie
 {
-    public partial class dataEdit_form : Form
+    public partial class registrationEdit_form : Form
     {
         /* Class scope members. */
         static private int ClientID = 0;
@@ -20,7 +20,7 @@ namespace AplicatieDisertatie
         static private int ReparatieID = 0;
         static private string ID = "";
 
-        public dataEdit_form()
+        public registrationEdit_form()
         {
             InitializeComponent();
             connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
@@ -288,7 +288,7 @@ namespace AplicatieDisertatie
         /* Double click event to copy the data from dataGridViewEdit to the appropiate boxes. */
         private void dataGridViewEdit_DoubleClick(object sender, EventArgs e)
         {
-            if (dataGridViewEdit.CurrentRow.Index != -1)
+            if (dataGridViewEdit.Rows.Count > 0 && dataGridViewEdit.CurrentRow.Index != -1)
             {
                 if (ID == "id_client")
                 {

@@ -1,6 +1,6 @@
 ﻿namespace AplicatieDisertatie
 {
-    partial class status_WIP_form
+    partial class statusWorking_form
     {
         /// <summary>
         /// Required designer variable.

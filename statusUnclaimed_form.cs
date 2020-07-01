@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace AplicatieDisertatie
 {
-    public partial class status_unclaimed_form : Form
+    public partial class statusUnclaimed_form : Form
     {
         /* Class scope members. */
         private static int ReparatieID = 0;
         private static int ReparatieID_6M = 0;
         
-        public status_unclaimed_form()
+        public statusUnclaimed_form()
         {
             InitializeComponent();
             dataGridCurrent.DoubleBufferedDataGridView(true);
@@ -82,9 +82,10 @@ namespace AplicatieDisertatie
 
         }
         #endregion
+        
         private void dataGridCurrent_Click(object sender, EventArgs e)
         {
-            if (dataGridCurrent.CurrentRow.Index != -1)
+            if (dataGridCurrent.Rows.Count > 0 && dataGridCurrent.CurrentRow.Index != -1)
             {
                 ReparatieID = Convert.ToInt32(dataGridCurrent.CurrentRow.Cells[0].Value.ToString());
             }
@@ -92,7 +93,7 @@ namespace AplicatieDisertatie
 
         private void dataGridGreaterThan6m_Click(object sender, EventArgs e)
         {
-            if (dataGridGreaterThan6m.CurrentRow.Index != -1)
+            if (dataGridGreaterThan6m.Rows.Count > 0 && dataGridGreaterThan6m.CurrentRow.Index != -1)
             {
                 ReparatieID_6M = Convert.ToInt32(dataGridGreaterThan6m.CurrentRow.Cells[0].Value.ToString());
             }

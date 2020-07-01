@@ -1,6 +1,6 @@
 ﻿namespace AplicatieDisertatie
 {
-    partial class registration_form
+    partial class registrationAdd_form
     {
         /// <summary>
         /// Required designer variable.

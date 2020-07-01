@@ -32,7 +32,6 @@ namespace AplicatieDisertatie
         {
             panelInregistrareSubmenu.Visible = true;
             panelStatusReparatiiSubmenu.Visible = false;
-            panelStatisticiSubmenu.Visible = false;
         }
 
         private void hideSubMenu()
@@ -41,8 +40,6 @@ namespace AplicatieDisertatie
                 panelInregistrareSubmenu.Visible = false;
             if (panelStatusReparatiiSubmenu.Visible == true)
                 panelStatusReparatiiSubmenu.Visible = false;
-            if (panelStatisticiSubmenu.Visible == true)
-                panelStatisticiSubmenu.Visible = false;
         }
         private void showSubMenu(Panel subMenu)
         {
@@ -61,17 +58,17 @@ namespace AplicatieDisertatie
 
         private void btnInregistrariAdauga_Click(object sender, EventArgs e)
         {
-            openChildForm(new registration_form());
+            openChildForm(new registrationAdd_form());
         }
 
         private void btnInregistrariIstoric_Click(object sender, EventArgs e)
         {
-            openChildForm(new ledger_form());
+            openChildForm(new registrationLedger_form());
         }
 
         private void btnInregistrariModificari_Click(object sender, EventArgs e)
         {
-            openChildForm(new dataEdit_form());
+            openChildForm(new registrationEdit_form());
         }
         #endregion
 
@@ -83,20 +80,19 @@ namespace AplicatieDisertatie
 
         private void btnStatusInLucru_Click(object sender, EventArgs e)
         {
-            openChildForm(new status_WIP_form());
+            openChildForm(new statusWorking_form());
 
         }
 
         private void btnStatusNeridicate_Click(object sender, EventArgs e)
         {
-            openChildForm(new status_unclaimed_form());
+            openChildForm(new statusUnclaimed_form());
         }
         #endregion
 
         #region StatisticiReparatiiSubmenu
         private void btnStatistici_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelStatisticiSubmenu);
             openChildForm(new statistics_form());
         }
 

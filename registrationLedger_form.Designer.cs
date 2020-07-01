@@ -1,6 +1,6 @@
 ﻿namespace AplicatieDisertatie
 {
-    partial class ledger_form
+    partial class registrationLedger_form
     {
         /// <summary>
         /// Required designer variable.

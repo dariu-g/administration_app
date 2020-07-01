@@ -16,9 +16,9 @@ using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace AplicatieDisertatie
 {
-    public partial class user_form : Form
+    public partial class userRegistration_form : Form
     {
-        public user_form()
+        public userRegistration_form()
         {
             InitializeComponent();
         }
@@ -69,7 +69,7 @@ namespace AplicatieDisertatie
                         DatabaseConnection.Close();
                         connection_class.ClearTextBoxes(this.Controls);
                         this.Hide();
-                        login_form loginform = new login_form();
+                        userLogin_form loginform = new userLogin_form();
                         loginform.Show();
                     }
 
@@ -80,7 +80,7 @@ namespace AplicatieDisertatie
         private void labelCatreAutentificare_Click(object sender, EventArgs e)
         {
             this.Hide();
-            login_form loginform = new login_form();
+            userLogin_form loginform = new userLogin_form();
             loginform.Show();
         }
         #endregion

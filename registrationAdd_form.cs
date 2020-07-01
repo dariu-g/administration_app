@@ -15,13 +15,13 @@ using Dapper;
 
 namespace AplicatieDisertatie
 {
-    public partial class registration_form : Form
+    public partial class registrationAdd_form : Form
     {
         /* Class scope members. */
         static private int ClientID = 0;
         static private int TelefonID = 0;
 
-        public registration_form()
+        public registrationAdd_form()
         {
             InitializeComponent();
             connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
@@ -78,7 +78,7 @@ namespace AplicatieDisertatie
                     sqlCmd.Parameters.AddWithValue("@Termen_rezolvare", txtTermenRezolvare.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Pret_estimativ", txtPretEstimativ.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Pret_avans", txtPretAvans.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@UtilizatorID", login_form.UtilizatorID);
+                    sqlCmd.Parameters.AddWithValue("@UtilizatorID", userLogin_form.UtilizatorID);
 
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Reparatie inregistrata!");

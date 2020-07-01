@@ -1,6 +1,6 @@
 ﻿namespace AplicatieDisertatie
 {
-    partial class status_unclaimed_form
+    partial class statusUnclaimed_form
     {
         /// <summary>
         /// Required designer variable.

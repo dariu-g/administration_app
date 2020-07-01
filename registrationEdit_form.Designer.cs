@@ -1,6 +1,6 @@
 ﻿namespace AplicatieDisertatie
 {
-    partial class dataEdit_form
+    partial class registrationEdit_form
     {
         /// <summary>
         /// Required designer variable.
@@ -522,10 +522,13 @@
             // 
             // dataGridViewEdit
             // 
+            this.dataGridViewEdit.AllowUserToAddRows = false;
+            this.dataGridViewEdit.AllowUserToDeleteRows = false;
             this.dataGridViewEdit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEdit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewEdit.Location = new System.Drawing.Point(0, 477);
             this.dataGridViewEdit.Name = "dataGridViewEdit";
+            this.dataGridViewEdit.ReadOnly = true;
             this.dataGridViewEdit.RowHeadersWidth = 51;
             this.dataGridViewEdit.RowTemplate.Height = 24;
             this.dataGridViewEdit.Size = new System.Drawing.Size(1074, 121);
@@ -565,6 +568,7 @@
             // 
             // dateDataPredarii
             // 
+            this.dateDataPredarii.Checked = false;
             this.dateDataPredarii.CustomFormat = "dd/MM/yyyy";
             this.dateDataPredarii.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateDataPredarii.Location = new System.Drawing.Point(680, 104);
@@ -659,7 +663,7 @@
             this.labelUnique5.TabIndex = 147;
             this.labelUnique5.Text = "*";
             // 
-            // dataEdit_form
+            // registrationEdit_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -718,7 +722,7 @@
             this.Controls.Add(this.txtCodTelefon);
             this.Controls.Add(nr_telefonLabel);
             this.Controls.Add(this.txtNrTelefon);
-            this.Name = "dataEdit_form";
+            this.Name = "registrationEdit_form";
             this.Text = "dataEdit_form";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEdit)).EndInit();
             this.ResumeLayout(false);

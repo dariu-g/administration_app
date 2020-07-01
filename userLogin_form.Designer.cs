@@ -1,6 +1,6 @@
 ﻿namespace AplicatieDisertatie
 {
-    partial class login_form
+    partial class userLogin_form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login_form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userLogin_form));
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelCatreInregistrareUtilizator = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
