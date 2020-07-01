@@ -24,6 +24,7 @@ namespace AplicatieDisertatie
             InitializeComponent();
             customizeDesign();
         }
+
         #region NavigationMenu
         #region Show/HideSubmenu
         /* Hides the submenu panel */
@@ -110,10 +111,13 @@ namespace AplicatieDisertatie
         
         private void btnInformatii_Click(object sender, EventArgs e)
         {
+            string workingDirectory = Environment.CurrentDirectory;
+            string UserManual_path = Directory.GetParent(workingDirectory).Parent.FullName + "\\UserManual\\UserManual.chm";
             Process UserManual = new Process();
-            UserManual.StartInfo.FileName = "C:\\Users\\User\\source\\repos\\AplicatieDisertatie\\UserManual\\UserManual.chm";
-            UserManual.Start();            
+            UserManual.StartInfo.FileName = UserManual_path;
+            UserManual.Start();
         }
+
         #endregion
         private Form activeForm = null;             // the child form needs to be stored apart from the main form
         private void openChildForm(Form childForm)  // this method works for only 1 child form being open in the main form (see 13:50 for multiple forms)

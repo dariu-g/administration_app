@@ -18,14 +18,15 @@ namespace AplicatieDisertatie
     public partial class registration_form : Form
     {
         /* Class scope members. */
-        static int ClientID = 0;
-        static int TelefonID = 0;
+        static private int ClientID = 0;
+        static private int TelefonID = 0;
 
         public registration_form()
         {
             InitializeComponent();
             connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
             last_Registration();
+            dataGridViewRegistration.DoubleBufferedDataGridView(true);
         }
 
         #region MainButtons

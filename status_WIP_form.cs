@@ -15,7 +15,7 @@ namespace AplicatieDisertatie
     public partial class status_WIP_form : Form
     {
         /* Class scope members. */
-        static int ReparatieID = 0;
+        private static int ReparatieID = 0;
 
         public status_WIP_form()
         {
@@ -77,7 +77,6 @@ namespace AplicatieDisertatie
             }
             else if (DialogResult == DialogResult.No)
             {
-
             }
             connection_class.FillDataGridView("AfisareTelefoaneInLucru", dataGridViewReparatii);
         }

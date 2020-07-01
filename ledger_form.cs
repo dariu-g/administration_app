@@ -49,8 +49,9 @@ namespace AplicatieDisertatie
                 {
                     db_con.Open();
                 }
-                DateTime dateFROM = dateTimeDin.Value;
-                DateTime dateTILL = dateTimePana.Value;
+                DateTime dateFROM = dateTimeDin.Value.Date;
+                DateTime dateTILL = dateTimePana.Value.Date;
+
                 ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>("CalendarDataInregistrari", new { dateFROM, dateTILL } ,commandType: CommandType.StoredProcedure);
             }
         }
@@ -65,6 +66,20 @@ namespace AplicatieDisertatie
                 }
 
                 ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>("ReparatiiRecente", commandType: CommandType.StoredProcedure);
+            }
+        }
+
+        private void btnCautare_Click(object sender, EventArgs e)
+        {
+            using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
+            {
+                if (db_con.State == ConnectionState.Closed)
+                {
+                    db_con.Open();
+                }
+
+                string searchText = txtCautare.Text.Trim();
+                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>("CautareGeneralaInregistrari", new { searchText }, commandType: CommandType.StoredProcedure);
             }
         }
 
@@ -157,8 +172,8 @@ namespace AplicatieDisertatie
             dataGridLedger.RowHeadersVisible = false;
 
             /* Includes the headers of the dataGridLedger. */
-            //dataGridLedger.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
-            //dataGridLedger.MultiSelect = true;
+            dataGridLedger.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            dataGridLedger.MultiSelect = true;
 
             dataGridLedger.SelectAll();
             DataObject dataGridViewData = dataGridLedger.GetClipboardContent();
@@ -175,6 +190,18 @@ namespace AplicatieDisertatie
             {
                 ReparatieID = Convert.ToInt32(dataGridLedger.CurrentRow.Cells[0].Value.ToString());
             }
+        }
+
+        private void dateTimeDin_ValueChanged(object sender, EventArgs e)
+        {
+            dataGridLedger.Rows.Clear();
+            dataGridLedger.Refresh();
+        }
+
+        private void dateTimePana_ValueChanged(object sender, EventArgs e)
+        {
+            dataGridLedger.Rows.Clear();
+            dataGridLedger.Refresh();
         }
     }
 }

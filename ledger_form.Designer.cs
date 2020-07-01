@@ -58,7 +58,7 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnDescarca = new System.Windows.Forms.Button();
             this.btnCautare = new System.Windows.Forms.Button();
-            this.labelNrInreg = new System.Windows.Forms.Label();
+            this.labelCautareGenerala = new System.Windows.Forms.Label();
             this.txtCautare = new System.Windows.Forms.TextBox();
             this.btnSterge = new System.Windows.Forms.Button();
             this.btnReparatiiRecente = new System.Windows.Forms.Button();
@@ -81,13 +81,14 @@
             // 
             // dateTimeDin
             // 
+            this.dateTimeDin.Checked = false;
             this.dateTimeDin.CustomFormat = "dd/MM/yyyy";
             this.dateTimeDin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeDin.Location = new System.Drawing.Point(59, 40);
             this.dateTimeDin.Name = "dateTimeDin";
             this.dateTimeDin.Size = new System.Drawing.Size(224, 22);
             this.dateTimeDin.TabIndex = 1;
-            this.dateTimeDin.ValueChanged += new System.EventHandler(this.btnCauta_Click);
+            this.dateTimeDin.ValueChanged += new System.EventHandler(this.dateTimeDin_ValueChanged);
             // 
             // dataGridLedger
             // 
@@ -336,7 +337,7 @@
             this.dateTimePana.Name = "dateTimePana";
             this.dateTimePana.Size = new System.Drawing.Size(224, 22);
             this.dateTimePana.TabIndex = 4;
-            this.dateTimePana.ValueChanged += new System.EventHandler(this.btnCauta_Click);
+            this.dateTimePana.ValueChanged += new System.EventHandler(this.dateTimePana_ValueChanged);
             // 
             // btnPrint
             // 
@@ -361,27 +362,28 @@
             // 
             // btnCautare
             // 
-            this.btnCautare.Location = new System.Drawing.Point(396, 92);
+            this.btnCautare.Location = new System.Drawing.Point(378, 92);
             this.btnCautare.Name = "btnCautare";
             this.btnCautare.Size = new System.Drawing.Size(75, 23);
             this.btnCautare.TabIndex = 13;
-            this.btnCautare.Text = "Cauta";
+            this.btnCautare.Text = "Cautare";
             this.btnCautare.UseVisualStyleBackColor = true;
+            this.btnCautare.Click += new System.EventHandler(this.btnCautare_Click);
             // 
-            // labelNrInreg
+            // labelCautareGenerala
             // 
-            this.labelNrInreg.AutoSize = true;
-            this.labelNrInreg.Location = new System.Drawing.Point(23, 92);
-            this.labelNrInreg.Name = "labelNrInreg";
-            this.labelNrInreg.Size = new System.Drawing.Size(145, 17);
-            this.labelNrInreg.TabIndex = 12;
-            this.labelNrInreg.Text = "Cautare baza de date";
+            this.labelCautareGenerala.AutoSize = true;
+            this.labelCautareGenerala.Location = new System.Drawing.Point(23, 92);
+            this.labelCautareGenerala.Name = "labelCautareGenerala";
+            this.labelCautareGenerala.Size = new System.Drawing.Size(118, 17);
+            this.labelCautareGenerala.TabIndex = 12;
+            this.labelCautareGenerala.Text = "Cautare generala";
             // 
             // txtCautare
             // 
-            this.txtCautare.Location = new System.Drawing.Point(216, 92);
+            this.txtCautare.Location = new System.Drawing.Point(147, 93);
             this.txtCautare.Name = "txtCautare";
-            this.txtCautare.Size = new System.Drawing.Size(158, 22);
+            this.txtCautare.Size = new System.Drawing.Size(210, 22);
             this.txtCautare.TabIndex = 11;
             // 
             // btnSterge
@@ -434,7 +436,7 @@
             this.Controls.Add(this.btnReparatiiRecente);
             this.Controls.Add(this.btnSterge);
             this.Controls.Add(this.btnCautare);
-            this.Controls.Add(this.labelNrInreg);
+            this.Controls.Add(this.labelCautareGenerala);
             this.Controls.Add(this.txtCautare);
             this.Controls.Add(this.btnDescarca);
             this.Controls.Add(this.btnPrint);
@@ -465,7 +467,7 @@
         private System.Windows.Forms.BindingSource ledgerclassBindingSource;
         private System.Windows.Forms.Button btnDescarca;
         private System.Windows.Forms.Button btnCautare;
-        private System.Windows.Forms.Label labelNrInreg;
+        private System.Windows.Forms.Label labelCautareGenerala;
         private System.Windows.Forms.TextBox txtCautare;
         private System.Windows.Forms.Button btnSterge;
         private System.Windows.Forms.Button btnReparatiiRecente;

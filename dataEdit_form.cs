@@ -145,7 +145,7 @@ namespace AplicatieDisertatie
                         sqlCmd.Parameters.AddWithValue("@Pret_avans", txtPretAvans.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@Pret_achitat", txtPretAchitat.Text.Trim());
                         sqlCmd.ExecuteNonQuery();
-                        MessageBox.Show("Datele telefonului au fost modificate!");
+                        MessageBox.Show("Datele reparatiei au fost modificate!");
                         btnModificaReparatie.Text = "Cauta";
                         readOnly_DateReparatie();
                     }

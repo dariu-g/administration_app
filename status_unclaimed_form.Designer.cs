@@ -36,6 +36,7 @@
             this.dateTimeDataPredarii = new System.Windows.Forms.DateTimePicker();
             this.txtObservatii = new System.Windows.Forms.TextBox();
             this.labelTelNeridicate6luni = new System.Windows.Forms.Label();
+            this.btnCaseaza = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCurrent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGreaterThan6m)).BeginInit();
@@ -44,7 +45,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(346, 250);
+            label1.Location = new System.Drawing.Point(332, 248);
             label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(76, 17);
@@ -83,7 +84,7 @@
             // 
             // btnSalveaza
             // 
-            this.btnSalveaza.Location = new System.Drawing.Point(438, 350);
+            this.btnSalveaza.Location = new System.Drawing.Point(484, 156);
             this.btnSalveaza.Name = "btnSalveaza";
             this.btnSalveaza.Size = new System.Drawing.Size(110, 30);
             this.btnSalveaza.TabIndex = 10;
@@ -94,7 +95,7 @@
             // labelDataPredarii
             // 
             this.labelDataPredarii.AutoSize = true;
-            this.labelDataPredarii.Location = new System.Drawing.Point(332, 205);
+            this.labelDataPredarii.Location = new System.Drawing.Point(332, 210);
             this.labelDataPredarii.Name = "labelDataPredarii";
             this.labelDataPredarii.Size = new System.Drawing.Size(90, 17);
             this.labelDataPredarii.TabIndex = 12;
@@ -111,11 +112,10 @@
             // 
             // txtObservatii
             // 
-            this.txtObservatii.Location = new System.Drawing.Point(438, 247);
+            this.txtObservatii.Location = new System.Drawing.Point(438, 235);
             this.txtObservatii.Margin = new System.Windows.Forms.Padding(5);
             this.txtObservatii.Multiline = true;
             this.txtObservatii.Name = "txtObservatii";
-            this.txtObservatii.ReadOnly = true;
             this.txtObservatii.Size = new System.Drawing.Size(242, 49);
             this.txtObservatii.TabIndex = 78;
             // 
@@ -123,17 +123,28 @@
             // 
             this.labelTelNeridicate6luni.AutoSize = true;
             this.labelTelNeridicate6luni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.labelTelNeridicate6luni.Location = new System.Drawing.Point(267, 429);
+            this.labelTelNeridicate6luni.Location = new System.Drawing.Point(320, 417);
             this.labelTelNeridicate6luni.Name = "labelTelNeridicate6luni";
             this.labelTelNeridicate6luni.Size = new System.Drawing.Size(526, 26);
             this.labelTelNeridicate6luni.TabIndex = 80;
             this.labelTelNeridicate6luni.Text = "Telefoane neridicate de peste 6 luni de la data primirii";
+            // 
+            // btnCaseaza
+            // 
+            this.btnCaseaza.Location = new System.Drawing.Point(484, 302);
+            this.btnCaseaza.Name = "btnCaseaza";
+            this.btnCaseaza.Size = new System.Drawing.Size(110, 30);
+            this.btnCaseaza.TabIndex = 81;
+            this.btnCaseaza.Text = "Caseaza";
+            this.btnCaseaza.UseVisualStyleBackColor = true;
+            this.btnCaseaza.Click += new System.EventHandler(this.btnCaseaza_Click);
             // 
             // status_unclaimed_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 575);
+            this.Controls.Add(this.btnCaseaza);
             this.Controls.Add(this.labelTelNeridicate6luni);
             this.Controls.Add(label1);
             this.Controls.Add(this.txtObservatii);
@@ -160,5 +171,6 @@
         private System.Windows.Forms.DateTimePicker dateTimeDataPredarii;
         private System.Windows.Forms.TextBox txtObservatii;
         private System.Windows.Forms.Label labelTelNeridicate6luni;
+        private System.Windows.Forms.Button btnCaseaza;
     }
 }
