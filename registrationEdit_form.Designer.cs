@@ -110,9 +110,9 @@
             label2.Location = new System.Drawing.Point(27, 110);
             label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(106, 17);
+            label2.Size = new System.Drawing.Size(69, 17);
             label2.TabIndex = 110;
-            label2.Text = "Prenume client:";
+            label2.Text = "Prenume:";
             // 
             // tip_telefonLabel
             // 
@@ -140,9 +140,9 @@
             nume_clientLabel.Location = new System.Drawing.Point(27, 70);
             nume_clientLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             nume_clientLabel.Name = "nume_clientLabel";
-            nume_clientLabel.Size = new System.Drawing.Size(86, 17);
+            nume_clientLabel.Size = new System.Drawing.Size(49, 17);
             nume_clientLabel.TabIndex = 104;
-            nume_clientLabel.Text = "Nume client:";
+            nume_clientLabel.Text = "Nume:";
             // 
             // modelLabel
             // 

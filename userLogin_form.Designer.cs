@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelCatreInregistrareUtilizator = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelMinimize = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelExit = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -87,7 +87,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(180)))), ((int)(((byte)(20)))));
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.labelMinimize);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.labelExit);
             this.panel2.Controls.Add(this.label11);
@@ -97,18 +97,18 @@
             this.panel2.Size = new System.Drawing.Size(1093, 183);
             this.panel2.TabIndex = 17;
             // 
-            // label1
+            // labelMinimize
             // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Location = new System.Drawing.Point(775, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 33);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "_";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.labelMinimize.AutoSize = true;
+            this.labelMinimize.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelMinimize.Location = new System.Drawing.Point(775, 14);
+            this.labelMinimize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelMinimize.Name = "labelMinimize";
+            this.labelMinimize.Size = new System.Drawing.Size(31, 33);
+            this.labelMinimize.TabIndex = 6;
+            this.labelMinimize.Text = "_";
+            this.labelMinimize.Click += new System.EventHandler(this.labelMinimize_Click);
             // 
             // pictureBox1
             // 
@@ -225,7 +225,7 @@
             this.txtUtilizator.Size = new System.Drawing.Size(388, 38);
             this.txtUtilizator.TabIndex = 1;
             // 
-            // login
+            // userLogin_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -236,7 +236,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(901, 605);
             this.MinimumSize = new System.Drawing.Size(901, 605);
-            this.Name = "login";
+            this.Name = "userLogin_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
             this.panel1.ResumeLayout(false);
@@ -263,6 +263,6 @@
         private System.Windows.Forms.Label labelCatreInregistrareUtilizator;
         private System.Windows.Forms.Label labelExit;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelMinimize;
     }
 }

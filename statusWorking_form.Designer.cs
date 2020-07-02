@@ -63,9 +63,9 @@
             this.labelPretAchitat.AutoSize = true;
             this.labelPretAchitat.Location = new System.Drawing.Point(357, 543);
             this.labelPretAchitat.Name = "labelPretAchitat";
-            this.labelPretAchitat.Size = new System.Drawing.Size(80, 17);
+            this.labelPretAchitat.Size = new System.Drawing.Size(104, 17);
             this.labelPretAchitat.TabIndex = 1;
-            this.labelPretAchitat.Text = "Pret achitat";
+            this.labelPretAchitat.Text = "Pret de achitat:";
             // 
             // checkBoxVerdictReparatie
             // 
@@ -96,11 +96,11 @@
             // labelPieseInlocuite
             // 
             this.labelPieseInlocuite.AutoSize = true;
-            this.labelPieseInlocuite.Location = new System.Drawing.Point(357, 467);
+            this.labelPieseInlocuite.Location = new System.Drawing.Point(357, 458);
             this.labelPieseInlocuite.Name = "labelPieseInlocuite";
-            this.labelPieseInlocuite.Size = new System.Drawing.Size(99, 17);
+            this.labelPieseInlocuite.Size = new System.Drawing.Size(103, 17);
             this.labelPieseInlocuite.TabIndex = 4;
-            this.labelPieseInlocuite.Text = "Piese inlocuite";
+            this.labelPieseInlocuite.Text = "Piese inlocuite:";
             // 
             // txtTermenGarantie
             // 
@@ -112,11 +112,11 @@
             // labelTermenGarantie
             // 
             this.labelTermenGarantie.AutoSize = true;
-            this.labelTermenGarantie.Location = new System.Drawing.Point(357, 510);
+            this.labelTermenGarantie.Location = new System.Drawing.Point(357, 513);
             this.labelTermenGarantie.Name = "labelTermenGarantie";
-            this.labelTermenGarantie.Size = new System.Drawing.Size(113, 17);
+            this.labelTermenGarantie.Size = new System.Drawing.Size(117, 17);
             this.labelTermenGarantie.TabIndex = 6;
-            this.labelTermenGarantie.Text = "Termen garantie";
+            this.labelTermenGarantie.Text = "Termen garantie:";
             // 
             // dateTimeDataPredarii
             // 
@@ -152,11 +152,11 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(357, 572);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 17);
+            this.label1.Size = new System.Drawing.Size(117, 17);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Concluzie reparatie";
+            this.label1.Text = "Verdict reparatie:";
             // 
-            // status_WIP_form
+            // statusWorking_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -173,7 +173,7 @@
             this.Controls.Add(this.checkBoxVerdictReparatie);
             this.Controls.Add(this.labelPretAchitat);
             this.Controls.Add(this.dataGridViewReparatii);
-            this.Name = "status_WIP_form";
+            this.Name = "statusWorking_form";
             this.Text = "Telefoane - in lucru";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReparatii)).EndInit();
             this.ResumeLayout(false);

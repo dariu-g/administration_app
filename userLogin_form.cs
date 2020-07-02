@@ -36,7 +36,7 @@ namespace AplicatieDisertatie
             Application.Exit();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void labelMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }

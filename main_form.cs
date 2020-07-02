@@ -95,14 +95,6 @@ namespace AplicatieDisertatie
         {
             openChildForm(new statistics_form());
         }
-
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            /* buton din meniul Statistici */
-            /* cod.. */
-            //hideSubMenu();
-        }
         #endregion
         
         private void btnInformatii_Click(object sender, EventArgs e)

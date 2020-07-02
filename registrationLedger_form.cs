@@ -110,7 +110,7 @@ namespace AplicatieDisertatie
         /* Deletes all fields from a specific registration in the table Date_reparatie, based on id_reparatie. */ 
         private void btnSterge_Click(object sender, EventArgs e)
         {
-            DialogResult DialogBox = MessageBox.Show("Doresti sa stergi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
+            DialogResult DialogBox = MessageBox.Show("Aceasta operatiune este ireversibila. Doresti sa stergi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if(DialogBox == DialogResult.Yes)
             {
                 try

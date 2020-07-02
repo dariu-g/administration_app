@@ -40,11 +40,11 @@ namespace AplicatieDisertatie
 
         public string observatii { get; set; }
 
-        public decimal pret_achitat { get; set; }
+        public int pret_achitat { get; set; }
 
-        public decimal pret_avans { get; set; }
+        public int pret_avans { get; set; }
 
-        public decimal pret_estimativ { get; set; }
+        public int pret_estimativ { get; set; }
 
         public string termen_rezolvare { get; set; }
 
