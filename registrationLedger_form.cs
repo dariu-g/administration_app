@@ -31,19 +31,13 @@ namespace AplicatieDisertatie
             {
                 btnDescarca.Enabled = true;
             }
-            /*
-            if (Directory.Exists("C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft Office"))
-            {
-                btnDescarca.Enabled = true;
-            }
-            */
             dataGridLedger.DoubleBufferedDataGridView(true);
         }
 
         #region MainButtons
         private void btnCauta_Click(object sender, EventArgs e)
         {
-            using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
+            using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
             {
                 if (db_con.State == ConnectionState.Closed)
                 {
@@ -58,7 +52,7 @@ namespace AplicatieDisertatie
         
         private void btnReparatiiRecente_Click(object sender, EventArgs e)
         {
-            using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
+            using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
             {
                 if (db_con.State == ConnectionState.Closed)
                 {
@@ -71,7 +65,7 @@ namespace AplicatieDisertatie
 
         private void btnCautare_Click(object sender, EventArgs e)
         {
-            using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
+            using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
             {
                 if (db_con.State == ConnectionState.Closed)
                 {
@@ -91,7 +85,7 @@ namespace AplicatieDisertatie
             ledger_class objct = ledgerclassBindingSource.Current as ledger_class;
             if (objct != null)
             {
-                using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
+                using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
                 {
                     if (db_con.State == ConnectionState.Closed)
                         db_con.Open();
@@ -146,7 +140,7 @@ namespace AplicatieDisertatie
         {      
             if (dataGridLedger.Rows.Count > 0)
             {
-                copyAlltoClipboard();
+                ClipboardCopy();
                 /* A MissingValue type object (empty object) created which will be passed as a parameter to the Workbook. */
                 object missValue = System.Reflection.Missing.Value;
                 
@@ -167,7 +161,7 @@ namespace AplicatieDisertatie
 
         #region LocalMethods
         /* Selects all the Columns/Rows in the dataGridLedger and copies them into the clipboard. */
-        private void copyAlltoClipboard()
+        private void ClipboardCopy()
         {
             dataGridLedger.RowHeadersVisible = false;
 

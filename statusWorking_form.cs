@@ -82,28 +82,6 @@ namespace AplicatieDisertatie
         }
         #endregion
 
-        /*
-        #region LocalMethods
-
-        private void FillDataGridView()
-        {
-            using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
-            {
-                if (DatabaseConnection.State == ConnectionState.Closed)
-                    DatabaseConnection.Open();
-
-                SqlDataAdapter sqlData = new SqlDataAdapter("AfisareTelefoaneInLucru", DatabaseConnection);
-                sqlData.SelectCommand.CommandType = CommandType.StoredProcedure;
-                DataTable dataTable = new DataTable();
-                sqlData.Fill(dataTable);
-                dataGridViewReparatii.DataSource = dataTable;
-
-                DatabaseConnection.Close();
-            }
-        }
-        #endregion
-        */
-
         /* Click event to store Nr_inreg in the variable ReparatieID upon clicking a registration. */
         private void dataGridViewReparatii_Click(object sender, EventArgs e)
         {

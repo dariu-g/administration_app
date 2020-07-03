@@ -114,6 +114,7 @@
             // 
             this.txtObservatii.Location = new System.Drawing.Point(438, 235);
             this.txtObservatii.Margin = new System.Windows.Forms.Padding(5);
+            this.txtObservatii.MaxLength = 250;
             this.txtObservatii.Multiline = true;
             this.txtObservatii.Name = "txtObservatii";
             this.txtObservatii.Size = new System.Drawing.Size(242, 49);
@@ -139,7 +140,7 @@
             this.btnCaseaza.UseVisualStyleBackColor = true;
             this.btnCaseaza.Click += new System.EventHandler(this.btnCaseaza_Click);
             // 
-            // status_unclaimed_form
+            // statusUnclaimed_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -153,8 +154,8 @@
             this.Controls.Add(this.dateTimeDataPredarii);
             this.Controls.Add(this.dataGridGreaterThan6m);
             this.Controls.Add(this.dataGridCurrent);
-            this.Name = "status_unclaimed_form";
-            this.Text = "status_unclaimed_form";
+            this.Name = "statusUnclaimed_form";
+            this.Text = "Status - neridicate";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCurrent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGreaterThan6m)).EndInit();
             this.ResumeLayout(false);

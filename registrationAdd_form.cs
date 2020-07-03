@@ -99,7 +99,7 @@ namespace AplicatieDisertatie
             ledger_class objct = ledgerclassBindingSource.Current as ledger_class;
             if (objct != null)
             {
-                using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
+                using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
                 {
                     if (db_con.State == ConnectionState.Closed)
                         db_con.Open();
@@ -130,7 +130,7 @@ namespace AplicatieDisertatie
         #region LocalMethods
         private void last_Registration()
         {
-            using (IDbConnection db_con = new SqlConnection(ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString))
+            using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
             {
                 if (db_con.State == ConnectionState.Closed)
                     db_con.Open();

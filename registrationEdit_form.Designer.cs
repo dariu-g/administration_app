@@ -47,6 +47,7 @@
             System.Windows.Forms.Label piese_inlocuiteLabel;
             System.Windows.Forms.Label termen_garantieLabel;
             System.Windows.Forms.Label pret_achitatLabel;
+            System.Windows.Forms.Label labelVerdictReparatie;
             this.btnModificaTelefon = new System.Windows.Forms.Button();
             this.txtTipTelefon = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -82,6 +83,7 @@
             this.labelUnique3 = new System.Windows.Forms.Label();
             this.labelUnique4 = new System.Windows.Forms.Label();
             this.labelUnique5 = new System.Windows.Forms.Label();
+            this.checkboxVerdictReparatie = new System.Windows.Forms.CheckBox();
             label2 = new System.Windows.Forms.Label();
             tip_telefonLabel = new System.Windows.Forms.Label();
             garantieLabel = new System.Windows.Forms.Label();
@@ -101,6 +103,7 @@
             piese_inlocuiteLabel = new System.Windows.Forms.Label();
             termen_garantieLabel = new System.Windows.Forms.Label();
             pret_achitatLabel = new System.Windows.Forms.Label();
+            labelVerdictReparatie = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEdit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -356,6 +359,7 @@
             this.txtTipTelefon.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTipTelefon.Location = new System.Drawing.Point(140, 235);
             this.txtTipTelefon.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTipTelefon.MaxLength = 100;
             this.txtTipTelefon.Name = "txtTipTelefon";
             this.txtTipTelefon.Size = new System.Drawing.Size(348, 22);
             this.txtTipTelefon.TabIndex = 8;
@@ -374,6 +378,7 @@
             // 
             this.txtPrenume.Location = new System.Drawing.Point(140, 107);
             this.txtPrenume.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPrenume.MaxLength = 100;
             this.txtPrenume.Name = "txtPrenume";
             this.txtPrenume.Size = new System.Drawing.Size(348, 22);
             this.txtPrenume.TabIndex = 4;
@@ -393,6 +398,7 @@
             // 
             this.txtNume.Location = new System.Drawing.Point(140, 67);
             this.txtNume.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNume.MaxLength = 100;
             this.txtNume.Name = "txtNume";
             this.txtNume.Size = new System.Drawing.Size(348, 22);
             this.txtNume.TabIndex = 3;
@@ -401,6 +407,7 @@
             // 
             this.txtModel.Location = new System.Drawing.Point(140, 275);
             this.txtModel.Margin = new System.Windows.Forms.Padding(5);
+            this.txtModel.MaxLength = 100;
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(348, 22);
             this.txtModel.TabIndex = 9;
@@ -409,6 +416,7 @@
             // 
             this.txtCuloare.Location = new System.Drawing.Point(140, 315);
             this.txtCuloare.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCuloare.MaxLength = 100;
             this.txtCuloare.Name = "txtCuloare";
             this.txtCuloare.Size = new System.Drawing.Size(348, 22);
             this.txtCuloare.TabIndex = 10;
@@ -417,6 +425,7 @@
             // 
             this.txtIMEI.Location = new System.Drawing.Point(140, 355);
             this.txtIMEI.Margin = new System.Windows.Forms.Padding(5);
+            this.txtIMEI.MaxLength = 18;
             this.txtIMEI.Name = "txtIMEI";
             this.txtIMEI.Size = new System.Drawing.Size(348, 22);
             this.txtIMEI.TabIndex = 11;
@@ -425,6 +434,7 @@
             // 
             this.txtCodTelefon.Location = new System.Drawing.Point(140, 387);
             this.txtCodTelefon.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCodTelefon.MaxLength = 100;
             this.txtCodTelefon.Name = "txtCodTelefon";
             this.txtCodTelefon.Size = new System.Drawing.Size(348, 22);
             this.txtCodTelefon.TabIndex = 12;
@@ -433,6 +443,7 @@
             // 
             this.txtNrTelefon.Location = new System.Drawing.Point(140, 147);
             this.txtNrTelefon.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNrTelefon.MaxLength = 50;
             this.txtNrTelefon.Name = "txtNrTelefon";
             this.txtNrTelefon.Size = new System.Drawing.Size(348, 22);
             this.txtNrTelefon.TabIndex = 5;
@@ -471,6 +482,7 @@
             // 
             this.txtObservatii.Location = new System.Drawing.Point(680, 233);
             this.txtObservatii.Margin = new System.Windows.Forms.Padding(5);
+            this.txtObservatii.MaxLength = 250;
             this.txtObservatii.Multiline = true;
             this.txtObservatii.Name = "txtObservatii";
             this.txtObservatii.Size = new System.Drawing.Size(331, 44);
@@ -480,6 +492,7 @@
             // 
             this.txtDefectConstatat.Location = new System.Drawing.Point(680, 129);
             this.txtDefectConstatat.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDefectConstatat.MaxLength = 500;
             this.txtDefectConstatat.Multiline = true;
             this.txtDefectConstatat.Name = "txtDefectConstatat";
             this.txtDefectConstatat.Size = new System.Drawing.Size(331, 46);
@@ -489,6 +502,7 @@
             // 
             this.txtTermenRezolvare.Location = new System.Drawing.Point(680, 287);
             this.txtTermenRezolvare.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTermenRezolvare.MaxLength = 50;
             this.txtTermenRezolvare.Name = "txtTermenRezolvare";
             this.txtTermenRezolvare.Size = new System.Drawing.Size(331, 22);
             this.txtTermenRezolvare.TabIndex = 21;
@@ -497,6 +511,7 @@
             // 
             this.txtPretEstimativ.Location = new System.Drawing.Point(680, 347);
             this.txtPretEstimativ.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPretEstimativ.MaxLength = 9;
             this.txtPretEstimativ.Name = "txtPretEstimativ";
             this.txtPretEstimativ.Size = new System.Drawing.Size(331, 22);
             this.txtPretEstimativ.TabIndex = 23;
@@ -505,6 +520,7 @@
             // 
             this.txtPretAvans.Location = new System.Drawing.Point(680, 379);
             this.txtPretAvans.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPretAvans.MaxLength = 9;
             this.txtPretAvans.Name = "txtPretAvans";
             this.txtPretAvans.Size = new System.Drawing.Size(331, 22);
             this.txtPretAvans.TabIndex = 24;
@@ -538,6 +554,7 @@
             // txtCautaClient
             // 
             this.txtCautaClient.Location = new System.Drawing.Point(242, 32);
+            this.txtCautaClient.MaxLength = 100;
             this.txtCautaClient.Name = "txtCautaClient";
             this.txtCautaClient.Size = new System.Drawing.Size(123, 22);
             this.txtCautaClient.TabIndex = 1;
@@ -545,6 +562,7 @@
             // txtCautaTelefon
             // 
             this.txtCautaTelefon.Location = new System.Drawing.Point(242, 201);
+            this.txtCautaTelefon.MaxLength = 100;
             this.txtCautaTelefon.Name = "txtCautaTelefon";
             this.txtCautaTelefon.Size = new System.Drawing.Size(123, 22);
             this.txtCautaTelefon.TabIndex = 6;
@@ -552,6 +570,7 @@
             // txtCautaReparatie
             // 
             this.txtCautaReparatie.Location = new System.Drawing.Point(779, 24);
+            this.txtCautaReparatie.MaxLength = 500;
             this.txtCautaReparatie.Name = "txtCautaReparatie";
             this.txtCautaReparatie.Size = new System.Drawing.Size(123, 22);
             this.txtCautaReparatie.TabIndex = 14;
@@ -582,6 +601,7 @@
             // 
             this.txtPieseInlocuite.Location = new System.Drawing.Point(680, 185);
             this.txtPieseInlocuite.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPieseInlocuite.MaxLength = 500;
             this.txtPieseInlocuite.Multiline = true;
             this.txtPieseInlocuite.Name = "txtPieseInlocuite";
             this.txtPieseInlocuite.Size = new System.Drawing.Size(331, 38);
@@ -591,6 +611,7 @@
             // 
             this.txtTermenGarantie.Location = new System.Drawing.Point(680, 319);
             this.txtTermenGarantie.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTermenGarantie.MaxLength = 50;
             this.txtTermenGarantie.Name = "txtTermenGarantie";
             this.txtTermenGarantie.Size = new System.Drawing.Size(331, 22);
             this.txtTermenGarantie.TabIndex = 22;
@@ -599,13 +620,14 @@
             // 
             this.txtPretAchitat.Location = new System.Drawing.Point(680, 411);
             this.txtPretAchitat.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPretAchitat.MaxLength = 9;
             this.txtPretAchitat.Name = "txtPretAchitat";
             this.txtPretAchitat.Size = new System.Drawing.Size(331, 22);
             this.txtPretAchitat.TabIndex = 25;
             // 
             // btnAnuleaza
             // 
-            this.btnAnuleaza.Location = new System.Drawing.Point(477, 442);
+            this.btnAnuleaza.Location = new System.Drawing.Point(425, 442);
             this.btnAnuleaza.Name = "btnAnuleaza";
             this.btnAnuleaza.Size = new System.Drawing.Size(103, 29);
             this.btnAnuleaza.TabIndex = 26;
@@ -663,11 +685,34 @@
             this.labelUnique5.TabIndex = 147;
             this.labelUnique5.Text = "*";
             // 
+            // checkboxVerdictReparatie
+            // 
+            this.checkboxVerdictReparatie.Location = new System.Drawing.Point(680, 448);
+            this.checkboxVerdictReparatie.Margin = new System.Windows.Forms.Padding(5);
+            this.checkboxVerdictReparatie.Name = "checkboxVerdictReparatie";
+            this.checkboxVerdictReparatie.Size = new System.Drawing.Size(109, 28);
+            this.checkboxVerdictReparatie.TabIndex = 26;
+            this.checkboxVerdictReparatie.Text = "?";
+            this.checkboxVerdictReparatie.UseVisualStyleBackColor = true;
+            this.checkboxVerdictReparatie.CheckedChanged += new System.EventHandler(this.checkboxVerdictReparatie_CheckedChanged);
+            // 
+            // labelVerdictReparatie
+            // 
+            labelVerdictReparatie.AutoSize = true;
+            labelVerdictReparatie.Location = new System.Drawing.Point(556, 448);
+            labelVerdictReparatie.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            labelVerdictReparatie.Name = "labelVerdictReparatie";
+            labelVerdictReparatie.Size = new System.Drawing.Size(117, 17);
+            labelVerdictReparatie.TabIndex = 149;
+            labelVerdictReparatie.Text = "Verdict reparatie:";
+            // 
             // registrationEdit_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1074, 598);
+            this.Controls.Add(this.checkboxVerdictReparatie);
+            this.Controls.Add(labelVerdictReparatie);
             this.Controls.Add(this.labelUnique5);
             this.Controls.Add(this.labelUnique4);
             this.Controls.Add(this.labelUnique3);
@@ -723,7 +768,7 @@
             this.Controls.Add(nr_telefonLabel);
             this.Controls.Add(this.txtNrTelefon);
             this.Name = "registrationEdit_form";
-            this.Text = "dataEdit_form";
+            this.Text = "Inregistrari - modificari";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -766,5 +811,6 @@
         private System.Windows.Forms.Label labelUnique3;
         private System.Windows.Forms.Label labelUnique4;
         private System.Windows.Forms.Label labelUnique5;
+        private System.Windows.Forms.CheckBox checkboxVerdictReparatie;
     }
 }

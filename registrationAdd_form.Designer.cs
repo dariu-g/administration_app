@@ -45,6 +45,8 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             this.dataGridViewRegistration = new System.Windows.Forms.DataGridView();
+            this.culoare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cod_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnInregistrare = new System.Windows.Forms.Button();
             this.btnAnulare = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -68,8 +70,6 @@
             this.txtTipTelefon = new System.Windows.Forms.TextBox();
             this.dateDataPrimirii = new System.Windows.Forms.DateTimePicker();
             this.checkBoxTiparire = new System.Windows.Forms.CheckBox();
-            this.culoare = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cod_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelUnique = new System.Windows.Forms.Label();
             this.labelUnique2 = new System.Windows.Forms.Label();
             this.idreparatieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,8 +86,8 @@
             this.termenrezolvareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pretestimativDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pretavansDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ledgerPrintclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             tip_telefonLabel = new System.Windows.Forms.Label();
             data_primiriiLabel = new System.Windows.Forms.Label();
             garantieLabel = new System.Windows.Forms.Label();
@@ -104,8 +104,8 @@
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegistration)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerPrintclassBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tip_telefonLabel
@@ -290,6 +290,24 @@
             this.dataGridViewRegistration.Size = new System.Drawing.Size(1092, 101);
             this.dataGridViewRegistration.TabIndex = 0;
             // 
+            // culoare
+            // 
+            this.culoare.DataPropertyName = "culoare";
+            this.culoare.HeaderText = "Culoare";
+            this.culoare.MinimumWidth = 6;
+            this.culoare.Name = "culoare";
+            this.culoare.ReadOnly = true;
+            this.culoare.Width = 125;
+            // 
+            // cod_telefon
+            // 
+            this.cod_telefon.DataPropertyName = "cod_telefon";
+            this.cod_telefon.HeaderText = "Cod telefon";
+            this.cod_telefon.MinimumWidth = 6;
+            this.cod_telefon.Name = "cod_telefon";
+            this.cod_telefon.ReadOnly = true;
+            this.cod_telefon.Width = 125;
+            // 
             // btnInregistrare
             // 
             this.btnInregistrare.Location = new System.Drawing.Point(905, 624);
@@ -338,6 +356,7 @@
             // 
             this.txtDefectConstatat.Location = new System.Drawing.Point(790, 112);
             this.txtDefectConstatat.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDefectConstatat.MaxLength = 500;
             this.txtDefectConstatat.Multiline = true;
             this.txtDefectConstatat.Name = "txtDefectConstatat";
             this.txtDefectConstatat.Size = new System.Drawing.Size(331, 97);
@@ -348,6 +367,7 @@
             // 
             this.txtTermenRezolvare.Location = new System.Drawing.Point(790, 292);
             this.txtTermenRezolvare.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTermenRezolvare.MaxLength = 50;
             this.txtTermenRezolvare.Name = "txtTermenRezolvare";
             this.txtTermenRezolvare.Size = new System.Drawing.Size(331, 26);
             this.txtTermenRezolvare.TabIndex = 13;
@@ -356,6 +376,7 @@
             // 
             this.txtPretEstimativ.Location = new System.Drawing.Point(790, 329);
             this.txtPretEstimativ.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPretEstimativ.MaxLength = 9;
             this.txtPretEstimativ.Name = "txtPretEstimativ";
             this.txtPretEstimativ.Size = new System.Drawing.Size(331, 26);
             this.txtPretEstimativ.TabIndex = 14;
@@ -365,6 +386,7 @@
             // 
             this.txtPretAvans.Location = new System.Drawing.Point(790, 369);
             this.txtPretAvans.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPretAvans.MaxLength = 9;
             this.txtPretAvans.Name = "txtPretAvans";
             this.txtPretAvans.Size = new System.Drawing.Size(331, 26);
             this.txtPretAvans.TabIndex = 15;
@@ -374,6 +396,7 @@
             // 
             this.txtNume.Location = new System.Drawing.Point(246, 120);
             this.txtNume.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNume.MaxLength = 100;
             this.txtNume.Name = "txtNume";
             this.txtNume.Size = new System.Drawing.Size(348, 26);
             this.txtNume.TabIndex = 2;
@@ -383,6 +406,7 @@
             // 
             this.txtModel.Location = new System.Drawing.Point(246, 327);
             this.txtModel.Margin = new System.Windows.Forms.Padding(5);
+            this.txtModel.MaxLength = 100;
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(348, 26);
             this.txtModel.TabIndex = 6;
@@ -392,6 +416,7 @@
             // 
             this.txtCuloare.Location = new System.Drawing.Point(246, 367);
             this.txtCuloare.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCuloare.MaxLength = 100;
             this.txtCuloare.Name = "txtCuloare";
             this.txtCuloare.Size = new System.Drawing.Size(348, 26);
             this.txtCuloare.TabIndex = 7;
@@ -401,6 +426,7 @@
             // 
             this.txtIMEI.Location = new System.Drawing.Point(246, 252);
             this.txtIMEI.Margin = new System.Windows.Forms.Padding(5);
+            this.txtIMEI.MaxLength = 18;
             this.txtIMEI.Name = "txtIMEI";
             this.txtIMEI.Size = new System.Drawing.Size(348, 26);
             this.txtIMEI.TabIndex = 4;
@@ -411,6 +437,7 @@
             // 
             this.txtCodTelefon.Location = new System.Drawing.Point(246, 405);
             this.txtCodTelefon.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCodTelefon.MaxLength = 100;
             this.txtCodTelefon.Name = "txtCodTelefon";
             this.txtCodTelefon.Size = new System.Drawing.Size(348, 26);
             this.txtCodTelefon.TabIndex = 8;
@@ -419,6 +446,7 @@
             // 
             this.txtNrTelefon.Location = new System.Drawing.Point(246, 84);
             this.txtNrTelefon.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNrTelefon.MaxLength = 100;
             this.txtNrTelefon.Name = "txtNrTelefon";
             this.txtNrTelefon.Size = new System.Drawing.Size(348, 26);
             this.txtNrTelefon.TabIndex = 1;
@@ -428,6 +456,7 @@
             // 
             this.txtObservatii.Location = new System.Drawing.Point(790, 224);
             this.txtObservatii.Margin = new System.Windows.Forms.Padding(5);
+            this.txtObservatii.MaxLength = 250;
             this.txtObservatii.Multiline = true;
             this.txtObservatii.Name = "txtObservatii";
             this.txtObservatii.Size = new System.Drawing.Size(331, 50);
@@ -449,6 +478,7 @@
             // 
             this.txtPrenume.Location = new System.Drawing.Point(246, 156);
             this.txtPrenume.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPrenume.MaxLength = 100;
             this.txtPrenume.Name = "txtPrenume";
             this.txtPrenume.Size = new System.Drawing.Size(348, 26);
             this.txtPrenume.TabIndex = 3;
@@ -511,6 +541,7 @@
             this.txtTipTelefon.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtTipTelefon.Location = new System.Drawing.Point(246, 291);
             this.txtTipTelefon.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTipTelefon.MaxLength = 100;
             this.txtTipTelefon.Name = "txtTipTelefon";
             this.txtTipTelefon.Size = new System.Drawing.Size(348, 26);
             this.txtTipTelefon.TabIndex = 5;
@@ -538,24 +569,6 @@
             this.checkBoxTiparire.TabIndex = 93;
             this.checkBoxTiparire.Text = "Tiparire";
             this.checkBoxTiparire.UseVisualStyleBackColor = true;
-            // 
-            // culoare
-            // 
-            this.culoare.DataPropertyName = "culoare";
-            this.culoare.HeaderText = "Culoare";
-            this.culoare.MinimumWidth = 6;
-            this.culoare.Name = "culoare";
-            this.culoare.ReadOnly = true;
-            this.culoare.Width = 125;
-            // 
-            // cod_telefon
-            // 
-            this.cod_telefon.DataPropertyName = "cod_telefon";
-            this.cod_telefon.HeaderText = "Cod telefon";
-            this.cod_telefon.MinimumWidth = 6;
-            this.cod_telefon.Name = "cod_telefon";
-            this.cod_telefon.ReadOnly = true;
-            this.cod_telefon.Width = 125;
             // 
             // labelUnique
             // 
@@ -705,13 +718,13 @@
             this.pretavansDataGridViewTextBoxColumn.ReadOnly = true;
             this.pretavansDataGridViewTextBoxColumn.Width = 125;
             // 
-            // ledgerclassBindingSource
-            // 
-            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.ledger_class);
-            // 
             // ledgerPrintclassBindingSource
             // 
             this.ledgerPrintclassBindingSource.DataSource = typeof(AplicatieDisertatie.ledgerPrint_class);
+            // 
+            // ledgerclassBindingSource
+            // 
+            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.ledger_class);
             // 
             // registrationAdd_form
             // 
@@ -765,10 +778,10 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "registrationAdd_form";
-            this.Text = "FormInregistrare";
+            this.Text = "Inregistrare - adauga";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegistration)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerPrintclassBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -212,6 +212,7 @@
             // 
             this.txtParola.Location = new System.Drawing.Point(299, 322);
             this.txtParola.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtParola.MaxLength = 150;
             this.txtParola.Name = "txtParola";
             this.txtParola.Size = new System.Drawing.Size(387, 38);
             this.txtParola.TabIndex = 2;
@@ -221,6 +222,7 @@
             // 
             this.txtUtilizator.Location = new System.Drawing.Point(299, 251);
             this.txtUtilizator.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.txtUtilizator.MaxLength = 50;
             this.txtUtilizator.Name = "txtUtilizator";
             this.txtUtilizator.Size = new System.Drawing.Size(388, 38);
             this.txtUtilizator.TabIndex = 1;
@@ -238,7 +240,7 @@
             this.MinimumSize = new System.Drawing.Size(901, 605);
             this.Name = "userLogin_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "login";
+            this.Text = "Autentificare";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

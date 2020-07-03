@@ -54,7 +54,7 @@
             this.dataGridViewReparatii.ReadOnly = true;
             this.dataGridViewReparatii.RowHeadersWidth = 51;
             this.dataGridViewReparatii.RowTemplate.Height = 24;
-            this.dataGridViewReparatii.Size = new System.Drawing.Size(1000, 388);
+            this.dataGridViewReparatii.Size = new System.Drawing.Size(1021, 388);
             this.dataGridViewReparatii.TabIndex = 0;
             this.dataGridViewReparatii.Click += new System.EventHandler(this.dataGridViewReparatii_Click);
             // 
@@ -81,6 +81,7 @@
             // txtPretAchitat
             // 
             this.txtPretAchitat.Location = new System.Drawing.Point(493, 538);
+            this.txtPretAchitat.MaxLength = 9;
             this.txtPretAchitat.Name = "txtPretAchitat";
             this.txtPretAchitat.Size = new System.Drawing.Size(242, 22);
             this.txtPretAchitat.TabIndex = 3;
@@ -88,6 +89,7 @@
             // txtPieseInlocuite
             // 
             this.txtPieseInlocuite.Location = new System.Drawing.Point(493, 455);
+            this.txtPieseInlocuite.MaxLength = 500;
             this.txtPieseInlocuite.Multiline = true;
             this.txtPieseInlocuite.Name = "txtPieseInlocuite";
             this.txtPieseInlocuite.Size = new System.Drawing.Size(242, 49);
@@ -105,6 +107,7 @@
             // txtTermenGarantie
             // 
             this.txtTermenGarantie.Location = new System.Drawing.Point(493, 510);
+            this.txtTermenGarantie.MaxLength = 50;
             this.txtTermenGarantie.Name = "txtTermenGarantie";
             this.txtTermenGarantie.Size = new System.Drawing.Size(242, 22);
             this.txtTermenGarantie.TabIndex = 2;
@@ -160,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 650);
+            this.ClientSize = new System.Drawing.Size(1021, 660);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalveaza);
             this.Controls.Add(this.labelDataPredarii);
@@ -174,7 +177,7 @@
             this.Controls.Add(this.labelPretAchitat);
             this.Controls.Add(this.dataGridViewReparatii);
             this.Name = "statusWorking_form";
-            this.Text = "Telefoane - in lucru";
+            this.Text = "Status - in lucru";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReparatii)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

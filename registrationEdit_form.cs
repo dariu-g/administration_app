@@ -24,6 +24,7 @@ namespace AplicatieDisertatie
         {
             InitializeComponent();
             connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
+            connection_class.checkBoxStates(checkboxVerdictReparatie, "Reparat", "Nereparat");
             readOnly_TextBoxes();
             dataGridViewEdit.DoubleBufferedDataGridView(true);
         }
@@ -144,6 +145,8 @@ namespace AplicatieDisertatie
                         sqlCmd.Parameters.AddWithValue("@Pret_estimativ", txtPretEstimativ.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@Pret_avans", txtPretAvans.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@Pret_achitat", txtPretAchitat.Text.Trim());
+                        if (dateDataPredarii.Checked == true)
+                        sqlCmd.Parameters.AddWithValue("@Verdict_reparatie", checkboxVerdictReparatie.Checked);
                         sqlCmd.ExecuteNonQuery();
                         MessageBox.Show("Datele reparatiei au fost modificate!");
                         btnModificaReparatie.Text = "Cauta";
@@ -330,6 +333,8 @@ namespace AplicatieDisertatie
                     txtPretEstimativ.Text = dataGridViewEdit.CurrentRow.Cells[8].Value.ToString();
                     txtPretAvans.Text = dataGridViewEdit.CurrentRow.Cells[9].Value.ToString();
                     txtPretAchitat.Text = dataGridViewEdit.CurrentRow.Cells[10].Value.ToString();
+                    if (!(dataGridViewEdit.CurrentRow.Cells[11].Value is DBNull))
+                        checkboxVerdictReparatie.Checked = Convert.ToBoolean(dataGridViewEdit.CurrentRow.Cells[11].Value);
                     btnModificaReparatie.Text = "Modifica";
                     readOnly_DateReparatie();
                     ID = "";
@@ -340,6 +345,11 @@ namespace AplicatieDisertatie
         private void checkboxGarantie_CheckStateChanged(object sender, EventArgs e)
         {
             connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
+        }
+
+        private void checkboxVerdictReparatie_CheckedChanged(object sender, EventArgs e)
+        {
+            connection_class.checkBoxStates(checkboxVerdictReparatie, "Reparat", "Nereparat");
         }
     }
 }

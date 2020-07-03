@@ -32,21 +32,8 @@
             this.btnCauta = new System.Windows.Forms.Button();
             this.dateTimeDin = new System.Windows.Forms.DateTimePicker();
             this.dataGridLedger = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePana = new System.Windows.Forms.DateTimePicker();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnDescarca = new System.Windows.Forms.Button();
-            this.btnCautare = new System.Windows.Forms.Button();
-            this.labelCautareGenerala = new System.Windows.Forms.Label();
-            this.txtCautare = new System.Windows.Forms.TextBox();
-            this.btnSterge = new System.Windows.Forms.Button();
-            this.btnReparatiiRecente = new System.Windows.Forms.Button();
-            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id_reparatie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nr_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imei = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tip_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.model = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +52,19 @@
             this.termen_garantie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.verdict_reparatie = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.utilizator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePana = new System.Windows.Forms.DateTimePicker();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnDescarca = new System.Windows.Forms.Button();
+            this.btnCautare = new System.Windows.Forms.Button();
+            this.labelCautareGenerala = new System.Windows.Forms.Label();
+            this.txtCautare = new System.Windows.Forms.TextBox();
+            this.btnSterge = new System.Windows.Forms.Button();
+            this.btnReparatiiRecente = new System.Windows.Forms.Button();
+            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLedger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -129,105 +129,6 @@
             this.dataGridLedger.TabIndex = 2;
             this.dataGridLedger.Click += new System.EventHandler(this.dataGridLedger_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Din:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(301, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Pana in";
-            // 
-            // dateTimePana
-            // 
-            this.dateTimePana.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePana.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePana.Location = new System.Drawing.Point(363, 40);
-            this.dateTimePana.Name = "dateTimePana";
-            this.dateTimePana.Size = new System.Drawing.Size(224, 22);
-            this.dateTimePana.TabIndex = 4;
-            this.dateTimePana.ValueChanged += new System.EventHandler(this.dateTimePana_ValueChanged);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Location = new System.Drawing.Point(915, 549);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(106, 31);
-            this.btnPrint.TabIndex = 6;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // btnDescarca
-            // 
-            this.btnDescarca.Enabled = false;
-            this.btnDescarca.Location = new System.Drawing.Point(479, 552);
-            this.btnDescarca.Name = "btnDescarca";
-            this.btnDescarca.Size = new System.Drawing.Size(108, 28);
-            this.btnDescarca.TabIndex = 7;
-            this.btnDescarca.Text = "Descarca";
-            this.btnDescarca.UseVisualStyleBackColor = true;
-            this.btnDescarca.Click += new System.EventHandler(this.btnDescarca_Click);
-            // 
-            // btnCautare
-            // 
-            this.btnCautare.Location = new System.Drawing.Point(378, 92);
-            this.btnCautare.Name = "btnCautare";
-            this.btnCautare.Size = new System.Drawing.Size(75, 23);
-            this.btnCautare.TabIndex = 13;
-            this.btnCautare.Text = "Cautare";
-            this.btnCautare.UseVisualStyleBackColor = true;
-            this.btnCautare.Click += new System.EventHandler(this.btnCautare_Click);
-            // 
-            // labelCautareGenerala
-            // 
-            this.labelCautareGenerala.AutoSize = true;
-            this.labelCautareGenerala.Location = new System.Drawing.Point(23, 92);
-            this.labelCautareGenerala.Name = "labelCautareGenerala";
-            this.labelCautareGenerala.Size = new System.Drawing.Size(118, 17);
-            this.labelCautareGenerala.TabIndex = 12;
-            this.labelCautareGenerala.Text = "Cautare generala";
-            // 
-            // txtCautare
-            // 
-            this.txtCautare.Location = new System.Drawing.Point(147, 93);
-            this.txtCautare.Name = "txtCautare";
-            this.txtCautare.Size = new System.Drawing.Size(210, 22);
-            this.txtCautare.TabIndex = 11;
-            // 
-            // btnSterge
-            // 
-            this.btnSterge.Location = new System.Drawing.Point(23, 552);
-            this.btnSterge.Name = "btnSterge";
-            this.btnSterge.Size = new System.Drawing.Size(105, 28);
-            this.btnSterge.TabIndex = 17;
-            this.btnSterge.Text = "Sterge";
-            this.btnSterge.UseVisualStyleBackColor = true;
-            this.btnSterge.Click += new System.EventHandler(this.btnSterge_Click);
-            // 
-            // btnReparatiiRecente
-            // 
-            this.btnReparatiiRecente.Location = new System.Drawing.Point(850, 32);
-            this.btnReparatiiRecente.Name = "btnReparatiiRecente";
-            this.btnReparatiiRecente.Size = new System.Drawing.Size(140, 39);
-            this.btnReparatiiRecente.TabIndex = 18;
-            this.btnReparatiiRecente.Text = "Reparatii Recente";
-            this.btnReparatiiRecente.UseVisualStyleBackColor = true;
-            this.btnReparatiiRecente.Click += new System.EventHandler(this.btnReparatiiRecente_Click);
-            // 
-            // ledgerclassBindingSource
-            // 
-            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.ledger_class);
-            // 
             // id_reparatie
             // 
             this.id_reparatie.DataPropertyName = "id_reparatie";
@@ -245,24 +146,6 @@
             this.nr_telefon.Name = "nr_telefon";
             this.nr_telefon.ReadOnly = true;
             this.nr_telefon.Width = 125;
-            // 
-            // numeDataGridViewTextBoxColumn
-            // 
-            this.numeDataGridViewTextBoxColumn.DataPropertyName = "nume";
-            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
-            this.numeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
-            this.numeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // prenumeDataGridViewTextBoxColumn
-            // 
-            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "prenume";
-            this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
-            this.prenumeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
-            this.prenumeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prenumeDataGridViewTextBoxColumn.Width = 125;
             // 
             // imei
             // 
@@ -428,6 +311,124 @@
             this.utilizator.ReadOnly = true;
             this.utilizator.Width = 125;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Din:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(301, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Pana in";
+            // 
+            // dateTimePana
+            // 
+            this.dateTimePana.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePana.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePana.Location = new System.Drawing.Point(363, 40);
+            this.dateTimePana.Name = "dateTimePana";
+            this.dateTimePana.Size = new System.Drawing.Size(224, 22);
+            this.dateTimePana.TabIndex = 4;
+            this.dateTimePana.ValueChanged += new System.EventHandler(this.dateTimePana_ValueChanged);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(915, 549);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(106, 31);
+            this.btnPrint.TabIndex = 6;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnDescarca
+            // 
+            this.btnDescarca.Enabled = false;
+            this.btnDescarca.Location = new System.Drawing.Point(479, 552);
+            this.btnDescarca.Name = "btnDescarca";
+            this.btnDescarca.Size = new System.Drawing.Size(108, 28);
+            this.btnDescarca.TabIndex = 7;
+            this.btnDescarca.Text = "Descarca";
+            this.btnDescarca.UseVisualStyleBackColor = true;
+            this.btnDescarca.Click += new System.EventHandler(this.btnDescarca_Click);
+            // 
+            // btnCautare
+            // 
+            this.btnCautare.Location = new System.Drawing.Point(378, 92);
+            this.btnCautare.Name = "btnCautare";
+            this.btnCautare.Size = new System.Drawing.Size(75, 23);
+            this.btnCautare.TabIndex = 13;
+            this.btnCautare.Text = "Cautare";
+            this.btnCautare.UseVisualStyleBackColor = true;
+            this.btnCautare.Click += new System.EventHandler(this.btnCautare_Click);
+            // 
+            // labelCautareGenerala
+            // 
+            this.labelCautareGenerala.AutoSize = true;
+            this.labelCautareGenerala.Location = new System.Drawing.Point(23, 92);
+            this.labelCautareGenerala.Name = "labelCautareGenerala";
+            this.labelCautareGenerala.Size = new System.Drawing.Size(118, 17);
+            this.labelCautareGenerala.TabIndex = 12;
+            this.labelCautareGenerala.Text = "Cautare generala";
+            // 
+            // txtCautare
+            // 
+            this.txtCautare.Location = new System.Drawing.Point(147, 93);
+            this.txtCautare.MaxLength = 500;
+            this.txtCautare.Name = "txtCautare";
+            this.txtCautare.Size = new System.Drawing.Size(210, 22);
+            this.txtCautare.TabIndex = 11;
+            // 
+            // btnSterge
+            // 
+            this.btnSterge.Location = new System.Drawing.Point(23, 552);
+            this.btnSterge.Name = "btnSterge";
+            this.btnSterge.Size = new System.Drawing.Size(105, 28);
+            this.btnSterge.TabIndex = 17;
+            this.btnSterge.Text = "Sterge";
+            this.btnSterge.UseVisualStyleBackColor = true;
+            this.btnSterge.Click += new System.EventHandler(this.btnSterge_Click);
+            // 
+            // btnReparatiiRecente
+            // 
+            this.btnReparatiiRecente.Location = new System.Drawing.Point(850, 32);
+            this.btnReparatiiRecente.Name = "btnReparatiiRecente";
+            this.btnReparatiiRecente.Size = new System.Drawing.Size(140, 39);
+            this.btnReparatiiRecente.TabIndex = 18;
+            this.btnReparatiiRecente.Text = "Reparatii Recente";
+            this.btnReparatiiRecente.UseVisualStyleBackColor = true;
+            this.btnReparatiiRecente.Click += new System.EventHandler(this.btnReparatiiRecente_Click);
+            // 
+            // numeDataGridViewTextBoxColumn
+            // 
+            this.numeDataGridViewTextBoxColumn.DataPropertyName = "nume";
+            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
+            this.numeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
+            this.numeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // prenumeDataGridViewTextBoxColumn
+            // 
+            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "prenume";
+            this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
+            this.prenumeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
+            this.prenumeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.prenumeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // ledgerclassBindingSource
+            // 
+            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.ledger_class);
+            // 
             // registrationLedger_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -447,7 +448,7 @@
             this.Controls.Add(this.dateTimeDin);
             this.Controls.Add(this.btnCauta);
             this.Name = "registrationLedger_form";
-            this.Text = "Istoric";
+            this.Text = "Inregistrari - istoric";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLedger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).EndInit();
             this.ResumeLayout(false);

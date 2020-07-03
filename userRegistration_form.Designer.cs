@@ -45,13 +45,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.txtTipUtilizator = new System.Windows.Forms.ComboBox();
             this.labelCatreAutentificare = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelExit = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -115,6 +115,7 @@
             // 
             this.txtNume.Location = new System.Drawing.Point(287, 181);
             this.txtNume.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNume.MaxLength = 99;
             this.txtNume.Name = "txtNume";
             this.txtNume.Size = new System.Drawing.Size(292, 38);
             this.txtNume.TabIndex = 1;
@@ -124,6 +125,7 @@
             // 
             this.txtPrenume.Location = new System.Drawing.Point(287, 226);
             this.txtPrenume.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrenume.MaxLength = 99;
             this.txtPrenume.Name = "txtPrenume";
             this.txtPrenume.Size = new System.Drawing.Size(292, 38);
             this.txtPrenume.TabIndex = 2;
@@ -133,6 +135,7 @@
             // 
             this.txtUtilizator.Location = new System.Drawing.Point(287, 294);
             this.txtUtilizator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUtilizator.MaxLength = 50;
             this.txtUtilizator.Name = "txtUtilizator";
             this.txtUtilizator.Size = new System.Drawing.Size(292, 38);
             this.txtUtilizator.TabIndex = 3;
@@ -141,6 +144,7 @@
             // 
             this.txtParola.Location = new System.Drawing.Point(286, 389);
             this.txtParola.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtParola.MaxLength = 150;
             this.txtParola.Name = "txtParola";
             this.txtParola.Size = new System.Drawing.Size(291, 38);
             this.txtParola.TabIndex = 5;
@@ -184,6 +188,7 @@
             // txtConfirmareParola
             // 
             this.txtConfirmareParola.Location = new System.Drawing.Point(287, 435);
+            this.txtConfirmareParola.MaxLength = 150;
             this.txtConfirmareParola.Name = "txtConfirmareParola";
             this.txtConfirmareParola.Size = new System.Drawing.Size(292, 38);
             this.txtConfirmareParola.TabIndex = 6;
@@ -251,6 +256,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(742, 628);
             this.panel1.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(257, 432);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(27, 36);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "*";
             // 
             // txtTipUtilizator
             // 
@@ -328,18 +344,7 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "ÎNREGISTRARE UTILIZATOR NOU";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(257, 432);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(27, 36);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "*";
-            // 
-            // user_form
+            // userRegistration_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -351,9 +356,9 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximumSize = new System.Drawing.Size(760, 675);
             this.MinimumSize = new System.Drawing.Size(760, 675);
-            this.Name = "user_form";
+            this.Name = "userRegistration_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Inregistrare Utilizator";
+            this.Text = "Inregistrare utilizator";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

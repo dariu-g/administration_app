@@ -149,6 +149,9 @@
     <EmbeddedResource Include="print_form.resx">
       <DependentUpon>print_form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="statistics_form.resx">
+      <DependentUpon>statistics_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="statusUnclaimed_form.resx">
       <DependentUpon>statusUnclaimed_form.cs</DependentUpon>
     </EmbeddedResource>

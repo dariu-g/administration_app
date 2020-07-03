@@ -47,6 +47,7 @@
             this.btnMainFormExit = new System.Windows.Forms.Label();
             this.panelButtons = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.labelAppVersion = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelStatusReparatiiSubmenu.SuspendLayout();
             this.panelInregistrareSubmenu.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelSideMenu.Controls.Add(this.labelAppVersion);
             this.panelSideMenu.Controls.Add(this.btnInformatii);
             this.panelSideMenu.Controls.Add(this.btnStatistici);
             this.panelSideMenu.Controls.Add(this.panelStatusReparatiiSubmenu);
@@ -318,6 +320,16 @@
             this.panelChildForm.Size = new System.Drawing.Size(1132, 753);
             this.panelChildForm.TabIndex = 2;
             // 
+            // labelAppVersion
+            // 
+            this.labelAppVersion.AutoSize = true;
+            this.labelAppVersion.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelAppVersion.Location = new System.Drawing.Point(12, 819);
+            this.labelAppVersion.Name = "labelAppVersion";
+            this.labelAppVersion.Size = new System.Drawing.Size(49, 25);
+            this.labelAppVersion.TabIndex = 5;
+            this.labelAppVersion.Text = "v1.0";
+            // 
             // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -333,8 +345,9 @@
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "main_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "main_form";
+            this.Text = "Aplicatia";
             this.panelSideMenu.ResumeLayout(false);
+            this.panelSideMenu.PerformLayout();
             this.panelStatusReparatiiSubmenu.ResumeLayout(false);
             this.panelInregistrareSubmenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
@@ -364,5 +377,6 @@
         private System.Windows.Forms.Label btnMainFormMax;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Button btnInregistrariModificari;
+        private System.Windows.Forms.Label labelAppVersion;
     }
 }

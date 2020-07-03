@@ -99,6 +99,19 @@ namespace AplicatieDisertatie
             }
         }
 
+        /* Allows only numbers, letters, whitespaces and a the specified punctuation marks, symbols. */
+        public static void NumbersLettersPunctuations_textBoxFormat (KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && 
+                e.KeyChar != '.' && e.KeyChar != ',' && e.KeyChar != '?' && e.KeyChar != '!' && e.KeyChar != '-' && 
+                e.KeyChar != '+' && e.KeyChar != '_' && e.KeyChar != '=' && e.KeyChar != '%' && e.KeyChar != '@' && 
+                e.KeyChar != '"' && e.KeyChar != '(' && e.KeyChar != ')' && e.KeyChar != ':' && e.KeyChar != '/' &&
+                e.KeyChar != '#')
+            {
+                e.Handled = true;
+            }
+        }
+
         /* Clears all text boxes from a form. */
         public static void ClearTextBoxes(Control.ControlCollection Controls)
         {
