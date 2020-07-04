@@ -45,23 +45,8 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             this.dataGridViewRegistration = new System.Windows.Forms.DataGridView();
-            this.idreparatieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nrtelefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imeiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tiptelefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.culoare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cod_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.garantieDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataprimiriiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.defectconstatatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observatiiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.termenrezolvareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pretestimativDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pretavansDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnInregistrare = new System.Windows.Forms.Button();
             this.btnAnulare = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -88,6 +73,21 @@
             this.labelUnique = new System.Windows.Forms.Label();
             this.labelUnique2 = new System.Windows.Forms.Label();
             this.ledgerPrintclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pretavansDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pretestimativDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.termenrezolvareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observatiiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.defectconstatatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataprimiriiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.garantieDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.modelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tiptelefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imeiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nrtelefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idreparatieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             tip_telefonLabel = new System.Windows.Forms.Label();
             data_primiriiLabel = new System.Windows.Forms.Label();
             garantieLabel = new System.Windows.Forms.Label();
@@ -104,8 +104,8 @@
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegistration)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerPrintclassBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tip_telefonLabel
@@ -290,69 +290,6 @@
             this.dataGridViewRegistration.Size = new System.Drawing.Size(1092, 101);
             this.dataGridViewRegistration.TabIndex = 0;
             // 
-            // idreparatieDataGridViewTextBoxColumn
-            // 
-            this.idreparatieDataGridViewTextBoxColumn.DataPropertyName = "id_reparatie";
-            this.idreparatieDataGridViewTextBoxColumn.HeaderText = "Nr. inreg";
-            this.idreparatieDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idreparatieDataGridViewTextBoxColumn.Name = "idreparatieDataGridViewTextBoxColumn";
-            this.idreparatieDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idreparatieDataGridViewTextBoxColumn.Width = 75;
-            // 
-            // nrtelefonDataGridViewTextBoxColumn
-            // 
-            this.nrtelefonDataGridViewTextBoxColumn.DataPropertyName = "nr_telefon";
-            this.nrtelefonDataGridViewTextBoxColumn.HeaderText = "Nr. telefon";
-            this.nrtelefonDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nrtelefonDataGridViewTextBoxColumn.Name = "nrtelefonDataGridViewTextBoxColumn";
-            this.nrtelefonDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nrtelefonDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // numeDataGridViewTextBoxColumn
-            // 
-            this.numeDataGridViewTextBoxColumn.DataPropertyName = "nume";
-            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
-            this.numeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
-            this.numeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // prenumeDataGridViewTextBoxColumn
-            // 
-            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "prenume";
-            this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
-            this.prenumeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
-            this.prenumeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prenumeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // imeiDataGridViewTextBoxColumn
-            // 
-            this.imeiDataGridViewTextBoxColumn.DataPropertyName = "imei";
-            this.imeiDataGridViewTextBoxColumn.HeaderText = "IMEI";
-            this.imeiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.imeiDataGridViewTextBoxColumn.Name = "imeiDataGridViewTextBoxColumn";
-            this.imeiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.imeiDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // tiptelefonDataGridViewTextBoxColumn
-            // 
-            this.tiptelefonDataGridViewTextBoxColumn.DataPropertyName = "tip_telefon";
-            this.tiptelefonDataGridViewTextBoxColumn.HeaderText = "Tip telefon";
-            this.tiptelefonDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tiptelefonDataGridViewTextBoxColumn.Name = "tiptelefonDataGridViewTextBoxColumn";
-            this.tiptelefonDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tiptelefonDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // modelDataGridViewTextBoxColumn
-            // 
-            this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
-            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
-            this.modelDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
-            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
-            this.modelDataGridViewTextBoxColumn.Width = 125;
-            // 
             // culoare
             // 
             this.culoare.DataPropertyName = "culoare";
@@ -370,73 +307,6 @@
             this.cod_telefon.Name = "cod_telefon";
             this.cod_telefon.ReadOnly = true;
             this.cod_telefon.Width = 125;
-            // 
-            // garantieDataGridViewCheckBoxColumn
-            // 
-            this.garantieDataGridViewCheckBoxColumn.DataPropertyName = "garantie";
-            this.garantieDataGridViewCheckBoxColumn.HeaderText = "Garantie";
-            this.garantieDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.garantieDataGridViewCheckBoxColumn.Name = "garantieDataGridViewCheckBoxColumn";
-            this.garantieDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.garantieDataGridViewCheckBoxColumn.Width = 75;
-            // 
-            // dataprimiriiDataGridViewTextBoxColumn
-            // 
-            this.dataprimiriiDataGridViewTextBoxColumn.DataPropertyName = "data_primirii";
-            this.dataprimiriiDataGridViewTextBoxColumn.HeaderText = "Data primirii";
-            this.dataprimiriiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dataprimiriiDataGridViewTextBoxColumn.Name = "dataprimiriiDataGridViewTextBoxColumn";
-            this.dataprimiriiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataprimiriiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // defectconstatatDataGridViewTextBoxColumn
-            // 
-            this.defectconstatatDataGridViewTextBoxColumn.DataPropertyName = "defect_constatat";
-            this.defectconstatatDataGridViewTextBoxColumn.HeaderText = "Defect constatat";
-            this.defectconstatatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.defectconstatatDataGridViewTextBoxColumn.Name = "defectconstatatDataGridViewTextBoxColumn";
-            this.defectconstatatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.defectconstatatDataGridViewTextBoxColumn.Width = 175;
-            // 
-            // observatiiDataGridViewTextBoxColumn
-            // 
-            this.observatiiDataGridViewTextBoxColumn.DataPropertyName = "observatii";
-            this.observatiiDataGridViewTextBoxColumn.HeaderText = "Observatii";
-            this.observatiiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.observatiiDataGridViewTextBoxColumn.Name = "observatiiDataGridViewTextBoxColumn";
-            this.observatiiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.observatiiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // termenrezolvareDataGridViewTextBoxColumn
-            // 
-            this.termenrezolvareDataGridViewTextBoxColumn.DataPropertyName = "termen_rezolvare";
-            this.termenrezolvareDataGridViewTextBoxColumn.HeaderText = "Termen rezolvare";
-            this.termenrezolvareDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.termenrezolvareDataGridViewTextBoxColumn.Name = "termenrezolvareDataGridViewTextBoxColumn";
-            this.termenrezolvareDataGridViewTextBoxColumn.ReadOnly = true;
-            this.termenrezolvareDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // pretestimativDataGridViewTextBoxColumn
-            // 
-            this.pretestimativDataGridViewTextBoxColumn.DataPropertyName = "pret_estimativ";
-            this.pretestimativDataGridViewTextBoxColumn.HeaderText = "Pret estimativ(lei)";
-            this.pretestimativDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pretestimativDataGridViewTextBoxColumn.Name = "pretestimativDataGridViewTextBoxColumn";
-            this.pretestimativDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pretestimativDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // pretavansDataGridViewTextBoxColumn
-            // 
-            this.pretavansDataGridViewTextBoxColumn.DataPropertyName = "pret_avans";
-            this.pretavansDataGridViewTextBoxColumn.HeaderText = "Pret avans(lei)";
-            this.pretavansDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.pretavansDataGridViewTextBoxColumn.Name = "pretavansDataGridViewTextBoxColumn";
-            this.pretavansDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pretavansDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ledgerclassBindingSource
-            // 
-            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.ledger_class);
             // 
             // btnInregistrare
             // 
@@ -722,8 +592,135 @@
             this.labelUnique2.TabIndex = 95;
             this.labelUnique2.Text = "*";
             // 
-            // ledgerPrintclassBindingSource
+            // ledgerclassBindingSource
             // 
+            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.ledger_class);
+            // 
+            // pretavansDataGridViewTextBoxColumn
+            // 
+            this.pretavansDataGridViewTextBoxColumn.DataPropertyName = "pret_avans";
+            this.pretavansDataGridViewTextBoxColumn.HeaderText = "Pret avans(lei)";
+            this.pretavansDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pretavansDataGridViewTextBoxColumn.Name = "pretavansDataGridViewTextBoxColumn";
+            this.pretavansDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pretavansDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // pretestimativDataGridViewTextBoxColumn
+            // 
+            this.pretestimativDataGridViewTextBoxColumn.DataPropertyName = "pret_estimativ";
+            this.pretestimativDataGridViewTextBoxColumn.HeaderText = "Pret estimativ(lei)";
+            this.pretestimativDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.pretestimativDataGridViewTextBoxColumn.Name = "pretestimativDataGridViewTextBoxColumn";
+            this.pretestimativDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pretestimativDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // termenrezolvareDataGridViewTextBoxColumn
+            // 
+            this.termenrezolvareDataGridViewTextBoxColumn.DataPropertyName = "termen_rezolvare";
+            this.termenrezolvareDataGridViewTextBoxColumn.HeaderText = "Termen rezolvare";
+            this.termenrezolvareDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.termenrezolvareDataGridViewTextBoxColumn.Name = "termenrezolvareDataGridViewTextBoxColumn";
+            this.termenrezolvareDataGridViewTextBoxColumn.ReadOnly = true;
+            this.termenrezolvareDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // observatiiDataGridViewTextBoxColumn
+            // 
+            this.observatiiDataGridViewTextBoxColumn.DataPropertyName = "observatii";
+            this.observatiiDataGridViewTextBoxColumn.HeaderText = "Observatii";
+            this.observatiiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.observatiiDataGridViewTextBoxColumn.Name = "observatiiDataGridViewTextBoxColumn";
+            this.observatiiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.observatiiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // defectconstatatDataGridViewTextBoxColumn
+            // 
+            this.defectconstatatDataGridViewTextBoxColumn.DataPropertyName = "defect_constatat";
+            this.defectconstatatDataGridViewTextBoxColumn.HeaderText = "Defect constatat";
+            this.defectconstatatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.defectconstatatDataGridViewTextBoxColumn.Name = "defectconstatatDataGridViewTextBoxColumn";
+            this.defectconstatatDataGridViewTextBoxColumn.ReadOnly = true;
+            this.defectconstatatDataGridViewTextBoxColumn.Width = 175;
+            // 
+            // dataprimiriiDataGridViewTextBoxColumn
+            // 
+            this.dataprimiriiDataGridViewTextBoxColumn.DataPropertyName = "data_primirii";
+            this.dataprimiriiDataGridViewTextBoxColumn.HeaderText = "Data primirii";
+            this.dataprimiriiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dataprimiriiDataGridViewTextBoxColumn.Name = "dataprimiriiDataGridViewTextBoxColumn";
+            this.dataprimiriiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataprimiriiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // garantieDataGridViewCheckBoxColumn
+            // 
+            this.garantieDataGridViewCheckBoxColumn.DataPropertyName = "garantie";
+            this.garantieDataGridViewCheckBoxColumn.HeaderText = "Garantie";
+            this.garantieDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.garantieDataGridViewCheckBoxColumn.Name = "garantieDataGridViewCheckBoxColumn";
+            this.garantieDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.garantieDataGridViewCheckBoxColumn.Width = 75;
+            // 
+            // modelDataGridViewTextBoxColumn
+            // 
+            this.modelDataGridViewTextBoxColumn.DataPropertyName = "model";
+            this.modelDataGridViewTextBoxColumn.HeaderText = "Model";
+            this.modelDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.modelDataGridViewTextBoxColumn.Name = "modelDataGridViewTextBoxColumn";
+            this.modelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.modelDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tiptelefonDataGridViewTextBoxColumn
+            // 
+            this.tiptelefonDataGridViewTextBoxColumn.DataPropertyName = "tip_telefon";
+            this.tiptelefonDataGridViewTextBoxColumn.HeaderText = "Tip telefon";
+            this.tiptelefonDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tiptelefonDataGridViewTextBoxColumn.Name = "tiptelefonDataGridViewTextBoxColumn";
+            this.tiptelefonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tiptelefonDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // imeiDataGridViewTextBoxColumn
+            // 
+            this.imeiDataGridViewTextBoxColumn.DataPropertyName = "imei";
+            this.imeiDataGridViewTextBoxColumn.HeaderText = "IMEI";
+            this.imeiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.imeiDataGridViewTextBoxColumn.Name = "imeiDataGridViewTextBoxColumn";
+            this.imeiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.imeiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // prenumeDataGridViewTextBoxColumn
+            // 
+            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "prenume";
+            this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
+            this.prenumeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
+            this.prenumeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.prenumeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // numeDataGridViewTextBoxColumn
+            // 
+            this.numeDataGridViewTextBoxColumn.DataPropertyName = "nume";
+            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
+            this.numeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
+            this.numeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nrtelefonDataGridViewTextBoxColumn
+            // 
+            this.nrtelefonDataGridViewTextBoxColumn.DataPropertyName = "nr_telefon";
+            this.nrtelefonDataGridViewTextBoxColumn.HeaderText = "Nr. telefon";
+            this.nrtelefonDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nrtelefonDataGridViewTextBoxColumn.Name = "nrtelefonDataGridViewTextBoxColumn";
+            this.nrtelefonDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nrtelefonDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // idreparatieDataGridViewTextBoxColumn
+            // 
+            this.idreparatieDataGridViewTextBoxColumn.DataPropertyName = "id_reparatie";
+            this.idreparatieDataGridViewTextBoxColumn.HeaderText = "Nr. inreg";
+            this.idreparatieDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idreparatieDataGridViewTextBoxColumn.Name = "idreparatieDataGridViewTextBoxColumn";
+            this.idreparatieDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idreparatieDataGridViewTextBoxColumn.Width = 75;
             // 
             // registrationAdd_form
             // 
@@ -779,8 +776,8 @@
             this.Name = "registrationAdd_form";
             this.Text = "Inregistrare - adauga";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRegistration)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerPrintclassBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -814,6 +811,10 @@
         private System.Windows.Forms.CheckBox checkBoxTiparire;
         private System.Windows.Forms.BindingSource ledgerPrintclassBindingSource;
         private System.Windows.Forms.BindingSource ledgerclassBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn culoare;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cod_telefon;
+        private System.Windows.Forms.Label labelUnique;
+        private System.Windows.Forms.Label labelUnique2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idreparatieDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nrtelefonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeDataGridViewTextBoxColumn;
@@ -821,8 +822,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn imeiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tiptelefonDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn culoare;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cod_telefon;
         private System.Windows.Forms.DataGridViewCheckBoxColumn garantieDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataprimiriiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn defectconstatatDataGridViewTextBoxColumn;
@@ -830,7 +829,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn termenrezolvareDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pretestimativDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pretavansDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label labelUnique;
-        private System.Windows.Forms.Label labelUnique2;
     }
 }

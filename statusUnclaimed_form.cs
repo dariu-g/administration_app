@@ -67,7 +67,7 @@ namespace AplicatieDisertatie
 
                     /* Date reparatie. */
                     sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID_6M);
-                    sqlCmd.Parameters.AddWithValue("@Data_predarii", dateTimeDataPredarii.Value);
+                    sqlCmd.Parameters.AddWithValue("@Data_casarii", dateTimeDataCasare.Value);
                     sqlCmd.Parameters.AddWithValue("@Observatii", txtObservatii.Text.Trim());
 
                     sqlCmd.ExecuteNonQuery();

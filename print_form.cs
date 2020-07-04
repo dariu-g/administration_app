@@ -46,7 +46,6 @@ namespace AplicatieDisertatie
                 new ReportParameter("pdata_primirii", _param.data_primirii.ToString("dd/MM/yyyy")),
                 new ReportParameter("ppret_estimativ", _param.pret_estimativ.ToString()),
                 new ReportParameter("ppret_avans", _param.pret_avans.ToString()),
-                //new ReportParameter("ppretachitat", _param.pret_achitat.ToString()),
                 new ReportParameter("ptermen_rezolvare", _param.termen_rezolvare.ToString())
             };
             this.reportViewer.LocalReport.SetParameters(parameters);

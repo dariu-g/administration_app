@@ -37,6 +37,8 @@
             this.txtObservatii = new System.Windows.Forms.TextBox();
             this.labelTelNeridicate6luni = new System.Windows.Forms.Label();
             this.btnCaseaza = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimeDataCasare = new System.Windows.Forms.DateTimePicker();
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCurrent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGreaterThan6m)).BeginInit();
@@ -45,7 +47,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(332, 248);
+            label1.Location = new System.Drawing.Point(7, 336);
             label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(76, 17);
@@ -84,7 +86,7 @@
             // 
             // btnSalveaza
             // 
-            this.btnSalveaza.Location = new System.Drawing.Point(484, 156);
+            this.btnSalveaza.Location = new System.Drawing.Point(781, 219);
             this.btnSalveaza.Name = "btnSalveaza";
             this.btnSalveaza.Size = new System.Drawing.Size(110, 30);
             this.btnSalveaza.TabIndex = 10;
@@ -95,7 +97,7 @@
             // labelDataPredarii
             // 
             this.labelDataPredarii.AutoSize = true;
-            this.labelDataPredarii.Location = new System.Drawing.Point(332, 210);
+            this.labelDataPredarii.Location = new System.Drawing.Point(640, 181);
             this.labelDataPredarii.Name = "labelDataPredarii";
             this.labelDataPredarii.Size = new System.Drawing.Size(90, 17);
             this.labelDataPredarii.TabIndex = 12;
@@ -105,14 +107,14 @@
             // 
             this.dateTimeDataPredarii.CustomFormat = "dd/MM/yyyy";
             this.dateTimeDataPredarii.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeDataPredarii.Location = new System.Drawing.Point(438, 205);
+            this.dateTimeDataPredarii.Location = new System.Drawing.Point(736, 176);
             this.dateTimeDataPredarii.Name = "dateTimeDataPredarii";
             this.dateTimeDataPredarii.Size = new System.Drawing.Size(242, 22);
             this.dateTimeDataPredarii.TabIndex = 11;
             // 
             // txtObservatii
             // 
-            this.txtObservatii.Location = new System.Drawing.Point(438, 235);
+            this.txtObservatii.Location = new System.Drawing.Point(113, 328);
             this.txtObservatii.Margin = new System.Windows.Forms.Padding(5);
             this.txtObservatii.MaxLength = 250;
             this.txtObservatii.Multiline = true;
@@ -124,7 +126,7 @@
             // 
             this.labelTelNeridicate6luni.AutoSize = true;
             this.labelTelNeridicate6luni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
-            this.labelTelNeridicate6luni.Location = new System.Drawing.Point(320, 417);
+            this.labelTelNeridicate6luni.Location = new System.Drawing.Point(18, 429);
             this.labelTelNeridicate6luni.Name = "labelTelNeridicate6luni";
             this.labelTelNeridicate6luni.Size = new System.Drawing.Size(526, 26);
             this.labelTelNeridicate6luni.TabIndex = 80;
@@ -132,7 +134,7 @@
             // 
             // btnCaseaza
             // 
-            this.btnCaseaza.Location = new System.Drawing.Point(484, 302);
+            this.btnCaseaza.Location = new System.Drawing.Point(138, 385);
             this.btnCaseaza.Name = "btnCaseaza";
             this.btnCaseaza.Size = new System.Drawing.Size(110, 30);
             this.btnCaseaza.TabIndex = 81;
@@ -140,11 +142,31 @@
             this.btnCaseaza.UseVisualStyleBackColor = true;
             this.btnCaseaza.Click += new System.EventHandler(this.btnCaseaza_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 303);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.TabIndex = 83;
+            this.label2.Text = "Data predarii";
+            // 
+            // dateTimeDataCasare
+            // 
+            this.dateTimeDataCasare.CustomFormat = "dd/MM/yyyy";
+            this.dateTimeDataCasare.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeDataCasare.Location = new System.Drawing.Point(113, 298);
+            this.dateTimeDataCasare.Name = "dateTimeDataCasare";
+            this.dateTimeDataCasare.Size = new System.Drawing.Size(242, 22);
+            this.dateTimeDataCasare.TabIndex = 82;
+            // 
             // statusUnclaimed_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 575);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dateTimeDataCasare);
             this.Controls.Add(this.btnCaseaza);
             this.Controls.Add(this.labelTelNeridicate6luni);
             this.Controls.Add(label1);
@@ -173,5 +195,7 @@
         private System.Windows.Forms.TextBox txtObservatii;
         private System.Windows.Forms.Label labelTelNeridicate6luni;
         private System.Windows.Forms.Button btnCaseaza;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimeDataCasare;
     }
 }
