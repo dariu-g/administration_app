@@ -92,8 +92,8 @@ namespace AplicatieDisertatie
                     
                     /* Storing the object id_reparatie from ledger_class in order to be sent to the stored procedure as a parameter. */
                     int obiect_ReparatieID = objct.id_reparatie;
-                    List<ledgerPrint_class> list = db_con.Query<ledgerPrint_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
-                    using (print_form form = new print_form(objct, list))
+                    List<ledger_class> list = db_con.Query<ledger_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
+                    using (print_form form = new print_form(objct))
                     {
                         form.ShowDialog();
                     };

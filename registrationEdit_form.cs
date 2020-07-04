@@ -14,7 +14,7 @@ namespace AplicatieDisertatie
 {
     public partial class registrationEdit_form : Form
     {
-        /* Class scope members. */
+        /* Class scope variables. */
         static private int ClientID = 0;
         static private int TelefonID = 0;
         static private int ReparatieID = 0;

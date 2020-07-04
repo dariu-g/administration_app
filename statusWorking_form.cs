@@ -14,13 +14,12 @@ namespace AplicatieDisertatie
 {
     public partial class statusWorking_form : Form
     {
-        /* Class scope members. */
+        /* Class scope variables. */
         private static int ReparatieID = 0;
 
         public statusWorking_form()
         {
             InitializeComponent();
-            //FillDataGridView();
             connection_class.FillDataGridView("AfisareTelefoaneInLucru", dataGridViewReparatii);
             connection_class.checkBoxStates(checkBoxVerdictReparatie, "Reparat", "Nereparat");
             dataGridViewReparatii.DoubleBufferedDataGridView(true);
@@ -88,6 +87,7 @@ namespace AplicatieDisertatie
             if (dataGridViewReparatii.CurrentRow.Index != -1)
             {
                 ReparatieID = Convert.ToInt32(dataGridViewReparatii.CurrentRow.Cells[0].Value.ToString());
+                connection_class.ClearTextBoxes(this.Controls);
             }
         }
 

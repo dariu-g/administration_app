@@ -20,10 +20,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.76667in</Top>
-            <Left>0.1611in</Left>
+            <Top>3.51943in</Top>
+            <Left>0.23332in</Left>
             <Height>0.25in</Height>
-            <Width>1.05557in</Width>
+            <Width>1.10557in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -49,10 +49,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pcod_telefon</rd:DefaultName>
-            <Top>2.76667in</Top>
-            <Left>1.28611in</Left>
+            <Top>3.51944in</Top>
+            <Left>1.33888in</Left>
             <Height>0.25in</Height>
-            <Width>2.05834in</Width>
+            <Width>1.75001in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -71,7 +71,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Termen estimativ de rezolvare:</Value>
+                    <Value>Termen rezolvare:</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -79,10 +79,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>3.62498in</Top>
-            <Left>3.93in</Left>
-            <Height>0.50833in</Height>
-            <Width>1.22222in</Width>
+            <Top>3.07219in</Top>
+            <Left>3.72944in</Left>
+            <Height>0.25in</Height>
+            <Width>1.19444in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -109,10 +109,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ptermen_rezolvare</rd:DefaultName>
-            <Top>3.62498in</Top>
-            <Left>5.22167in</Left>
+            <Top>3.08329in</Top>
+            <Left>5.00722in</Left>
             <Height>0.25in</Height>
-            <Width>1.4in</Width>
+            <Width>1.37222in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -139,10 +139,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.53887in</Top>
-            <Left>0.17499in</Left>
+            <Top>1.27775in</Top>
+            <Left>0.2611in</Left>
             <Height>0.25in</Height>
-            <Width>1.04168in</Width>
+            <Width>1.09168in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -169,10 +169,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.84443in</Top>
-            <Left>0.18889in</Left>
+            <Top>1.59719in</Top>
+            <Left>0.26111in</Left>
             <Height>0.25in</Height>
-            <Width>1.02778in</Width>
+            <Width>1.07778in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -199,10 +199,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.21943in</Top>
-            <Left>0.16111in</Left>
+            <Top>0.97219in</Top>
+            <Left>0.26111in</Left>
             <Height>0.25in</Height>
-            <Width>1.05556in</Width>
+            <Width>1.10556in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -229,10 +229,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pnume</rd:DefaultName>
-            <Top>0.53887in</Top>
-            <Left>1.25834in</Left>
+            <Top>1.27775in</Top>
+            <Left>1.36667in</Left>
             <Height>0.25in</Height>
-            <Width>2.08612in</Width>
+            <Width>1.77779in</Width>
             <ZIndex>7</ZIndex>
             <Style>
               <Border>
@@ -259,10 +259,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pprenume</rd:DefaultName>
-            <Top>0.84443in</Top>
-            <Left>1.25834in</Left>
+            <Top>1.58331in</Top>
+            <Left>1.36667in</Left>
             <Height>0.25in</Height>
-            <Width>2.08612in</Width>
+            <Width>1.77779in</Width>
             <ZIndex>8</ZIndex>
             <Style>
               <Border>
@@ -289,10 +289,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pnr_telefon</rd:DefaultName>
-            <Top>0.23332in</Top>
-            <Left>1.25834in</Left>
+            <Top>0.9722in</Top>
+            <Left>1.36667in</Left>
             <Height>0.25in</Height>
-            <Width>2.08612in</Width>
+            <Width>1.77779in</Width>
             <ZIndex>9</ZIndex>
             <Style>
               <Border>
@@ -319,8 +319,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.23332in</Top>
-            <Left>3.94389in</Left>
+            <Top>0.9583in</Top>
+            <Left>3.72944in</Left>
             <Height>0.25in</Height>
             <Width>1.19444in</Width>
             <ZIndex>10</ZIndex>
@@ -349,10 +349,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.04165in</Top>
-            <Left>3.94389in</Left>
+            <Top>1.29164in</Top>
+            <Left>3.72944in</Left>
             <Height>0.25in</Height>
-            <Width>1.20833in</Width>
+            <Width>1.19444in</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
@@ -379,10 +379,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>0.56665in</Top>
-            <Left>3.94389in</Left>
-            <Height>0.25in</Height>
-            <Width>1.20833in</Width>
+            <Top>3.51942in</Top>
+            <Left>3.72944in</Left>
+            <Height>0.23612in</Height>
+            <Width>1.19444in</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
@@ -409,8 +409,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pdata_primirii</rd:DefaultName>
-            <Top>0.23332in</Top>
-            <Left>5.22167in</Left>
+            <Top>0.9583in</Top>
+            <Left>5.02111in</Left>
             <Height>0.25in</Height>
             <Width>1.58611in</Width>
             <ZIndex>13</ZIndex>
@@ -439,10 +439,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pdefect_constatat</rd:DefaultName>
-            <Top>1.02776in</Top>
-            <Left>5.20778in</Left>
-            <Height>0.50278in</Height>
-            <Width>2.4in</Width>
+            <Top>1.27775in</Top>
+            <Left>5.02111in</Left>
+            <Height>0.45278in</Height>
+            <Width>2.60777in</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -469,10 +469,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.51666in</Top>
-            <Left>0.17499in</Left>
+            <Top>2.26942in</Top>
+            <Left>0.24721in</Left>
             <Height>0.25in</Height>
-            <Width>1.04168in</Width>
+            <Width>1.09168in</Width>
             <ZIndex>15</ZIndex>
             <Style>
               <Border>
@@ -499,10 +499,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.14166in</Top>
-            <Left>0.17499in</Left>
+            <Top>2.89442in</Top>
+            <Left>0.24721in</Left>
             <Height>0.25in</Height>
-            <Width>1.04168in</Width>
+            <Width>1.09168in</Width>
             <ZIndex>16</ZIndex>
             <Style>
               <Border>
@@ -529,10 +529,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.83611in</Top>
-            <Left>0.17499in</Left>
+            <Top>2.58887in</Top>
+            <Left>0.24721in</Left>
             <Height>0.25in</Height>
-            <Width>1.04168in</Width>
+            <Width>1.09168in</Width>
             <ZIndex>17</ZIndex>
             <Style>
               <Border>
@@ -559,10 +559,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>p_tip_telefon</rd:DefaultName>
-            <Top>1.83611in</Top>
-            <Left>1.28612in</Left>
+            <Top>2.58888in</Top>
+            <Left>1.33889in</Left>
             <Height>0.25in</Height>
-            <Width>2.05834in</Width>
+            <Width>1.75001in</Width>
             <ZIndex>18</ZIndex>
             <Style>
               <Border>
@@ -589,10 +589,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pmodel</rd:DefaultName>
-            <Top>2.14167in</Top>
-            <Left>1.28612in</Left>
+            <Top>2.89444in</Top>
+            <Left>1.33889in</Left>
             <Height>0.25in</Height>
-            <Width>2.05834in</Width>
+            <Width>1.75001in</Width>
             <ZIndex>19</ZIndex>
             <Style>
               <Border>
@@ -619,10 +619,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pimei</rd:DefaultName>
-            <Top>1.51666in</Top>
-            <Left>1.28612in</Left>
+            <Top>2.26943in</Top>
+            <Left>1.33889in</Left>
             <Height>0.25in</Height>
-            <Width>2.05834in</Width>
+            <Width>1.75001in</Width>
             <ZIndex>20</ZIndex>
             <Style>
               <Border>
@@ -649,10 +649,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>3.05834in</Top>
-            <Left>0.17499in</Left>
+            <Top>3.8111in</Top>
+            <Left>0.24721in</Left>
             <Height>0.25in</Height>
-            <Width>1.04168in</Width>
+            <Width>1.09168in</Width>
             <ZIndex>21</ZIndex>
             <Style>
               <Border>
@@ -671,18 +671,20 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Parameters!pgarantie.Value</Value>
-                    <Style />
+                    <Value>=iif(isnothing(Parameters!pgarantie.Value), "", iif(Parameters!pgarantie.Value, "Da", "Nu"))</Value>
+                    <Style>
+                      <FontFamily />
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pgarantie</rd:DefaultName>
-            <Top>3.05834in</Top>
-            <Left>1.28612in</Left>
+            <Top>3.81111in</Top>
+            <Left>1.33889in</Left>
             <Height>0.25in</Height>
-            <Width>2.05834in</Width>
+            <Width>1.75001in</Width>
             <ZIndex>22</ZIndex>
             <Style>
               <Border>
@@ -709,10 +711,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>2.44722in</Top>
-            <Left>0.17499in</Left>
+            <Top>3.19998in</Top>
+            <Left>0.24721in</Left>
             <Height>0.25in</Height>
-            <Width>1.04168in</Width>
+            <Width>1.09168in</Width>
             <ZIndex>23</ZIndex>
             <Style>
               <Border>
@@ -739,10 +741,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pculoare</rd:DefaultName>
-            <Top>2.44722in</Top>
-            <Left>1.28612in</Left>
+            <Top>3.19999in</Top>
+            <Left>1.33889in</Left>
             <Height>0.25in</Height>
-            <Width>2.07223in</Width>
+            <Width>1.75in</Width>
             <ZIndex>24</ZIndex>
             <Style>
               <Border>
@@ -769,8 +771,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>3.22776in</Top>
-            <Left>3.94389in</Left>
+            <Top>3.8111in</Top>
+            <Left>3.72944in</Left>
             <Height>0.25in</Height>
             <Width>1.19444in</Width>
             <ZIndex>25</ZIndex>
@@ -799,10 +801,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.59999in</Top>
-            <Left>3.94389in</Left>
+            <Top>1.84998in</Top>
+            <Left>3.72944in</Left>
             <Height>0.25in</Height>
-            <Width>1.20833in</Width>
+            <Width>1.19444in</Width>
             <ZIndex>26</ZIndex>
             <Style>
               <Border>
@@ -829,8 +831,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>2.23888in</Top>
-            <Left>3.94389in</Left>
+            <Top>4.11666in</Top>
+            <Left>3.72944in</Left>
             <Height>0.25in</Height>
             <Width>1.19444in</Width>
             <ZIndex>27</ZIndex>
@@ -859,41 +861,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>pobservatii</rd:DefaultName>
-            <Top>1.59999in</Top>
-            <Left>5.22167in</Left>
-            <Height>0.54444in</Height>
-            <Width>2.37166in</Width>
+            <Top>1.84998in</Top>
+            <Left>5.02111in</Left>
+            <Height>0.52776in</Height>
+            <Width>2.62166in</Width>
             <ZIndex>28</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="ppretachitat">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!ppretachitat.Value</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>ppretachitat</rd:DefaultName>
-            <Top>3.22776in</Top>
-            <Left>5.20778in</Left>
-            <Height>0.25in</Height>
-            <Width>1.08889in</Width>
-            <ZIndex>29</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -919,11 +891,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>2.60276in</Top>
-            <Left>3.94389in</Left>
+            <Top>2.46108in</Top>
+            <Left>3.72944in</Left>
             <Height>0.25in</Height>
             <Width>1.19444in</Width>
-            <ZIndex>30</ZIndex>
+            <ZIndex>29</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -949,11 +921,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox16</rd:DefaultName>
-            <Top>2.90832in</Top>
-            <Left>3.94389in</Left>
+            <Top>2.76664in</Top>
+            <Left>3.72944in</Left>
             <Height>0.25in</Height>
             <Width>1.19444in</Width>
-            <ZIndex>31</ZIndex>
+            <ZIndex>30</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -979,11 +951,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ppret_estimativ</rd:DefaultName>
-            <Top>2.58887in</Top>
-            <Left>5.20778in</Left>
+            <Top>2.44719in</Top>
+            <Left>4.99333in</Left>
             <Height>0.25in</Height>
             <Width>1.08889in</Width>
-            <ZIndex>32</ZIndex>
+            <ZIndex>31</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1009,11 +981,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>ppret_avans</rd:DefaultName>
-            <Top>2.90832in</Top>
-            <Left>5.20778in</Left>
+            <Top>2.76664in</Top>
+            <Left>4.99333in</Left>
             <Height>0.25in</Height>
             <Width>1.08889in</Width>
-            <ZIndex>33</ZIndex>
+            <ZIndex>32</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1031,7 +1003,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Semătură client: ..............................</Value>
+                    <Value>Semnătură client: ..............................</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -1039,11 +1011,11 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox23</rd:DefaultName>
-            <Top>4.55555in</Top>
-            <Left>0.26333in</Left>
-            <Height>0.28333in</Height>
-            <Width>2.38333in</Width>
-            <ZIndex>34</ZIndex>
+            <Top>4.80831in</Top>
+            <Left>0.26111in</Left>
+            <Height>0.25833in</Height>
+            <Width>2.44166in</Width>
+            <ZIndex>33</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1069,10 +1041,194 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox24</rd:DefaultName>
-            <Top>4.55555in</Top>
-            <Left>3.92944in</Left>
+            <Top>4.80831in</Top>
+            <Left>3.74333in</Left>
             <Height>0.25833in</Height>
             <Width>2.75in</Width>
+            <ZIndex>34</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox15">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Conform </Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>GDPR 679/2016</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>, datele clientul sunt colectate pe baza consimțământului dumneavoastră și prin acordul de prelucrare a datelor prin semnătura pe procesul verbal de primire în service, în scopul comunicării între firmă și client. Contactați-ne pentru orice întrebări cu privire la protecția datelor la modul în care sunt utilizate sau pentru rectificarea acestora.</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Notă: </Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>Garanția pentru reparația telefonului este de </Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>__ zile</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> de la data ridicării aparatului și se acordă doar pentru defecțiunea remediată și nu pentru alte afecțiuni nesolicitate sau apărute pe parcursul garanției.</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> În cazul telefoanelor cu defecțiuni grave, firma nu își asumă nici un fel de responsabilitate dacă în urma procesului de reparație, acesta manifestă și alte defecte decât acelea pentru care a fost solicitată reparația</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value> (nu pornește, nu are semnal, nu încarcă, etc.)</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Nu se acordă garanție pentru:</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>carcase lovite, antene rupte, conectori deteriorați, display spart sau defecțiuni provenite din nerespectarea condițiilor din certificatul de garanție, punere în funcțiune și utilizare precum și intervenții neautorizate asupra echipamentului.</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Bulleted</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>reparația telefoanelor care au urme și efecte secundare datorate contactului cu diferite lichide.</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Bulleted</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>lipsa sau deteriorarea sigiliului de garanție.</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Normal</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <ListStyle>Bulleted</ListStyle>
+                <ListLevel>1</ListLevel>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>ATENTIE: În cazul operațiunilor de programare software, datele personale din telefon (contacte, calendar, album, multimedia, etc.) pot fi șterse irecuperabil</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Aparatele vor fi predate în maxim 30 zile de la data reparației. După acest termen, firma nu mai răspunde de acestea!</Value>
+                    <Style>
+                      <FontSize>7pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox15</rd:DefaultName>
+            <Top>5.26942in</Top>
+            <Left>0.0961in</Left>
+            <Height>1.92222in</Height>
+            <Width>7.87221in</Width>
             <ZIndex>35</ZIndex>
             <Style>
               <Border>
@@ -1084,350 +1240,157 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Proces verbal de primire in service</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>(garanție)</Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.15in</Top>
+            <Left>2.57943in</Left>
+            <Height>0.45in</Height>
+            <Width>2.63946in</Width>
+            <ZIndex>36</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Nr.înreg: </Value>
+                    <Style>
+                      <FontSize>12pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>0.24167in</Top>
+            <Left>5.70387in</Left>
+            <Height>0.25in</Height>
+            <Width>0.78946in</Width>
+            <ZIndex>37</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="pid_reparatie">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!pid_reparatie.Value</Value>
+                    <Style>
+                      <FontSize>14pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>pid_reparatie</rd:DefaultName>
+            <Top>0.24167in</Top>
+            <Left>6.5211in</Left>
+            <Height>0.35833in</Height>
+            <Width>1.4472in</Width>
+            <ZIndex>38</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox22">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>PUNCT SERVICE:</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox22</rd:DefaultName>
+            <Top>0.15in</Top>
+            <Left>0.26111in</Left>
+            <Height>0.25in</Height>
+            <Width>1.26166in</Width>
+            <ZIndex>39</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>4.90833in</Height>
+        <Height>7.31666in</Height>
         <Style />
       </Body>
-      <Width>8.12167in</Width>
+      <Width>8in</Width>
       <Page>
-        <PageHeader>
-          <Height>1.255in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Proces verbal de primire in service</Value>
-                      <Style>
-                        <FontSize>12pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>(garanție)</Value>
-                      <Style>
-                        <FontSize>12pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.18in</Top>
-              <Left>2.38833in</Left>
-              <Height>0.45in</Height>
-              <Width>2.63946in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Nr.înreg: </Value>
-                      <Style>
-                        <FontSize>12pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox2</rd:DefaultName>
-              <Top>0.38in</Top>
-              <Left>5.5072in</Left>
-              <Height>0.25in</Height>
-              <Width>0.78946in</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="pid_reparatie">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Parameters!pid_reparatie.Value</Value>
-                      <Style>
-                        <FontSize>14pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>pid_reparatie</rd:DefaultName>
-              <Top>0.38in</Top>
-              <Left>6.31056in</Left>
-              <Height>0.35833in</Height>
-              <Width>1.425in</Width>
-              <ZIndex>2</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="Textbox22">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>PUNCT SERVICE:</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox22</rd:DefaultName>
-              <Top>0.18in</Top>
-              <Left>0.26333in</Left>
-              <Height>0.25in</Height>
-              <Width>1.26166in</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageHeader>
-        <PageFooter>
-          <Height>2.11667in</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="Textbox15">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Conform </Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value>GDPR 679/2016</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value>, datele clientul sunt colectate pe baza consimțământului dumneavoastră și prin acordul de prelucrare a datelor prin semnătura pe procesul verbal de primire în service, în scopul comunicării între firmă și client. Contactați-ne pentru orice întrebări cu privire la protecția datelor la modul în care sunt utilizate sau pentru rectificarea acestora.</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Notă: </Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value>Garanția pentru reparația telefonului este de </Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value>__ zile</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value> de la data ridicării aparatului și se acordă doar pentru defecțiunea remediată și nu pentru alte afecțiuni nesolicitate sau apărute pe parcursul garanției.</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value> În cazul telefoanelor cu defecțiuni grave, firma nu își asumă nici un fel de responsabilitate dacă în urma procesului de reparație, acesta manifestă și alte defecte decât acelea pentru care a fost solicitată reparația</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value> (nu pornește, nu are semnal, nu încarcă, etc.)</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Nu se acordă garanție pentru:</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>carcase lovite, antene rupte, conectori deteriorați, display spart sau defecțiuni provenite din nerespectarea condițiilor din certificatul de garanție, punere în funcțiune și utilizare precum și intervenții neautorizate asupra echipamentului.</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <ListStyle>Bulleted</ListStyle>
-                  <ListLevel>1</ListLevel>
-                  <Style />
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>reparația telefoanelor care au urme și efecte secundare datorate contactului cu diferite lichide.</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <ListStyle>Bulleted</ListStyle>
-                  <ListLevel>1</ListLevel>
-                  <Style />
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>lipsa sau deteriorarea sigiliului de garanție.</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Normal</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <ListStyle>Bulleted</ListStyle>
-                  <ListLevel>1</ListLevel>
-                  <Style />
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>ATENTIE: În cazul operațiunilor de programare software, datele personale din telefon (contacte, calendar, album, multimedia, etc.) pot fi șterse irecuperabil</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Aparatele vor fi predate în maxim 30 zile de la data reparației. După acest termen, firma nu mai răspunde de acestea!</Value>
-                      <Style>
-                        <FontSize>8pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox15</rd:DefaultName>
-              <Top>0.06944in</Top>
-              <Height>2.04722in</Height>
-              <Width>8.12167in</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageFooter>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <PageHeight>11.69in</PageHeight>
+        <PageWidth>8.27in</PageWidth>
+        <LeftMargin>0.2in</LeftMargin>
+        <TopMargin>0.2in</TopMargin>
         <Style />
       </Page>
     </ReportSection>
@@ -1470,10 +1433,6 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="pobservatii">
-      <DataType>String</DataType>
-      <Prompt>ReportParameter1</Prompt>
-    </ReportParameter>
-    <ReportParameter Name="ppretachitat">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
@@ -1567,11 +1526,6 @@
           <ColumnIndex>2</ColumnIndex>
           <RowIndex>2</RowIndex>
           <ParameterName>pobservatii</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>3</RowIndex>
-          <ParameterName>ppretachitat</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>

@@ -17,7 +17,7 @@ namespace AplicatieDisertatie
 {
     public partial class registrationAdd_form : Form
     {
-        /* Class scope members. */
+        /* Class scope variables. */
         static private int ClientID = 0;
         static private int TelefonID = 0;
 
@@ -105,8 +105,8 @@ namespace AplicatieDisertatie
                         db_con.Open();
 
                     int obiect_ReparatieID = objct.id_reparatie;
-                    List<ledgerPrint_class> list = db_con.Query<ledgerPrint_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
-                    using (print_form form = new print_form(objct, list))
+                    List<ledger_class> list = db_con.Query<ledger_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
+                    using (print_form form = new print_form(objct))
                     {
                         form.ShowDialog();
                     };

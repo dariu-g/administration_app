@@ -15,20 +15,17 @@ namespace AplicatieDisertatie
 {
     public partial class print_form : Form
     {
-        /* Class scope members. */
+        /* Class scope variables. */
         ledger_class _param;
-        List<ledgerPrint_class> _list = new List<ledgerPrint_class>();
 
-        public print_form(ledger_class param, List<ledgerPrint_class> list)
+        public print_form(ledger_class param)
         {
             InitializeComponent();
             _param = param;
-            _list = list;
         }
 
         private void print_form_Load(object sender, EventArgs e)
         {
-            ledgerPrintclassBindingSource.DataSource = _list;
             ReportParameter[] parameters = new ReportParameter[]
             {
                 new ReportParameter("pid_reparatie", _param.id_reparatie.ToString()),
@@ -49,7 +46,7 @@ namespace AplicatieDisertatie
                 new ReportParameter("pdata_primirii", _param.data_primirii.ToString("dd/MM/yyyy")),
                 new ReportParameter("ppret_estimativ", _param.pret_estimativ.ToString()),
                 new ReportParameter("ppret_avans", _param.pret_avans.ToString()),
-                new ReportParameter("ppretachitat", _param.pret_achitat.ToString()),
+                //new ReportParameter("ppretachitat", _param.pret_achitat.ToString()),
                 new ReportParameter("ptermen_rezolvare", _param.termen_rezolvare.ToString())
             };
             this.reportViewer.LocalReport.SetParameters(parameters);

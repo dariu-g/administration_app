@@ -14,7 +14,7 @@ namespace AplicatieDisertatie
 {
     public partial class userLogin_form : Form
     {
-        /* Class scope members. */
+        /* Class scope variables. */
         static public int UtilizatorID = 0;
 
         public userLogin_form()

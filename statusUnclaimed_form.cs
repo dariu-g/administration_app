@@ -13,7 +13,7 @@ namespace AplicatieDisertatie
 {
     public partial class statusUnclaimed_form : Form
     {
-        /* Class scope members. */
+        /* Class scope variables. */
         private static int ReparatieID = 0;
         private static int ReparatieID_6M = 0;
         
