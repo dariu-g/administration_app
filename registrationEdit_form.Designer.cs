@@ -48,6 +48,7 @@
             System.Windows.Forms.Label termen_garantieLabel;
             System.Windows.Forms.Label pret_achitatLabel;
             System.Windows.Forms.Label labelVerdictReparatie;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registrationEdit_form));
             this.btnModificaTelefon = new System.Windows.Forms.Button();
             this.txtTipTelefon = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -297,8 +298,20 @@
             pret_achitatLabel.TabIndex = 141;
             pret_achitatLabel.Text = "Pret achitat";
             // 
+            // labelVerdictReparatie
+            // 
+            labelVerdictReparatie.AutoSize = true;
+            labelVerdictReparatie.Location = new System.Drawing.Point(556, 448);
+            labelVerdictReparatie.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            labelVerdictReparatie.Name = "labelVerdictReparatie";
+            labelVerdictReparatie.Size = new System.Drawing.Size(117, 17);
+            labelVerdictReparatie.TabIndex = 149;
+            labelVerdictReparatie.Text = "Verdict reparatie:";
+            // 
             // btnModificaTelefon
             // 
+            this.btnModificaTelefon.Image = ((System.Drawing.Image)(resources.GetObject("btnModificaTelefon.Image")));
+            this.btnModificaTelefon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificaTelefon.Location = new System.Drawing.Point(373, 198);
             this.btnModificaTelefon.Name = "btnModificaTelefon";
             this.btnModificaTelefon.Size = new System.Drawing.Size(103, 29);
@@ -363,6 +376,8 @@
             this.txtTipTelefon.Name = "txtTipTelefon";
             this.txtTipTelefon.Size = new System.Drawing.Size(348, 22);
             this.txtTipTelefon.TabIndex = 8;
+            this.txtTipTelefon.TextChanged += new System.EventHandler(this.txtTipTelefon_TextChanged);
+            this.txtTipTelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTipTelefon_KeyPress);
             // 
             // label4
             // 
@@ -382,6 +397,8 @@
             this.txtPrenume.Name = "txtPrenume";
             this.txtPrenume.Size = new System.Drawing.Size(348, 22);
             this.txtPrenume.TabIndex = 4;
+            this.txtPrenume.TextChanged += new System.EventHandler(this.txtPrenume_TextChanged);
+            this.txtPrenume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrenume_KeyPress);
             // 
             // checkboxGarantie
             // 
@@ -402,6 +419,8 @@
             this.txtNume.Name = "txtNume";
             this.txtNume.Size = new System.Drawing.Size(348, 22);
             this.txtNume.TabIndex = 3;
+            this.txtNume.TextChanged += new System.EventHandler(this.txtNume_TextChanged);
+            this.txtNume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNume_KeyPress);
             // 
             // txtModel
             // 
@@ -411,6 +430,8 @@
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(348, 22);
             this.txtModel.TabIndex = 9;
+            this.txtModel.TextChanged += new System.EventHandler(this.txtModel_TextChanged);
+            this.txtModel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtModel_KeyPress);
             // 
             // txtCuloare
             // 
@@ -420,6 +441,8 @@
             this.txtCuloare.Name = "txtCuloare";
             this.txtCuloare.Size = new System.Drawing.Size(348, 22);
             this.txtCuloare.TabIndex = 10;
+            this.txtCuloare.TextChanged += new System.EventHandler(this.txtCuloare_TextChanged);
+            this.txtCuloare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCuloare_KeyPress);
             // 
             // txtIMEI
             // 
@@ -429,6 +452,7 @@
             this.txtIMEI.Name = "txtIMEI";
             this.txtIMEI.Size = new System.Drawing.Size(348, 22);
             this.txtIMEI.TabIndex = 11;
+            this.txtIMEI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIMEI_KeyPress);
             // 
             // txtCodTelefon
             // 
@@ -438,6 +462,7 @@
             this.txtCodTelefon.Name = "txtCodTelefon";
             this.txtCodTelefon.Size = new System.Drawing.Size(348, 22);
             this.txtCodTelefon.TabIndex = 12;
+            this.txtCodTelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodTelefon_KeyPress);
             // 
             // txtNrTelefon
             // 
@@ -447,6 +472,7 @@
             this.txtNrTelefon.Name = "txtNrTelefon";
             this.txtNrTelefon.Size = new System.Drawing.Size(348, 22);
             this.txtNrTelefon.TabIndex = 5;
+            this.txtNrTelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNrTelefon_KeyPress);
             // 
             // label3
             // 
@@ -487,6 +513,8 @@
             this.txtObservatii.Name = "txtObservatii";
             this.txtObservatii.Size = new System.Drawing.Size(331, 44);
             this.txtObservatii.TabIndex = 20;
+            this.txtObservatii.TextChanged += new System.EventHandler(this.txtObservatii_TextChanged);
+            this.txtObservatii.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtObservatii_KeyPress);
             // 
             // txtDefectConstatat
             // 
@@ -497,6 +525,8 @@
             this.txtDefectConstatat.Name = "txtDefectConstatat";
             this.txtDefectConstatat.Size = new System.Drawing.Size(331, 46);
             this.txtDefectConstatat.TabIndex = 18;
+            this.txtDefectConstatat.TextChanged += new System.EventHandler(this.txtDefectConstatat_TextChanged);
+            this.txtDefectConstatat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDefectConstatat_KeyPress);
             // 
             // txtTermenRezolvare
             // 
@@ -506,6 +536,7 @@
             this.txtTermenRezolvare.Name = "txtTermenRezolvare";
             this.txtTermenRezolvare.Size = new System.Drawing.Size(331, 22);
             this.txtTermenRezolvare.TabIndex = 21;
+            this.txtTermenRezolvare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTermenRezolvare_KeyPress);
             // 
             // txtPretEstimativ
             // 
@@ -515,6 +546,7 @@
             this.txtPretEstimativ.Name = "txtPretEstimativ";
             this.txtPretEstimativ.Size = new System.Drawing.Size(331, 22);
             this.txtPretEstimativ.TabIndex = 23;
+            this.txtPretEstimativ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPretEstimativ_KeyPress);
             // 
             // txtPretAvans
             // 
@@ -524,9 +556,12 @@
             this.txtPretAvans.Name = "txtPretAvans";
             this.txtPretAvans.Size = new System.Drawing.Size(331, 22);
             this.txtPretAvans.TabIndex = 24;
+            this.txtPretAvans.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPretAvans_KeyPress);
             // 
             // btnModificaClient
             // 
+            this.btnModificaClient.Image = ((System.Drawing.Image)(resources.GetObject("btnModificaClient.Image")));
+            this.btnModificaClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificaClient.Location = new System.Drawing.Point(373, 28);
             this.btnModificaClient.Margin = new System.Windows.Forms.Padding(5);
             this.btnModificaClient.Name = "btnModificaClient";
@@ -558,6 +593,7 @@
             this.txtCautaClient.Name = "txtCautaClient";
             this.txtCautaClient.Size = new System.Drawing.Size(123, 22);
             this.txtCautaClient.TabIndex = 1;
+            this.txtCautaClient.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCautaClient_KeyPress);
             // 
             // txtCautaTelefon
             // 
@@ -566,6 +602,7 @@
             this.txtCautaTelefon.Name = "txtCautaTelefon";
             this.txtCautaTelefon.Size = new System.Drawing.Size(123, 22);
             this.txtCautaTelefon.TabIndex = 6;
+            this.txtCautaTelefon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCautaTelefon_KeyPress);
             // 
             // txtCautaReparatie
             // 
@@ -574,9 +611,12 @@
             this.txtCautaReparatie.Name = "txtCautaReparatie";
             this.txtCautaReparatie.Size = new System.Drawing.Size(123, 22);
             this.txtCautaReparatie.TabIndex = 14;
+            this.txtCautaReparatie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCautaReparatie_KeyPress);
             // 
             // btnModificaReparatie
             // 
+            this.btnModificaReparatie.Image = ((System.Drawing.Image)(resources.GetObject("btnModificaReparatie.Image")));
+            this.btnModificaReparatie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificaReparatie.Location = new System.Drawing.Point(908, 21);
             this.btnModificaReparatie.Name = "btnModificaReparatie";
             this.btnModificaReparatie.Size = new System.Drawing.Size(103, 29);
@@ -606,6 +646,8 @@
             this.txtPieseInlocuite.Name = "txtPieseInlocuite";
             this.txtPieseInlocuite.Size = new System.Drawing.Size(331, 38);
             this.txtPieseInlocuite.TabIndex = 19;
+            this.txtPieseInlocuite.TextChanged += new System.EventHandler(this.txtPieseInlocuite_TextChanged);
+            this.txtPieseInlocuite.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPieseInlocuite_KeyPress);
             // 
             // txtTermenGarantie
             // 
@@ -615,6 +657,7 @@
             this.txtTermenGarantie.Name = "txtTermenGarantie";
             this.txtTermenGarantie.Size = new System.Drawing.Size(331, 22);
             this.txtTermenGarantie.TabIndex = 22;
+            this.txtTermenGarantie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTermenGarantie_KeyPress);
             // 
             // txtPretAchitat
             // 
@@ -624,9 +667,12 @@
             this.txtPretAchitat.Name = "txtPretAchitat";
             this.txtPretAchitat.Size = new System.Drawing.Size(331, 22);
             this.txtPretAchitat.TabIndex = 25;
+            this.txtPretAchitat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPretAchitat_KeyPress);
             // 
             // btnAnuleaza
             // 
+            this.btnAnuleaza.Image = ((System.Drawing.Image)(resources.GetObject("btnAnuleaza.Image")));
+            this.btnAnuleaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAnuleaza.Location = new System.Drawing.Point(425, 442);
             this.btnAnuleaza.Name = "btnAnuleaza";
             this.btnAnuleaza.Size = new System.Drawing.Size(103, 29);
@@ -695,16 +741,6 @@
             this.checkboxVerdictReparatie.Text = "?";
             this.checkboxVerdictReparatie.UseVisualStyleBackColor = true;
             this.checkboxVerdictReparatie.CheckedChanged += new System.EventHandler(this.checkboxVerdictReparatie_CheckedChanged);
-            // 
-            // labelVerdictReparatie
-            // 
-            labelVerdictReparatie.AutoSize = true;
-            labelVerdictReparatie.Location = new System.Drawing.Point(556, 448);
-            labelVerdictReparatie.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            labelVerdictReparatie.Name = "labelVerdictReparatie";
-            labelVerdictReparatie.Size = new System.Drawing.Size(117, 17);
-            labelVerdictReparatie.TabIndex = 149;
-            labelVerdictReparatie.Text = "Verdict reparatie:";
             // 
             // registrationEdit_form
             // 

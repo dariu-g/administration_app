@@ -15,7 +15,8 @@ namespace AplicatieDisertatie
     public partial class userLogin_form : Form
     {
         /* Class scope variables. */
-        static public int UtilizatorID = 0;
+        public static int UtilizatorID = 0;
+        public static string username = "";
 
         public userLogin_form()
         {
@@ -99,7 +100,10 @@ namespace AplicatieDisertatie
 
                     /* Fetches UtilizatorID from the dataTable position [0][0]. */
                     if (dataTable != null)
+                    {
                         UtilizatorID = Convert.ToInt32(dataTable.Rows[0][0]);
+                        username = Convert.ToString(dataTable.Rows[0][1]);
+                    }
 
 
                     DatabaseConnection.Close();
@@ -115,7 +119,19 @@ namespace AplicatieDisertatie
             return dataTable;
         }
         #endregion
-        
+
+        #region TextBoxesFormatting
+        private void txtUtilizator_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtParola_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+        #endregion
+
         #region Design
         private void labelExit_MouseEnter(object sender, EventArgs e)
         {

@@ -196,5 +196,10 @@ namespace AplicatieDisertatie
             dataGridLedger.Rows.Clear();
             dataGridLedger.Refresh();
         }
+
+        private void txtCautare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
     }
 }

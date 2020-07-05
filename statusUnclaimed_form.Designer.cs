@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(statusUnclaimed_form));
             this.dataGridCurrent = new System.Windows.Forms.DataGridView();
             this.dataGridGreaterThan6m = new System.Windows.Forms.DataGridView();
             this.btnSalveaza = new System.Windows.Forms.Button();
@@ -86,11 +87,14 @@
             // 
             // btnSalveaza
             // 
+            this.btnSalveaza.Image = ((System.Drawing.Image)(resources.GetObject("btnSalveaza.Image")));
+            this.btnSalveaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalveaza.Location = new System.Drawing.Point(781, 219);
             this.btnSalveaza.Name = "btnSalveaza";
-            this.btnSalveaza.Size = new System.Drawing.Size(110, 30);
+            this.btnSalveaza.Size = new System.Drawing.Size(94, 30);
             this.btnSalveaza.TabIndex = 10;
             this.btnSalveaza.Text = "Salveaza";
+            this.btnSalveaza.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalveaza.UseVisualStyleBackColor = true;
             this.btnSalveaza.Click += new System.EventHandler(this.btnSalveaza_Click);
             // 
@@ -121,6 +125,8 @@
             this.txtObservatii.Name = "txtObservatii";
             this.txtObservatii.Size = new System.Drawing.Size(242, 49);
             this.txtObservatii.TabIndex = 78;
+            this.txtObservatii.TextChanged += new System.EventHandler(this.txtObservatii_TextChanged);
+            this.txtObservatii.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtObservatii_KeyPress);
             // 
             // labelTelNeridicate6luni
             // 
@@ -134,6 +140,8 @@
             // 
             // btnCaseaza
             // 
+            this.btnCaseaza.Image = ((System.Drawing.Image)(resources.GetObject("btnCaseaza.Image")));
+            this.btnCaseaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCaseaza.Location = new System.Drawing.Point(138, 385);
             this.btnCaseaza.Name = "btnCaseaza";
             this.btnCaseaza.Size = new System.Drawing.Size(110, 30);

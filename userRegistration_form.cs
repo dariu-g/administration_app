@@ -79,7 +79,7 @@ namespace AplicatieDisertatie
 
         private void labelCatreAutentificare_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             userLogin_form loginform = new userLogin_form();
             loginform.Show();
         }
@@ -121,6 +121,31 @@ namespace AplicatieDisertatie
         private void txtPrenume_TextChanged(object sender, EventArgs e)
         {
             connection_class.ToTitleCase_textBoxFormat(txtPrenume);
+        }
+
+        private void txtNume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtPrenume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtUtilizator_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtParola_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtConfirmareParola_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
         }
         #endregion
     }

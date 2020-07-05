@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userRegistration_form));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -82,54 +83,65 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(156, 300);
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(142, 300);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 31);
+            this.label3.Size = new System.Drawing.Size(142, 31);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Utilizator";
+            this.label3.Text = "   Utilizator";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(121, 339);
+            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Location = new System.Drawing.Point(107, 343);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 31);
+            this.label4.Size = new System.Drawing.Size(187, 31);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Tip Utilizator";
+            this.label4.Text = "   Tip Utilizator";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(178, 389);
+            this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Location = new System.Drawing.Point(165, 389);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 31);
+            this.label5.Size = new System.Drawing.Size(113, 31);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Parolă";
+            this.label5.Text = "   Parolă";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtNume
             // 
             this.txtNume.Location = new System.Drawing.Point(287, 181);
             this.txtNume.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNume.MaxLength = 99;
+            this.txtNume.MaxLength = 100;
             this.txtNume.Name = "txtNume";
             this.txtNume.Size = new System.Drawing.Size(292, 38);
             this.txtNume.TabIndex = 1;
             this.txtNume.TextChanged += new System.EventHandler(this.txtNume_TextChanged);
+            this.txtNume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNume_KeyPress);
             // 
             // txtPrenume
             // 
             this.txtPrenume.Location = new System.Drawing.Point(287, 226);
             this.txtPrenume.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPrenume.MaxLength = 99;
+            this.txtPrenume.MaxLength = 100;
             this.txtPrenume.Name = "txtPrenume";
             this.txtPrenume.Size = new System.Drawing.Size(292, 38);
             this.txtPrenume.TabIndex = 2;
             this.txtPrenume.TextChanged += new System.EventHandler(this.txtPrenume_TextChanged);
+            this.txtPrenume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrenume_KeyPress);
             // 
             // txtUtilizator
             // 
@@ -139,6 +151,7 @@
             this.txtUtilizator.Name = "txtUtilizator";
             this.txtUtilizator.Size = new System.Drawing.Size(292, 38);
             this.txtUtilizator.TabIndex = 3;
+            this.txtUtilizator.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUtilizator_KeyPress);
             // 
             // txtParola
             // 
@@ -149,6 +162,7 @@
             this.txtParola.Size = new System.Drawing.Size(291, 38);
             this.txtParola.TabIndex = 5;
             this.txtParola.UseSystemPasswordChar = true;
+            this.txtParola.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParola_KeyPress);
             // 
             // label6
             // 
@@ -179,11 +193,14 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(67, 435);
+            this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(57, 435);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(230, 31);
+            this.label7.Size = new System.Drawing.Size(251, 31);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Confirmare parolă";
+            this.label7.Text = "   Confirmare parolă";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtConfirmareParola
             // 
@@ -193,6 +210,7 @@
             this.txtConfirmareParola.Size = new System.Drawing.Size(292, 38);
             this.txtConfirmareParola.TabIndex = 6;
             this.txtConfirmareParola.UseSystemPasswordChar = true;
+            this.txtConfirmareParola.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConfirmareParola_KeyPress);
             // 
             // label8
             // 
@@ -290,11 +308,14 @@
             this.labelCatreAutentificare.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelCatreAutentificare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline);
             this.labelCatreAutentificare.ForeColor = System.Drawing.Color.White;
-            this.labelCatreAutentificare.Location = new System.Drawing.Point(323, 586);
+            this.labelCatreAutentificare.Image = ((System.Drawing.Image)(resources.GetObject("labelCatreAutentificare.Image")));
+            this.labelCatreAutentificare.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelCatreAutentificare.Location = new System.Drawing.Point(294, 584);
             this.labelCatreAutentificare.Name = "labelCatreAutentificare";
-            this.labelCatreAutentificare.Size = new System.Drawing.Size(257, 25);
+            this.labelCatreAutentificare.Size = new System.Drawing.Size(274, 25);
             this.labelCatreAutentificare.TabIndex = 8;
-            this.labelCatreAutentificare.Text = "*Ai deja cont? Autentifică-te.";
+            this.labelCatreAutentificare.Text = "     Ai deja cont? Autentifică-te.";
+            this.labelCatreAutentificare.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelCatreAutentificare.Click += new System.EventHandler(this.labelCatreAutentificare_Click);
             this.labelCatreAutentificare.MouseEnter += new System.EventHandler(this.labelCatreAutentificare_MouseEnter);
             this.labelCatreAutentificare.MouseLeave += new System.EventHandler(this.labelCatreAutentificare_MouseLeave);
@@ -338,11 +359,14 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(24, 59);
+            this.label11.Image = ((System.Drawing.Image)(resources.GetObject("label11.Image")));
+            this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label11.Location = new System.Drawing.Point(8, 61);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(856, 58);
+            this.label11.Size = new System.Drawing.Size(898, 58);
             this.label11.TabIndex = 7;
-            this.label11.Text = "ÎNREGISTRARE UTILIZATOR NOU";
+            this.label11.Text = "   ÎNREGISTRARE UTILIZATOR NOU";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // userRegistration_form
             // 

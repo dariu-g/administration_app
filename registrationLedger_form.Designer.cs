@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registrationLedger_form));
             this.btnCauta = new System.Windows.Forms.Button();
             this.dateTimeDin = new System.Windows.Forms.DateTimePicker();
             this.dataGridLedger = new System.Windows.Forms.DataGridView();
@@ -71,9 +72,11 @@
             // 
             // btnCauta
             // 
-            this.btnCauta.Location = new System.Drawing.Point(609, 40);
+            this.btnCauta.Image = ((System.Drawing.Image)(resources.GetObject("btnCauta.Image")));
+            this.btnCauta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCauta.Location = new System.Drawing.Point(605, 38);
             this.btnCauta.Name = "btnCauta";
-            this.btnCauta.Size = new System.Drawing.Size(75, 23);
+            this.btnCauta.Size = new System.Drawing.Size(89, 31);
             this.btnCauta.TabIndex = 0;
             this.btnCauta.Text = "Cauta";
             this.btnCauta.UseVisualStyleBackColor = true;
@@ -341,9 +344,11 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(915, 549);
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(906, 549);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(106, 31);
+            this.btnPrint.Size = new System.Drawing.Size(115, 27);
             this.btnPrint.TabIndex = 6;
             this.btnPrint.Text = "Print";
             this.btnPrint.UseVisualStyleBackColor = true;
@@ -352,9 +357,11 @@
             // btnDescarca
             // 
             this.btnDescarca.Enabled = false;
+            this.btnDescarca.Image = ((System.Drawing.Image)(resources.GetObject("btnDescarca.Image")));
+            this.btnDescarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDescarca.Location = new System.Drawing.Point(479, 552);
             this.btnDescarca.Name = "btnDescarca";
-            this.btnDescarca.Size = new System.Drawing.Size(108, 28);
+            this.btnDescarca.Size = new System.Drawing.Size(108, 24);
             this.btnDescarca.TabIndex = 7;
             this.btnDescarca.Text = "Descarca";
             this.btnDescarca.UseVisualStyleBackColor = true;
@@ -362,9 +369,11 @@
             // 
             // btnCautare
             // 
+            this.btnCautare.Image = ((System.Drawing.Image)(resources.GetObject("btnCautare.Image")));
+            this.btnCautare.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCautare.Location = new System.Drawing.Point(378, 92);
             this.btnCautare.Name = "btnCautare";
-            this.btnCautare.Size = new System.Drawing.Size(75, 23);
+            this.btnCautare.Size = new System.Drawing.Size(98, 23);
             this.btnCautare.TabIndex = 13;
             this.btnCautare.Text = "Cautare";
             this.btnCautare.UseVisualStyleBackColor = true;
@@ -386,12 +395,15 @@
             this.txtCautare.Name = "txtCautare";
             this.txtCautare.Size = new System.Drawing.Size(210, 22);
             this.txtCautare.TabIndex = 11;
+            this.txtCautare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCautare_KeyPress);
             // 
             // btnSterge
             // 
+            this.btnSterge.Image = ((System.Drawing.Image)(resources.GetObject("btnSterge.Image")));
+            this.btnSterge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSterge.Location = new System.Drawing.Point(23, 552);
             this.btnSterge.Name = "btnSterge";
-            this.btnSterge.Size = new System.Drawing.Size(105, 28);
+            this.btnSterge.Size = new System.Drawing.Size(105, 24);
             this.btnSterge.TabIndex = 17;
             this.btnSterge.Text = "Sterge";
             this.btnSterge.UseVisualStyleBackColor = true;
@@ -399,11 +411,14 @@
             // 
             // btnReparatiiRecente
             // 
+            this.btnReparatiiRecente.Image = ((System.Drawing.Image)(resources.GetObject("btnReparatiiRecente.Image")));
+            this.btnReparatiiRecente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReparatiiRecente.Location = new System.Drawing.Point(850, 32);
             this.btnReparatiiRecente.Name = "btnReparatiiRecente";
-            this.btnReparatiiRecente.Size = new System.Drawing.Size(140, 39);
+            this.btnReparatiiRecente.Size = new System.Drawing.Size(155, 39);
             this.btnReparatiiRecente.TabIndex = 18;
             this.btnReparatiiRecente.Text = "Reparatii Recente";
+            this.btnReparatiiRecente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReparatiiRecente.UseVisualStyleBackColor = true;
             this.btnReparatiiRecente.Click += new System.EventHandler(this.btnReparatiiRecente_Click);
             // 

@@ -178,6 +178,21 @@ namespace AplicatieDisertatie
             }
         }
 
+        private void txtNume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtPrenume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtNrTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
         /* TextBoxes telefon. */
         private void txtTipTelefon_TextChanged(object sender, EventArgs e)
         {
@@ -227,6 +242,27 @@ namespace AplicatieDisertatie
                 }
             }
         }
+
+        private void txtTipTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtModel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtCuloare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtCodTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
         /* TextBoxes reparatie. */
         private void txtDefectConstatat_TextChanged(object sender, EventArgs e)
         {
@@ -236,6 +272,21 @@ namespace AplicatieDisertatie
         private void txtObservatii_TextChanged(object sender, EventArgs e)
         {
             connection_class.CapitalizeFirstLetter_textBoxFormat(txtObservatii);
+        }
+
+        private void txtDefectConstatat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtObservatii_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtTermenRezolvare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
         }
 
         private void txtPretEstimativ_KeyPress(object sender, KeyPressEventArgs e)
@@ -252,6 +303,7 @@ namespace AplicatieDisertatie
         {
             connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
         }
+
         #endregion
     }
 }

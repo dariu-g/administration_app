@@ -95,5 +95,27 @@ namespace AplicatieDisertatie
         {
             connection_class.checkBoxStates(checkBoxVerdictReparatie, "Reparat", "Nereparat");
         }
+
+        #region TextBoxesFormatting
+        private void txtPieseInlocuite_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtPieseInlocuite);
+        }
+
+        private void txtPieseInlocuite_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtTermenGarantie_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtPretAchitat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumberOnly_textBoxFormat(e);
+        }
+        #endregion
     }
 }

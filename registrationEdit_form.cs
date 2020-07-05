@@ -215,6 +215,7 @@ namespace AplicatieDisertatie
             txtCautaReparatie.ReadOnly = false;
             txtCautaTelefon.ReadOnly = false;
             checkboxGarantie.Enabled = false;
+            checkboxVerdictReparatie.Enabled = false;
             dateDataPrimirii.Enabled = false;
             dateDataPredarii.Enabled = false;
         }
@@ -271,6 +272,7 @@ namespace AplicatieDisertatie
                 txtPretEstimativ.ReadOnly = false;
                 txtPretAvans.ReadOnly = false;
                 txtPretAchitat.ReadOnly = false;
+                checkboxVerdictReparatie.Enabled = true;
             }
             else if (btnModificaReparatie.Text == "Cauta")
             {
@@ -284,6 +286,7 @@ namespace AplicatieDisertatie
                 txtPretEstimativ.ReadOnly = true;
                 txtPretAvans.ReadOnly = true;
                 txtPretAchitat.ReadOnly = true;
+                checkboxVerdictReparatie.Enabled = false;
             }
         }
         #endregion
@@ -351,5 +354,146 @@ namespace AplicatieDisertatie
         {
             connection_class.checkBoxStates(checkboxVerdictReparatie, "Reparat", "Nereparat");
         }
+
+        #region TextBoxesFormatting
+
+        /* Date client. */
+        private void txtCautaClient_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtNume_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtNume);
+        }
+
+        private void txtPrenume_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtPrenume);
+        }
+
+        private void txtNrTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtNume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtPrenume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        /* Date telefon. */
+        private void txtCautaTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtTipTelefon_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtTipTelefon);
+        }
+
+        private void txtModel_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtModel);
+        }
+
+        private void txtCuloare_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtCuloare);
+        }
+
+        private void txtIMEI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumberOnly_textBoxFormat(e);
+        }
+
+        private void txtTipTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtModel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtCuloare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtCodTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        /* Date reparatie. */
+        private void txtCautaReparatie_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtDefectConstatat_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtDefectConstatat);
+        }
+
+        private void txtPieseInlocuite_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtPieseInlocuite);
+        }
+
+        private void txtObservatii_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtObservatii);
+        }
+
+        private void txtDefectConstatat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtObservatii_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtPieseInlocuite_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtTermenRezolvare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtTermenGarantie_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtPretEstimativ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumberOnly_textBoxFormat(e);
+        }
+
+        private void txtPretAvans_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumberOnly_textBoxFormat(e);
+        }
+
+        private void txtPretAchitat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumberOnly_textBoxFormat(e);
+        }
+        #endregion
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(statusWorking_form));
             this.dataGridViewReparatii = new System.Windows.Forms.DataGridView();
             this.labelPretAchitat = new System.Windows.Forms.Label();
             this.checkBoxVerdictReparatie = new System.Windows.Forms.CheckBox();
@@ -85,6 +86,7 @@
             this.txtPretAchitat.Name = "txtPretAchitat";
             this.txtPretAchitat.Size = new System.Drawing.Size(242, 22);
             this.txtPretAchitat.TabIndex = 3;
+            this.txtPretAchitat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPretAchitat_KeyPress);
             // 
             // txtPieseInlocuite
             // 
@@ -94,6 +96,8 @@
             this.txtPieseInlocuite.Name = "txtPieseInlocuite";
             this.txtPieseInlocuite.Size = new System.Drawing.Size(242, 49);
             this.txtPieseInlocuite.TabIndex = 1;
+            this.txtPieseInlocuite.TextChanged += new System.EventHandler(this.txtPieseInlocuite_TextChanged);
+            this.txtPieseInlocuite.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPieseInlocuite_KeyPress);
             // 
             // labelPieseInlocuite
             // 
@@ -111,6 +115,7 @@
             this.txtTermenGarantie.Name = "txtTermenGarantie";
             this.txtTermenGarantie.Size = new System.Drawing.Size(242, 22);
             this.txtTermenGarantie.TabIndex = 2;
+            this.txtTermenGarantie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTermenGarantie_KeyPress);
             // 
             // labelTermenGarantie
             // 
@@ -142,11 +147,14 @@
             // 
             // btnSalveaza
             // 
+            this.btnSalveaza.Image = ((System.Drawing.Image)(resources.GetObject("btnSalveaza.Image")));
+            this.btnSalveaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalveaza.Location = new System.Drawing.Point(493, 612);
             this.btnSalveaza.Name = "btnSalveaza";
-            this.btnSalveaza.Size = new System.Drawing.Size(87, 38);
+            this.btnSalveaza.Size = new System.Drawing.Size(94, 38);
             this.btnSalveaza.TabIndex = 5;
             this.btnSalveaza.Text = "Salveaza";
+            this.btnSalveaza.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalveaza.UseVisualStyleBackColor = true;
             this.btnSalveaza.Click += new System.EventHandler(this.btnSalveaza_Click);
             // 

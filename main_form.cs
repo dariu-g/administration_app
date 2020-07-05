@@ -23,6 +23,7 @@ namespace AplicatieDisertatie
         {
             InitializeComponent();
             customizeDesign();
+            labelUser.Text = userLogin_form.username;
         }
 
         #region NavigationMenu
@@ -34,13 +35,6 @@ namespace AplicatieDisertatie
             panelStatusReparatiiSubmenu.Visible = false;
         }
 
-        private void hideSubMenu()
-        {
-            if (panelInregistrareSubmenu.Visible == true)
-                panelInregistrareSubmenu.Visible = false;
-            if (panelStatusReparatiiSubmenu.Visible == true)
-                panelStatusReparatiiSubmenu.Visible = false;
-        }
         private void showSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
@@ -106,9 +100,17 @@ namespace AplicatieDisertatie
             UserManual.Start();
         }
 
+        private void btnIesire_Click(object sender, EventArgs e)
+        {
+            userLogin_form.UtilizatorID = 0;
+            userLogin_form.username = "";
+            this.Close();
+            userLogin_form loginform = new userLogin_form();
+            loginform.Show();
+        }
         #endregion
         private Form activeForm = null;             // the child form needs to be stored apart from the main form
-        private void openChildForm(Form childForm)  // this method works for only 1 child form being open in the main form (see 13:50 for multiple forms)
+        private void openChildForm(Form childForm)  // this method works for only 1 child form being open in the main form
         {
             if (activeForm != null)
                 activeForm.Close();

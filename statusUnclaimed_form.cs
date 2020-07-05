@@ -98,5 +98,17 @@ namespace AplicatieDisertatie
                 ReparatieID_6M = Convert.ToInt32(dataGridGreaterThan6m.CurrentRow.Cells[0].Value.ToString());
             }
         }
+
+        #region TextBoxesFormatting
+        private void txtObservatii_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtObservatii);
+        }
+
+        private void txtObservatii_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+        #endregion
     }
 }
