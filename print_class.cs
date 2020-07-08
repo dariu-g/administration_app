@@ -8,7 +8,7 @@ using Dapper;
 
 namespace AplicatieDisertatie
 {
-    public class ledger_class
+    public class print_class
     {
         public int id_reparatie { get; set; }
 

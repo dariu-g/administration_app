@@ -35,6 +35,7 @@ namespace AplicatieDisertatie
         }
 
         #region MainButtons
+        /* Searches registration between the selected dates. */
         private void btnCauta_Click(object sender, EventArgs e)
         {
             using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
@@ -46,10 +47,11 @@ namespace AplicatieDisertatie
                 DateTime dateFROM = dateTimeDin.Value.Date;
                 DateTime dateTILL = dateTimePana.Value.Date;
 
-                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>("CalendarDataInregistrari", new { dateFROM, dateTILL } ,commandType: CommandType.StoredProcedure);
+                ledgerclassBindingSource.DataSource = db_con.Query<print_class>("CalendarDataInregistrari", new { dateFROM, dateTILL } ,commandType: CommandType.StoredProcedure);
             }
         }
         
+        /* Executes a procedure to display the latest 15 registrations. */
         private void btnReparatiiRecente_Click(object sender, EventArgs e)
         {
             using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
@@ -59,10 +61,11 @@ namespace AplicatieDisertatie
                     db_con.Open();
                 }
 
-                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>("ReparatiiRecente", commandType: CommandType.StoredProcedure);
+                ledgerclassBindingSource.DataSource = db_con.Query<print_class>("ReparatiiRecente", commandType: CommandType.StoredProcedure);
             }
         }
 
+        /* Executes a search after the text written in the textbox txtCautare. */
         private void btnCautare_Click(object sender, EventArgs e)
         {
             using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
@@ -73,7 +76,7 @@ namespace AplicatieDisertatie
                 }
 
                 string searchText = txtCautare.Text.Trim();
-                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>("CautareGeneralaInregistrari", new { searchText }, commandType: CommandType.StoredProcedure);
+                ledgerclassBindingSource.DataSource = db_con.Query<print_class>("CautareGeneralaInregistrari", new { searchText }, commandType: CommandType.StoredProcedure);
             }
         }
 
@@ -82,7 +85,7 @@ namespace AplicatieDisertatie
          * to create a preview of the printable registration */
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            ledger_class objct = ledgerclassBindingSource.Current as ledger_class;
+            print_class objct = ledgerclassBindingSource.Current as print_class;
             if (objct != null)
             {
                 using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
@@ -92,7 +95,7 @@ namespace AplicatieDisertatie
                     
                     /* Storing the object id_reparatie from ledger_class in order to be sent to the stored procedure as a parameter. */
                     int obiect_ReparatieID = objct.id_reparatie;
-                    List<ledger_class> list = db_con.Query<ledger_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
+                    List<print_class> list = db_con.Query<print_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
                     using (print_form form = new print_form(objct))
                     {
                         form.ShowDialog();
@@ -185,6 +188,7 @@ namespace AplicatieDisertatie
             }
         }
 
+        /* Clears the dataGridLedger if the dates are changed. */
         private void dateTimeDin_ValueChanged(object sender, EventArgs e)
         {
             dataGridLedger.Rows.Clear();
@@ -197,9 +201,16 @@ namespace AplicatieDisertatie
             dataGridLedger.Refresh();
         }
 
+        #region TextBoxFormatting
         private void txtCautare_KeyPress(object sender, KeyPressEventArgs e)
         {
             connection_class.NumbersLettersPunctuations_textBoxFormat(e);
         }
+
+        private void txtCautare_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtCautare);
+        }
+        #endregion
     }
 }

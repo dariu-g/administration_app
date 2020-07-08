@@ -76,7 +76,8 @@ namespace AplicatieDisertatie
         /* Capitalizes the first letter of the first word written. */
         public static void CapitalizeFirstLetter_textBoxFormat(TextBox InputTextBox)
         {
-            if (InputTextBox.Text.Length <= 0) return;
+            if (InputTextBox.Text.Length <= 0) 
+                return;
             string first_character = InputTextBox.Text.Substring(0, 1);
             if (first_character != first_character.ToUpper())
             {

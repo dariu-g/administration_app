@@ -87,10 +87,12 @@ namespace AplicatieDisertatie
         #region StatisticiReparatiiSubmenu
         private void btnStatistici_Click(object sender, EventArgs e)
         {
-            openChildForm(new statistics_form());
+            /* To be implemented. */
+            //openChildForm(new statistics_form());
         }
         #endregion
         
+        /* Opens the .chm project. */
         private void btnInformatii_Click(object sender, EventArgs e)
         {
             string workingDirectory = Environment.CurrentDirectory;
@@ -100,6 +102,7 @@ namespace AplicatieDisertatie
             UserManual.Start();
         }
 
+        /* User logout method. */
         private void btnIesire_Click(object sender, EventArgs e)
         {
             userLogin_form.UtilizatorID = 0;

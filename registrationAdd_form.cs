@@ -96,7 +96,7 @@ namespace AplicatieDisertatie
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            ledger_class objct = ledgerclassBindingSource.Current as ledger_class;
+            print_class objct = ledgerclassBindingSource.Current as print_class;
             if (objct != null)
             {
                 using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
@@ -105,7 +105,7 @@ namespace AplicatieDisertatie
                         db_con.Open();
 
                     int obiect_ReparatieID = objct.id_reparatie;
-                    List<ledger_class> list = db_con.Query<ledger_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
+                    List<print_class> list = db_con.Query<print_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
                     using (print_form form = new print_form(objct))
                     {
                         form.ShowDialog();
@@ -135,7 +135,7 @@ namespace AplicatieDisertatie
                 if (db_con.State == ConnectionState.Closed)
                     db_con.Open();
 
-                ledgerclassBindingSource.DataSource = db_con.Query<ledger_class>("UltimaInregistrare", commandType: CommandType.StoredProcedure);
+                ledgerclassBindingSource.DataSource = db_con.Query<print_class>("UltimaInregistrare", commandType: CommandType.StoredProcedure);
             }
         }
         #endregion

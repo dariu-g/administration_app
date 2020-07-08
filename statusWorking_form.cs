@@ -41,43 +41,50 @@ namespace AplicatieDisertatie
         /* Updates the data typed in the textBoxes in table Date_reparatie. */
         private void btnSalveaza_Click(object sender, EventArgs e)
         {
-            DialogResult DialogBox = new DialogResult();
-            if (dateTimeDataPredarii.Checked == true)
+            if (txtPieseInlocuite.Text == "" || txtPretAchitat.Text == "" || txtTermenGarantie.Text == "")
             {
-                DialogBox = MessageBox.Show("Doresti sa concluzionezi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
+                MessageBox.Show("Completati toate campurile.");
             }
             else
             {
-                DialogBox = MessageBox.Show("Doresti sa modifici aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
-            }
-            if (DialogBox == DialogResult.Yes)
-            {
-                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                DialogResult DialogBox = new DialogResult();
+                if (dateTimeDataPredarii.Checked == true)
                 {
-                    DatabaseConnection.Open();
-                    SqlCommand sqlCmd = new SqlCommand("ConcluzionareReparatie", DatabaseConnection);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-
-                    /* Date reparatie. */
-                    sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID);
-                    /* Adding this condition the registration can be completed without data_predarii, thus effectively
-                     * marking the phone reparation completed, but the phone is yet to be received by the customer. */
-                    if (dateTimeDataPredarii.Checked == true)
-                        sqlCmd.Parameters.AddWithValue("@Data_predarii", dateTimeDataPredarii.Value);
-                    sqlCmd.Parameters.AddWithValue("@Piese_inlocuite", txtPieseInlocuite.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Termen_garantie", txtTermenGarantie.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Pret_achitat", txtPretAchitat.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Verdict_reparatie", checkBoxVerdictReparatie.Checked);
-
-                    sqlCmd.ExecuteNonQuery();
-                    MessageBox.Show("Reparatie concluzionata!");
-                    connection_class.ClearTextBoxes(this.Controls);
+                    DialogBox = MessageBox.Show("Doresti sa concluzionezi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
                 }
+                else
+                {
+                    DialogBox = MessageBox.Show("Doresti sa modifici aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
+                }
+                if (DialogBox == DialogResult.Yes)
+                {
+                    using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                    {
+                        DatabaseConnection.Open();
+                        SqlCommand sqlCmd = new SqlCommand("ConcluzionareReparatie", DatabaseConnection);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+
+                        /* Date reparatie. */
+                        sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID);
+                        /* Adding this condition the registration can be completed without data_predarii, thus effectively
+                         * marking the phone reparation completed, but the phone is yet to be received by the customer. */
+                        if (dateTimeDataPredarii.Checked == true)
+                            sqlCmd.Parameters.AddWithValue("@Data_predarii", dateTimeDataPredarii.Value);
+                        sqlCmd.Parameters.AddWithValue("@Piese_inlocuite", txtPieseInlocuite.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Termen_garantie", txtTermenGarantie.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Pret_achitat", txtPretAchitat.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Verdict_reparatie", checkBoxVerdictReparatie.Checked);
+
+                        sqlCmd.ExecuteNonQuery();
+                        MessageBox.Show("Reparatie concluzionata!");
+                        connection_class.ClearTextBoxes(this.Controls);
+                    }
+                }
+                else if (DialogResult == DialogResult.No)
+                {
+                }
+                connection_class.FillDataGridView("AfisareTelefoaneInLucru", dataGridViewReparatii);
             }
-            else if (DialogResult == DialogResult.No)
-            {
-            }
-            connection_class.FillDataGridView("AfisareTelefoaneInLucru", dataGridViewReparatii);
         }
         #endregion
 

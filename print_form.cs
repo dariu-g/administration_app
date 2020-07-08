@@ -16,14 +16,15 @@ namespace AplicatieDisertatie
     public partial class print_form : Form
     {
         /* Class scope variables. */
-        ledger_class _param;
+        print_class _param;
 
-        public print_form(ledger_class param)
+        public print_form(print_class param)
         {
             InitializeComponent();
             _param = param;
         }
 
+        /* Loads the received values in param into the report. */
         private void print_form_Load(object sender, EventArgs e)
         {
             ReportParameter[] parameters = new ReportParameter[]

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_form));
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.labelUser = new System.Windows.Forms.Label();
             this.btnIesire = new System.Windows.Forms.Button();
             this.btnInformatii = new System.Windows.Forms.Button();
             this.btnStatistici = new System.Windows.Forms.Button();
@@ -50,22 +51,22 @@
             this.labelAppVersion = new System.Windows.Forms.Label();
             this.panelButtons = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.labelWelcome = new System.Windows.Forms.Label();
-            this.labelUser = new System.Windows.Forms.Label();
+            this.labelAplicatieDisertatie = new System.Windows.Forms.Label();
+            this.labelAn = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelStatusReparatiiSubmenu.SuspendLayout();
             this.panelInregistrareSubmenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelButtons.SuspendLayout();
+            this.panelChildForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
             // 
-            this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.panelSideMenu.Controls.Add(this.labelUser);
             this.panelSideMenu.Controls.Add(this.btnIesire);
-            this.panelSideMenu.Controls.Add(this.labelWelcome);
             this.panelSideMenu.Controls.Add(this.btnInformatii);
             this.panelSideMenu.Controls.Add(this.btnStatistici);
             this.panelSideMenu.Controls.Add(this.panelStatusReparatiiSubmenu);
@@ -76,8 +77,20 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(252, 835);
+            this.panelSideMenu.Size = new System.Drawing.Size(252, 803);
             this.panelSideMenu.TabIndex = 0;
+            // 
+            // labelUser
+            // 
+            this.labelUser.AutoSize = true;
+            this.labelUser.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.labelUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.labelUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelUser.Location = new System.Drawing.Point(0, 733);
+            this.labelUser.Name = "labelUser";
+            this.labelUser.Size = new System.Drawing.Size(105, 25);
+            this.labelUser.TabIndex = 10;
+            this.labelUser.Text = "UserName";
             // 
             // btnIesire
             // 
@@ -89,7 +102,7 @@
             this.btnIesire.ForeColor = System.Drawing.Color.Black;
             this.btnIesire.Image = ((System.Drawing.Image)(resources.GetObject("btnIesire.Image")));
             this.btnIesire.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIesire.Location = new System.Drawing.Point(0, 790);
+            this.btnIesire.Location = new System.Drawing.Point(0, 758);
             this.btnIesire.Name = "btnIesire";
             this.btnIesire.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnIesire.Size = new System.Drawing.Size(252, 45);
@@ -109,7 +122,7 @@
             this.btnInformatii.ForeColor = System.Drawing.Color.Black;
             this.btnInformatii.Image = ((System.Drawing.Image)(resources.GetObject("btnInformatii.Image")));
             this.btnInformatii.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInformatii.Location = new System.Drawing.Point(0, 502);
+            this.btnInformatii.Location = new System.Drawing.Point(0, 475);
             this.btnInformatii.Name = "btnInformatii";
             this.btnInformatii.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnInformatii.Size = new System.Drawing.Size(252, 45);
@@ -129,7 +142,7 @@
             this.btnStatistici.ForeColor = System.Drawing.Color.Black;
             this.btnStatistici.Image = ((System.Drawing.Image)(resources.GetObject("btnStatistici.Image")));
             this.btnStatistici.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatistici.Location = new System.Drawing.Point(0, 457);
+            this.btnStatistici.Location = new System.Drawing.Point(0, 430);
             this.btnStatistici.Name = "btnStatistici";
             this.btnStatistici.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnStatistici.Size = new System.Drawing.Size(252, 45);
@@ -145,7 +158,7 @@
             this.panelStatusReparatiiSubmenu.Controls.Add(this.btnStatusNeridicate);
             this.panelStatusReparatiiSubmenu.Controls.Add(this.btnStatusInLucru);
             this.panelStatusReparatiiSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStatusReparatiiSubmenu.Location = new System.Drawing.Point(0, 378);
+            this.panelStatusReparatiiSubmenu.Location = new System.Drawing.Point(0, 351);
             this.panelStatusReparatiiSubmenu.Name = "panelStatusReparatiiSubmenu";
             this.panelStatusReparatiiSubmenu.Size = new System.Drawing.Size(252, 79);
             this.panelStatusReparatiiSubmenu.TabIndex = 4;
@@ -195,7 +208,7 @@
             this.btnStatusReparatii.ForeColor = System.Drawing.Color.Black;
             this.btnStatusReparatii.Image = ((System.Drawing.Image)(resources.GetObject("btnStatusReparatii.Image")));
             this.btnStatusReparatii.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStatusReparatii.Location = new System.Drawing.Point(0, 333);
+            this.btnStatusReparatii.Location = new System.Drawing.Point(0, 306);
             this.btnStatusReparatii.Name = "btnStatusReparatii";
             this.btnStatusReparatii.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnStatusReparatii.Size = new System.Drawing.Size(252, 45);
@@ -212,7 +225,7 @@
             this.panelInregistrareSubmenu.Controls.Add(this.btnInregistrariIstoric);
             this.panelInregistrareSubmenu.Controls.Add(this.btnInregistrariAdauga);
             this.panelInregistrareSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelInregistrareSubmenu.Location = new System.Drawing.Point(0, 213);
+            this.panelInregistrareSubmenu.Location = new System.Drawing.Point(0, 186);
             this.panelInregistrareSubmenu.Name = "panelInregistrareSubmenu";
             this.panelInregistrareSubmenu.Size = new System.Drawing.Size(252, 120);
             this.panelInregistrareSubmenu.TabIndex = 2;
@@ -281,7 +294,7 @@
             this.btnInregistrariReparatii.ForeColor = System.Drawing.Color.Black;
             this.btnInregistrariReparatii.Image = ((System.Drawing.Image)(resources.GetObject("btnInregistrariReparatii.Image")));
             this.btnInregistrariReparatii.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInregistrariReparatii.Location = new System.Drawing.Point(0, 168);
+            this.btnInregistrariReparatii.Location = new System.Drawing.Point(0, 141);
             this.btnInregistrariReparatii.Name = "btnInregistrariReparatii";
             this.btnInregistrariReparatii.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnInregistrariReparatii.Size = new System.Drawing.Size(252, 45);
@@ -299,7 +312,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(252, 168);
+            this.panelLogo.Size = new System.Drawing.Size(252, 141);
             this.panelLogo.TabIndex = 0;
             // 
             // btnMeniuNavigare
@@ -314,7 +327,7 @@
             this.btnMeniuNavigare.ForeColor = System.Drawing.Color.Black;
             this.btnMeniuNavigare.Image = ((System.Drawing.Image)(resources.GetObject("btnMeniuNavigare.Image")));
             this.btnMeniuNavigare.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMeniuNavigare.Location = new System.Drawing.Point(0, 122);
+            this.btnMeniuNavigare.Location = new System.Drawing.Point(0, 95);
             this.btnMeniuNavigare.Name = "btnMeniuNavigare";
             this.btnMeniuNavigare.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMeniuNavigare.Size = new System.Drawing.Size(252, 46);
@@ -367,10 +380,11 @@
             // 
             // labelAppVersion
             // 
+            this.labelAppVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAppVersion.AutoSize = true;
             this.labelAppVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.labelAppVersion.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelAppVersion.Location = new System.Drawing.Point(1073, 16);
+            this.labelAppVersion.Location = new System.Drawing.Point(1029, 14);
             this.labelAppVersion.Name = "labelAppVersion";
             this.labelAppVersion.Size = new System.Drawing.Size(39, 20);
             this.labelAppVersion.TabIndex = 5;
@@ -381,42 +395,62 @@
             this.panelButtons.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(11)))), ((int)(((byte)(7)))));
             this.panelButtons.Controls.Add(this.labelAppVersion);
             this.panelButtons.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelButtons.Location = new System.Drawing.Point(252, 790);
+            this.panelButtons.Location = new System.Drawing.Point(252, 758);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(1122, 45);
+            this.panelButtons.Size = new System.Drawing.Size(1080, 45);
             this.panelButtons.TabIndex = 1;
             // 
             // panelChildForm
             // 
-            this.panelChildForm.AutoSize = true;
             this.panelChildForm.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelChildForm.Controls.Add(this.label1);
+            this.panelChildForm.Controls.Add(this.labelAn);
+            this.panelChildForm.Controls.Add(this.labelAplicatieDisertatie);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.panelChildForm.Location = new System.Drawing.Point(252, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1122, 790);
+            this.panelChildForm.Size = new System.Drawing.Size(1080, 758);
             this.panelChildForm.TabIndex = 2;
             // 
-            // labelWelcome
+            // labelAplicatieDisertatie
             // 
-            this.labelWelcome.AutoSize = true;
-            this.labelWelcome.ForeColor = System.Drawing.Color.Snow;
-            this.labelWelcome.Location = new System.Drawing.Point(3, 753);
-            this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(92, 25);
-            this.labelWelcome.TabIndex = 9;
-            this.labelWelcome.Text = "Utilizator:";
+            this.labelAplicatieDisertatie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAplicatieDisertatie.AutoSize = true;
+            this.labelAplicatieDisertatie.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.labelAplicatieDisertatie.ForeColor = System.Drawing.Color.Firebrick;
+            this.labelAplicatieDisertatie.Location = new System.Drawing.Point(334, 360);
+            this.labelAplicatieDisertatie.Name = "labelAplicatieDisertatie";
+            this.labelAplicatieDisertatie.Size = new System.Drawing.Size(439, 58);
+            this.labelAplicatieDisertatie.TabIndex = 0;
+            this.labelAplicatieDisertatie.Text = "Aplicatie Disertatie";
             // 
-            // labelUser
+            // labelAn
             // 
-            this.labelUser.AutoSize = true;
-            this.labelUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.labelUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelUser.Location = new System.Drawing.Point(77, 753);
-            this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(105, 25);
-            this.labelUser.TabIndex = 10;
-            this.labelUser.Text = "UserName";
+            this.labelAn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAn.AutoSize = true;
+            this.labelAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.labelAn.ForeColor = System.Drawing.Color.Firebrick;
+            this.labelAn.Location = new System.Drawing.Point(491, 418);
+            this.labelAn.Name = "labelAn";
+            this.labelAn.Size = new System.Drawing.Size(112, 48);
+            this.labelAn.TabIndex = 1;
+            this.labelAn.Text = "2020";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.label1.ForeColor = System.Drawing.Color.Coral;
+            this.label1.Location = new System.Drawing.Point(180, 147);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(786, 48);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Gestiunea reparatiilor telefoanelor mobile";
             // 
             // main_form
             // 
@@ -424,7 +458,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1374, 835);
+            this.ClientSize = new System.Drawing.Size(1332, 803);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelButtons);
             this.Controls.Add(this.panelSideMenu);
@@ -442,8 +476,9 @@
             this.panelLogo.PerformLayout();
             this.panelButtons.ResumeLayout(false);
             this.panelButtons.PerformLayout();
+            this.panelChildForm.ResumeLayout(false);
+            this.panelChildForm.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -471,6 +506,8 @@
         private System.Windows.Forms.Button btnIesire;
         private System.Windows.Forms.Button btnMeniuNavigare;
         private System.Windows.Forms.Label labelUser;
-        private System.Windows.Forms.Label labelWelcome;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelAn;
+        private System.Windows.Forms.Label labelAplicatieDisertatie;
     }
 }

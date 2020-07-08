@@ -27,6 +27,7 @@ namespace AplicatieDisertatie
         }
 
         #region MainButtons
+        /* Updates the date. */
         private void btnSalveaza_Click(object sender, EventArgs e)
         {
             DialogResult DialogBox = MessageBox.Show("Doresti sa concluzionezi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
@@ -53,36 +54,42 @@ namespace AplicatieDisertatie
             connection_class.FillDataGridView("AfisareTelefoaneNeridicate", dataGridCurrent);
         }
 
-
+        /* Updates the date and concatenates the text in the database field observatii. */
         private void btnCaseaza_Click(object sender, EventArgs e)
         {
-            DialogResult DialogBox = MessageBox.Show("Doresti sa casezi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
-            if (DialogBox == DialogResult.Yes)
+            if (txtObservatii.Text == "")
             {
-                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                MessageBox.Show("Completati campul observatii.");
+            }
+            else 
+            {
+                DialogResult DialogBox = MessageBox.Show("Doresti sa casezi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
+                if (DialogBox == DialogResult.Yes)
                 {
-                    DatabaseConnection.Open();
-                    SqlCommand sqlCmd = new SqlCommand("CasareReparatie", DatabaseConnection);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                    {
+                        DatabaseConnection.Open();
+                        SqlCommand sqlCmd = new SqlCommand("CasareReparatie", DatabaseConnection);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
 
-                    /* Date reparatie. */
-                    sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID_6M);
-                    sqlCmd.Parameters.AddWithValue("@Data_casarii", dateTimeDataCasare.Value);
-                    sqlCmd.Parameters.AddWithValue("@Observatii", txtObservatii.Text.Trim());
+                        /* Date reparatie. */
+                        sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID_6M);
+                        sqlCmd.Parameters.AddWithValue("@Data_casarii", dateTimeDataCasare.Value);
+                        sqlCmd.Parameters.AddWithValue("@Observatii", txtObservatii.Text.Trim());
 
-                    sqlCmd.ExecuteNonQuery();
-                    MessageBox.Show("Reparatie casata!");
-                    connection_class.ClearTextBoxes(this.Controls);
+                        sqlCmd.ExecuteNonQuery();
+                        MessageBox.Show("Reparatie casata!");
+                        connection_class.ClearTextBoxes(this.Controls);
+                    }
                 }
+                else if (DialogBox == DialogResult.No)
+                {
+                }
+                connection_class.FillDataGridView("AfisareTelefoaneNeridicateSaseLuni", dataGridGreaterThan6m);
             }
-            else if (DialogBox == DialogResult.No)
-            {
-            }
-            connection_class.FillDataGridView("AfisareTelefoaneNeridicateSaseLuni", dataGridGreaterThan6m);
-
         }
         #endregion
-        
+        /* Saves the registration id in the variable ReparatieID. */
         private void dataGridCurrent_Click(object sender, EventArgs e)
         {
             if (dataGridCurrent.Rows.Count > 0 && dataGridCurrent.CurrentRow.Index != -1)
@@ -91,6 +98,7 @@ namespace AplicatieDisertatie
             }
         }
 
+        /* Saves the registration id in the variable ReparatieID_6m. */
         private void dataGridGreaterThan6m_Click(object sender, EventArgs e)
         {
             if (dataGridGreaterThan6m.Rows.Count > 0 && dataGridGreaterThan6m.CurrentRow.Index != -1)

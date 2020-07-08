@@ -80,7 +80,7 @@
     <Compile Include="registrationEdit_form.Designer.cs">
       <DependentUpon>registrationEdit_form.cs</DependentUpon>
     </Compile>
-    <Compile Include="ledger_class.cs" />
+    <Compile Include="print_class.cs" />
     <Compile Include="registrationLedger_form.cs">
       <SubType>Form</SubType>
     </Compile>

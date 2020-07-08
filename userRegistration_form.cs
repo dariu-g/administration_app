@@ -24,6 +24,7 @@ namespace AplicatieDisertatie
         }
 
         #region MainButtons
+        /* Registers the textboxes values in the table Utilizatori. */ 
         private void btnInregistrare_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUtilizator.Text) || string.IsNullOrEmpty(txtParola.Text))
@@ -77,6 +78,7 @@ namespace AplicatieDisertatie
             }
         }
 
+        /* Redirects the user to userLogin_form. */
         private void labelCatreAutentificare_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -97,6 +97,9 @@
             // 
             this.dataGridLedger.AllowUserToAddRows = false;
             this.dataGridLedger.AllowUserToDeleteRows = false;
+            this.dataGridLedger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridLedger.AutoGenerateColumns = false;
             this.dataGridLedger.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridLedger.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -123,12 +126,12 @@
             this.verdict_reparatie,
             this.utilizator});
             this.dataGridLedger.DataSource = this.ledgerclassBindingSource;
-            this.dataGridLedger.Location = new System.Drawing.Point(23, 134);
+            this.dataGridLedger.Location = new System.Drawing.Point(23, 159);
             this.dataGridLedger.Name = "dataGridLedger";
             this.dataGridLedger.ReadOnly = true;
             this.dataGridLedger.RowHeadersWidth = 51;
             this.dataGridLedger.RowTemplate.Height = 24;
-            this.dataGridLedger.Size = new System.Drawing.Size(998, 409);
+            this.dataGridLedger.Size = new System.Drawing.Size(1016, 530);
             this.dataGridLedger.TabIndex = 2;
             this.dataGridLedger.Click += new System.EventHandler(this.dataGridLedger_Click);
             // 
@@ -344,9 +347,10 @@
             // 
             // btnPrint
             // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(906, 549);
+            this.btnPrint.Location = new System.Drawing.Point(924, 706);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(115, 27);
             this.btnPrint.TabIndex = 6;
@@ -356,10 +360,11 @@
             // 
             // btnDescarca
             // 
+            this.btnDescarca.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnDescarca.Enabled = false;
             this.btnDescarca.Image = ((System.Drawing.Image)(resources.GetObject("btnDescarca.Image")));
             this.btnDescarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDescarca.Location = new System.Drawing.Point(479, 552);
+            this.btnDescarca.Location = new System.Drawing.Point(488, 709);
             this.btnDescarca.Name = "btnDescarca";
             this.btnDescarca.Size = new System.Drawing.Size(108, 24);
             this.btnDescarca.TabIndex = 7;
@@ -371,7 +376,7 @@
             // 
             this.btnCautare.Image = ((System.Drawing.Image)(resources.GetObject("btnCautare.Image")));
             this.btnCautare.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCautare.Location = new System.Drawing.Point(378, 92);
+            this.btnCautare.Location = new System.Drawing.Point(380, 117);
             this.btnCautare.Name = "btnCautare";
             this.btnCautare.Size = new System.Drawing.Size(98, 23);
             this.btnCautare.TabIndex = 13;
@@ -382,7 +387,7 @@
             // labelCautareGenerala
             // 
             this.labelCautareGenerala.AutoSize = true;
-            this.labelCautareGenerala.Location = new System.Drawing.Point(23, 92);
+            this.labelCautareGenerala.Location = new System.Drawing.Point(25, 117);
             this.labelCautareGenerala.Name = "labelCautareGenerala";
             this.labelCautareGenerala.Size = new System.Drawing.Size(118, 17);
             this.labelCautareGenerala.TabIndex = 12;
@@ -390,18 +395,20 @@
             // 
             // txtCautare
             // 
-            this.txtCautare.Location = new System.Drawing.Point(147, 93);
+            this.txtCautare.Location = new System.Drawing.Point(149, 118);
             this.txtCautare.MaxLength = 500;
             this.txtCautare.Name = "txtCautare";
             this.txtCautare.Size = new System.Drawing.Size(210, 22);
             this.txtCautare.TabIndex = 11;
+            this.txtCautare.TextChanged += new System.EventHandler(this.txtCautare_TextChanged);
             this.txtCautare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCautare_KeyPress);
             // 
             // btnSterge
             // 
+            this.btnSterge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSterge.Image = ((System.Drawing.Image)(resources.GetObject("btnSterge.Image")));
             this.btnSterge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSterge.Location = new System.Drawing.Point(23, 552);
+            this.btnSterge.Location = new System.Drawing.Point(23, 709);
             this.btnSterge.Name = "btnSterge";
             this.btnSterge.Size = new System.Drawing.Size(105, 24);
             this.btnSterge.TabIndex = 17;
@@ -413,7 +420,7 @@
             // 
             this.btnReparatiiRecente.Image = ((System.Drawing.Image)(resources.GetObject("btnReparatiiRecente.Image")));
             this.btnReparatiiRecente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReparatiiRecente.Location = new System.Drawing.Point(850, 32);
+            this.btnReparatiiRecente.Location = new System.Drawing.Point(884, 38);
             this.btnReparatiiRecente.Name = "btnReparatiiRecente";
             this.btnReparatiiRecente.Size = new System.Drawing.Size(155, 39);
             this.btnReparatiiRecente.TabIndex = 18;
@@ -442,13 +449,13 @@
             // 
             // ledgerclassBindingSource
             // 
-            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.ledger_class);
+            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.print_class);
             // 
             // registrationLedger_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1047, 602);
+            this.ClientSize = new System.Drawing.Size(1080, 790);
             this.Controls.Add(this.btnReparatiiRecente);
             this.Controls.Add(this.btnSterge);
             this.Controls.Add(this.btnCautare);
@@ -462,6 +469,7 @@
             this.Controls.Add(this.dataGridLedger);
             this.Controls.Add(this.dateTimeDin);
             this.Controls.Add(this.btnCauta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "registrationLedger_form";
             this.Text = "Inregistrari - istoric";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLedger)).EndInit();
