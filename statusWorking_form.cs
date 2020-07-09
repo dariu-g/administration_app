@@ -124,5 +124,10 @@ namespace AplicatieDisertatie
             connection_class.NumberOnly_textBoxFormat(e);
         }
         #endregion
+
+        private void statusWorking_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ReparatieID = 0;
+        }
     }
 }

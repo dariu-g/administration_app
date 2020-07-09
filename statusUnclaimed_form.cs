@@ -118,5 +118,11 @@ namespace AplicatieDisertatie
             connection_class.NumbersLettersPunctuations_textBoxFormat(e);
         }
         #endregion
+
+        private void statusUnclaimed_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ReparatieID = 0;
+            ReparatieID_6M = 0;
+        }
     }
 }

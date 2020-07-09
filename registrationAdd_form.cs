@@ -305,5 +305,11 @@ namespace AplicatieDisertatie
         }
 
         #endregion
+
+        private void registrationAdd_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ClientID = 0;
+            TelefonID = 0;
+        }
     }
 }

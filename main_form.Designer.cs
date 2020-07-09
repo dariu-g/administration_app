@@ -54,6 +54,7 @@
             this.labelAplicatieDisertatie = new System.Windows.Forms.Label();
             this.labelAn = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelUtilizator = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelStatusReparatiiSubmenu.SuspendLayout();
             this.panelInregistrareSubmenu.SuspendLayout();
@@ -65,6 +66,7 @@
             // panelSideMenu
             // 
             this.panelSideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelSideMenu.Controls.Add(this.labelUtilizator);
             this.panelSideMenu.Controls.Add(this.labelUser);
             this.panelSideMenu.Controls.Add(this.btnIesire);
             this.panelSideMenu.Controls.Add(this.btnInformatii);
@@ -82,11 +84,11 @@
             // 
             // labelUser
             // 
+            this.labelUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelUser.AutoSize = true;
-            this.labelUser.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.labelUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.labelUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.labelUser.Location = new System.Drawing.Point(0, 733);
+            this.labelUser.Location = new System.Drawing.Point(87, 730);
             this.labelUser.Name = "labelUser";
             this.labelUser.Size = new System.Drawing.Size(105, 25);
             this.labelUser.TabIndex = 10;
@@ -415,9 +417,6 @@
             // 
             // labelAplicatieDisertatie
             // 
-            this.labelAplicatieDisertatie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAplicatieDisertatie.AutoSize = true;
             this.labelAplicatieDisertatie.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.labelAplicatieDisertatie.ForeColor = System.Drawing.Color.Firebrick;
@@ -429,9 +428,6 @@
             // 
             // labelAn
             // 
-            this.labelAn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAn.AutoSize = true;
             this.labelAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.labelAn.ForeColor = System.Drawing.Color.Firebrick;
@@ -451,6 +447,17 @@
             this.label1.Size = new System.Drawing.Size(786, 48);
             this.label1.TabIndex = 2;
             this.label1.Text = "Gestiunea reparatiilor telefoanelor mobile";
+            // 
+            // labelUtilizator
+            // 
+            this.labelUtilizator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelUtilizator.AutoSize = true;
+            this.labelUtilizator.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelUtilizator.Location = new System.Drawing.Point(3, 730);
+            this.labelUtilizator.Name = "labelUtilizator";
+            this.labelUtilizator.Size = new System.Drawing.Size(92, 25);
+            this.labelUtilizator.TabIndex = 11;
+            this.labelUtilizator.Text = "Utilizator:";
             // 
             // main_form
             // 
@@ -509,5 +516,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelAn;
         private System.Windows.Forms.Label labelAplicatieDisertatie;
+        private System.Windows.Forms.Label labelUtilizator;
     }
 }

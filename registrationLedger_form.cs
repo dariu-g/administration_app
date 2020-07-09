@@ -107,33 +107,36 @@ namespace AplicatieDisertatie
         /* Deletes all fields from a specific registration in the table Date_reparatie, based on id_reparatie. */ 
         private void btnSterge_Click(object sender, EventArgs e)
         {
-            DialogResult DialogBox = MessageBox.Show("Aceasta operatiune este ireversibila. Doresti sa stergi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if(DialogBox == DialogResult.Yes)
+            if (ReparatieID != 0)
             {
-                try
+                DialogResult DialogBox = MessageBox.Show("Aceasta operatiune este ireversibila. Doresti sa stergi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (DialogBox == DialogResult.Yes)
                 {
-                    using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                    try
                     {
-                        if (DatabaseConnection.State == ConnectionState.Closed)
-                            DatabaseConnection.Open();
-                        SqlCommand sqlCmd = new SqlCommand("StergeReparatie", DatabaseConnection);
-                        sqlCmd.CommandType = CommandType.StoredProcedure;
-                        sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID);
+                        using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                        {
+                            if (DatabaseConnection.State == ConnectionState.Closed)
+                                DatabaseConnection.Open();
+                            SqlCommand sqlCmd = new SqlCommand("StergeReparatie", DatabaseConnection);
+                            sqlCmd.CommandType = CommandType.StoredProcedure;
+                            sqlCmd.Parameters.AddWithValue("@Reparatie_id", ReparatieID);
 
-                        sqlCmd.ExecuteNonQuery();
-                        MessageBox.Show("Reparatie stearsa!");
-                        DatabaseConnection.Close();
+                            sqlCmd.ExecuteNonQuery();
+                            MessageBox.Show("Reparatie stearsa!");
+                            DatabaseConnection.Close();
+                        }
                     }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Eroare de stergere!");
+                    }
+
                 }
-                catch (Exception ex)
+                else if (DialogBox == DialogResult.No)
                 {
-                    MessageBox.Show(ex.Message, "Eroare de stergere!");
+
                 }
-
-            }
-            else if (DialogBox == DialogResult.No)
-            {
-
             }
         }
 
@@ -212,5 +215,10 @@ namespace AplicatieDisertatie
             connection_class.CapitalizeFirstLetter_textBoxFormat(txtCautare);
         }
         #endregion
+
+        private void registrationLedger_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ReparatieID = 0;
+        }
     }
 }

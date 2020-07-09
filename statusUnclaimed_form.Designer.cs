@@ -47,7 +47,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(330, 709);
+            label1.Location = new System.Drawing.Point(346, 665);
             label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(76, 17);
@@ -74,7 +74,7 @@
             this.dataGridGreaterThan6m.AllowUserToAddRows = false;
             this.dataGridGreaterThan6m.AllowUserToDeleteRows = false;
             this.dataGridGreaterThan6m.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridGreaterThan6m.Location = new System.Drawing.Point(0, 529);
+            this.dataGridGreaterThan6m.Location = new System.Drawing.Point(0, 487);
             this.dataGridGreaterThan6m.Name = "dataGridGreaterThan6m";
             this.dataGridGreaterThan6m.ReadOnly = true;
             this.dataGridGreaterThan6m.RowHeadersWidth = 51;
@@ -87,7 +87,7 @@
             // 
             this.btnSalveaza.Image = ((System.Drawing.Image)(resources.GetObject("btnSalveaza.Image")));
             this.btnSalveaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalveaza.Location = new System.Drawing.Point(477, 409);
+            this.btnSalveaza.Location = new System.Drawing.Point(519, 395);
             this.btnSalveaza.Name = "btnSalveaza";
             this.btnSalveaza.Size = new System.Drawing.Size(94, 30);
             this.btnSalveaza.TabIndex = 10;
@@ -116,7 +116,7 @@
             // 
             // txtObservatii
             // 
-            this.txtObservatii.Location = new System.Drawing.Point(436, 701);
+            this.txtObservatii.Location = new System.Drawing.Point(450, 657);
             this.txtObservatii.Margin = new System.Windows.Forms.Padding(5);
             this.txtObservatii.MaxLength = 230;
             this.txtObservatii.Multiline = true;
@@ -130,9 +130,9 @@
             // 
             this.btnCaseaza.Image = ((System.Drawing.Image)(resources.GetObject("btnCaseaza.Image")));
             this.btnCaseaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaseaza.Location = new System.Drawing.Point(461, 758);
+            this.btnCaseaza.Location = new System.Drawing.Point(519, 714);
             this.btnCaseaza.Name = "btnCaseaza";
-            this.btnCaseaza.Size = new System.Drawing.Size(110, 30);
+            this.btnCaseaza.Size = new System.Drawing.Size(94, 30);
             this.btnCaseaza.TabIndex = 81;
             this.btnCaseaza.Text = "Caseaza";
             this.btnCaseaza.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(330, 676);
+            this.label2.Location = new System.Drawing.Point(346, 632);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 17);
             this.label2.TabIndex = 83;
@@ -151,7 +151,7 @@
             // 
             this.dateTimeDataCasare.CustomFormat = "dd/MM/yyyy";
             this.dateTimeDataCasare.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeDataCasare.Location = new System.Drawing.Point(436, 671);
+            this.dateTimeDataCasare.Location = new System.Drawing.Point(450, 627);
             this.dateTimeDataCasare.Name = "dateTimeDataCasare";
             this.dateTimeDataCasare.Size = new System.Drawing.Size(242, 22);
             this.dateTimeDataCasare.TabIndex = 82;
@@ -174,6 +174,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "statusUnclaimed_form";
             this.Text = "Status - neridicate";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.statusUnclaimed_form_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCurrent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridGreaterThan6m)).EndInit();
             this.ResumeLayout(false);

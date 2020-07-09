@@ -495,5 +495,13 @@ namespace AplicatieDisertatie
             connection_class.NumberOnly_textBoxFormat(e);
         }
         #endregion
+
+        private void registrationEdit_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ClientID = 0;
+            TelefonID = 0;
+            ReparatieID = 0;
+            ID = "";
+        }
     }
 }

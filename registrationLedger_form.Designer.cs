@@ -35,6 +35,8 @@
             this.dataGridLedger = new System.Windows.Forms.DataGridView();
             this.id_reparatie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nr_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imei = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tip_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.model = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +55,7 @@
             this.termen_garantie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.verdict_reparatie = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.utilizator = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePana = new System.Windows.Forms.DateTimePicker();
@@ -63,9 +66,6 @@
             this.txtCautare = new System.Windows.Forms.TextBox();
             this.btnSterge = new System.Windows.Forms.Button();
             this.btnReparatiiRecente = new System.Windows.Forms.Button();
-            this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prenumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLedger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -152,6 +152,24 @@
             this.nr_telefon.Name = "nr_telefon";
             this.nr_telefon.ReadOnly = true;
             this.nr_telefon.Width = 125;
+            // 
+            // numeDataGridViewTextBoxColumn
+            // 
+            this.numeDataGridViewTextBoxColumn.DataPropertyName = "nume";
+            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
+            this.numeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
+            this.numeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // prenumeDataGridViewTextBoxColumn
+            // 
+            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "prenume";
+            this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
+            this.prenumeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
+            this.prenumeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.prenumeDataGridViewTextBoxColumn.Width = 125;
             // 
             // imei
             // 
@@ -317,6 +335,10 @@
             this.utilizator.ReadOnly = true;
             this.utilizator.Width = 125;
             // 
+            // ledgerclassBindingSource
+            // 
+            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.print_class);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -429,28 +451,6 @@
             this.btnReparatiiRecente.UseVisualStyleBackColor = true;
             this.btnReparatiiRecente.Click += new System.EventHandler(this.btnReparatiiRecente_Click);
             // 
-            // numeDataGridViewTextBoxColumn
-            // 
-            this.numeDataGridViewTextBoxColumn.DataPropertyName = "nume";
-            this.numeDataGridViewTextBoxColumn.HeaderText = "Nume";
-            this.numeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.numeDataGridViewTextBoxColumn.Name = "numeDataGridViewTextBoxColumn";
-            this.numeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.numeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // prenumeDataGridViewTextBoxColumn
-            // 
-            this.prenumeDataGridViewTextBoxColumn.DataPropertyName = "prenume";
-            this.prenumeDataGridViewTextBoxColumn.HeaderText = "Prenume";
-            this.prenumeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prenumeDataGridViewTextBoxColumn.Name = "prenumeDataGridViewTextBoxColumn";
-            this.prenumeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prenumeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ledgerclassBindingSource
-            // 
-            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.print_class);
-            // 
             // registrationLedger_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -472,6 +472,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "registrationLedger_form";
             this.Text = "Inregistrari - istoric";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.registrationLedger_form_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLedger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).EndInit();
             this.ResumeLayout(false);

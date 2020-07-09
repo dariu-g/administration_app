@@ -149,9 +149,9 @@
             // 
             this.btnSalveaza.Image = ((System.Drawing.Image)(resources.GetObject("btnSalveaza.Image")));
             this.btnSalveaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalveaza.Location = new System.Drawing.Point(485, 701);
+            this.btnSalveaza.Location = new System.Drawing.Point(485, 696);
             this.btnSalveaza.Name = "btnSalveaza";
-            this.btnSalveaza.Size = new System.Drawing.Size(94, 38);
+            this.btnSalveaza.Size = new System.Drawing.Size(92, 45);
             this.btnSalveaza.TabIndex = 5;
             this.btnSalveaza.Text = "Salveaza";
             this.btnSalveaza.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -187,6 +187,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "statusWorking_form";
             this.Text = "Status - in lucru";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.statusWorking_form_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReparatii)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

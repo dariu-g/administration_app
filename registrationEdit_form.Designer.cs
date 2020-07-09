@@ -671,11 +671,12 @@
             // 
             // btnAnuleaza
             // 
+            this.btnAnuleaza.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAnuleaza.Image = ((System.Drawing.Image)(resources.GetObject("btnAnuleaza.Image")));
             this.btnAnuleaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAnuleaza.Location = new System.Drawing.Point(486, 536);
+            this.btnAnuleaza.Location = new System.Drawing.Point(479, 568);
             this.btnAnuleaza.Name = "btnAnuleaza";
-            this.btnAnuleaza.Size = new System.Drawing.Size(103, 29);
+            this.btnAnuleaza.Size = new System.Drawing.Size(115, 34);
             this.btnAnuleaza.TabIndex = 26;
             this.btnAnuleaza.Text = "Anuleaza";
             this.btnAnuleaza.UseVisualStyleBackColor = true;
@@ -806,6 +807,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "registrationEdit_form";
             this.Text = "Inregistrari - modificari";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.registrationEdit_form_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
