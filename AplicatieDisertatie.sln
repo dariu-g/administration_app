@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicatieDisertatie", "AplicatieDisertatie.csproj", "{0BBB8A0A-2DB5-4256-8144-445A96509B67}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AplicatieDisertatieInstall", "AplicatieDisertatieInstall\AplicatieDisertatieInstall.vdproj", "{BA069758-B37E-42D0-BEBE-C8F5459170AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{0BBB8A0A-2DB5-4256-8144-445A96509B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BBB8A0A-2DB5-4256-8144-445A96509B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BBB8A0A-2DB5-4256-8144-445A96509B67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA069758-B37E-42D0-BEBE-C8F5459170AE}.Debug|Any CPU.ActiveCfg = Debug
+		{BA069758-B37E-42D0-BEBE-C8F5459170AE}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -95,8 +95,14 @@ namespace AplicatieDisertatie
         /* Opens the .chm project. */
         private void btnInformatii_Click(object sender, EventArgs e)
         {
+            /* Visual studio project path. */
             string workingDirectory = Environment.CurrentDirectory;
             string UserManual_path = Directory.GetParent(workingDirectory).Parent.FullName + "\\UserManual\\UserManual.chm";
+
+            /* Deployed application path. 
+            string UserManual_path = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\UserManual\\UserManual.chm";
+            */
+
             Process UserManual = new Process();
             UserManual.StartInfo.FileName = UserManual_path;
             UserManual.Start();
