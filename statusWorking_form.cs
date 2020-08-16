@@ -50,7 +50,7 @@ namespace AplicatieDisertatie
                 DialogResult DialogBox = new DialogResult();
                 if (dateTimeDataPredarii.Checked == true)
                 {
-                    DialogBox = MessageBox.Show("Doresti sa concluzionezi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
+                    DialogBox = MessageBox.Show("Doresti sa solutionezi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
                 }
                 else
                 {
@@ -76,7 +76,10 @@ namespace AplicatieDisertatie
                         sqlCmd.Parameters.AddWithValue("@Verdict_reparatie", checkBoxVerdictReparatie.Checked);
 
                         sqlCmd.ExecuteNonQuery();
-                        MessageBox.Show("Reparatie concluzionata!");
+                        if (dateTimeDataPredarii.Checked == true)
+                            MessageBox.Show("Reparatie solutionata!");
+                        else
+                            MessageBox.Show("Reparatie mutata in fereastra Status - neridicate!");
                         connection_class.ClearTextBoxes(this.Controls);
                     }
                 }
@@ -95,6 +98,7 @@ namespace AplicatieDisertatie
             {
                 ReparatieID = Convert.ToInt32(dataGridViewReparatii.CurrentRow.Cells[0].Value.ToString());
                 connection_class.ClearTextBoxes(this.Controls);
+                btnSalveaza.Enabled = true;
             }
         }
 
@@ -116,7 +120,7 @@ namespace AplicatieDisertatie
 
         private void txtTermenGarantie_KeyPress(object sender, KeyPressEventArgs e)
         {
-            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+            connection_class.NumberOnly_textBoxFormat(e);
         }
 
         private void txtPretAchitat_KeyPress(object sender, KeyPressEventArgs e)

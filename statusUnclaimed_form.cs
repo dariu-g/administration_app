@@ -30,7 +30,7 @@ namespace AplicatieDisertatie
         /* Updates the date. */
         private void btnSalveaza_Click(object sender, EventArgs e)
         {
-            DialogResult DialogBox = MessageBox.Show("Doresti sa concluzionezi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
+            DialogResult DialogBox = MessageBox.Show("Doresti sa solutionezi aceasta reparatie?", "Atentionare", MessageBoxButtons.YesNo);
             if (DialogBox == DialogResult.Yes)
             {
                 using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
@@ -44,7 +44,7 @@ namespace AplicatieDisertatie
                     sqlCmd.Parameters.AddWithValue("@Data_predarii", dateTimeDataPredarii.Value);
 
                     sqlCmd.ExecuteNonQuery();
-                    MessageBox.Show("Reparatie concluzionata!");
+                    MessageBox.Show("Reparatie solutionata!");
                     connection_class.ClearTextBoxes(this.Controls);
                 }
             }
@@ -95,6 +95,7 @@ namespace AplicatieDisertatie
             if (dataGridCurrent.Rows.Count > 0 && dataGridCurrent.CurrentRow.Index != -1)
             {
                 ReparatieID = Convert.ToInt32(dataGridCurrent.CurrentRow.Cells[0].Value.ToString());
+                btnSalveaza.Enabled = true;
             }
         }
 
@@ -104,6 +105,7 @@ namespace AplicatieDisertatie
             if (dataGridGreaterThan6m.Rows.Count > 0 && dataGridGreaterThan6m.CurrentRow.Index != -1)
             {
                 ReparatieID_6M = Convert.ToInt32(dataGridGreaterThan6m.CurrentRow.Cells[0].Value.ToString());
+                btnCaseaza.Enabled = true;
             }
         }
 

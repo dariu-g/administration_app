@@ -33,6 +33,17 @@
             this.btnCauta = new System.Windows.Forms.Button();
             this.dateTimeDin = new System.Windows.Forms.DateTimePicker();
             this.dataGridLedger = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePana = new System.Windows.Forms.DateTimePicker();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnDescarca = new System.Windows.Forms.Button();
+            this.btnCautare = new System.Windows.Forms.Button();
+            this.labelCautareGenerala = new System.Windows.Forms.Label();
+            this.txtCautare = new System.Windows.Forms.TextBox();
+            this.btnSterge = new System.Windows.Forms.Button();
+            this.btnReparatiiRecente = new System.Windows.Forms.Button();
+            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id_reparatie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nr_telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,17 +66,6 @@
             this.termen_garantie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.verdict_reparatie = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.utilizator = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ledgerclassBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePana = new System.Windows.Forms.DateTimePicker();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnDescarca = new System.Windows.Forms.Button();
-            this.btnCautare = new System.Windows.Forms.Button();
-            this.labelCautareGenerala = new System.Windows.Forms.Label();
-            this.txtCautare = new System.Windows.Forms.TextBox();
-            this.btnSterge = new System.Windows.Forms.Button();
-            this.btnReparatiiRecente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLedger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ledgerclassBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -134,6 +134,122 @@
             this.dataGridLedger.Size = new System.Drawing.Size(1016, 530);
             this.dataGridLedger.TabIndex = 2;
             this.dataGridLedger.Click += new System.EventHandler(this.dataGridLedger_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 45);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Din:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(301, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Pana in";
+            // 
+            // dateTimePana
+            // 
+            this.dateTimePana.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePana.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePana.Location = new System.Drawing.Point(363, 40);
+            this.dateTimePana.Name = "dateTimePana";
+            this.dateTimePana.Size = new System.Drawing.Size(224, 22);
+            this.dateTimePana.TabIndex = 4;
+            this.dateTimePana.ValueChanged += new System.EventHandler(this.dateTimePana_ValueChanged);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(924, 706);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(115, 27);
+            this.btnPrint.TabIndex = 6;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnDescarca
+            // 
+            this.btnDescarca.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDescarca.Enabled = false;
+            this.btnDescarca.Image = ((System.Drawing.Image)(resources.GetObject("btnDescarca.Image")));
+            this.btnDescarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDescarca.Location = new System.Drawing.Point(488, 709);
+            this.btnDescarca.Name = "btnDescarca";
+            this.btnDescarca.Size = new System.Drawing.Size(108, 24);
+            this.btnDescarca.TabIndex = 7;
+            this.btnDescarca.Text = "Descarca";
+            this.btnDescarca.UseVisualStyleBackColor = true;
+            this.btnDescarca.Click += new System.EventHandler(this.btnDescarca_Click);
+            // 
+            // btnCautare
+            // 
+            this.btnCautare.Image = ((System.Drawing.Image)(resources.GetObject("btnCautare.Image")));
+            this.btnCautare.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCautare.Location = new System.Drawing.Point(380, 117);
+            this.btnCautare.Name = "btnCautare";
+            this.btnCautare.Size = new System.Drawing.Size(98, 23);
+            this.btnCautare.TabIndex = 13;
+            this.btnCautare.Text = "Cautare";
+            this.btnCautare.UseVisualStyleBackColor = true;
+            this.btnCautare.Click += new System.EventHandler(this.btnCautare_Click);
+            // 
+            // labelCautareGenerala
+            // 
+            this.labelCautareGenerala.AutoSize = true;
+            this.labelCautareGenerala.Location = new System.Drawing.Point(25, 117);
+            this.labelCautareGenerala.Name = "labelCautareGenerala";
+            this.labelCautareGenerala.Size = new System.Drawing.Size(118, 17);
+            this.labelCautareGenerala.TabIndex = 12;
+            this.labelCautareGenerala.Text = "Cautare generala";
+            // 
+            // txtCautare
+            // 
+            this.txtCautare.Location = new System.Drawing.Point(149, 118);
+            this.txtCautare.MaxLength = 500;
+            this.txtCautare.Name = "txtCautare";
+            this.txtCautare.Size = new System.Drawing.Size(210, 22);
+            this.txtCautare.TabIndex = 11;
+            this.txtCautare.TextChanged += new System.EventHandler(this.txtCautare_TextChanged);
+            this.txtCautare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCautare_KeyPress);
+            // 
+            // btnSterge
+            // 
+            this.btnSterge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnSterge.Image = ((System.Drawing.Image)(resources.GetObject("btnSterge.Image")));
+            this.btnSterge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSterge.Location = new System.Drawing.Point(23, 709);
+            this.btnSterge.Name = "btnSterge";
+            this.btnSterge.Size = new System.Drawing.Size(105, 24);
+            this.btnSterge.TabIndex = 17;
+            this.btnSterge.Text = "Sterge";
+            this.btnSterge.UseVisualStyleBackColor = true;
+            this.btnSterge.Click += new System.EventHandler(this.btnSterge_Click);
+            // 
+            // btnReparatiiRecente
+            // 
+            this.btnReparatiiRecente.Image = ((System.Drawing.Image)(resources.GetObject("btnReparatiiRecente.Image")));
+            this.btnReparatiiRecente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReparatiiRecente.Location = new System.Drawing.Point(884, 38);
+            this.btnReparatiiRecente.Name = "btnReparatiiRecente";
+            this.btnReparatiiRecente.Size = new System.Drawing.Size(155, 39);
+            this.btnReparatiiRecente.TabIndex = 18;
+            this.btnReparatiiRecente.Text = "Reparatii Recente";
+            this.btnReparatiiRecente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReparatiiRecente.UseVisualStyleBackColor = true;
+            this.btnReparatiiRecente.Click += new System.EventHandler(this.btnReparatiiRecente_Click);
+            // 
+            // ledgerclassBindingSource
+            // 
+            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.print_class);
             // 
             // id_reparatie
             // 
@@ -300,7 +416,7 @@
             // termen_rezolvare
             // 
             this.termen_rezolvare.DataPropertyName = "termen_rezolvare";
-            this.termen_rezolvare.HeaderText = "Termen rezolvare";
+            this.termen_rezolvare.HeaderText = "Termen de rezolvare(zile)";
             this.termen_rezolvare.MinimumWidth = 6;
             this.termen_rezolvare.Name = "termen_rezolvare";
             this.termen_rezolvare.ReadOnly = true;
@@ -309,7 +425,7 @@
             // termen_garantie
             // 
             this.termen_garantie.DataPropertyName = "termen_garantie";
-            this.termen_garantie.HeaderText = "Termen Garantie";
+            this.termen_garantie.HeaderText = "Termen garantie(zile)";
             this.termen_garantie.MinimumWidth = 6;
             this.termen_garantie.Name = "termen_garantie";
             this.termen_garantie.ReadOnly = true;
@@ -334,122 +450,6 @@
             this.utilizator.Name = "utilizator";
             this.utilizator.ReadOnly = true;
             this.utilizator.Width = 125;
-            // 
-            // ledgerclassBindingSource
-            // 
-            this.ledgerclassBindingSource.DataSource = typeof(AplicatieDisertatie.print_class);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Din:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(301, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Pana in";
-            // 
-            // dateTimePana
-            // 
-            this.dateTimePana.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePana.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePana.Location = new System.Drawing.Point(363, 40);
-            this.dateTimePana.Name = "dateTimePana";
-            this.dateTimePana.Size = new System.Drawing.Size(224, 22);
-            this.dateTimePana.TabIndex = 4;
-            this.dateTimePana.ValueChanged += new System.EventHandler(this.dateTimePana_ValueChanged);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(924, 706);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(115, 27);
-            this.btnPrint.TabIndex = 6;
-            this.btnPrint.Text = "Print";
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // btnDescarca
-            // 
-            this.btnDescarca.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDescarca.Enabled = false;
-            this.btnDescarca.Image = ((System.Drawing.Image)(resources.GetObject("btnDescarca.Image")));
-            this.btnDescarca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDescarca.Location = new System.Drawing.Point(488, 709);
-            this.btnDescarca.Name = "btnDescarca";
-            this.btnDescarca.Size = new System.Drawing.Size(108, 24);
-            this.btnDescarca.TabIndex = 7;
-            this.btnDescarca.Text = "Descarca";
-            this.btnDescarca.UseVisualStyleBackColor = true;
-            this.btnDescarca.Click += new System.EventHandler(this.btnDescarca_Click);
-            // 
-            // btnCautare
-            // 
-            this.btnCautare.Image = ((System.Drawing.Image)(resources.GetObject("btnCautare.Image")));
-            this.btnCautare.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCautare.Location = new System.Drawing.Point(380, 117);
-            this.btnCautare.Name = "btnCautare";
-            this.btnCautare.Size = new System.Drawing.Size(98, 23);
-            this.btnCautare.TabIndex = 13;
-            this.btnCautare.Text = "Cautare";
-            this.btnCautare.UseVisualStyleBackColor = true;
-            this.btnCautare.Click += new System.EventHandler(this.btnCautare_Click);
-            // 
-            // labelCautareGenerala
-            // 
-            this.labelCautareGenerala.AutoSize = true;
-            this.labelCautareGenerala.Location = new System.Drawing.Point(25, 117);
-            this.labelCautareGenerala.Name = "labelCautareGenerala";
-            this.labelCautareGenerala.Size = new System.Drawing.Size(118, 17);
-            this.labelCautareGenerala.TabIndex = 12;
-            this.labelCautareGenerala.Text = "Cautare generala";
-            // 
-            // txtCautare
-            // 
-            this.txtCautare.Location = new System.Drawing.Point(149, 118);
-            this.txtCautare.MaxLength = 500;
-            this.txtCautare.Name = "txtCautare";
-            this.txtCautare.Size = new System.Drawing.Size(210, 22);
-            this.txtCautare.TabIndex = 11;
-            this.txtCautare.TextChanged += new System.EventHandler(this.txtCautare_TextChanged);
-            this.txtCautare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCautare_KeyPress);
-            // 
-            // btnSterge
-            // 
-            this.btnSterge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSterge.Image = ((System.Drawing.Image)(resources.GetObject("btnSterge.Image")));
-            this.btnSterge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSterge.Location = new System.Drawing.Point(23, 709);
-            this.btnSterge.Name = "btnSterge";
-            this.btnSterge.Size = new System.Drawing.Size(105, 24);
-            this.btnSterge.TabIndex = 17;
-            this.btnSterge.Text = "Sterge";
-            this.btnSterge.UseVisualStyleBackColor = true;
-            this.btnSterge.Click += new System.EventHandler(this.btnSterge_Click);
-            // 
-            // btnReparatiiRecente
-            // 
-            this.btnReparatiiRecente.Image = ((System.Drawing.Image)(resources.GetObject("btnReparatiiRecente.Image")));
-            this.btnReparatiiRecente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReparatiiRecente.Location = new System.Drawing.Point(884, 38);
-            this.btnReparatiiRecente.Name = "btnReparatiiRecente";
-            this.btnReparatiiRecente.Size = new System.Drawing.Size(155, 39);
-            this.btnReparatiiRecente.TabIndex = 18;
-            this.btnReparatiiRecente.Text = "Reparatii Recente";
-            this.btnReparatiiRecente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReparatiiRecente.UseVisualStyleBackColor = true;
-            this.btnReparatiiRecente.Click += new System.EventHandler(this.btnReparatiiRecente_Click);
             // 
             // registrationLedger_form
             // 

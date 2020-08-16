@@ -71,7 +71,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Termen rezolvare:</Value>
+                    <Value>Termen de rezolvare  (zile):</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -81,7 +81,7 @@
             <rd:DefaultName>Textbox16</rd:DefaultName>
             <Top>3.07219in</Top>
             <Left>3.72944in</Left>
-            <Height>0.25in</Height>
+            <Height>0.37779in</Height>
             <Width>1.19444in</Width>
             <ZIndex>2</ZIndex>
             <Style>
@@ -111,8 +111,8 @@
             <rd:DefaultName>ptermen_rezolvare</rd:DefaultName>
             <Top>3.08329in</Top>
             <Left>5.00722in</Left>
-            <Height>0.25in</Height>
-            <Width>1.37222in</Width>
+            <Height>0.36669in</Height>
+            <Width>1.6in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>

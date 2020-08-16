@@ -32,7 +32,7 @@ namespace AplicatieDisertatie
         private void customizeDesign()
         {
             panelInregistrareSubmenu.Visible = true;
-            panelStatusReparatiiSubmenu.Visible = false;
+            panelStatusReparatiiSubmenu.Visible = true;
         }
 
         private void showSubMenu(Panel subMenu)

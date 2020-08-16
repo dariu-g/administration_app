@@ -472,12 +472,12 @@ namespace AplicatieDisertatie
 
         private void txtTermenRezolvare_KeyPress(object sender, KeyPressEventArgs e)
         {
-            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+            connection_class.NumberOnly_textBoxFormat(e);
         }
 
         private void txtTermenGarantie_KeyPress(object sender, KeyPressEventArgs e)
         {
-            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+            connection_class.NumberOnly_textBoxFormat(e);
         }
 
         private void txtPretEstimativ_KeyPress(object sender, KeyPressEventArgs e)

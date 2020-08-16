@@ -484,6 +484,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -1341,7 +1349,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_D4F3587DD2FC4159A6B87DD95963D68A"
                     {
-                    "Name" = "8:AplicatieDisertatie"
+                    "Name" = "8:Gestiune Reparatii"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -1369,7 +1377,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AplicatieDisertatieInstall"
         "ProductCode" = "8:{03C8F43A-8E24-4E93-A1A2-3595FDC29FA8}"
-        "PackageCode" = "8:{E13A14FE-1F77-4722-B7A5-DDFD6533789A}"
+        "PackageCode" = "8:{1E615262-9E31-4799-A214-73DD5155F21F}"
         "UpgradeCode" = "8:{88D489A6-F777-48E5-A1C8-3923CECB10B3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1491,7 +1499,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7826453200D94DB7B41F3EC1CB79764E"
             {
-            "Name" = "8:AplicatieDisertatie"
+            "Name" = "8:Gestiune Reparatii"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -1505,7 +1513,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D776D787E2F84F6BA681CA7BEE4D21A2"
             {
-            "Name" = "8:AplicatieDisertatie"
+            "Name" = "8:Gestiune Reparatii"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

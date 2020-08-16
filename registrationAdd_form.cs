@@ -99,18 +99,10 @@ namespace AplicatieDisertatie
             print_class objct = ledgerclassBindingSource.Current as print_class;
             if (objct != null)
             {
-                using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
+                using (print_form form = new print_form(objct))
                 {
-                    if (db_con.State == ConnectionState.Closed)
-                        db_con.Open();
-
-                    int obiect_ReparatieID = objct.id_reparatie;
-                    List<print_class> list = db_con.Query<print_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
-                    using (print_form form = new print_form(objct))
-                    {
-                        form.ShowDialog();
-                    };
-                }
+                    form.ShowDialog();
+                };
             }
         }
 
@@ -286,7 +278,7 @@ namespace AplicatieDisertatie
 
         private void txtTermenRezolvare_KeyPress(object sender, KeyPressEventArgs e)
         {
-            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+            connection_class.NumberOnly_textBoxFormat(e);
         }
 
         private void txtPretEstimativ_KeyPress(object sender, KeyPressEventArgs e)

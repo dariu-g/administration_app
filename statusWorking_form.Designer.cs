@@ -64,14 +64,14 @@
             this.labelPretAchitat.AutoSize = true;
             this.labelPretAchitat.Location = new System.Drawing.Point(349, 607);
             this.labelPretAchitat.Name = "labelPretAchitat";
-            this.labelPretAchitat.Size = new System.Drawing.Size(104, 17);
+            this.labelPretAchitat.Size = new System.Drawing.Size(132, 17);
             this.labelPretAchitat.TabIndex = 1;
-            this.labelPretAchitat.Text = "Pret de achitat:";
+            this.labelPretAchitat.Text = "Pret de achitat (lei):";
             // 
             // checkBoxVerdictReparatie
             // 
             this.checkBoxVerdictReparatie.AutoSize = true;
-            this.checkBoxVerdictReparatie.Location = new System.Drawing.Point(485, 636);
+            this.checkBoxVerdictReparatie.Location = new System.Drawing.Point(500, 635);
             this.checkBoxVerdictReparatie.Name = "checkBoxVerdictReparatie";
             this.checkBoxVerdictReparatie.Size = new System.Drawing.Size(38, 21);
             this.checkBoxVerdictReparatie.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             // txtPretAchitat
             // 
-            this.txtPretAchitat.Location = new System.Drawing.Point(485, 602);
+            this.txtPretAchitat.Location = new System.Drawing.Point(500, 602);
             this.txtPretAchitat.MaxLength = 9;
             this.txtPretAchitat.Name = "txtPretAchitat";
             this.txtPretAchitat.Size = new System.Drawing.Size(242, 22);
@@ -90,7 +90,7 @@
             // 
             // txtPieseInlocuite
             // 
-            this.txtPieseInlocuite.Location = new System.Drawing.Point(485, 519);
+            this.txtPieseInlocuite.Location = new System.Drawing.Point(500, 519);
             this.txtPieseInlocuite.MaxLength = 500;
             this.txtPieseInlocuite.Multiline = true;
             this.txtPieseInlocuite.Name = "txtPieseInlocuite";
@@ -110,7 +110,7 @@
             // 
             // txtTermenGarantie
             // 
-            this.txtTermenGarantie.Location = new System.Drawing.Point(485, 574);
+            this.txtTermenGarantie.Location = new System.Drawing.Point(500, 574);
             this.txtTermenGarantie.MaxLength = 50;
             this.txtTermenGarantie.Name = "txtTermenGarantie";
             this.txtTermenGarantie.Size = new System.Drawing.Size(242, 22);
@@ -122,15 +122,15 @@
             this.labelTermenGarantie.AutoSize = true;
             this.labelTermenGarantie.Location = new System.Drawing.Point(349, 577);
             this.labelTermenGarantie.Name = "labelTermenGarantie";
-            this.labelTermenGarantie.Size = new System.Drawing.Size(117, 17);
+            this.labelTermenGarantie.Size = new System.Drawing.Size(152, 17);
             this.labelTermenGarantie.TabIndex = 6;
-            this.labelTermenGarantie.Text = "Termen garantie:";
+            this.labelTermenGarantie.Text = "Termen garantie (zile):";
             // 
             // dateTimeDataPredarii
             // 
             this.dateTimeDataPredarii.CustomFormat = "dd/MM/yyyy";
             this.dateTimeDataPredarii.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeDataPredarii.Location = new System.Drawing.Point(485, 482);
+            this.dateTimeDataPredarii.Location = new System.Drawing.Point(500, 482);
             this.dateTimeDataPredarii.Name = "dateTimeDataPredarii";
             this.dateTimeDataPredarii.ShowCheckBox = true;
             this.dateTimeDataPredarii.Size = new System.Drawing.Size(242, 22);
@@ -147,6 +147,7 @@
             // 
             // btnSalveaza
             // 
+            this.btnSalveaza.Enabled = false;
             this.btnSalveaza.Image = ((System.Drawing.Image)(resources.GetObject("btnSalveaza.Image")));
             this.btnSalveaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalveaza.Location = new System.Drawing.Point(485, 696);

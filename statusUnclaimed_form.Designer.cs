@@ -85,6 +85,7 @@
             // 
             // btnSalveaza
             // 
+            this.btnSalveaza.Enabled = false;
             this.btnSalveaza.Image = ((System.Drawing.Image)(resources.GetObject("btnSalveaza.Image")));
             this.btnSalveaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalveaza.Location = new System.Drawing.Point(519, 395);
@@ -128,6 +129,7 @@
             // 
             // btnCaseaza
             // 
+            this.btnCaseaza.Enabled = false;
             this.btnCaseaza.Image = ((System.Drawing.Image)(resources.GetObject("btnCaseaza.Image")));
             this.btnCaseaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCaseaza.Location = new System.Drawing.Point(519, 714);

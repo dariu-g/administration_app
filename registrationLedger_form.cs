@@ -80,27 +80,17 @@ namespace AplicatieDisertatie
             }
         }
 
-        /* Utilizes Dapper IDbconnection, to execute PrintInregistrare procedure and stores the result in a list of type ledgerPrint_class
-         * and it passes the list and an object of type ledger_class to the print_form which will use Microsoft's Report Viewer tool
+        /* Passes the current object selection from ledgerclassBindingSource of type ledger_class to the print_form which will use Microsoft's Report Viewer tool
          * to create a preview of the printable registration */
         private void btnPrint_Click(object sender, EventArgs e)
         {
             print_class objct = ledgerclassBindingSource.Current as print_class;
             if (objct != null)
             {
-                using (IDbConnection db_con = new SqlConnection(connection_class.connectionString))
+                using (print_form form = new print_form(objct))
                 {
-                    if (db_con.State == ConnectionState.Closed)
-                        db_con.Open();
-                    
-                    /* Storing the object id_reparatie from ledger_class in order to be sent to the stored procedure as a parameter. */
-                    int obiect_ReparatieID = objct.id_reparatie;
-                    List<print_class> list = db_con.Query<print_class>("PrintInregistrare", new { obiect_ReparatieID }, commandType: CommandType.StoredProcedure).ToList();
-                    using (print_form form = new print_form(objct))
-                    {
-                        form.ShowDialog();
-                    };
-                }
+                    form.ShowDialog();
+                };
             }
         }
 
