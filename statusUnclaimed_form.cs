@@ -52,6 +52,7 @@ namespace AplicatieDisertatie
             {
             }
             connection_class.FillDataGridView("AfisareTelefoaneNeridicate", dataGridCurrent);
+            btnSalveaza.Enabled = false;
         }
 
         /* Updates the date and concatenates the text in the database field observatii. */
@@ -86,6 +87,7 @@ namespace AplicatieDisertatie
                 {
                 }
                 connection_class.FillDataGridView("AfisareTelefoaneNeridicateSaseLuni", dataGridGreaterThan6m);
+                btnCaseaza.Enabled = false;
             }
         }
         #endregion

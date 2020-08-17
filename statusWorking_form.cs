@@ -87,6 +87,7 @@ namespace AplicatieDisertatie
                 {
                 }
                 connection_class.FillDataGridView("AfisareTelefoaneInLucru", dataGridViewReparatii);
+                btnSalveaza.Enabled = false;
             }
         }
         #endregion
@@ -94,7 +95,7 @@ namespace AplicatieDisertatie
         /* Click event to store Nr_inreg in the variable ReparatieID upon clicking a registration. */
         private void dataGridViewReparatii_Click(object sender, EventArgs e)
         {
-            if (dataGridViewReparatii.CurrentRow.Index != -1)
+            if (dataGridViewReparatii.Rows.Count > 0 && dataGridViewReparatii.CurrentRow.Index != -1)
             {
                 ReparatieID = Convert.ToInt32(dataGridViewReparatii.CurrentRow.Cells[0].Value.ToString());
                 connection_class.ClearTextBoxes(this.Controls);
