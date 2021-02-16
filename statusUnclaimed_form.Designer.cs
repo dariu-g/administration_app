@@ -1,0 +1,199 @@
+﻿namespace AplicatieDisertatie
+{
+    partial class statusUnclaimed_form
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(statusUnclaimed_form));
+            this.dataGridCurrent = new System.Windows.Forms.DataGridView();
+            this.dataGridGreaterThan6m = new System.Windows.Forms.DataGridView();
+            this.btnSalveaza = new System.Windows.Forms.Button();
+            this.labelDataPredarii = new System.Windows.Forms.Label();
+            this.dateTimeDataPredarii = new System.Windows.Forms.DateTimePicker();
+            this.txtObservatii = new System.Windows.Forms.TextBox();
+            this.btnCaseaza = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimeDataCasare = new System.Windows.Forms.DateTimePicker();
+            label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCurrent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGreaterThan6m)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(346, 665);
+            label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(76, 17);
+            label1.TabIndex = 79;
+            label1.Text = "Observatii:";
+            // 
+            // dataGridCurrent
+            // 
+            this.dataGridCurrent.AllowUserToAddRows = false;
+            this.dataGridCurrent.AllowUserToDeleteRows = false;
+            this.dataGridCurrent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCurrent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dataGridCurrent.Location = new System.Drawing.Point(0, 0);
+            this.dataGridCurrent.Name = "dataGridCurrent";
+            this.dataGridCurrent.ReadOnly = true;
+            this.dataGridCurrent.RowHeadersWidth = 51;
+            this.dataGridCurrent.RowTemplate.Height = 24;
+            this.dataGridCurrent.Size = new System.Drawing.Size(1080, 361);
+            this.dataGridCurrent.TabIndex = 0;
+            this.dataGridCurrent.Click += new System.EventHandler(this.dataGridCurrent_Click);
+            // 
+            // dataGridGreaterThan6m
+            // 
+            this.dataGridGreaterThan6m.AllowUserToAddRows = false;
+            this.dataGridGreaterThan6m.AllowUserToDeleteRows = false;
+            this.dataGridGreaterThan6m.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridGreaterThan6m.Location = new System.Drawing.Point(0, 487);
+            this.dataGridGreaterThan6m.Name = "dataGridGreaterThan6m";
+            this.dataGridGreaterThan6m.ReadOnly = true;
+            this.dataGridGreaterThan6m.RowHeadersWidth = 51;
+            this.dataGridGreaterThan6m.RowTemplate.Height = 24;
+            this.dataGridGreaterThan6m.Size = new System.Drawing.Size(1080, 136);
+            this.dataGridGreaterThan6m.TabIndex = 1;
+            this.dataGridGreaterThan6m.Click += new System.EventHandler(this.dataGridGreaterThan6m_Click);
+            // 
+            // btnSalveaza
+            // 
+            this.btnSalveaza.Enabled = false;
+            this.btnSalveaza.Image = ((System.Drawing.Image)(resources.GetObject("btnSalveaza.Image")));
+            this.btnSalveaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalveaza.Location = new System.Drawing.Point(519, 395);
+            this.btnSalveaza.Name = "btnSalveaza";
+            this.btnSalveaza.Size = new System.Drawing.Size(94, 30);
+            this.btnSalveaza.TabIndex = 10;
+            this.btnSalveaza.Text = "Salveaza";
+            this.btnSalveaza.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalveaza.UseVisualStyleBackColor = true;
+            this.btnSalveaza.Click += new System.EventHandler(this.btnSalveaza_Click);
+            // 
+            // labelDataPredarii
+            // 
+            this.labelDataPredarii.AutoSize = true;
+            this.labelDataPredarii.Location = new System.Drawing.Point(354, 372);
+            this.labelDataPredarii.Name = "labelDataPredarii";
+            this.labelDataPredarii.Size = new System.Drawing.Size(90, 17);
+            this.labelDataPredarii.TabIndex = 12;
+            this.labelDataPredarii.Text = "Data predarii";
+            // 
+            // dateTimeDataPredarii
+            // 
+            this.dateTimeDataPredarii.CustomFormat = "dd/MM/yyyy";
+            this.dateTimeDataPredarii.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeDataPredarii.Location = new System.Drawing.Point(450, 367);
+            this.dateTimeDataPredarii.Name = "dateTimeDataPredarii";
+            this.dateTimeDataPredarii.Size = new System.Drawing.Size(242, 22);
+            this.dateTimeDataPredarii.TabIndex = 11;
+            // 
+            // txtObservatii
+            // 
+            this.txtObservatii.Location = new System.Drawing.Point(450, 657);
+            this.txtObservatii.Margin = new System.Windows.Forms.Padding(5);
+            this.txtObservatii.MaxLength = 230;
+            this.txtObservatii.Multiline = true;
+            this.txtObservatii.Name = "txtObservatii";
+            this.txtObservatii.Size = new System.Drawing.Size(242, 49);
+            this.txtObservatii.TabIndex = 78;
+            this.txtObservatii.TextChanged += new System.EventHandler(this.txtObservatii_TextChanged);
+            this.txtObservatii.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtObservatii_KeyPress);
+            // 
+            // btnCaseaza
+            // 
+            this.btnCaseaza.Enabled = false;
+            this.btnCaseaza.Image = ((System.Drawing.Image)(resources.GetObject("btnCaseaza.Image")));
+            this.btnCaseaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCaseaza.Location = new System.Drawing.Point(519, 714);
+            this.btnCaseaza.Name = "btnCaseaza";
+            this.btnCaseaza.Size = new System.Drawing.Size(94, 30);
+            this.btnCaseaza.TabIndex = 81;
+            this.btnCaseaza.Text = "Caseaza";
+            this.btnCaseaza.UseVisualStyleBackColor = true;
+            this.btnCaseaza.Click += new System.EventHandler(this.btnCaseaza_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(346, 632);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 17);
+            this.label2.TabIndex = 83;
+            this.label2.Text = "Data predarii";
+            // 
+            // dateTimeDataCasare
+            // 
+            this.dateTimeDataCasare.CustomFormat = "dd/MM/yyyy";
+            this.dateTimeDataCasare.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeDataCasare.Location = new System.Drawing.Point(450, 627);
+            this.dateTimeDataCasare.Name = "dateTimeDataCasare";
+            this.dateTimeDataCasare.Size = new System.Drawing.Size(242, 22);
+            this.dateTimeDataCasare.TabIndex = 82;
+            // 
+            // statusUnclaimed_form
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1080, 790);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dateTimeDataCasare);
+            this.Controls.Add(this.btnCaseaza);
+            this.Controls.Add(label1);
+            this.Controls.Add(this.txtObservatii);
+            this.Controls.Add(this.btnSalveaza);
+            this.Controls.Add(this.labelDataPredarii);
+            this.Controls.Add(this.dateTimeDataPredarii);
+            this.Controls.Add(this.dataGridGreaterThan6m);
+            this.Controls.Add(this.dataGridCurrent);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "statusUnclaimed_form";
+            this.Text = "Status - neridicate";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.statusUnclaimed_form_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCurrent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGreaterThan6m)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.DataGridView dataGridCurrent;
+        private System.Windows.Forms.DataGridView dataGridGreaterThan6m;
+        private System.Windows.Forms.Button btnSalveaza;
+        private System.Windows.Forms.Label labelDataPredarii;
+        private System.Windows.Forms.DateTimePicker dateTimeDataPredarii;
+        private System.Windows.Forms.TextBox txtObservatii;
+        private System.Windows.Forms.Button btnCaseaza;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimeDataCasare;
+    }
+}

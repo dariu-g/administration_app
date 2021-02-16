@@ -4,11 +4,16 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AplicatieDisertatie.Properties;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 
 namespace AplicatieDisertatie
 {
@@ -18,56 +23,46 @@ namespace AplicatieDisertatie
         {
             InitializeComponent();
             customizeDesign();
+            labelUser.Text = userLogin_form.username;
         }
 
-        /* hides the submenu panel */
+        #region NavigationMenu
+        #region Show/HideSubmenu
+        /* Hides the submenu panel */
         private void customizeDesign()
         {
-            panelInregistrareSubmenu.Visible = false;
-            panelStatusReparatiiSubmenu.Visible = false;
-            panelStatisticiSubmenu.Visible = false;
-        }
-
-        private void hideSubMenu()
-        {
-            if (panelInregistrareSubmenu.Visible == true)
-                panelInregistrareSubmenu.Visible = false;
-            if (panelStatusReparatiiSubmenu.Visible == true)
-                panelStatusReparatiiSubmenu.Visible = false;
-            if (panelStatisticiSubmenu.Visible == true)
-                panelStatisticiSubmenu.Visible = false;
+            panelInregistrareSubmenu.Visible = true;
+            panelStatusReparatiiSubmenu.Visible = true;
         }
 
         private void showSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
-            {
-                hideSubMenu();
                 subMenu.Visible = true;
-            }
             else
                 subMenu.Visible = false;
         }
+        #endregion
 
-        #region InregistrareSubmenu
-        private void btnInregistrare_Click(object sender, EventArgs e)
+        #region InregistrariReparatiiSubmenu
+        private void btnInregistrariReparatii_Click(object sender, EventArgs e)
         {
             showSubMenu(panelInregistrareSubmenu);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnInregistrariAdauga_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormInregistrare());
-            /* buton din meniul Inregistrare */
-            /* cod.. */
-            hideSubMenu();
+            openChildForm(new registrationAdd_form());
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnInregistrariIstoric_Click(object sender, EventArgs e)
         {
-            /* buton din meniul Inregistrare */
-            /* cod.. */
-            hideSubMenu();
+            openChildForm(new registrationLedger_form());
+        }
+
+        private void btnInregistrariModificari_Click(object sender, EventArgs e)
+        {
+            openChildForm(new registrationEdit_form());
         }
         #endregion
 
@@ -77,57 +72,54 @@ namespace AplicatieDisertatie
             showSubMenu(panelStatusReparatiiSubmenu);
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void btnStatusInLucru_Click(object sender, EventArgs e)
         {
-            /* buton din meniul Status reparatii */
-            /* cod.. */
-            hideSubMenu();
+            openChildForm(new statusWorking_form());
+
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnStatusNeridicate_Click(object sender, EventArgs e)
         {
-            /* buton din meniul Status reparatii */
-            /* cod.. */
-            hideSubMenu();
+            openChildForm(new statusUnclaimed_form());
         }
         #endregion
 
-        #region StatisticiSubmenu
+        #region StatisticiReparatiiSubmenu
         private void btnStatistici_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelStatisticiSubmenu);
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            /* buton din meniul Status reparatii */
-            /* cod.. */
-            hideSubMenu();
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            /* buton din meniul Statistici */
-            /* cod.. */
-            hideSubMenu();
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            /* buton din meniul Statistici */
-            /* cod.. */
-            hideSubMenu();
+            /* To be implemented. */
+            //openChildForm(new statistics_form());
         }
         #endregion
+        
+        /* Opens the .chm project. */
         private void btnInformatii_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormInformatii());
-            /* cod.. */
-            hideSubMenu();
+            /* Visual studio project path. */
+            string workingDirectory = Environment.CurrentDirectory;
+            string UserManual_path = Directory.GetParent(workingDirectory).Parent.FullName + "\\UserManual\\UserManual.chm";
+
+            /* Deployed application path. 
+            string UserManual_path = System.IO.Path.GetDirectoryName(Application.ExecutablePath) + "\\UserManual\\UserManual.chm";
+            */
+
+            Process UserManual = new Process();
+            UserManual.StartInfo.FileName = UserManual_path;
+            UserManual.Start();
         }
 
+        /* User logout method. */
+        private void btnIesire_Click(object sender, EventArgs e)
+        {
+            userLogin_form.UtilizatorID = 0;
+            userLogin_form.username = "";
+            this.Close();
+            userLogin_form loginform = new userLogin_form();
+            loginform.Show();
+        }
+        #endregion
         private Form activeForm = null;             // the child form needs to be stored apart from the main form
-        private void openChildForm(Form childForm)  // this method works for only 1 child form being open in the main form (see 13:50 for multiple forms)
+        private void openChildForm(Form childForm)  // this method works for only 1 child form being open in the main form
         {
             if (activeForm != null)
                 activeForm.Close();
@@ -141,9 +133,21 @@ namespace AplicatieDisertatie
             childForm.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        #region MainFormButtons
+        private void btnMainFormExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void btnMainFormMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMainFormMax_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+        #endregion
     }
 }

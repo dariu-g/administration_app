@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AplicatieDisertatie
 {
-    public partial class FormInformatii : Form
+    public partial class statistics_form : Form
     {
-        public FormInformatii()
+        public statistics_form()
         {
             InitializeComponent();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
