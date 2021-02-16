@@ -1,9 +1,9 @@
-# AplicatieDisertatie v1.0
+# administration_app v1.0
 
-## Informatii generale
+## General info
 Aplicatia este destinata gestiunii reparatiilor de telefoane mobile
 
-## Tehnologii
+## Technologies
 * C# (Microsoft Visual Studio Enterprise 2019)
 * T-SQL (Microsoft SQL SERVER MANAGEMENT STUDIO 18)
 * .NET FRAMEWORK 4.7.2
