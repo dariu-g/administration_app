@@ -36,18 +36,13 @@
             // 
             // reportViewer
             // 
-            this.reportViewer.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.ledgerPrintclassBindingSource, "id_reparatie", true));
             this.reportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer.LocalReport.ReportEmbeddedResource = "AplicatieDisertatie.ledgerPrint_report.rdlc";
+            this.reportViewer.LocalReport.ReportEmbeddedResource = "AplicatieDisertatie.print_report.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 0);
             this.reportViewer.Name = "reportViewer";
             this.reportViewer.ServerReport.BearerToken = null;
             this.reportViewer.Size = new System.Drawing.Size(1203, 720);
             this.reportViewer.TabIndex = 0;
-            // 
-            // ledgerPrintclassBindingSource
-            // 
-            this.ledgerPrintclassBindingSource.DataSource = typeof(AplicatieDisertatie.ledgerPrint_class);
             // 
             // print_form
             // 

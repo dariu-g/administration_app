@@ -1,6 +1,6 @@
 ﻿namespace AplicatieDisertatie
 {
-    partial class status_WIP_form
+    partial class statusWorking_form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(statusWorking_form));
             this.dataGridViewReparatii = new System.Windows.Forms.DataGridView();
             this.labelPretAchitat = new System.Windows.Forms.Label();
             this.checkBoxVerdictReparatie = new System.Windows.Forms.CheckBox();
@@ -39,11 +40,14 @@
             this.dateTimeDataPredarii = new System.Windows.Forms.DateTimePicker();
             this.labelDataPredarii = new System.Windows.Forms.Label();
             this.btnSalveaza = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReparatii)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewReparatii
             // 
+            this.dataGridViewReparatii.AllowUserToAddRows = false;
+            this.dataGridViewReparatii.AllowUserToDeleteRows = false;
             this.dataGridViewReparatii.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewReparatii.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridViewReparatii.Location = new System.Drawing.Point(0, 0);
@@ -51,82 +55,91 @@
             this.dataGridViewReparatii.ReadOnly = true;
             this.dataGridViewReparatii.RowHeadersWidth = 51;
             this.dataGridViewReparatii.RowTemplate.Height = 24;
-            this.dataGridViewReparatii.Size = new System.Drawing.Size(1000, 388);
+            this.dataGridViewReparatii.Size = new System.Drawing.Size(1080, 441);
             this.dataGridViewReparatii.TabIndex = 0;
             this.dataGridViewReparatii.Click += new System.EventHandler(this.dataGridViewReparatii_Click);
             // 
             // labelPretAchitat
             // 
             this.labelPretAchitat.AutoSize = true;
-            this.labelPretAchitat.Location = new System.Drawing.Point(397, 551);
+            this.labelPretAchitat.Location = new System.Drawing.Point(349, 607);
             this.labelPretAchitat.Name = "labelPretAchitat";
-            this.labelPretAchitat.Size = new System.Drawing.Size(80, 17);
+            this.labelPretAchitat.Size = new System.Drawing.Size(132, 17);
             this.labelPretAchitat.TabIndex = 1;
-            this.labelPretAchitat.Text = "Pret achitat";
+            this.labelPretAchitat.Text = "Pret de achitat (lei):";
             // 
             // checkBoxVerdictReparatie
             // 
             this.checkBoxVerdictReparatie.AutoSize = true;
-            this.checkBoxVerdictReparatie.Location = new System.Drawing.Point(741, 483);
+            this.checkBoxVerdictReparatie.Location = new System.Drawing.Point(500, 635);
             this.checkBoxVerdictReparatie.Name = "checkBoxVerdictReparatie";
-            this.checkBoxVerdictReparatie.Size = new System.Drawing.Size(147, 21);
+            this.checkBoxVerdictReparatie.Size = new System.Drawing.Size(38, 21);
             this.checkBoxVerdictReparatie.TabIndex = 4;
-            this.checkBoxVerdictReparatie.Text = "Reparat/nereparat";
+            this.checkBoxVerdictReparatie.Text = "?";
             this.checkBoxVerdictReparatie.UseVisualStyleBackColor = true;
+            this.checkBoxVerdictReparatie.CheckStateChanged += new System.EventHandler(this.checkBoxVerdictReparatie_CheckStateChanged);
             // 
             // txtPretAchitat
             // 
-            this.txtPretAchitat.Location = new System.Drawing.Point(493, 548);
+            this.txtPretAchitat.Location = new System.Drawing.Point(500, 602);
+            this.txtPretAchitat.MaxLength = 9;
             this.txtPretAchitat.Name = "txtPretAchitat";
             this.txtPretAchitat.Size = new System.Drawing.Size(242, 22);
             this.txtPretAchitat.TabIndex = 3;
+            this.txtPretAchitat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPretAchitat_KeyPress);
             // 
             // txtPieseInlocuite
             // 
-            this.txtPieseInlocuite.Location = new System.Drawing.Point(493, 455);
+            this.txtPieseInlocuite.Location = new System.Drawing.Point(500, 519);
+            this.txtPieseInlocuite.MaxLength = 500;
             this.txtPieseInlocuite.Multiline = true;
             this.txtPieseInlocuite.Name = "txtPieseInlocuite";
             this.txtPieseInlocuite.Size = new System.Drawing.Size(242, 49);
             this.txtPieseInlocuite.TabIndex = 1;
+            this.txtPieseInlocuite.TextChanged += new System.EventHandler(this.txtPieseInlocuite_TextChanged);
+            this.txtPieseInlocuite.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPieseInlocuite_KeyPress);
             // 
             // labelPieseInlocuite
             // 
             this.labelPieseInlocuite.AutoSize = true;
-            this.labelPieseInlocuite.Location = new System.Drawing.Point(378, 455);
+            this.labelPieseInlocuite.Location = new System.Drawing.Point(349, 522);
             this.labelPieseInlocuite.Name = "labelPieseInlocuite";
-            this.labelPieseInlocuite.Size = new System.Drawing.Size(99, 17);
+            this.labelPieseInlocuite.Size = new System.Drawing.Size(103, 17);
             this.labelPieseInlocuite.TabIndex = 4;
-            this.labelPieseInlocuite.Text = "Piese inlocuite";
+            this.labelPieseInlocuite.Text = "Piese inlocuite:";
             // 
             // txtTermenGarantie
             // 
-            this.txtTermenGarantie.Location = new System.Drawing.Point(493, 510);
+            this.txtTermenGarantie.Location = new System.Drawing.Point(500, 574);
+            this.txtTermenGarantie.MaxLength = 50;
             this.txtTermenGarantie.Name = "txtTermenGarantie";
             this.txtTermenGarantie.Size = new System.Drawing.Size(242, 22);
             this.txtTermenGarantie.TabIndex = 2;
+            this.txtTermenGarantie.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTermenGarantie_KeyPress);
             // 
             // labelTermenGarantie
             // 
             this.labelTermenGarantie.AutoSize = true;
-            this.labelTermenGarantie.Location = new System.Drawing.Point(364, 510);
+            this.labelTermenGarantie.Location = new System.Drawing.Point(349, 577);
             this.labelTermenGarantie.Name = "labelTermenGarantie";
-            this.labelTermenGarantie.Size = new System.Drawing.Size(113, 17);
+            this.labelTermenGarantie.Size = new System.Drawing.Size(152, 17);
             this.labelTermenGarantie.TabIndex = 6;
-            this.labelTermenGarantie.Text = "Termen garantie";
+            this.labelTermenGarantie.Text = "Termen garantie (zile):";
             // 
             // dateTimeDataPredarii
             // 
             this.dateTimeDataPredarii.CustomFormat = "dd/MM/yyyy";
             this.dateTimeDataPredarii.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimeDataPredarii.Location = new System.Drawing.Point(493, 408);
+            this.dateTimeDataPredarii.Location = new System.Drawing.Point(500, 482);
             this.dateTimeDataPredarii.Name = "dateTimeDataPredarii";
+            this.dateTimeDataPredarii.ShowCheckBox = true;
             this.dateTimeDataPredarii.Size = new System.Drawing.Size(242, 22);
             this.dateTimeDataPredarii.TabIndex = 8;
             // 
             // labelDataPredarii
             // 
             this.labelDataPredarii.AutoSize = true;
-            this.labelDataPredarii.Location = new System.Drawing.Point(387, 408);
+            this.labelDataPredarii.Location = new System.Drawing.Point(349, 482);
             this.labelDataPredarii.Name = "labelDataPredarii";
             this.labelDataPredarii.Size = new System.Drawing.Size(90, 17);
             this.labelDataPredarii.TabIndex = 9;
@@ -134,19 +147,33 @@
             // 
             // btnSalveaza
             // 
-            this.btnSalveaza.Location = new System.Drawing.Point(258, 483);
+            this.btnSalveaza.Enabled = false;
+            this.btnSalveaza.Image = ((System.Drawing.Image)(resources.GetObject("btnSalveaza.Image")));
+            this.btnSalveaza.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalveaza.Location = new System.Drawing.Point(485, 696);
             this.btnSalveaza.Name = "btnSalveaza";
-            this.btnSalveaza.Size = new System.Drawing.Size(75, 23);
+            this.btnSalveaza.Size = new System.Drawing.Size(92, 45);
             this.btnSalveaza.TabIndex = 5;
             this.btnSalveaza.Text = "Salveaza";
+            this.btnSalveaza.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalveaza.UseVisualStyleBackColor = true;
             this.btnSalveaza.Click += new System.EventHandler(this.btnSalveaza_Click);
             // 
-            // status_WIP_form
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(349, 636);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 17);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Verdict reparatie:";
+            // 
+            // statusWorking_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 590);
+            this.ClientSize = new System.Drawing.Size(1080, 790);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalveaza);
             this.Controls.Add(this.labelDataPredarii);
             this.Controls.Add(this.dateTimeDataPredarii);
@@ -158,8 +185,10 @@
             this.Controls.Add(this.checkBoxVerdictReparatie);
             this.Controls.Add(this.labelPretAchitat);
             this.Controls.Add(this.dataGridViewReparatii);
-            this.Name = "status_WIP_form";
-            this.Text = "Telefoane - in lucru";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "statusWorking_form";
+            this.Text = "Status - in lucru";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.statusWorking_form_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReparatii)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,5 +208,6 @@
         private System.Windows.Forms.DateTimePicker dateTimeDataPredarii;
         private System.Windows.Forms.Label labelDataPredarii;
         private System.Windows.Forms.Button btnSalveaza;
+        private System.Windows.Forms.Label label1;
     }
 }

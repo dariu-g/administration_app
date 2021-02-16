@@ -1,0 +1,507 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace AplicatieDisertatie
+{
+    public partial class registrationEdit_form : Form
+    {
+        /* Class scope variables. */
+        static private int ClientID = 0;
+        static private int TelefonID = 0;
+        static private int ReparatieID = 0;
+        static private string ID = "";
+
+        public registrationEdit_form()
+        {
+            InitializeComponent();
+            connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
+            connection_class.checkBoxStates(checkboxVerdictReparatie, "Reparat", "Nereparat");
+            readOnly_TextBoxes();
+            dataGridViewEdit.DoubleBufferedDataGridView(true);
+        }
+
+        #region MainButtons
+        /* Method which will perform a database query if the button text is "Cauta" or update the table Date_client
+         * if the button text is "Modifica". */
+        private void btnModificaClient_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                {
+                    if (DatabaseConnection.State == ConnectionState.Closed)
+                        DatabaseConnection.Open();
+
+                    if (btnModificaClient.Text == "Cauta")
+                    {
+                        FillDataGridView("ModificaClient", "@Cautare_client", "@Mod_buton", txtCautaClient);
+                        ID = "id_client";
+                    }
+                    else if (btnModificaClient.Text == "Modifica")
+                    {
+
+                        SqlCommand sqlCmd = new SqlCommand("ModificaClient", DatabaseConnection);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.AddWithValue("@Mod_buton", "Modifica");
+                        sqlCmd.Parameters.AddWithValue("@ClientID", ClientID);
+                        sqlCmd.Parameters.AddWithValue("@Nume", txtNume.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Prenume", txtPrenume.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Nr_telefon", txtNrTelefon.Text.Trim());
+                        sqlCmd.ExecuteNonQuery();
+                        MessageBox.Show("Datele clientului au fost modificate.");
+                        btnModificaClient.Text = "Cauta";
+                        readOnly_DateClient();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Eroare de conexiune a bazei de date.");
+            }
+        }
+
+        /* Method which will perform a database query if the button text is "Cauta" or update the table Date_telefon
+         * if the button text is "Modifica". */
+        private void btnModificaTelefon_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                {
+                    if (DatabaseConnection.State == ConnectionState.Closed)
+                        DatabaseConnection.Open();
+
+                    if (btnModificaTelefon.Text == "Cauta")
+                    {
+                        FillDataGridView("ModificaTelefon", "@Cautare_telefon", "@Mod_buton", txtCautaTelefon);
+                        ID = "id_telefon";
+                    }
+                    else if (btnModificaTelefon.Text == "Modifica")
+                    {
+
+                        SqlCommand sqlCmd = new SqlCommand("ModificaTelefon", DatabaseConnection);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.AddWithValue("@Mod_buton", "Modifica");
+                        sqlCmd.Parameters.AddWithValue("@TelefonID", TelefonID);
+                        sqlCmd.Parameters.AddWithValue("@Tip_telefon", txtTipTelefon.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Model", txtModel.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Culoare", txtCuloare.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@IMEI", txtIMEI.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Cod_telefon", txtCodTelefon.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Garantie", checkboxGarantie.Checked);
+                        sqlCmd.ExecuteNonQuery();
+                        MessageBox.Show("Datele telefonului au fost modificate!");
+                        btnModificaTelefon.Text = "Cauta";
+                        readOnly_DateTelefon();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Eroare de conexiune a bazei de date.");
+            }
+        }
+
+        /* Method which will perform a database query if the button text is "Cauta" or update the table Date_reparatie
+         * if the button text is "Modifica". */
+        private void btnModificaReparatie_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+                {
+                    if (DatabaseConnection.State == ConnectionState.Closed)
+                        DatabaseConnection.Open();
+
+                    if (btnModificaReparatie.Text == "Cauta")
+                    {
+                        FillDataGridView("ModificaReparatie", "@Cautare_reparatie", "Mod_buton", txtCautaReparatie);
+                        ID = "id_reparatie";
+                    }
+                    else if (btnModificaReparatie.Text == "Modifica")
+                    {
+                        SqlCommand sqlCmd = new SqlCommand("ModificaReparatie", DatabaseConnection);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.Parameters.AddWithValue("@Mod_buton", "Modifica");
+                        sqlCmd.Parameters.AddWithValue("@ReparatieID", ReparatieID);
+                        sqlCmd.Parameters.AddWithValue("@Data_primirii", dateDataPrimirii.Value);
+                        /* If dateDataPredarii is checked it will be updated, otherwise the value will remain the same. */
+                        if (dateDataPredarii.Checked == true)
+                            sqlCmd.Parameters.AddWithValue("@Data_predarii", dateDataPredarii.Value);
+                        sqlCmd.Parameters.AddWithValue("@Defect_constatat", txtDefectConstatat.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Piese_inlocuite", txtPieseInlocuite.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Observatii", txtObservatii.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Termen_rezolvare", txtTermenRezolvare.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Termen_garantie", txtTermenGarantie.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Pret_estimativ", txtPretEstimativ.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Pret_avans", txtPretAvans.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Pret_achitat", txtPretAchitat.Text.Trim());
+                        if (dateDataPredarii.Checked == true)
+                        sqlCmd.Parameters.AddWithValue("@Verdict_reparatie", checkboxVerdictReparatie.Checked);
+                        sqlCmd.ExecuteNonQuery();
+                        MessageBox.Show("Datele reparatiei au fost modificate!");
+                        btnModificaReparatie.Text = "Cauta";
+                        readOnly_DateReparatie();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Eroare de conexiune a bazei de date.");
+            }
+        }
+
+        /* Empties all textBoxes and returns the form to the initial state. */
+        private void btnAnuleaza_Click(object sender, EventArgs e)
+        {
+            connection_class.ClearTextBoxes(this.Controls);
+            btnModificaClient.Text = "Cauta";
+            btnModificaTelefon.Text = "Cauta";
+            btnModificaReparatie.Text = "Cauta";
+            readOnly_TextBoxes();
+        }
+        #endregion
+
+        #region LocalMethods
+        /* Parametrized method to fill dataGridViewEdit based on the used stored procedure corresponding to each searches. */
+        private void FillDataGridView(string StoredProc, string Param1, string Param2, TextBox TextBox)
+        {
+            using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
+            {
+                if (DatabaseConnection.State == ConnectionState.Closed)
+                    DatabaseConnection.Open();
+
+                SqlDataAdapter sqlData = new SqlDataAdapter(StoredProc, DatabaseConnection);
+                sqlData.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlData.SelectCommand.Parameters.AddWithValue(Param1, TextBox.Text.Trim());
+                sqlData.SelectCommand.Parameters.AddWithValue(Param2, "Cauta");
+
+                DataTable dataTable = new DataTable();
+                sqlData.Fill(dataTable);
+                dataGridViewEdit.DataSource = dataTable;
+
+                /* To prevent showing the ClientID and TelefonID from the database, the following line hides the first column. */
+                dataGridViewEdit.Columns[0].Visible = false;
+
+                DatabaseConnection.Close();
+            }
+        }
+
+        /* Methods to disable input controls, except the Search bars and "Cauta/Modifica/Anuleaza" buttons. */
+        private void readOnly_TextBoxes()
+        {
+            Action<Control.ControlCollection> clear_func = null;
+
+            clear_func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).ReadOnly = true;
+                    else
+                        clear_func(control.Controls);
+
+            };
+            clear_func(Controls);
+            txtCautaClient.ReadOnly = false;
+            txtCautaReparatie.ReadOnly = false;
+            txtCautaTelefon.ReadOnly = false;
+            checkboxGarantie.Enabled = false;
+            checkboxVerdictReparatie.Enabled = false;
+            dateDataPrimirii.Enabled = false;
+            dateDataPredarii.Enabled = false;
+        }
+
+        private void readOnly_DateClient()
+        {
+            if (btnModificaClient.Text == "Modifica")
+            {
+                txtNume.ReadOnly = false;
+                txtPrenume.ReadOnly = false;
+                txtNrTelefon.ReadOnly = false;
+            }
+            else if (btnModificaClient.Text == "Cauta")
+            {
+                txtNume.ReadOnly = true;
+                txtPrenume.ReadOnly = true;
+                txtNrTelefon.ReadOnly = true;
+            }
+        }
+
+        private void readOnly_DateTelefon()
+        {
+            if (btnModificaTelefon.Text == "Modifica")
+            {
+                txtTipTelefon.ReadOnly = false;
+                txtModel.ReadOnly = false;
+                txtCuloare.ReadOnly = false;
+                txtIMEI.ReadOnly = false;
+                txtCodTelefon.ReadOnly = false;
+                checkboxGarantie.Enabled = true;
+            }
+            else if (btnModificaTelefon.Text == "Cauta")
+            {
+                txtTipTelefon.ReadOnly = true;
+                txtModel.ReadOnly = true;
+                txtCuloare.ReadOnly = true;
+                txtIMEI.ReadOnly = true;
+                txtCodTelefon.ReadOnly = true;
+                checkboxGarantie.Enabled = false;
+            }
+        }
+
+        private void readOnly_DateReparatie()
+        {
+            if (btnModificaReparatie.Text == "Modifica")
+            {
+                dateDataPrimirii.Enabled = true;
+                dateDataPredarii.Enabled = true;
+                txtDefectConstatat.ReadOnly = false;
+                txtPieseInlocuite.ReadOnly = false;
+                txtObservatii.ReadOnly = false;
+                txtTermenRezolvare.ReadOnly = false;
+                txtTermenGarantie.ReadOnly = false;
+                txtPretEstimativ.ReadOnly = false;
+                txtPretAvans.ReadOnly = false;
+                txtPretAchitat.ReadOnly = false;
+                checkboxVerdictReparatie.Enabled = true;
+            }
+            else if (btnModificaReparatie.Text == "Cauta")
+            {
+                dateDataPrimirii.Enabled = false;
+                dateDataPredarii.Enabled = false;
+                txtDefectConstatat.ReadOnly = true;
+                txtPieseInlocuite.ReadOnly = true;
+                txtObservatii.ReadOnly = true;
+                txtTermenRezolvare.ReadOnly = true;
+                txtTermenGarantie.ReadOnly = true;
+                txtPretEstimativ.ReadOnly = true;
+                txtPretAvans.ReadOnly = true;
+                txtPretAchitat.ReadOnly = true;
+                checkboxVerdictReparatie.Enabled = false;
+            }
+        }
+        #endregion
+
+        /* Double click event to copy the data from dataGridViewEdit to the appropiate boxes. */
+        private void dataGridViewEdit_DoubleClick(object sender, EventArgs e)
+        {
+            if (dataGridViewEdit.Rows.Count > 0 && dataGridViewEdit.CurrentRow.Index != -1)
+            {
+                if (ID == "id_client")
+                {
+                    ClientID = Convert.ToInt32(dataGridViewEdit.CurrentRow.Cells[0].Value.ToString());
+                    txtNume.Text = dataGridViewEdit.CurrentRow.Cells[1].Value.ToString();
+                    txtPrenume.Text = dataGridViewEdit.CurrentRow.Cells[2].Value.ToString();
+                    txtNrTelefon.Text = dataGridViewEdit.CurrentRow.Cells[3].Value.ToString();
+                    btnModificaClient.Text = "Modifica";
+                    readOnly_DateClient();
+                    ID = "";
+                }
+
+                if (ID == "id_telefon")
+                {
+                    TelefonID = Convert.ToInt32(dataGridViewEdit.CurrentRow.Cells[0].Value.ToString());
+                    txtTipTelefon.Text = dataGridViewEdit.CurrentRow.Cells[1].Value.ToString();
+                    txtModel.Text = dataGridViewEdit.CurrentRow.Cells[2].Value.ToString();
+                    txtCuloare.Text = dataGridViewEdit.CurrentRow.Cells[3].Value.ToString();
+                    txtIMEI.Text = dataGridViewEdit.CurrentRow.Cells[4].Value.ToString();
+                    txtCodTelefon.Text = dataGridViewEdit.CurrentRow.Cells[5].Value.ToString();
+                    checkboxGarantie.Checked = Convert.ToBoolean(dataGridViewEdit.CurrentRow.Cells[6].Value);
+                    btnModificaTelefon.Text = "Modifica";
+                    readOnly_DateTelefon();
+                    ID = "";
+                }
+
+                if (ID == "id_reparatie")
+                {
+                    ReparatieID = Convert.ToInt32(dataGridViewEdit.CurrentRow.Cells[0].Value.ToString());
+                    dateDataPrimirii.Value = System.Convert.ToDateTime(dataGridViewEdit.CurrentRow.Cells[1].Value);
+                    /* This condition will skip data_predarii, if the value in the database is null. */
+                    if (!(dataGridViewEdit.CurrentRow.Cells[2].Value is DBNull)) 
+                        dateDataPredarii.Value = System.Convert.ToDateTime(dataGridViewEdit.CurrentRow.Cells[2].Value);
+                    txtDefectConstatat.Text = dataGridViewEdit.CurrentRow.Cells[3].Value.ToString();
+                    txtPieseInlocuite.Text = dataGridViewEdit.CurrentRow.Cells[4].Value.ToString();
+                    txtObservatii.Text = dataGridViewEdit.CurrentRow.Cells[5].Value.ToString();
+                    txtTermenRezolvare.Text = dataGridViewEdit.CurrentRow.Cells[6].Value.ToString();
+                    txtTermenGarantie.Text = dataGridViewEdit.CurrentRow.Cells[7].Value.ToString();
+                    txtPretEstimativ.Text = dataGridViewEdit.CurrentRow.Cells[8].Value.ToString();
+                    txtPretAvans.Text = dataGridViewEdit.CurrentRow.Cells[9].Value.ToString();
+                    txtPretAchitat.Text = dataGridViewEdit.CurrentRow.Cells[10].Value.ToString();
+                    if (!(dataGridViewEdit.CurrentRow.Cells[11].Value is DBNull))
+                        checkboxVerdictReparatie.Checked = Convert.ToBoolean(dataGridViewEdit.CurrentRow.Cells[11].Value);
+                    btnModificaReparatie.Text = "Modifica";
+                    readOnly_DateReparatie();
+                    ID = "";
+                }
+            }
+        }
+
+        private void checkboxGarantie_CheckStateChanged(object sender, EventArgs e)
+        {
+            connection_class.checkBoxStates(checkboxGarantie, "Da", "Nu");
+        }
+
+        private void checkboxVerdictReparatie_CheckedChanged(object sender, EventArgs e)
+        {
+            connection_class.checkBoxStates(checkboxVerdictReparatie, "Reparat", "Nereparat");
+        }
+
+        #region TextBoxesFormatting
+
+        /* Date client. */
+        private void txtCautaClient_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtNume_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtNume);
+        }
+
+        private void txtPrenume_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtPrenume);
+        }
+
+        private void txtNrTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtNume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtPrenume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        /* Date telefon. */
+        private void txtCautaTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtTipTelefon_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtTipTelefon);
+        }
+
+        private void txtModel_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtModel);
+        }
+
+        private void txtCuloare_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtCuloare);
+        }
+
+        private void txtIMEI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumberOnly_textBoxFormat(e);
+        }
+
+        private void txtTipTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtModel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtCuloare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtCodTelefon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        /* Date reparatie. */
+        private void txtCautaReparatie_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtDefectConstatat_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtDefectConstatat);
+        }
+
+        private void txtPieseInlocuite_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtPieseInlocuite);
+        }
+
+        private void txtObservatii_TextChanged(object sender, EventArgs e)
+        {
+            connection_class.CapitalizeFirstLetter_textBoxFormat(txtObservatii);
+        }
+
+        private void txtDefectConstatat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtObservatii_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtPieseInlocuite_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtTermenRezolvare_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumberOnly_textBoxFormat(e);
+        }
+
+        private void txtTermenGarantie_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumberOnly_textBoxFormat(e);
+        }
+
+        private void txtPretEstimativ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumberOnly_textBoxFormat(e);
+        }
+
+        private void txtPretAvans_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumberOnly_textBoxFormat(e);
+        }
+
+        private void txtPretAchitat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumberOnly_textBoxFormat(e);
+        }
+        #endregion
+
+        private void registrationEdit_form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ClientID = 0;
+            TelefonID = 0;
+            ReparatieID = 0;
+            ID = "";
+        }
+    }
+}

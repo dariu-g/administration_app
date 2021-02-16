@@ -117,25 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="label2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <metadata name="tip_telefonLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="data_primiriiLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="garantieLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="defect_constatatLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="termen_rezolvareLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="pret_estimativLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="pret_avansLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="nume_clientLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -159,25 +147,83 @@
   <metadata name="label1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="label2.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="data_primiriiLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="cod_telefon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="defect_constatatLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="culoare.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="termen_rezolvareLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
+  <metadata name="pret_estimativLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="ledgerclassBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>544, 17</value>
+  <metadata name="pret_avansLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="registrationclassBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="data_predariiLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
-  <metadata name="ledgerPrintclassBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>282, 17</value>
+  <metadata name="piese_inlocuiteLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
   </metadata>
+  <metadata name="termen_garantieLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="pret_achitatLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="labelVerdictReparatie.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnModificaTelefon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAXZJREFUOE+dkrFqwmAUhYNurh18jA4+QhbR3SVDMmYVXJUUAj5AB5csBurwt5Og
+        gx2cpO3gEzRLWrBbtUHEoXJ7TvwllMRCPfARvDnn+v/3xjin3W5XAjZYgD04gAj0wZW2FQuGCpgul0vp
+        dDpSr9fFNE1xHEeUUrLdbld4f63teeFlOJlMpNlsShiGEr1G8ha/y2z2KLZtS7fbPTXJnwTFWhzH0mg0
+        5PnpRTbrr1+sVh9pE54E3r6OZWIxCALxPC8XPsGT8DrwRjqWCUXV6/XkXj0Uhgmvw5nAe9CxTCiOfN+X
+        4TAsDBPOhIOFd69jmVBsj8djcV1X1p+bwgYcLLcD70LHMqFYTZLkYFmWDAaDXBMOltvhiuG1dewoFMrg
+        bj6fp1tgE56E/8iZeN5NWueK4ZuCko7mw3zyJLwOZ8LBcjtcMXwhqOhocZi/QRW0wQgowM+4pmNHoXAu
+        XNaWvwVjcHGYgvm71WpdFqYQuGUTEPw7bBjGD/7P/+8HiloYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnModificaClient.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAXZJREFUOE+dkrFqwmAUhYNurh18jA4+QhbR3SVDMmYVXJUUAj5AB5csBurwt5Og
+        gx2cpO3gEzRLWrBbtUHEoXJ7TvwllMRCPfARvDnn+v/3xjin3W5XAjZYgD04gAj0wZW2FQuGCpgul0vp
+        dDpSr9fFNE1xHEeUUrLdbld4f63teeFlOJlMpNlsShiGEr1G8ha/y2z2KLZtS7fbPTXJnwTFWhzH0mg0
+        5PnpRTbrr1+sVh9pE54E3r6OZWIxCALxPC8XPsGT8DrwRjqWCUXV6/XkXj0Uhgmvw5nAe9CxTCiOfN+X
+        4TAsDBPOhIOFd69jmVBsj8djcV1X1p+bwgYcLLcD70LHMqFYTZLkYFmWDAaDXBMOltvhiuG1dewoFMrg
+        bj6fp1tgE56E/8iZeN5NWueK4ZuCko7mw3zyJLwOZ8LBcjtcMXwhqOhocZi/QRW0wQgowM+4pmNHoXAu
+        XNaWvwVjcHGYgvm71WpdFqYQuGUTEPw7bBjGD/7P/+8HiloYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnModificaReparatie.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        xAAADsQBlSsOGwAAAXZJREFUOE+dkrFqwmAUhYNurh18jA4+QhbR3SVDMmYVXJUUAj5AB5csBurwt5Og
+        gx2cpO3gEzRLWrBbtUHEoXJ7TvwllMRCPfARvDnn+v/3xjin3W5XAjZYgD04gAj0wZW2FQuGCpgul0vp
+        dDpSr9fFNE1xHEeUUrLdbld4f63teeFlOJlMpNlsShiGEr1G8ha/y2z2KLZtS7fbPTXJnwTFWhzH0mg0
+        5PnpRTbrr1+sVh9pE54E3r6OZWIxCALxPC8XPsGT8DrwRjqWCUXV6/XkXj0Uhgmvw5nAe9CxTCiOfN+X
+        4TAsDBPOhIOFd69jmVBsj8djcV1X1p+bwgYcLLcD70LHMqFYTZLkYFmWDAaDXBMOltvhiuG1dewoFMrg
+        bj6fp1tgE56E/8iZeN5NWueK4ZuCko7mw3zyJLwOZ8LBcjtcMXwhqOhocZi/QRW0wQgowM+4pmNHoXAu
+        XNaWvwVjcHGYgvm71WpdFqYQuGUTEPw7bBjGD/7P/+8HiloYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnAnuleaza.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAFjSURBVDhPpVOxSsNQFM0PCP2A
+        Dp0cOgmd3Lo5CU4OTh0E14B+QPQDrLtDcBEHRRx0KgQdFKQQXARRENFGxeHpkvV5zs195kUSHXrg0Mc9
+        956c5N0GRJ7nLTAGLWjAUIRfQD3SHsclJ4RPFyO732sLs/S6FAGcO2B6s7tj92Zn7P3pEfVIZWlIxttb
+        IpIni/P28y1jEiYLeT7fWBWNfagd62gBNjGBMyAvN9fZaD4e7sSQNZqgloItHS3AAoXbg7hiwqfxlXj2
+        UnV0rIomE5ImX++vfHpf2+tBd1Ci+gY0RT3WtnrocG2Cw3733/hzoOGH8wf9b3C2siAfUEdKuOGG2Kl/
+        C3ozQx0twGijteXKMBcGjXLX+B2whwk8458lC9x2OdbdNc5M+UiNrzQZX8mSiegbNC4KwBqYsJ+vZCbP
+        iQgme5Ed19ilcwOgD/lf4ObiHDnnUPnnsAP6BmBCBtbaKWiDbxUsAY8G1hgMAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

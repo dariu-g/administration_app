@@ -16,7 +16,7 @@ namespace AplicatieDisertatie
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new main_form());
+            Application.Run(new userLogin_form());
         }
     }
 }

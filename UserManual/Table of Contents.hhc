@@ -13,8 +13,32 @@
 		<param name="Local" value="Prezentare.htm">
 		</OBJECT>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Continut">
-		<param name="Local" value="Continut.htm">
+		<param name="Name" value="Autentificare">
+		<param name="Local" value="Autentificare.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Inregistrare utilizator nou">
+		<param name="Local" value="InregistrareUtilizator.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Inregistrari - adauga">
+		<param name="Local" value="InregistrariAdauga.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Inregistrari - istoric">
+		<param name="Local" value="InregistrariIstoric.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Inregistrari - modificari">
+		<param name="Local" value="InregistrariModificari.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Status - in lucru">
+		<param name="Local" value="StatusInLucru.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Status - neridicate">
+		<param name="Local" value="StatusNeridicate.htm">
 		</OBJECT>
 </UL>
 </BODY></HTML>

@@ -16,17 +16,15 @@ using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace AplicatieDisertatie
 {
-
-    //create a class for database connection create in which we have 2 functions database open/close connection 
-    public partial class user_form : Form
+    public partial class userRegistration_form : Form
     {
-        //string connectionString = @"Data Source=BLUE;Initial Catalog=baza_date;Integrated Security=True";
-        connection_class hash = new connection_class();
-        public user_form()
+        public userRegistration_form()
         {
             InitializeComponent();
         }
 
+        #region MainButtons
+        /* Registers the textboxes values in the table Utilizatori. */ 
         private void btnInregistrare_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUtilizator.Text) || string.IsNullOrEmpty(txtParola.Text))
@@ -43,8 +41,7 @@ namespace AplicatieDisertatie
             }
             else
             {
-                string connectionString = ConfigurationManager.ConnectionStrings["DatabaseConnection"].ConnectionString;
-                using (SqlConnection DatabaseConnection = new SqlConnection(connectionString))
+                using (SqlConnection DatabaseConnection = new SqlConnection(connection_class.connectionString))
                 {
                     DatabaseConnection.Open();
 
@@ -67,13 +64,13 @@ namespace AplicatieDisertatie
                         sqlCmd.Parameters.AddWithValue("@Tip_Utilizator", txtTipUtilizator.SelectedItem);
                         sqlCmd.Parameters.AddWithValue("@Nume", txtNume.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@Prenume", txtPrenume.Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@Parola", hash.PasswordEncrypt(txtParola.Text.Trim()));
+                        sqlCmd.Parameters.AddWithValue("@Parola", connection_class.PasswordEncrypt(txtParola.Text.Trim()));
                         sqlCmd.ExecuteNonQuery();
                         MessageBox.Show("Utilzatorul a fost inregistrat cu succes!");
                         DatabaseConnection.Close();
-                        Clear();
+                        connection_class.ClearTextBoxes(this.Controls);
                         this.Hide();
-                        login_form loginform = new login_form();
+                        userLogin_form loginform = new userLogin_form();
                         loginform.Show();
                     }
 
@@ -81,10 +78,14 @@ namespace AplicatieDisertatie
             }
         }
 
-        void Clear()
+        /* Redirects the user to userLogin_form. */
+        private void labelCatreAutentificare_Click(object sender, EventArgs e)
         {
-            txtNume.Text = txtPrenume.Text = txtUtilizator.Text = txtTipUtilizator.Text = txtParola.Text = txtConfirmareParola.Text =  "";
+            this.Close();
+            userLogin_form loginform = new userLogin_form();
+            loginform.Show();
         }
+        #endregion
 
         #region Design
         private void labelExit_Click(object sender, EventArgs e)
@@ -113,24 +114,40 @@ namespace AplicatieDisertatie
         }
         #endregion
 
-        private void labelCatreAutentificare_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            login_form loginform = new login_form();
-            loginform.Show();
-        }
-
         #region TextBoxesFormatting
         private void txtNume_TextChanged(object sender, EventArgs e)
         {
-            txtNume.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(this.txtNume.Text);
-            txtNume.Select(txtNume.Text.Length, 0);
+            connection_class.ToTitleCase_textBoxFormat(txtNume);
         }
 
         private void txtPrenume_TextChanged(object sender, EventArgs e)
         {
-            txtPrenume.Text = System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(this.txtPrenume.Text);
-            txtPrenume.Select(txtPrenume.Text.Length, 0);
+            connection_class.ToTitleCase_textBoxFormat(txtPrenume);
+        }
+
+        private void txtNume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtPrenume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtUtilizator_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtParola_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
+        }
+
+        private void txtConfirmareParola_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            connection_class.NumbersLettersPunctuations_textBoxFormat(e);
         }
         #endregion
     }
