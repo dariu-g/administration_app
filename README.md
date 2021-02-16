@@ -13,6 +13,3 @@ Aplicatia este destinata gestiunii reparatiilor de telefoane mobile
 2. Conexiune baza_date - Visual Studio
 3. Connection String 
 4. Rebuild Solution + AplicatieDisertatieInstall
-
-## Contact
-https://www.linkedin.com/in/gradinaru-d-2773b8a0/
